@@ -19,7 +19,7 @@ $config_array = array(
     // preloading 'log' component
     'preload' => array('log'),
     'sourceLanguage' => 'en_us',
-    'language' => 'es',
+    'language' => 'en',
     // application components
     'components' => array(
         'messages' => array(

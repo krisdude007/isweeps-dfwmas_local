@@ -12,8 +12,10 @@ if($game->type == 'sub') {
     $gameCloseDate = $game->close_date;
 }
 
-$months = array(1 => "Enero", 2 => "Febrero",3 => "Marzo",4 => "Abril", 5 => "Mayo", 6 => "Junio", 7 => "Julio",  8 => "Agosto", 9 => "Septiembre", 10=> "Octubre", 11=> "Noviembre", 12=> "Diciembre");
-$days = array(1 => "Lunes", 2 => "Martes", 3 => "Miércoles", 4 => "Jueves",5 => "Viernes", 6 => "Sábado", 7 => "Domingo");
+$months = array(1 => "January", 2 => "February",3 => "March",4 => "April", 5 => "May", 6 => "June", 7 => "July",  8 => "August", 9 => "September", 10=> "October", 11=> "November", 12=> "December");
+//$months = array(1 => "Enero", 2 => "Febrero",3 => "Marzo",4 => "Abril", 5 => "Mayo", 6 => "Junio", 7 => "Julio",  8 => "Agosto", 9 => "Septiembre", 10=> "Octubre", 11=> "Noviembre", 12=> "Diciembre");
+$days = array(1 => "Monday", 2 => "Tuesday", 3 => "Wednesday", 4 => "Thursday",5 => "Friday", 6 => "Saturday", 7 => "Sunday");
+//$days = array(1 => "Lunes", 2 => "Martes", 3 => "Miércoles", 4 => "Jueves",5 => "Viernes", 6 => "Sábado", 7 => "Domingo");
 
 $dy = date("N", strtotime($gameCloseDate));
 $mj = date("n", strtotime($gameCloseDate));
@@ -56,7 +58,7 @@ foreach ($game->gameChoiceAnswers as $answer) {
                 <div class='col-sm-8' style="text-align: left; margin-left: 71px; margin-top: 50px; padding-right: 0px; width: 56.73%; padding-left: 0px;"><h4 style='margin-top: 0px; font-size: 15px; color: #f9d83d;'><?php echo Yii::t('youtoo', 'LIGA MX - ') . $game->prize; ?></h4>
                     <p style='font-size: 10px; margin: 0px 0px 5px; color: #ffffff;'><?php echo Yii::t('youtoo', 'Each Friday, Azteca will air a Futbol Match. You have to pick the winner. It\'s only $1.00 to select<br/>your answer. If you are right, then your will entered to win the weekly prize for this game.'); ?></p>
                     <p style='font-size: 10px; margin: 0px 0px 5px; color: #ffffff;'>
-                        <?php echo Yii::t('youtoo', 'Players for Game #1 will be able to choose from the two playing teams or a tie. Example:<br/>Choose Team A, Team B or Tie.') ?>&nbsp;&nbsp;<a href="<?php echo ($game->description == 'Liga MX - Sábado Estelar')? $this->createUrl('/site/marketingpage', array()) : $this->createUrl('/site/marketingpage2', array()); ?>" style="cursor:pointer; position: relative; z-index: 1020;"><span style=" color: #f9d83d;">¿Quieres saber m&#225;s?&nbsp;&nbsp;<img src="/webassets/images/laliga/Button_Yellow-Arrow.png" style="height:9px;"/></span></a>
+                        <?php echo Yii::t('youtoo', 'Players for Game #1 will be able to choose from the two playing teams or a tie. Example:<br/>Choose Team A, Team B or Tie.') ?>&nbsp;&nbsp;<a href="<?php echo ($game->description == 'Liga MX - Sábado Estelar')? $this->createUrl('/site/marketingpage', array()) : $this->createUrl('/site/marketingpage2', array()); ?>" style="cursor:pointer; position: relative; z-index: 1020;"><span style=" color: #f9d83d;"><?php echo Yii::t('youtoo','You want to know more?'); ?>&nbsp;&nbsp;<img src="/webassets/images/laliga/Button_Yellow-Arrow.png" style="height:9px;"/></span></a>
                     </p>
                 </div>
                 <script>
@@ -65,7 +67,7 @@ foreach ($game->gameChoiceAnswers as $answer) {
                           var format = "%H:%M:%S";
 
                           //if(event.offset.days > 0) {
-                            format = '%-D día%!D ' + format;
+                          format = '%-D <?php echo (Yii::app()->language == 'en') ? 'day' : 'día'?>%!D ' + format;
                           //}
 
                           $(this).text(event.strftime(format));

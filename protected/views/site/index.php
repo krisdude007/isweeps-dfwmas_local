@@ -21,11 +21,11 @@ $cs->registerScriptFile(Yii::app()->request->baseurl . '/core/webassets/js/jquer
         ?>
 
         <?php if (Yii::app()->user->isGuest): ?>
-            <a href="<?php echo $url; ?>"><img src="/webassets/images/laliga/Image_Hero_Azteca-Concursos.png" style="position: relative; top: -28px; max-width: 102.6%; left: -7px;"/>
+            <a href="<?php echo $url; ?>"><img src="/webassets/images/laliga/Image_Hero_Azteca-Concursos<?php echo (Yii::app()->language == 'en') ? '_eng' : ''; ?>.png" style="position: relative; top: -28px; max-width: 102.6%; left: -7px;"/>
             </a>
-            <a href="/marketingpage"><span style="position: absolute; top: 254px;right: 195px; color: #ffffff;">¿Quieres saber m&#225;s?&nbsp;&nbsp;&nbsp;<img src="/webassets/images/laliga/Button_Yellow-Arrow.png"/></span></a>
+            <a href="/marketingpage"><span style="position: absolute; top: 254px;right: 160px; color: #ffffff;"><?php echo Yii::t('youtoo','You want to know more?'); ?>&nbsp;&nbsp;&nbsp;<img src="/webassets/images/laliga/Button_Yellow-Arrow.png"/></span></a>
             <div style="position: relative; top: -17px;">
-                <span><a href="http://us.azteca.com/" target="_blank" class="track"><img src="/webassets/images/laliga/AzA_399x96_Clasico_Oct1.jpg" style="padding-right: 0px;max-width: 398px; width:100%;"/></a></span>
+                <span><a href=<?php echo $url; ?>><img src="/webassets/images/laliga/Image_Banner_Juega-Ahora-Por-1<?php echo (Yii::app()->language == 'en') ? '_eng' : ''; ?>.png" style="padding-right: 0px;max-width: 398px; width:100%;"/></a></span>
                 <span><a href="<?php echo $currentWinLooseOrDrawGame['url']; ?>"><img src="/webassets/images/laliga/Image_Banner_Viernes-Futbolero.png" style="padding-right: 8px;max-width: 398px; width:100%; margin-left: 9px;"/></a></span>
     <!--                <span><a href="/redeem"><img src="/webassets/images/laliga/image_redeem-points<?php echo (Yii::app()->language == 'en') ? '_eng' : ''; ?>.png" style="max-width: 249px; width:100%;"/></a></span>-->
             </div>
@@ -45,12 +45,12 @@ $cs->registerScriptFile(Yii::app()->request->baseurl . '/core/webassets/js/jquer
                     <br/><br/> <?php echo Yii::t('youtoo', 'Good luck and have fun.'); ?>
                 </div>
             <?php else: ?>
-                <a href="<?php echo $url; ?>"><img src="/webassets/images/laliga/Image_Hero_Azteca-Concursos.png" style="position: relative; top: -28px; max-width: 102.6%; left: -7px;"/>
+                <a href="<?php echo $url; ?>"><img src="/webassets/images/laliga/Image_Hero_Azteca-Concursos<?php echo (Yii::app()->language == 'en') ? '_eng' : ''; ?>.png" style="position: relative; top: -28px; max-width: 102.6%; left: -7px;"/>
                 </a>
-                <a href="/marketingpage"><span style="position: absolute; top: 254px;right: 195px; color: #ffffff;">¿Quieres saber m&#225;s?&nbsp;&nbsp;&nbsp;<img src="/webassets/images/laliga/Button_Yellow-Arrow.png"/></span></a>
+                <a href="/marketingpage"><span style="position: absolute; top: 254px;right: 160px; color: #ffffff;"><?php echo Yii::t('youtoo','You want to know more?'); ?>&nbsp;&nbsp;&nbsp;<img src="/webassets/images/laliga/Button_Yellow-Arrow.png"/></span></a>
                 <div style="float: left; margin-left: 12px;margin-bottom: 10px;">
-                    <span><a href="http://us.azteca.com/" target="_blank" class="track"><img src="/webassets/images/laliga/AzA_399x96_Clasico_Oct1.jpg" style="padding-right: 15px;max-width: 398px; width:100%;"/></a></span>
-                    <span><a href="<?php echo $currentWinLooseOrDrawGame['url']; ?>"><img src="/webassets/images/laliga/Image_Banner_Viernes-Futbolero.png" style="padding-right: 13px;max-width: 398px; width:100%;"/></a></span>
+                    <span><a href="<?php echo $url; ?>"><img src="/webassets/images/laliga/Image_Banner_Juega-Ahora-Por-1<?php echo (Yii::app()->language == 'en') ? '_eng' : ''; ?>.png" style="padding-right: 15px;max-width: 398px; width:100%;"/></a></span>
+                    <span><a href="<?php echo $currentWinLooseOrDrawGame['url']; ?>"><img src="/webassets/images/laliga/Image_Banner_Viernes-Futbolero<?php echo (Yii::app()->language == 'en') ? '_eng' : ''; ?>.png" style="padding-right: 13px;max-width: 398px; width:100%;"/></a></span>
                 </div>
                 <!--                <div style="float: left; margin-left: 12px;margin-bottom: 10px; min-height: 90px; min-width:384px; background-color: #292929;">
                                     <div><?php //echo '<a class="btn btn-default btn-md '.$playFreeButtonStatus.'" style="font-weight: 700; font-size: 15px; min-width: 150px; min-height: 37px; margin-top: 10px;" href="' . $this->createUrl($playFreeButtonURL, array()) . '">' . Yii::t('youtoo', $playFreeButtonMessage) . '</a>';  ?></div>
@@ -68,7 +68,7 @@ $cs->registerScriptFile(Yii::app()->request->baseurl . '/core/webassets/js/jquer
                     var format = "%H:%M:%S";
 
                     //if(event.offset.days > 0) {
-                    format = '%-D día%!D ' + format;
+                    format = '%-D <?php echo (Yii::app()->language == 'en') ? 'day' : 'día'?>%!D ' + format;
                     //}
 
                     $(this).text(event.strftime(format));
@@ -92,7 +92,7 @@ $cs->registerScriptFile(Yii::app()->request->baseurl . '/core/webassets/js/jquer
                     <thead style="background-color: #292929; border-color: #292929;">
                         <tr>
                             <th style="color: #ffffff;"><?php echo Yii::t('youtoo', 'Game') ?></th>
-<!--                            <th style="text-align: left; color: #ffffff;"><?php //echo Yii::t('youtoo', 'Entries') ?></th>-->
+                            <th style="text-align: left; color: #ffffff;"><?php echo Yii::t('youtoo', 'Entries') ?></th>
                             <th style="text-align: left; color: #ffffff;"><?php echo Yii::t('youtoo', 'Entry Fee') ?></th>
                             <th style="text-align: left; color: #ffffff;"><?php echo Yii::t('youtoo', 'Prize') ?></th>
                             <th style="text-align: left; color: #ffffff;"><?php echo Yii::t('youtoo', 'Live') ?></th>
@@ -113,7 +113,7 @@ $cs->registerScriptFile(Yii::app()->request->baseurl . '/core/webassets/js/jquer
                                         var format = "%H:%M:%S";
 
                                         //if(event.offset.days > 0) {
-                                        format = '%-D día%!D ' + format;
+                                        format = '%-D <?php echo (Yii::app()->language == 'en') ? 'day' : 'día'?>%!D ' + format;
                                         //}
 
                                         $(this).text(event.strftime(format));
@@ -132,7 +132,7 @@ $cs->registerScriptFile(Yii::app()->request->baseurl . '/core/webassets/js/jquer
                                 }
                                 ?>
                                 <td class="alignLeft" style="vertical-align: middle; text-align: left; color: #f9d83d; border-top: none;"><a style="color: <?php echo $fontColor; ?>; <?php echo $cursor; ?> text-decoration: none;" href="<?php echo $this->createUrl($allDisplayedGames[$game->id]['url'], array()); ?>"><?php echo $game->description; ?></a></td>
-<!--                                <td style="vertical-align: middle; border-top: none; border-right: 1px solid #424242; color: #ffffff;"><?php //echo ($game->num_plays_free + $game->num_plays_paid); ?></td>-->
+                                <td style="vertical-align: middle; border-top: none; border-right: 1px solid #424242; color: #ffffff;"><?php echo ($game->num_plays_free + $game->num_plays_paid); ?></td>
                                 <td style="vertical-align: middle;border-top: none; border-right: 1px solid #424242; color: #ffffff;"><?php echo '$' . $game->price; ?></td>
                                 <td style="vertical-align: middle;border-top: none; border-right: 1px solid #424242; color: #ffffff;"><?php echo $game->prize; ?></td>
                                 <td id="countDown<?php echo $q; ?>" class="alignLeft" style="vertical-align: middle;border-top: none; color: #ffffff;"><?php //echo date('m/d/y <\b\\r> H:i:s', strtotime($game->close_date));  ?></td>
