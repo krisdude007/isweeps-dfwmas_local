@@ -101,7 +101,7 @@ input[type="checkbox"],input[type="radio"]{
     margin: 0px 8px;
 }
 .main {
-    max-width: 980px;
+    max-width: 1080px;
     margin: 0 auto;
     /*background: url('/webassets/images/redbackground.png');*/
 }

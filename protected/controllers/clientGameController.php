@@ -295,20 +295,32 @@ class clientGameController extends GameController {
             echo "No game with this ID exists.";
         }
     }
+    
+    
+    
+    public function actionAjaxWinLooseOrDraw() {
+        var_dump($_POST);exit;
+    }
 
     public function actionWinLooseOrDraw($id = NULL) {
         $user_id = Yii::app()->user->getId();
-
+        
         if (empty($user_id)) {
             $this->redirect($this->createUrl("/login/{$id}"));
         }
-
+        
         $user = clientUser::model()->findByPK($user_id);
+        
+        if (eGameChoice::getNumberOfActiveGames() > 0) {
+            
+            $games = eGameChoice::getAllActiveGames();
 
-        if($id == NULL) {
-            $game = eGameChoice::model()->isActive()->with('gameChoiceAnswers')->find();
-        } else {
-            $game = eGameChoice::model()->with('gameChoiceAnswers')->findByPk((int) $id);
+            if ($id == NULL) {
+                $game = eGameChoice::model()->multiple()->isActive()->with('gameChoiceAnswers')->find();
+            } else {
+                $game = eGameChoice::model()->multiple()->with('gameChoiceAnswers')->findByPk((int) $id);
+            }
+            
         }
 
         if (!$game) {
@@ -343,7 +355,7 @@ class clientGameController extends GameController {
             Yii::app()->end();
         }
 
-        if (isset($_POST['eGameChoiceResponse'])) {
+        if (isset($_POST['eGameChoiceResponse'])) {var_dump($_POST);exit;
             $response->attributes = $_POST['eGameChoiceResponse'];
             $response->transaction_id = GameUtility::getNextTransactionID($user_id);
             $response->user_id = $user_id;
@@ -381,6 +393,7 @@ class clientGameController extends GameController {
 
         if ($game) {
             $this->render('winlooseordraw', array(
+                'games' => $games,
                 'game' => $game,
                 'mainGame' => $mainGame,
                 'response' => $response,

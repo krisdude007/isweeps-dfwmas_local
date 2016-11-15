@@ -14,8 +14,8 @@ $config_array = array(
         'client.components.*',
     ),
     //'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-    'name' => 'Laliga',
-    'timeZone' => 'America/Los_Angeles',
+    'name' => 'iSweepsUSA',
+    'timeZone' => 'America/Chicago',
     // preloading 'log' component
     'preload' => array('log'),
     'sourceLanguage' => 'en_us',
@@ -87,7 +87,7 @@ $config_array = array(
                 'continue/<id:\d+>' => '/game/thankyou',
                 'continuepaid' => '/game/paidthankyou',
                 'continuepaid/<id:\d+>' => '/game/paidthankyou',
-                //'winlooseordraw' => '/game/winlooseordraw',
+                'winlooseordraw' => '/game/winlooseordraw',
                 'winlooseordraw/<id:\d+>' => '/game/winlooseordraw',
                 'payviapaypal' => 'site/payviapaypal',
                 'payviapaypal/<id:\d+>' => 'site/payviapaypal',
@@ -443,7 +443,7 @@ $config_array = array(
             'sessionTimeoutSecs' => 60 * 60,
         ),
         'GamePlay' => array(
-          'setGeoLocation' => true,
+          'setGeoLocation' => false,
           'Country' => array('United States','India'),
           'AllowedCity' => array('Hyderabad'),
           'AllowedState' => array('Alabama','Alaska','Arkansas','Colorado',

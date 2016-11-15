@@ -162,7 +162,7 @@ var overlayHandlers = function() {
         console.log('cookie set');
     }
     else {
-        console.log('cookie not set');
+        //console.log('cookie not set');
         //$('.dim').toggle();
     }
     $('.hide_dim').off('click');
