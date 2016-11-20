@@ -21,6 +21,7 @@ foreach ($game->gameChoiceAnswers as $answer) {
 
     input[type=radio] + label {
         display:inline-block;
+        color: grey;
     }
 
     input[type=radio]:checked + label {
