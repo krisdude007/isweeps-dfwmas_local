@@ -25,6 +25,7 @@ class eGameChoiceResponse extends GameChoiceResponse {
     public $mobileplays;
     public $mobilefreeplays;
     public $IVRplays;
+    public $game_unique_id;
 
     public function rules() {
         // NOTE: you should only define rules for those attributes that
@@ -39,7 +40,7 @@ class eGameChoiceResponse extends GameChoiceResponse {
             array('created_on, updated_on', 'default', 'value' => date("Y-m-d H:i:s"), 'setOnEmpty' => false, 'on' => 'insert'),
             array('ip_address', 'default', 'value' => getenv('REMOTE_ADDR'), 'setOnEmpty' => false, 'on' => 'insert, update'),
             array('updated_on', 'default', 'value' => date("Y-m-d H:i:s"), 'setOnEmpty' => false, 'on' => 'update'),
-            array('id, game_choice_id, game_choice_answer_id, sms_id, user_id, transaction_id, is_winner, source, ip_address, ip_derivedcity, ip_derivedstate, created_on, updated_on', 'safe', 'on' => 'search'),
+            array('id, game_choice_id, game_choice_answer_id, sms_id, user_id, transaction_id, is_winner, game_unique_id, source, ip_address, ip_derivedcity, ip_derivedstate, created_on, updated_on', 'safe', 'on' => 'search'),
         );
     }
 

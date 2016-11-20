@@ -299,11 +299,128 @@ class clientGameController extends GameController {
     
     
     public function actionAjaxWinLooseOrDraw() {
-        var_dump($_POST);exit;
+        
+        if (empty(Yii::app()->session)) {
+            echo json_encode(array('error' => Yii::t('youtoo', 'User not logged in.')));
+            exit;
+        }
+        $user_id = Yii::app()->user->getId();
+        $id = $_POST['eGameChoiceResponse']['game_choice_id'];
+        //$user = clientUser::model()->findByPK($user_id);
+        $noOfSubmissions = eGameChoiceResponse::model()->findAllByAttributes(array('game_unique_id' => Yii::app()->session['gameUniqueId']));
+        $countOfSubmissions = count($noOfSubmissions);
+        
+        if ($countOfSubmissions >= Yii::app()->session['noOfQs']) {
+            echo json_encode(array('error' => Yii::t('youtoo', 'All questions answered')));
+            exit;
+        } else {
+            
+        }
+        
+        if (eGameChoice::getNumberOfActiveGames() > 0) {
+            
+            $games = eGameChoice::getAllActiveGames();
+
+            if ($id == NULL) {
+                $game = eGameChoice::model()->multiple()->isActive()->with('gameChoiceAnswers')->find();
+            } else {
+                $game = eGameChoice::model()->multiple()->with('gameChoiceAnswers')->findByPk((int) $id);
+            }
+        }
+
+        if (!$game) {
+            echo "No game with this ID exists.";
+        }
+        
+        if($game->type == 'sub') {
+            $mainGame = eGameChoice::model()->findByPk($game->g_parant_id);
+        } else { 
+            $mainGame = null;
+        }
+
+        if ($game->price == 0) {
+
+        } else {
+            if (GameUtility::getCashBalance($user_id) > 0) {
+
+            } else {
+                $this->redirect($this->createUrl("/payment?gid={$game->id}"));
+            }
+        }
+
+        $response = new eGameChoiceResponse;
+
+        if (isset($_POST['ajax']) && $_POST['ajax'] === 'game-choice-form') {
+            echo CActiveForm::validate($response);
+            Yii::app()->end();
+        }
+
+        if (isset($_POST['eGameChoiceResponse'])) {
+            $response->attributes = $_POST['eGameChoiceResponse'];
+            $response->transaction_id = GameUtility::getNextTransactionID($user_id);
+            $response->user_id = $user_id;
+            $response->game_unique_id = Yii::app()->session['gameUniqueId'];
+            //var_dump($response);exit;
+            if (empty($response->game_choice_answer_id)) {
+                echo json_encode(array('error' => Yii::t('youtoo', 'Please choose an answer.')));
+                exit;
+            }
+                      
+            if ($response->validate()) {
+                $response->save();
+                Yii::app()->session['gamechoiceresponseId'] = $response->id;
+                if ($countOfSubmissions < (Yii::app()->session['noOfQs'] - 1)) {
+                    echo json_encode(array('success' => Yii::t('youtoo', 'Current question saved')));
+                    exit;
+                }
+                if ($countOfSubmissions == (Yii::app()->session['noOfQs'] - 1)) {
+                    echo json_encode(array('completed' => Yii::t('youtoo', 'All questions answered')));
+                    exit;
+                }
+            } else {
+                echo json_encode(array('error' => Yii::t('youtoo', 'Errors found')));
+                exit;
+            }
+        }
+    }
+    
+        
+    public function actionPickGame($gi = 1, $gid = NULL) {
+        
+        $user_id = Yii::app()->user->getId();
+        
+//        if (empty($user_id)) {
+//            $this->redirect($this->createUrl("/login/{$id}"));
+//        }
+        
+        $user = clientUser::model()->findByPK($user_id);
+        
+        if (isset($_GET['noOfQs']) && $_GET['noOfQs'] > 0) {
+            $noOfQs = $_GET['noOfQs'];
+            Yii::app()->session['noOfQs'] = $noOfQs;
+            
+            $uniqueId = (uniqid('', true));;
+            Yii::app()->session['gameUniqueId'] = $uniqueId;
+            
+            $this->redirect($this->createUrl("/winlooseordraw"));
+        } 
+        
+        $gameArray   = Array(1 => 1, 2 => 5, 3 => 10, 4 => 15, 5 => 20); //0 index with default key as 5
+        $gameCreditArray = Array(1 => 1, 2 => 5, 3 => 10, 4 => 15, 5 => 20);
+        
+        $this->render('pickgame', array(
+            'gameArray' => $gameArray,
+            'game_id' => $gid,
+            'gameCreditArray' => $gameCreditArray,
+            'gameIndex' => $gi,
+            'user' => $user,
+        ));
     }
 
     public function actionWinLooseOrDraw($id = NULL) {
+        
         $user_id = Yii::app()->user->getId();
+        $noOfQs = Yii::app()->session['noOfQs'];
         
         if (empty($user_id)) {
             $this->redirect($this->createUrl("/login/{$id}"));
@@ -333,18 +450,13 @@ class clientGameController extends GameController {
             $mainGame = null;
         }
 
-        //$geoLocation = GeoUtility::GeoLocation();
-        //if(!$geoLocation['isValid']) {
-        //    $this->redirect($this->createUrl("/geocoordinates/{$id}"));
-        //}
-
         if ($game->price == 0) {
 
         } else {
             if (GameUtility::getCashBalance($user_id) > 0) {
 
             } else {
-                $this->redirect($this->createUrl("/payment?gid={$game->id}"));
+                $this->redirect($this->createUrl("/payment?noOfQs=$noOfQs"));
             }
         }
 
@@ -355,18 +467,10 @@ class clientGameController extends GameController {
             Yii::app()->end();
         }
 
-        if (isset($_POST['eGameChoiceResponse'])) {var_dump($_POST);exit;
+        if (isset($_POST['eGameChoiceResponse'])) {exit;
             $response->attributes = $_POST['eGameChoiceResponse'];
             $response->transaction_id = GameUtility::getNextTransactionID($user_id);
             $response->user_id = $user_id;
-            //$response->transaction_id = $gameManager['transaction_id'];
-
-//            $response->ip_address = ClientUtility::getClientIpAddress();
-//            $ipinfo = ClientUtility::getIPInfo($response->ip_address);
-//            $ipinfo2 = json_decode(file_get_contents('http://ipinfo.io/' . $response->ip_address . '/geo'));
-//            $response->ip_derivedcity = isset($ipinfo) ? $ipinfo->city : $ipinfo2->city;
-//
-//            $responseUser = clientUser::model()->findByPk($response->user_id);
 
             if (empty($response->game_choice_answer_id)) {
                 Yii::app()->user->setFlash('error', Yii::t('youtoo', 'Please choose an answer.'));

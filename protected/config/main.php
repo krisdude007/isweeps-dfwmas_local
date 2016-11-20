@@ -89,6 +89,7 @@ $config_array = array(
                 'continuepaid/<id:\d+>' => '/game/paidthankyou',
                 'winlooseordraw' => '/game/winlooseordraw',
                 'winlooseordraw/<id:\d+>' => '/game/winlooseordraw',
+                'pickgame' => '/game/pickgame',
                 'payviapaypal' => 'site/payviapaypal',
                 'payviapaypal/<id:\d+>' => 'site/payviapaypal',
                 'howtoplay' => '/site/howtoplay',

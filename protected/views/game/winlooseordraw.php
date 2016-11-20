@@ -15,7 +15,7 @@ foreach ($game->gameChoiceAnswers as $answer) {
 ?>
 <style>
     input[type=radio] {
-        display:none;
+        
         margin:20px;
     }
 
@@ -27,7 +27,16 @@ foreach ($game->gameChoiceAnswers as $answer) {
         background-image: none;
         background-color:#d0d0d0;
     }
-
+    
+/*    ::-webkit-scrollbar {
+        -webkit-appearance: none;
+        width: 7px;
+        }
+    ::-webkit-scrollbar-thumb {
+        border-radius: 4px;
+        background-color: rgba(0,0, 255,.5);
+        -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+    }*/
 </style>
 
 <div id="pageContainer" class="container" style='padding-right: 0px; padding-left: 0px;'>
@@ -39,12 +48,12 @@ foreach ($game->gameChoiceAnswers as $answer) {
                 <div class="form" style="position: relative; top: 22px; min-width: 923px; min-height: 712px; background-color:#002E42; clear: both;">
                     <!--                <div class='gameEntry' style='width: 100%; background-color: #eeeeee; min-height: 299px; min-width: 823px;'>-->
                     <div class="game" class="fab-left fab-voting-left" style='clear: both;'>
-                        <div class="col-xs-11 col-sm-11 col-lg-11 col-sm-offset-1" style="padding-left: 0px; padding-right: 0px; clear: both; ">
-                            <div class="table-responsive" style="height: 370px; overflow: auto; position: relative;  width: 96%; margin-top: 20px;">
+                        <div class="col-xs-11 col-sm-11 col-lg-11 col-sm-offset-1" style="padding-left: 0px; padding-right: 0px; clear: both; margin-left: 5.3%;">
+                            <div class="table-responsive" style="height: 630px; overflow: auto; position: relative;  width: 98%; margin-top: 20px;">
                                 <table class="table">
                                     <thead style="background-color: #292929; border-color: #292929;">
                                         <tr>
-                                            <th style="text-align: center; color: #ffffff;"><?php echo Yii::t('youtoo', 'Game Question') ?></th>
+                                            <th style="text-align: center; color: #ffffff; width: 40%;"><?php echo Yii::t('youtoo', 'Game Question') ?></th>
                                             <th style="text-align: center; color: #ffffff;"><?php echo Yii::t('youtoo', 'Game Answers') ?></th>
                                         </tr>
                                     </thead>
@@ -54,25 +63,30 @@ foreach ($game->gameChoiceAnswers as $answer) {
                                         $q = 1;
                                         ?>
                                         <?php 
+                                        
                                         foreach ($games as $game) {
                                             ?>
                                             <tr class="<?php echo $q % 2 == 0 ? 'even' : 'odd'; ?>" style="cursor: default; border-top: 3px solid #292929;">
-                                                <td class="alignLeft" style="vertical-align: middle; text-align: left; color: #f9d83d; border-top: none;"><?php echo $game->question; ?></td>
+                                               
+                                                <td class="alignLeft" style="vertical-align: middle; text-align: left; color: #f9d83d; border-top: none; font-size: 15px;"><?php echo $game->question; ?></td>
                                                 <td style="vertical-align: middle; border-top: none; border-right: 1px solid #424242; color: #ffffff;">
                                                     <?php
+                                                    $form = $this->beginWidget('CActiveForm', array(
+                                                        //'id' => 'game-choice-form',
+                                                        'enableAjaxValidation' => true,
+                                                        //'action' => Yii::app()->createUrl('/winlooseordraw/'.$game->id),
+                                                        'enableClientValidation' => true,
+                                                        //'clientOptions' => array(
+                                                            //'validateOnSubmit' => true,
+                                                        //)
+                                                        'htmlOptions' => array('onsubmit' => 'return submitChoice(this);return false;',),
+                                                    ));
+                                                    
                                                     $answerArray = Array();
                                                     $answerAutoArray = Array();
                                                     $i = 1;
                                                     $op = 1;
-                                                    $form = $this->beginWidget('CActiveForm', array(
-                                                        'id' => 'game-choice-form',
-                                                        'enableAjaxValidation' => true,
-                                                        'action' => Yii::app()->createUrl('/winlooseordraw/'.$game->id),
-                                                        'enableClientValidation' => true,
-                                                        'clientOptions' => array(
-                                                            'validateOnSubmit' => true,
-                                                        )
-                                                    ));
+                                                    
                                                     if (Utility::isMobile()) {
                                                         $source = 'mobile';
                                                     } else {
@@ -87,19 +101,22 @@ foreach ($game->gameChoiceAnswers as $answer) {
                                                     }
                                                     if (sizeof($game->gameChoiceAnswers) > 4) {
                                                         echo '<div class="col-sm-11 ">';
-                                                        echo '<div class="options" style="text-align: left;">' . $form->radioButtonList($response, 'game_choice_answer_id', $answerArray, array('labelOptions' =>  array('style' => "display:inline; ')",  'style' => 'width: 30%; background-color: transparent; text-align: center;', 'class' => 'form-control'),'template' => "{input} {label}", 'separator' => '&nbsp&nbsp;&nbsp;', 'onchange' => "submitOption();")) . '</div>';
+                                                        echo $form->radioButtonList($response, 'game_choice_answer_id', $answerArray, array('labelOptions' =>  array('style' => "display:inline; background-color: transparent; ')",  'class' => 'form-control'),'separator' => '&nbsp&nbsp;&nbsp;', ));
                                                         echo '</div>';
                                                         echo $form->error($response, 'game_choice_answer_id');
                                                         echo $form->hiddenField($response, 'game_choice_id', array('value' => $game->id));
                                                         $op++;
                                                     } 
                                                     else {
-                                                        echo $form->radioButtonList($response, 'game_choice_answer_id', $answerArray, array('labelOptions' => array('style' => "display:inline;')", 'class' => 'form-control'), 'template' => "{input} {label}", 'separator' => '&nbsp&nbsp;&nbsp;', 'onclick' => "submitOption();"));
+                                                        echo $form->radioButtonList($response, 'game_choice_answer_id', $answerArray, array('labelOptions' => array('style' => "display:inline; background-color: transparent; ')", 'class' => 'form-control'), 'separator' => '&nbsp&nbsp;&nbsp;'));
                                                         echo $form->error($response, 'game_choice_answer_id');
                                                         echo $form->hiddenField($response, 'game_choice_id', array('value' => $game->id));
                                                         $op++;
                                                     }
                                                     echo $form->hiddenField($response, 'source', array('value' => $source));
+                                                    echo '<br/>';
+                                                    echo "<input type='submit' value='Submit answer' class='btn btn-success'> &nbsp; &nbsp;";
+                                                    echo "<input type='reset' value='Choose another question' class='btn btn-warning'>";
                                                     $this->endWidget();
                                                     ?></td>
                                             <?php 
@@ -120,12 +137,28 @@ foreach ($game->gameChoiceAnswers as $answer) {
     </div>
 </div>
 <script>
-    $(document).ready(function(){
-        function submitOption() {
-            $('input[type=radio]').on('change', function () {
-                $('#game-choice-form').submit(function (e) {
+
+        function submitChoice(me) {
+                 $.ajax({
+                    type: 'post',
+                    url: '/game/ajaxWinLooseOrDraw',
+                    data: $(me).serialize(),
+                    dataType: 'json',
+                    success: function (data) {
+                        if (data.completed) {
+                          window.location = "/index.php?f=g";  
+                        }
+                        if (data.success) {
+                           $(me).find('input[type="submit"]').prop( "disabled",true);
+                           $(me).find('input[type="reset"]').prop( "disabled",true);
+                        }
+                        if (data.error) {
+                            alert(data.error);
+                        }
+                    }
                 });
-            });
-        }
-    });
+            return false;
+    }
+   
+ 
 </script>
