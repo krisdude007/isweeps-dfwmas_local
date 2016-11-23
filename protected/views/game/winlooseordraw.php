@@ -152,7 +152,11 @@ foreach ($game->gameChoiceAnswers as $answer) {
      countChoice=parseInt(countChoice) - parseInt(1);
      //countChoice=parseInt(countChoice)+parseInt(1);
      var divData=document.getElementById("resultCount");
-     divData.innerHTML="You have : "+countChoice +" answers left.";
+     if (countChoice === 1) {
+         divData.innerHTML="You have : "+countChoice +" answer left.";
+     } else {
+         divData.innerHTML="You have : "+countChoice +" answers left.";
+     }
     }
         
     function submitChoice(me) {
