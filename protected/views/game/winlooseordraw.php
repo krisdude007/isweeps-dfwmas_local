@@ -38,6 +38,12 @@ foreach ($game->gameChoiceAnswers as $answer) {
         background-color: rgba(0,0, 255,.5);
         -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
     }*/
+
+    .count {
+        color: #00cccc;
+        margin-bottom: 10px;
+    }
+    
 </style>
 
 <div id="pageContainer" class="container" style='padding-right: 0px; padding-left: 0px;'>
@@ -51,6 +57,7 @@ foreach ($game->gameChoiceAnswers as $answer) {
                     <div class="game" class="fab-left fab-voting-left" style='clear: both;'>
                         <div class="col-xs-11 col-sm-11 col-lg-11 col-sm-offset-1" style="padding-left: 0px; padding-right: 0px; clear: both; margin-left: 5.3%;">
                             <div class="table-responsive" style="height: 630px; overflow: auto; position: relative;  width: 98%; margin-top: 20px;">
+                                <div id='resultCount' class='count'>You have : <?php echo Yii::app()->session['noOfQs']; ?> answers left.</div>
                                 <table class="table">
                                     <thead style="background-color: #292929; border-color: #292929;">
                                         <tr>
@@ -116,8 +123,8 @@ foreach ($game->gameChoiceAnswers as $answer) {
                                                     }
                                                     echo $form->hiddenField($response, 'source', array('value' => $source));
                                                     echo '<br/>';
-                                                    echo "<input type='submit' value='Submit answer' class='btn btn-success'> &nbsp; &nbsp;";
-                                                    echo "<input type='reset' value='Choose another question' class='btn btn-warning'>";
+                                                    echo "<input type='submit' value='Lock-in' class='btn btn-success' onclick='countChoiceClicked();'> &nbsp; &nbsp;";
+//                                                    echo "<input type='reset' value='Choose another question' class='btn btn-warning'>";
                                                     $this->endWidget();
                                                     ?></td>
                                             <?php 
@@ -138,28 +145,35 @@ foreach ($game->gameChoiceAnswers as $answer) {
     </div>
 </div>
 <script>
-
-        function submitChoice(me) {
-                 $.ajax({
-                    type: 'post',
-                    url: '/game/ajaxWinLooseOrDraw',
-                    data: $(me).serialize(),
-                    dataType: 'json',
-                    success: function (data) {
-                        if (data.completed) {
-                          window.location = "/index.php?f=g";  
-                        }
-                        if (data.success) {
-                           $(me).find('input[type="submit"]').prop( "disabled",true);
-                           $(me).find('input[type="reset"]').prop( "disabled",true);
-                        }
-                        if (data.error) {
-                            alert(data.error);
-                        }
-                    }
-                });
-            return false;
+    
+    var countChoice=<?php echo Yii::app()->session['noOfQs'];?>;
+    //var countChoice= 0;
+    function countChoiceClicked(){
+     countChoice=parseInt(countChoice) - parseInt(1);
+     //countChoice=parseInt(countChoice)+parseInt(1);
+     var divData=document.getElementById("resultCount");
+     divData.innerHTML="You have : "+countChoice +" answers left.";
     }
-   
- 
+        
+    function submitChoice(me) {
+             $.ajax({
+                type: 'post',
+                url: '/game/ajaxWinLooseOrDraw',
+                data: $(me).serialize(),
+                dataType: 'json',
+                success: function (data) {
+                    if (data.completed) {
+                      window.location = "/index.php?f=g";  
+                    }
+                        if (data.success) {
+                            $(me).find('input[type="submit"]').prop( "disabled",true);
+//                            $(me).find('input[type="reset"]').prop( "disabled",true);                                
+                    }
+                    if (data.error) {
+                        alert(data.error);
+                    }
+                }
+            });
+        return false;
+    }
 </script>

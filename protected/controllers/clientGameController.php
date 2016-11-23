@@ -314,7 +314,8 @@ class clientGameController extends GameController {
             echo json_encode(array('error' => Yii::t('youtoo', 'All questions answered')));
             exit;
         } else {
-            
+//            echo json_encode(array('count' => $countOfSubmissions));
+//            exit;
         }
         
         if (eGameChoice::getNumberOfActiveGames() > 0) {

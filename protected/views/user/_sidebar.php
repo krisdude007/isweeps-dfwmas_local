@@ -5,7 +5,7 @@
             <?php //$geoLocation = GeoUtility::GeoLocation(); ?>
             <?php //if ($geoLocation['isValid']): ?>
                 <div style="text-align: center; color: #ffffff; font-size: 12px;"><?php echo Yii::t('youtoo', 'Cash Balance'); ?> : <?php echo '<span style="color: #35aae5;">$' . GameUtility::getCashBalance(Yii::app()->user->getId()) . '</span>'; ?></div>
-                <div style="text-align: center; color: #ffffff; font-size: 12px;"><?php echo Yii::t('youtoo', 'Credits'); ?> : <?php echo '<span style="color: #35aae5;">' . ClientUtility::getTotalUserBalanceCredits() . '</span>'; ?></div>
+                <!--<div style="text-align: center; color: #ffffff; font-size: 12px;"><?php echo Yii::t('youtoo', 'Credits'); ?> : <?php // echo '<span style="color: #35aae5;">' . ClientUtility::getTotalUserBalanceCredits() . '</span>'; ?></div>-->
                 <a class="btn btn-default btn-sm startButton" style="text-indent: 0; line-height: normal; margin-top: 10px; font-size: 12px;" href="<?php echo $this->createUrl('/payment', array()); ?>"><?php echo Yii::t('youtoo', 'Add Funds'); ?></a><hr class='hr'/>
             <?php //endif; ?>
         <?php else: ?>
@@ -32,7 +32,7 @@
                         <div class="panel-body">
                             <ul class="nav navbar-nav">
                                 <li><a <?php if ($this->activeSubNavLink == 'marketingpage'): ?>style='font-size: 10px;padding: 10px 2px;'<?php else: ?>style='color: #ffffff; font-size: 10px;padding: 10px 2px;'<?php endif; ?> <?php if ($this->activeSubNavLink == 'marketingpage'): ?>class='active'<?php endif; ?> href="<?php echo $this->createUrl('/site/marketingpage', array()); ?>"><?php echo Yii::t('youtoo', 'Liga MX - $1,000'); ?></a></li>
-                                <li><a <?php if ($this->activeSubNavLink == 'marketingpage2'): ?>style='font-size: 10px;padding: 10px 2px;'<?php else: ?>style='color: #ffffff; font-size: 10px;padding: 10px 2px;'<?php endif; ?> <?php if ($this->activeSubNavLink == 'marketingpage2'): ?>class='active'<?php endif; ?> href="<?php echo $this->createUrl('/site/marketingpage2', array()); ?>"><?php echo Yii::t('youtoo', 'Liga MX -  Balón Autografíado'); ?></a></li>
+                                <!--<li><a <?php // if ($this->activeSubNavLink == 'marketingpage2'): ?>style='font-size: 10px;padding: 10px 2px;'<?php // else: ?>style='color: #ffffff; font-size: 10px;padding: 10px 2px;'<?php // endif; ?> <?php // if ($this->activeSubNavLink == 'marketingpage2'): ?>class='active'<?php // endif; ?> href="<?php // echo $this->createUrl('/site/marketingpage2', array()); ?>"><?php // echo Yii::t('youtoo', 'Liga MX -  Balón Autografíado'); ?></a></li>-->
                             </ul>
                         </div>
                     </div>

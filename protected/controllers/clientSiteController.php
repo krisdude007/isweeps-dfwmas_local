@@ -22,7 +22,7 @@ class clientSiteController extends SiteController {
                 'users' => array('@'),
             ),
             array('allow',
-                'actions' => array('index', 'home', 'winners', 'redeem', 'error', 'customerror', 'testserverload', 'confirmation', 'howtoplay', 'geocoordinates', 'geocoordinatesshare', 'ajaxGeoCoordinates', 'ajaxGeoCoordinatesNotPreshare', 'cannotplay', 'gameredirect', 'aboutlinks', 'about', 'legallinks', 'marketinglinks','legal', 'helplinks', 'help', 'faq', 'privacy', 'marketingpage', 'marketingpage2', 'payandplay', 'newpayandplay', 'freeplay', 'rules', 'testgame', 'terms','contact'),
+                'actions' => array('index', 'home', 'winners', 'redeem', 'error', 'customerror', 'testserverload', 'confirmation', 'howtoplay', 'geocoordinates', 'geocoordinatesshare', 'ajaxGeoCoordinates', 'ajaxGeoCoordinatesNotPreshare', 'cannotplay', 'gameredirect', 'aboutlinks', 'about', 'legallinks', 'marketinglinks','legal', 'helplinks', 'help', 'faq', 'privacy', 'marketingpage', 'marketingpage2', 'payandplay', 'newpayandplay', 'freeplay', 'rules', 'testgame', 'terms','contact', 'newpage'),
                 'users' => array('*'),
             ),
             array('allow',
@@ -275,6 +275,11 @@ class clientSiteController extends SiteController {
 
         $winners = GameUtility::getWinners();
         $this->render('winners', array('winners' => $winners));
+    }
+    
+     public function actionNewPage() {
+
+        $this->render('newpage', array());
     }
 
     public function actionCustomError() {

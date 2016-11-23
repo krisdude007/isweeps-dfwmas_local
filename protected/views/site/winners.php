@@ -33,7 +33,7 @@
                                 <?php } ?>
                             <?php endforeach; ?>
                             <?php if ($i == 0): ?>
-                                <tr><td colspan="5" style="text-align: center; border: 1px solid #eeeeee;"><?php echo Yii::t('youtoo','PLEASE COME BACK TO SEE THE LALIGA.COM SWEEPSTAKES WINNERS LIST NEXT WEEK. THANKS'); ?></td></tr>
+                                <tr><td colspan="5" style="text-align: center; border: 1px solid #eeeeee;"><?php echo Yii::t('youtoo','PLEASE COME BACK TO SEE THE BALDINIS.COM SWEEPSTAKES WINNERS LIST NEXT WEEK. THANKS'); ?></td></tr>
                             <?php endif; ?>
                         </tbody>
                     </table>

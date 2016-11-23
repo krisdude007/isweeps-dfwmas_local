@@ -124,14 +124,14 @@ Yii::app()->facebook->initJs($output);
         <?php elseif ($this->action->id == 'marketingpage' || $this->action->id == 'marketingpage2'): ?>
             <div id="wrapper" style="background-color: #0b1112;">
             <?php else: ?>
-                <?php echo (in_array(Yii::app()->controller->id, array('site')) || in_array(Yii::app()->controller->action->id, array('faq', 'confirmation', 'redeem', 'winners', 'playnow', 'winlooseordraw', 'payment', 'multiple4', 'thankyou', 'paidthankyou','pickgame'))) ? '<div id="wrapper">' : ''; ?>
+                <?php echo (in_array(Yii::app()->controller->id, array('site')) || in_array(Yii::app()->controller->action->id, array('faq', 'confirmation', 'redeem', 'winners', 'playnow', 'winlooseordraw', 'payment', 'multiple4', 'thankyou', 'paidthankyou','pickgame','newpage'))) ? '<div id="wrapper">' : ''; ?>
             <?php endif; ?>
-            <?php echo ((in_array(Yii::app()->controller->action->id, array('redeem', 'winners', 'winlooseordraw', 'multiple4', 'thankyou', 'paidthankyou','pickgame')))) ? '<div id="page-content-wrapper" style="padding: 20px; background-color: #ffffff;">' : '<div id="page-content-wrapper">'; ?>
+            <?php echo ((in_array(Yii::app()->controller->action->id, array('redeem', 'winners', 'winlooseordraw', 'multiple4', 'thankyou', 'paidthankyou','pickgame','newpage')))) ? '<div id="page-content-wrapper" style="padding: 20px; background-color: #ffffff;">' : '<div id="page-content-wrapper">'; ?>
             <div class="container-fluid">
                 <?php echo $content; ?>
             </div>
         </div>
-        <?php echo (in_array(Yii::app()->controller->id, array('site')) || in_array(Yii::app()->controller->action->id, array('playnow', 'winlooseordraw', 'index2', 'multiple4', 'thankyou', 'paidthankyou','pickgame'))) ? '</div>' : ''; ?>
+        <?php echo (in_array(Yii::app()->controller->id, array('site')) || in_array(Yii::app()->controller->action->id, array('playnow', 'winlooseordraw', 'index2', 'multiple4', 'thankyou', 'paidthankyou','pickgame','newpage'))) ? '</div>' : ''; ?>
         <div id="pageFooterDrop">
             <div  class="row col-sm-10 col-sm-offset-2" style='padding-left: 50px;'>
                 <div class="col-sm-3" id="aboutDrop">
