@@ -5,7 +5,7 @@
             <div class='col-sm-12'>
                 <?php for ($i = 1; $i <= 5; $i++) { ?>
                     <div class="paymentOptionsTop">
-                        <div style="background-color: #f2f2f2;"><h3 class='changeText' style="margin-top: 0px; min-height: 47px; font-size: 22px; padding-top: 5px; margin-bottom: 0px; font-weight: 300;"><?php echo $gameArray[$i]; ?> <?php echo ($gameArray[$i] > 1) ? 'questions' : 'question' ?></h3></div>
+                        <div style="background-color: #f2f2f2;"><h3 class="changeText-<?php echo $gameArray[$i]; ?> " style="margin-top: 0px; min-height: 47px; font-size: 22px; padding-top: 5px; margin-bottom: 0px; font-weight: 300;"><?php echo $gameArray[$i]; ?> <?php echo ($gameArray[$i] > 1) ? 'questions' : 'question' ?></h3></div>
                         <div style='margin-top: 5px;'><?php echo $gameCreditArray[$i]; ?><br/><?php echo Yii::t('youtoo', 'credit bonus'); ?></div><hr style="margin-top: 5px; margin-bottom: 5px;"/>
                         <?php if ($gameArray[$i] > 1): ?>
                             <div style="font-size: 10px; margin-bottom: 10px;"><?php echo Yii::t('youtoo', 'Entry to the<br/>weekly freeroll'); ?></div>
@@ -64,17 +64,56 @@
         </div>
     </div>
 </div>
-<script>
-    $('.changeText').hover(
+<script>   
+        $('.changeText-1').hover( 
             function () {
                 var $this = $('.statistics');
-                $this.data('initialText', $this.text());
-                $this.text("I'm replaced!");
+                $this.data('initialText', $this.text());$this.text("I'm replaced! - 1");
             },
             function () {
                 var $this = $('.statistics');
                 $this.text($this.data('initialText'));
             }
-    );
+        );
+        $('.changeText-5').hover( 
+            function () {
+                var $this = $('.statistics');
+                $this.data('initialText', $this.text());$this.text("I'm replaced! - 5");
+            },
+            function () {
+                var $this = $('.statistics');
+                $this.text($this.data('initialText'));
+            }
+        );
+        $('.changeText-10').hover( 
+            function () {
+                var $this = $('.statistics');
+                $this.data('initialText', $this.text());$this.text("I'm replaced! - 10");
+            },
+            function () {
+                var $this = $('.statistics');
+                $this.text($this.data('initialText'));
+            }
+        );
+        $('.changeText-15').hover( 
+            function () {
+                var $this = $('.statistics');
+                $this.data('initialText', $this.text());$this.text("I'm replaced! - 15");
+            },
+            function () {
+                var $this = $('.statistics');
+                $this.text($this.data('initialText'));
+            }
+        );
+        $('.changeText-20').hover( 
+            function () {
+                var $this = $('.statistics');
+                $this.data('initialText', $this.text());$this.text("I'm replaced! - 20");
+            },
+            function () {
+                var $this = $('.statistics');
+                $this.text($this.data('initialText'));
+            }
+        );
 </script>
 
