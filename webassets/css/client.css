@@ -101,7 +101,7 @@ input[type="checkbox"],input[type="radio"]{
     margin: 0px 8px;
 }
 .main {
-    max-width: 980px;
+    max-width: 1080px;
     margin: 0 auto;
     /*background: url('/webassets/images/redbackground.png');*/
 }
@@ -302,11 +302,11 @@ span.required{
 }
 
 .paymentOptionsTop {
-    max-width:140px;
+    max-width:150px;
     min-height: 186px;
     width: 100%;
     height: 100%;
-    border: 4px solid #f9d83d;
+    border: 4px solid #FF0000;
     float: left;
     margin-right: 14px;
 }
@@ -503,6 +503,14 @@ td.alignLeft {
     margin-left: 13px;
     padding: 8px 10px;
     font-size: 14px;
+}
+
+.startButton2 {
+    min-height: 43px;
+    min-width: 182px;
+/*    margin-left: 13px;*/
+    padding: 8px 10px;
+    font-size: 19px;
 }
 
 .btn-default:hover  {

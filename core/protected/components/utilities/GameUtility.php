@@ -31,26 +31,6 @@ class GameUtility {
 
         return $totals;
     }
-    
-    public static function isAnswerCorrect($response_id)
-    {
-        $response = eGameChoiceResponse::model()->findByPk((int) $response_id);
-        
-        if($response != NULL)
-        {
-            $answer = eGameChoiceAnswer::model()->findByPk($response->game_choice_answer_id);
-            
-            if($answer->is_correct == 1){
-                return true;
-            }
-            else {
-                return false;
-            }
-        }
-        else {
-            return false;
-        }
-    }
 
     public static function pickWinnerRand($old_is_active, $new_is_active, $game_id) {
 
@@ -862,10 +842,6 @@ class GameUtility {
                 if($game->reveal_id != NULL)
                 {
                     $allDisplayedGames[$id]['url'] = '/game/reveal/'.$game->id;
-                }
-                else if($game->word_scramble_id != NULL)
-                {
-                    $allDisplayedGames[$id]['url'] = '/game/wordscramble/'.$game->id;
                 }
                 else if(sizeof($game->gameChoiceAnswers) == 5)
                 {

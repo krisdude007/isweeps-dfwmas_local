@@ -52,15 +52,15 @@ $stripe = StripeUtility::config(); ?>
                                         <script src="https://checkout.stripe.com/v2/checkout.js" class="stripe-button"
                                                 data-key="<?php echo $stripe['publishable_key']; ?>"
                                                 data-amount="<?php echo $prize->market_value * 100; ?>"
-                                                data-name="Azteca"
+                                                data-name="iSweepsUSA"
                                                 data-description="<?php echo $prize->name; ?>"
-                                                data-locale="es"
-                                                data-label="Compra con Tarjeta"></script>
+                                                data-locale="en"
+                                                data-label="Pay with card"></script>
                                     </form>
                                      <p>&nbsp;</p>
                                 </span>
                                 <span>
-                                    <a id="paypal-express" style="font-size: 14pt;text-decoration: underline;" href="<?php echo Yii::app()->createURL("/expressCheckOut/".$prize->tableName()."/$prize->market_value/$prize->id"); ?>"><img src="https://www.paypalobjects.com/es_ES/i/bnr/bnr_shopNowUsing_150x40.gif" alt="Buy now with PayPal" /></a>
+                                    <a id="paypal-express" style="font-size: 14pt;text-decoration: underline;" href="<?php echo Yii::app()->createURL("/expressCheckOut/".$prize->tableName()."/$prize->market_value/$prize->id"); ?>"><img src="https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif" alt="Buy now with PayPal" /></a>
                                 </span>
 <!--                                <form id="paypal-payproduct-form" action="/processpaypalproduct/<?php //echo $prize->id; ?>" method="post">
                                         <?php //echo CHtml::link(Yii::t('youtoo', 'Pay Using Paypal'), array('#'), array('data-toggle' => 'modal', 'data-target' => '#modalPaypalDirect', 'class' => 'btn btn-default btn-sm')); ?>

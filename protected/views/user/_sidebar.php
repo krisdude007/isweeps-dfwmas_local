@@ -22,7 +22,7 @@
         <li><a href="<?php echo $this->createUrl('/site/faq', array()); ?>"><?php echo Yii::t('youtoo', 'FAQ'); ?></a></li>
         <li class="<?php if ($this->activeNavLink == 'marketingpage' || $this->activeNavLink == 'marketingpage2'): ?>panel panel-default active<?php endif; ?>" id="dropdown">
                 <a data-toggle="collapse" href="#dropdown-lvl11">
-                    <span></span> <?php echo Yii::t('youtoo', 'C&#243;mo Jugar'); ?> <span class="caret"></span>
+                    <span></span> <?php echo Yii::t('youtoo', 'How to play'); ?> <span class="caret"></span>
                 </a>
                 <?php if (Yii::app()->controller->id == 'site' && in_array(Yii::app()->controller->action->id, array('marketingpage', 'marketingpage2'))): ?>
                     <div id="dropdown-lvl11" class="panel-collapse in">

@@ -24,8 +24,8 @@
         -moz-opacity: 0.5;
         background-color: #ddd;
         visibility: hidden;
+        /*height: expression((document.body.scrollHeight > document.body.offsetHeight) ? document.body.scrollHeight : document.body.offsetHeight);*/
         width: expression(document.body.clientWidth);
-        height: expression(document.body.scrollHeight > document.body.offsetHeight ? document.body.scrollHeight : document.body.offsetHeight);
         z-index: 100;
     }
 
@@ -72,7 +72,7 @@
         top: 0px;
         left: 0px;
         z-index: 99;
-        top: expression(document.body.clientHeight / 2 - this.offsetHeight / 2);
+        top: expression(document.body.clientHeight / 2 - (this.offsetHeight / 2));
         left: expression(document.body.clientWidth / 2 - this.offsetWidth / 2);
         border-radius: 5px;
         -moz-border-radius: 5px;

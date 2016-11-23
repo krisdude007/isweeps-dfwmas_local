@@ -52,65 +52,60 @@ class clientSiteController extends SiteController {
 
         //unset(Yii::app()->session['mainGameId']);
 
-        if (eGameChoice::getNumberOfActiveGames() > 0) {
+        //if (eGameChoice::getNumberOfActiveGames() > 0) {
 
-            if ($id == NULL) {
-                $game = eGameChoice::model()->multiple()->isActive()->with('gameChoiceAnswers')->find();
-            } else {
-                $game = eGameChoice::model()->multiple()->with('gameChoiceAnswers')->findByPk((int) $id);
-            }
-            $games = eGameChoice::getAllActiveGames();
+//            $games = eGameChoice::getAllActiveGames();
+//            var_dump($games);exit;
+//            $response = new eGameChoiceResponse;
+              $user_id = Yii::app()->user->getId();
+              $user = clientUser::model()->findByPk($user_id);
 
-            $response = new eGameChoiceResponse;
-            $user_id = Yii::app()->user->getId();
-            $user = clientUser::model()->findByPk($user_id);
+//            if (isset($_POST['ajax']) && $_POST['ajax'] === 'game-choice-form') {
+//                echo CActiveForm::validate($response);
+//                Yii::app()->end();
+//            }
 
-            if (isset($_POST['ajax']) && $_POST['ajax'] === 'game-choice-form') {
-                echo CActiveForm::validate($response);
-                Yii::app()->end();
-            }
+//            if (isset($_POST['eGameChoiceResponse'])) {
+//                $response->attributes = $_POST['eGameChoiceResponse'];
+//                Yii::app()->session['gamechoiceanswerId'] = $response->game_choice_answer_id;
+//                Yii::app()->session['gamechoiceId'] = $response->game_choice_id;
+//                Yii::app()->session['source'] = $response->source;
+//
+//                if (empty($response->game_choice_answer_id)) {
+//                    Yii::app()->user->setFlash('error', Yii::t('youtoo','Please choose an answer.'));
+//                    $this->redirect($this->createUrl('/site/index'));
+//                } else {
+//
+//                    if (Yii::app()->user->isGuest && empty($response->user_id)) {
+//                        $response->user_id = 0;
+//                    } else {
+//                        $response->user_id = $user->id;
+//                    }
+//                    if ($response->validate()) {
+//                        $response->save();
+//                        Yii::app()->session['gamechoiceresponseId'] = $response->id;
+//                    }
+//                    $this->redirect($this->createUrl('/actel/payment'));
+//                }
+//            }
 
-            if (isset($_POST['eGameChoiceResponse'])) {
-                $response->attributes = $_POST['eGameChoiceResponse'];
-                Yii::app()->session['gamechoiceanswerId'] = $response->game_choice_answer_id;
-                Yii::app()->session['gamechoiceId'] = $response->game_choice_id;
-                Yii::app()->session['source'] = $response->source;
-
-                if (empty($response->game_choice_answer_id)) {
-                    Yii::app()->user->setFlash('error', Yii::t('youtoo','Please choose an answer.'));
-                    $this->redirect($this->createUrl('/site/index'));
-                } else {
-
-                    if (Yii::app()->user->isGuest && empty($response->user_id)) {
-                        $response->user_id = 0;
-                    } else {
-                        $response->user_id = $user->id;
-                    }
-                    if ($response->validate()) {
-                        $response->save();
-                        Yii::app()->session['gamechoiceresponseId'] = $response->id;
-                    }
-                    $this->redirect($this->createUrl('/actel/payment'));
-                }
-            }
-
-            if (isset($game)) {
-                $formPlayNow = new FormPlayNow();
+            //if (isset($game)) {
+                //$formPlayNow = new FormPlayNow();
                 $this->render('index', array(
-                    'games' => $games,
-                    'game' => $game,
-                    'response' => $response,
+                    //'games' => $games,
+                    //'game' => $game,
+                    //'response' => $response,
                     'user' => $user,
-                    'formPlayNow' => $formPlayNow,
+                    //'formPlayNow' => $formPlayNow,
                 ));
 
                 /* end game play */
-            } else {
-                Yii::app()->user->setFlash('error', "Errors found!");
-            }
-        } else {
-            $this->render('index2', array());
-        }
+//            } else {
+//                Yii::app()->user->setFlash('error', "Errors found!");
+//            }
+//        } else {
+//            $this->render('index2', array());
+//        }
     }
 
     public function actionTestGame() {
