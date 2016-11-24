@@ -5,12 +5,12 @@
             <div class='col-sm-12'>
                 <?php for ($i = 1; $i <= 5; $i++) { ?>
                     <div class="paymentOptionsTop">
-                        <div style="background-color: #f2f2f2;"><h3 class="changeText-<?php echo $gameArray[$i]; ?> " style="margin-top: 0px; min-height: 47px; font-size: 22px; padding-top: 5px; margin-bottom: 0px; font-weight: 300;"><?php echo $gameArray[$i]; ?> <?php echo ($gameArray[$i] > 1) ? 'questions' : 'question' ?></h3></div>
-                        <div style='margin-top: 5px;'><?php echo $gameCreditArray[$i]; ?><br/><?php echo Yii::t('youtoo', 'credit bonus'); ?></div><hr style="margin-top: 5px; margin-bottom: 5px;"/>
+                        <div style="background-color: #f2f2f2;"><h3 class="changeText-<?php echo $gameArray[$i]; ?> " style="margin-top: 0px; min-height: 47px; font-size: 22px; padding-top: 5px; margin-bottom: 0px; font-weight: 300; cursor: default;"><?php echo $gameArray[$i]; ?> <?php echo ($gameArray[$i] > 1) ? 'questions' : 'question' ?></h3></div>
+                        <div style='margin-top: 5px; cursor: default;'><?php echo $gameCreditArray[$i]; ?><br/><?php echo Yii::t('youtoo', 'credit bonus'); ?></div><hr style="margin-top: 5px; margin-bottom: 5px;"/>
                         <?php if ($gameArray[$i] > 1): ?>
-                            <div style="font-size: 10px; margin-bottom: 10px;"><?php echo Yii::t('youtoo', 'Entry to the<br/>weekly freeroll'); ?></div>
+                            <div style="font-size: 10px; margin-bottom: 10px; cursor: default;"><?php echo Yii::t('youtoo', 'Entry to the<br/>weekly freeroll'); ?></div>
                         <?php else: ?>
-                            <div style="font-size: 10px; margin-bottom: 10px;"><?php echo Yii::t('youtoo', 'No entry to the<br/>weekly freeroll'); ?></div>                      
+                            <div style="font-size: 10px; margin-bottom: 10px; cursor: default;"><?php echo Yii::t('youtoo', 'No entry to the<br/>weekly freeroll'); ?></div>                      
                         <?php endif; ?>
                         <div style="margin-top: 25px; margin-bottom: 10px;"><a id="entry<?php echo $i; ?>" href="/pickgame?noOfQs=<?php echo $gameArray[$i]; ?>" class="btn btn-default btn-md" style="min-width: 114px; min-height: 37px; background-color: #35A2CC !important; border-color: #35A2CC;"><?php echo Yii::t('youtoo', 'Select'); ?></a></div>
                     </div>
@@ -28,7 +28,7 @@
         <div class="row">
             <div class="row">
                 <div class="col-sm-10 col-sm-offset-1">
-                    <h4 id="total" style="font-weight: 300;">Total: $5 for each game choice of questions.</h4>
+                    <h4 id="total" style="font-weight: 300; cursor: default;">Total: $5 for each game choice of questions.</h4>
                     <div style="max-width:100%;margin: 0 auto;">
 
                     </div>
@@ -39,9 +39,9 @@
             <div class='row'>
                 <div class='col-sm-5 col-sm-offset-1'>
                     <div class="paymentOptionsTop" style='border: 4px solid #308000;max-width:310px; min-height: 186px; margin-left: 15px;'>
-                        <div style="background-color: #f2f2f2;"><h3 style="margin-top: 0px; min-height: 47px; font-size: 22px; padding-top: 5px; margin-bottom: 0px; font-weight: 300;">Click below for a Free Weekly Game</h3></div>
-                        <div style='margin-top: 5px;'>Additional Title here<br/><?php echo Yii::t('youtoo', 'credit bonus'); ?></div><hr style="margin-top: 5px; margin-bottom: 5px;"/>
-                        <div style="font-size: 10px; margin-bottom: 10px;"><?php echo Yii::t('youtoo', 'Click Here for entry to the<br/>weekly freeroll'); ?></div>                      
+                        <div style="background-color: #f2f2f2;"><h3 style="margin-top: 0px; min-height: 47px; font-size: 22px; padding-top: 5px; margin-bottom: 0px; font-weight: 300; cursor: default;">Click below for a Free Weekly Game</h3></div>
+                        <div style='margin-top: 5px; cursor: default;'>Additional Title here<br/><?php echo Yii::t('youtoo', 'credit bonus'); ?></div><hr style="margin-top: 5px; margin-bottom: 5px;"/>
+                        <div style="font-size: 10px; margin-bottom: 10px; cursor: default;"><?php echo Yii::t('youtoo', 'Click Here for entry to the<br/>weekly freeroll'); ?></div>                      
                         <div style="margin-top: 25px; margin-bottom: 10px;"><a id="entry<?php echo $i; ?>" href="/newpage" class="btn btn-default btn-lg" style="background-color: #F9D83D !important; border-color: #F9D83D;"><?php echo Yii::t('youtoo', 'Free Weekly Game'); ?></a></div>
                     </div>
                 </div>

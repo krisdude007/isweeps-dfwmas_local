@@ -76,17 +76,12 @@ foreach ($game->gameChoiceAnswers as $answer) {
                                             ?>
                                             <tr class="<?php echo $q % 2 == 0 ? 'even' : 'odd'; ?>" style="cursor: default; border-top: 3px solid #292929;">
                                                
-                                                <td class="alignLeft" style="vertical-align: middle; text-align: left; color: #f9d83d; border-top: none; font-size: 15px;"><?php echo $game->question; ?></td>
+                                                <td class="alignLeft gamechoice-<?php echo $q; ?>" style="vertical-align: middle; text-align: left; color: #f9d83d; border-top: none; font-size: 15px;"><?php echo $game->question; ?></td>
                                                 <td style="vertical-align: middle; border-top: none; border-right: 1px solid #424242; color: #ffffff;">
                                                     <?php
                                                     $form = $this->beginWidget('CActiveForm', array(
-                                                        //'id' => 'game-choice-form',
                                                         'enableAjaxValidation' => true,
-                                                        //'action' => Yii::app()->createUrl('/winlooseordraw/'.$game->id),
                                                         'enableClientValidation' => true,
-                                                        //'clientOptions' => array(
-                                                            //'validateOnSubmit' => true,
-                                                        //)
                                                         'htmlOptions' => array('onsubmit' => 'return submitChoice(this);return false;',),
                                                     ));
                                                     
@@ -160,6 +155,8 @@ foreach ($game->gameChoiceAnswers as $answer) {
     }
         
     function submitChoice(me) {
+        var row = $(me).closest("tr");
+        //console.log(me);
              $.ajax({
                 type: 'post',
                 url: '/game/ajaxWinLooseOrDraw',
@@ -171,7 +168,8 @@ foreach ($game->gameChoiceAnswers as $answer) {
                     }
                         if (data.success) {
                             $(me).find('input[type="submit"]').prop( "disabled",true);
-//                            $(me).find('input[type="reset"]').prop( "disabled",true);                                
+//                            $(me).find('input[type="reset"]').prop( "disabled",true);
+                              row.css('background-color','#142E02');
                     }
                     if (data.error) {
                         alert(data.error);
