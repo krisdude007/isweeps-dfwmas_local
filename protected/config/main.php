@@ -80,6 +80,7 @@ $config_array = array(
                 'cannotplay' =>  '/site/cannotplay',
                 'site/index' => '/site/payandplay',
                 'contact' => '/site/contact',
+                'newpage' => '/site/newpage',
                 'multiplechoice/<id:\d+>' => '/game/multiple4',
                 'thankyoumobile' => '/game/thankyoumobile',
                 'thankyou' => '/game/thankyou',

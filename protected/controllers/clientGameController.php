@@ -299,7 +299,7 @@ class clientGameController extends GameController {
     
     
     public function actionAjaxWinLooseOrDraw() {
-        
+        var_dump($_POST);exit;
         if (empty(Yii::app()->session)) {
             echo json_encode(array('error' => Yii::t('youtoo', 'User not logged in.')));
             exit;
@@ -314,7 +314,8 @@ class clientGameController extends GameController {
             echo json_encode(array('error' => Yii::t('youtoo', 'All questions answered')));
             exit;
         } else {
-            
+//            echo json_encode(array('count' => $countOfSubmissions));
+//            exit;
         }
         
         if (eGameChoice::getNumberOfActiveGames() > 0) {

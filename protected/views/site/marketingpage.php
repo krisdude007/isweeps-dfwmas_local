@@ -1,10 +1,10 @@
 <div id="pageContainer" class="container" style="padding-left: 0px; padding-right: 0px; background-color: #0b1112; "><?php //if(isset($_GET['f'])){ echo $_GET['f']; } exit;        ?>
     <div class="subContainer" style="padding: 0px;">
         <?php $this->renderPartial('_sideBar', array()); ?>
-        <a href="/winlooseordraw/157"><img src="/webassets/images/laliga/image_web_azteca-concursos_background.png" style="position: relative; top: -28px; max-width: 102.6%; left: -7px;"/>
+        <a href="/winlooseordraw/157"><img src="/webassets/images/laliga/image_web_azteca-concursos_background.png" style="position: relative; max-width: 102.6%; left: -7px;"/>
         </a>
         <div class="row">
-            <div class="col-sm-8 col-sm-offset-2" style="background-color: #2a3335; position: relative; top: -383px; margin-left: 10.9333%; min-width: 660px; min-height: 200px;">
+            <div class="col-sm-8 col-sm-offset-2" style="background-color: #2a3335; position: relative; top: -356px; margin-left: 14.9333%; min-width: 660px; min-height: 200px;">
                 <div style="float: left; max-width: 350px;">
                     <h3 style="text-align: left; color: #edbc5a;font-weight: 300;">Juego</h3>
                     <p style="text-align: left; color: #ffffff; font-size: 12px;">Cada viernes y sábado, Azteca transmitirá un partido de fútbol.
@@ -35,18 +35,18 @@
                                    type="application/x-shockwave-flash"
                                    pluginspage="http://www.macromedia.com/go/getflashplayer"
                                    allowFullScreen="true"
-                                   autoplay="true"
-                                   flashvars="file=<?php echo Yii::app()->createUrl('/webassets/videos/Azteca_30_Sec_Promo_Generic_WEB.mov') ?>&autostart=true&stretching=exactfit&autoPlay=true&controlbar=none" />
+                                   autoplay="false"
+                                   flashvars="file=<?php echo Yii::app()->createUrl('/webassets/videos/Azteca_30_Sec_Promo_Generic_WEB.mov') ?>&autostart=false&stretching=exactfit&autoPlay=false&controlbar=none" />
                          </object>
                 </div>
             </div>
         </div>
         <div class="row">
-            <img src="/webassets/images/laliga/image_divider.png" style="position: relative; top: -355px;"/>
-            <a href="/winlooseordraw/157"><img src="/webassets/images/laliga/Button_juega-ahora.png" style="position: absolute; top: 465px; right: 320px"/></a>
+            <img src="/webassets/images/laliga/image_divider.png" style="position: relative; top: -325px;"/>
+            <a href="/winlooseordraw/157"><img src="/webassets/images/laliga/Button_juega-ahora.png" style="position: absolute; top: 465px; right: 365px"/></a>
         </div>
         <div class="row">
-            <div class="col-sm-4 col-sm-offset-2" style="background-color: #2a3335; position: relative; top: -324px; margin-left: 10.9333%; min-width: 329px; min-height: 604px; margin-bottom: -200px;">
+            <div class="col-sm-4 col-sm-offset-2" style="background-color: #2a3335; position: relative; top: -294px; margin-left: 14.9333%; min-width: 329px; min-height: 604px; margin-bottom: -200px;">
                 <h3 style="text-align: left; color: #edbc5a;font-weight: 300;">Cómo participar</h3>
                 <p style="text-align: left; color: #ffffff; font-size: 12px;">El sorteo para el concurso LIGA MX VIERNES
                     FUTBOLERO se llevará a cabo todos los viernes a partir
@@ -80,7 +80,7 @@
                     siguiente partido transmitido.
                 </p>
             </div>
-            <div class="col-sm-4" style="background-color: #2a3335; position: relative; top: -324px; margin-left: 0.9633%; min-width: 321px; min-height: 201px;">
+            <div class="col-sm-4" style="background-color: #2a3335; position: relative; top: -294px; margin-left: 0.9633%; min-width: 321px; min-height: 201px;">
                 <h3 style="text-align: left; color: #edbc5a;font-weight: 300;">Lista de Premios</h3>
                 <p style="text-align: left; color: #ffffff; font-size: 12px;">¡Puedes ganar dinero en efectivo y premios! Cada
                     viernes por la noche, a partir del 21 de septiembre

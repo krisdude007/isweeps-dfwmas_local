@@ -26,7 +26,7 @@
                         <div class="faq panel-heading" style='padding: 0px;'>
                             <h3 class="faq panel-title" style='padding: 5px;text-align: left;'><span class="pull-left clickable panel-collapsed"><i class="glyphicon glyphicon-chevron-right" style='top: 0px;'></i>&nbsp;&nbsp;</span>What is the price to enter if I choose the paid method?</h3>
                         </div>
-                        <div class="faq panel-body" style='background-color: #eeeeee; border-color: #eeeeee; display: none; margin: 15px; text-align: left;'>The Sweepstakes costs $1 (one US dollar) dollar to enter when using the paid method.  There may also be free to enter sweepstakes from time to time.</div>
+                        <div class="faq panel-body" style='background-color: #eeeeee; border-color: #eeeeee; display: none; margin: 15px; text-align: left;'>The Sweepstakes costs $5 (five US dollars) dollar to enter when using the paid method.  There may also be free to enter sweepstakes from time to time.</div>
                     </div>
                 </div>
                 <br/>

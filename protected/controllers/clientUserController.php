@@ -229,8 +229,8 @@ class clientUserController extends UserController {
 
                     }
                 }
-
-                $this->redirect($this->createUrl('/site/index'));
+                
+                $this->redirect($this->createUrl('/pickgame'));
                 AuditUtility::save($this, $_REQUEST);
 
             } else {

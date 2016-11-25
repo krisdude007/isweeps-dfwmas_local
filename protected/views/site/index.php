@@ -21,7 +21,7 @@ $cs->registerScriptFile(Yii::app()->request->baseurl . '/core/webassets/js/jquer
             </div>
         <?php else: ?>
             <?php if (isset($_GET['f']) && $_GET['f'] == 'g'): ?>
-                <div class='col-sm-12' style='padding-left: 12px; padding-right: 10px; clear: both;'>
+                <div class='col-sm-12' style='padding-left: 12px; padding-right: 10px; clear: both; position: relative; top: -28px;'>
                     <img src="/webassets/images/laliga/image_congrats<?php echo (Yii::app()->language == 'en') ? '_eng' : ''; ?>.png" style=" max-width: 100%; margin-bottom: 10px;"/>
                 </div>
             <?php elseif (isset($_GET['f']) && $_GET['f'] == 'p'): ?>
