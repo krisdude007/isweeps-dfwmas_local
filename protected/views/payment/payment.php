@@ -163,7 +163,7 @@ $stripe = StripeUtility::config();
                         <div style="background-color: #f2f2f2;"><h3 style="margin-top: 0px; min-height: 43px; padding-top: 8px; margin-bottom: 0px; font-weight: 300;">$<?php echo $payCashArray[$i]; ?></h3></div>
                         <div style='margin-top: 5px;'><?php echo $payCreditArray[$i]; ?><br/><?php echo Yii::t('youtoo', 'credit bonus'); ?></div><hr style="margin-top: 5px; margin-bottom: 5px;"/>
     <!--                        <div style="font-size: 10px; margin-bottom: 10px;"><?php echo Yii::t('youtoo', 'Entry to the<br/>weekly freeroll'); ?></div>-->
-                        <div style="margin-top: 25px;"><a id="entry<?php echo $i; ?>" href="/payment?ci=<?php echo $i; ?>&gid=<?php echo $game_id; ?>" class="btn btn-default btn-md" style="min-width: 114px; min-height: 37px;"><?php echo Yii::t('youtoo', 'Select'); ?></a></div>
+                        <div style="margin-top: 25px;"><a id="entry<?php echo $i; ?>" href="/payment?ci=<?php echo $i; ?>" class="btn btn-default btn-md" style="min-width: 114px; min-height: 37px;"><?php echo Yii::t('youtoo', 'Select'); ?></a></div>
                     </div>
                     <?php }
                 ?>
@@ -252,12 +252,12 @@ $stripe = StripeUtility::config();
                                             data-locale="en"
                                     data-label="Pay with card"></script>
                                     <input id="amount" type="hidden" name="amount" value="<?php echo $payCashArray[$cashIndex]; ?>"/>
-                                    <input id="game_id" type="hidden" name="game_id" value="<?php echo $game_id; ?>"/>
+                                    <!--<input id="game_id" type="hidden" name="game_id" value="<?php //echo $game_id; ?>"/>-->
                                 </form>
                             </div>
                         </div>
                         <div>
-                            <a id="paypal-express" style="font-size: 14pt;text-decoration: underline;" href="<?php echo Yii::app()->createURL("/expressCheckOut/$payCashArray[$cashIndex]/$game_id"); ?>"><img src="https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif" alt="PayPal Credit" /></a>
+                            <a id="paypal-express" style="font-size: 14pt;text-decoration: underline;" href="<?php echo Yii::app()->createURL("/expressCheckOut/$payCashArray[$cashIndex]"); ?>"><img src="https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif" alt="PayPal Credit" /></a>
                         </div>
                         <!--                        <form id="paypal-prepay-form" action="/processpaypalprepay" method="post">
                         <?php //echo CHtml::link(Yii::t('youtoo', 'Pay Using Paypal'), array('#'), array('data-toggle' => 'modal', 'data-target' => '#modalPaypalDirect', 'class' => 'btn btn-default btn-sm'));  ?>

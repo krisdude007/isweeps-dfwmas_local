@@ -613,7 +613,7 @@ class GameUtility {
 
     public static function getCashBalance($user_id){
 
-        return self::getTotalUserTransactionBalance($user_id) - self::getTotalUserResponses($user_id);
+        return self::getTotalUserTransactionBalance($user_id) - self::getTotalUserGames($user_id);
     }
 
     public static function getNextTransactionID($user_id) {
@@ -635,7 +635,24 @@ class GameUtility {
         return $nextTransactionID;
     }
 
-    public static function getTotalUserResponses($user_id) {
+    public static function getTotalUserGames($user_id) {
+//        $totalResponses = 0;
+//
+//        $games = eGameChoice::model()->findAllByAttributes(array('price' => 1));
+//
+//        foreach($games as $game) {
+//            $totalResponses = $totalResponses + eGameChoiceResponse::model()->countByAttributes(array('game_choice_id' => $game->id, 'user_id' => $user_id));
+//        }
+        
+        $result = Yii::app()->db->createCommand("SELECT COUNT(GR.game_unique_id) AS total_responses
+                FROM game_choice AS G
+                RIGHT JOIN game_choice_response AS GR ON GR.game_choice_id = G.id AND GR.user_id = {$user_id}
+                GROUP BY GR.game_unique_id
+                ")->queryAll();
+        return count($result) * 5;
+    }
+    
+     public static function getTotalUserResponses($user_id) {
 //        $totalResponses = 0;
 //
 //        $games = eGameChoice::model()->findAllByAttributes(array('price' => 1));
@@ -651,6 +668,8 @@ class GameUtility {
 
         return $result[0]['total_responses'];
     }
+    
+    
 
     public static function getTotalUserTransactionBalance($user_id) {
         $transactionBalance = 0;

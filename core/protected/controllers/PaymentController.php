@@ -236,7 +236,7 @@ class PaymentController extends Controller {
         $transactionID = PaymentUtility::stripePaymentPrepay($_POST['amount'], $_POST['stripeToken']);
         $result = MailUtility::send('thankyou', $userEmail->email, array('link' =>Yii::app()->createAbsoluteUrl("/", array()),'amount' => $_POST['amount']), false);
         if ($result) {
-            $game_id = $_POST['game_id'];
+            $game_id = isset($_POST['game_id']) ? $_POST['game_id'] : NULL;
             if(empty($game_id)) {
 
                 if ($this->isMobile()) {
