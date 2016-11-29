@@ -240,7 +240,7 @@ class AdminGameController extends Controller {
             $game = new eGameChoice;
             $game->open_date = date('Y-m-d H:i:s', strtotime(date("Y-m-d H:i:s")));
             $game->close_date = date('Y-m-d H:i:s', strtotime('+7 days', strtotime(date("Y-m-d H:i:s"))));
-            
+
             if ($type == 'multiple' || $type == 'sub') {
                 if ($anum == 2) {
                     $gameChoiceAnswers = Array(new eGameChoiceAnswer,
@@ -352,7 +352,7 @@ class AdminGameController extends Controller {
                 $games = null;
             }
         } else {
-            $games = eGameChoice::model()->{$type}()->recent()->notdeleted()->asc()->with('gameChoiceAnswers')->findAll();
+            $games = eGameChoice::model()->{$type}()->recent()->notdeleted()->with('gameChoiceAnswers')->findAll();
         }
         
         
