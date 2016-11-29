@@ -151,7 +151,7 @@ Yii::app()->facebook->initJs($output);
                     <div><a href="/contact"><?php echo Yii::t('youtoo', 'Support'); ?></a></div>
                     <div><a href="#"><?php echo Yii::t('youtoo', 'How it works'); ?></a></div>
                     <div><a href="#"><?php echo Yii::t('youtoo', 'Rules & Scoring'); ?></a></div>
-                    <div><a href="/faq"><?php echo Yii::t('youtoo', 'FAQ'); ?></a></div>
+                    <div><a href="https://laliga.youtoo.com/faq"><?php echo Yii::t('youtoo', 'FAQ'); ?></a></div>
                 </div>
                 <div class="col-sm-3" id="legalDrop">
                     <div class="dropHead"><?php echo Yii::t('youtoo', 'LEGAL'); ?></div>
