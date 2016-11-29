@@ -19,7 +19,7 @@
     -->        </div>
             <div class='congrats-buttons' style="margin-bottom: 80px;">
                 <div class='row col-sm-12' style='padding-right: 0px;'>
-                 <span class='col-sm-4' style='padding-left: 0px; visibility: hidden;'><a class='btn btn-default btn-md' href=''></a></span>
+                 <span class='col-sm-4' style='padding-left: 0px; display: none;'><a class='btn btn-default btn-md' href=''></a></span>
                     <span class='col-sm-4'><a class='btn btn-default btn-md' href='<?php echo $this->createUrl('/site/index', array()); ?>'><?php echo Yii::t('youtoo','Play Now'); ?></a></span>
 <!--                    <span class='col-sm-4'><a class='btn btn-default btn-md' href='<?php echo $this->createUrl('/redeem', array()); ?>'><?php echo Yii::t('youtoo','Shop Now'); ?></a></span>-->
                 </div>
