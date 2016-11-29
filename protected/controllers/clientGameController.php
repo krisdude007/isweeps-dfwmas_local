@@ -299,7 +299,6 @@ class clientGameController extends GameController {
     
     
     public function actionAjaxWinLooseOrDraw() {
-        
         if (empty(Yii::app()->session)) {
             echo json_encode(array('error' => Yii::t('youtoo', 'User not logged in.')));
             exit;
@@ -309,7 +308,7 @@ class clientGameController extends GameController {
         //$user = clientUser::model()->findByPK($user_id);
         $noOfSubmissions = eGameChoiceResponse::model()->findAllByAttributes(array('game_unique_id' => Yii::app()->session['gameUniqueId']));
         $countOfSubmissions = count($noOfSubmissions);
-        
+                
         if ($countOfSubmissions >= Yii::app()->session['noOfQs']) {
             echo json_encode(array('error' => Yii::t('youtoo', 'All questions answered')));
             exit;
@@ -367,11 +366,22 @@ class clientGameController extends GameController {
                 exit;
             }
                       
+            if (!is_array($_SESSION['choiceList'])) {
+                $_SESSION['choiceList'] = array();
+            }
+            
             if ($response->validate()) {
                 $response->save();
                 Yii::app()->session['gamechoiceresponseId'] = $response->id;
                 if ($countOfSubmissions < (Yii::app()->session['noOfQs'] - 1)) {
-                    echo json_encode(array('success' => Yii::t('youtoo', 'Current question saved')));
+                        $_SESSION['choiceList'][] = array(
+                        'game_choice_answer_id'=> $response->game_choice_answer_id,
+                        'game_choice_id' => $response->game_choice_id,
+                            );
+                        Yii::app()->session['noOfAs'] += 1;
+                        Yii::app()->session['noOfRemaining'] = Yii::app()->session['noOfQs'] - Yii::app()->session['noOfAs'];
+                    
+                    echo json_encode(array('success' => Yii::t('youtoo', 'Current question saved'), 'remainingSubmissions' => Yii::app()->session['noOfRemaining']));
                     exit;
                 }
                 if ($countOfSubmissions == (Yii::app()->session['noOfQs'] - 1)) {
@@ -398,7 +408,11 @@ class clientGameController extends GameController {
         
         if (isset($_GET['noOfQs']) && $_GET['noOfQs'] > 0) {
             $noOfQs = $_GET['noOfQs'];
+            
+            $_SESSION['choiceList'] = array();
             Yii::app()->session['noOfQs'] = $noOfQs;
+            Yii::app()->session['noOfAs'] = 0;
+            Yii::app()->session['noOfRemaining'] = $noOfQs - Yii::app()->session['noOfAs'];
             
             $uniqueId = (uniqid('', true));;
             Yii::app()->session['gameUniqueId'] = $uniqueId;
