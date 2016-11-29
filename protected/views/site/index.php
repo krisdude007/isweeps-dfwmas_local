@@ -14,7 +14,7 @@ $cs->registerScriptFile(Yii::app()->request->baseurl . '/core/webassets/js/jquer
         <?php if (Yii::app()->user->isGuest): ?>
             <a href="<?php echo $url; ?>"><img src="/webassets/images/laliga/Image_Hero_Azteca-Concursos<?php echo (Yii::app()->language == 'en') ? '_eng' : ''; ?>.png" style="position: relative; max-width: 102.6%; left: -7px;"/>
             </a>
-            <a href="/marketingpage"><span style="position: absolute; top: 240px;right: 90px; color: #ffffff;"><?php echo Yii::t('youtoo','You want to know more?'); ?>&nbsp;&nbsp;&nbsp;<img src="/webassets/images/laliga/Button_Yellow-Arrow.png"/></span></a>
+            <a href="/marketingpage"><span style="position: absolute; top: 260px;right: 125px; color: #ffffff;"><?php echo Yii::t('youtoo','You want to know more?'); ?>&nbsp;&nbsp;&nbsp;<img src="/webassets/images/laliga/Button_Yellow-Arrow.png"/></span></a>
             <div style="position: relative; top: 15px;">
                 <span><a href=<?php echo $url; ?>><img src="/webassets/images/laliga/Image_Banner_Juega-Ahora-Por-1<?php echo (Yii::app()->language == 'en') ? '_eng' : ''; ?>.png" style="margin-left: -12px;max-width: 405px; width:100%;"/></a></span>
                 <span><a href="<?php //echo $currentWinLooseOrDrawGame['url']; ?>"><img src="/webassets/images/laliga/Image_Banner_Viernes-Futbolero<?php echo (Yii::app()->language == 'en') ? '_eng' : ''; ?>.png" style="max-width: 405px; width:100%; margin-left: 10px;"/></a></span>
@@ -37,7 +37,7 @@ $cs->registerScriptFile(Yii::app()->request->baseurl . '/core/webassets/js/jquer
             <?php else: ?>
                 <a href="<?php echo $url; ?>"><img src="/webassets/images/laliga/Image_Hero_Azteca-Concursos<?php echo (Yii::app()->language == 'en') ? '_eng' : ''; ?>.png" style="position: relative; max-width: 102.6%; left: -7px;"/>
                 </a>
-                <a href="/marketingpage"><span style="position: absolute; top: 240px;right: 90px; color: #ffffff;"><?php echo Yii::t('youtoo','You want to know more?'); ?>&nbsp;&nbsp;&nbsp;<img src="/webassets/images/laliga/Button_Yellow-Arrow.png"/></span></a>
+                <a href="/marketingpage"><span style="position: absolute; top: 260px;right: 125px; color: #ffffff;"><?php echo Yii::t('youtoo','You want to know more?'); ?>&nbsp;&nbsp;&nbsp;<img src="/webassets/images/laliga/Button_Yellow-Arrow.png"/></span></a>
                 <div style="position: relative; top: 15px;">
                     <span><a href="<?php //echo $url; ?>"><img src="/webassets/images/laliga/Image_Banner_Juega-Ahora-Por-1<?php echo (Yii::app()->language == 'en') ? '_eng' : ''; ?>.png" style="margin-left: -12px;max-width: 405px; width:100%;"/></a></span>
                     <span><a href="<?php //echo $currentWinLooseOrDrawGame['url']; ?>"><img src="/webassets/images/laliga/Image_Banner_Viernes-Futbolero<?php echo (Yii::app()->language == 'en') ? '_eng' : ''; ?>.png" style="max-width: 405px; width:100%; margin-left: 10px;"/></a></span>
