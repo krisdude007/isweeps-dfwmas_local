@@ -31,9 +31,8 @@
                         <div id="dropdown-lvl11" class="panel-collapse collapse">
                         <?php endif; ?>
                         <div class="panel-body">
-                            <ul class="nav navbar-nav">
-                                <li><a <?php if ($this->activeSubNavLink == 'marketingpage'): ?>style='font-size: 10px;padding: 10px 2px;'<?php else: ?>style='color: #ffffff; font-size: 10px;padding: 10px 2px;'<?php endif; ?> <?php if ($this->activeSubNavLink == 'marketingpage'): ?>class='active'<?php endif; ?> href="<?php echo $this->createUrl('/site/marketingpage', array()); ?>"><?php echo Yii::t('youtoo', 'Luxury Trip'); ?></a></li>
-                                <!--<li><a <?php // if ($this->activeSubNavLink == 'marketingpage2'): ?>style='font-size: 10px;padding: 10px 2px;'<?php // else: ?>style='color: #ffffff; font-size: 10px;padding: 10px 2px;'<?php // endif; ?> <?php // if ($this->activeSubNavLink == 'marketingpage2'): ?>class='active'<?php // endif; ?> href="<?php // echo $this->createUrl('/site/marketingpage2', array()); ?>"><?php // echo Yii::t('youtoo', 'Liga MX -  Balón Autografíado'); ?></a></li>-->
+                            <ul class="nav navbar-nav" style="width: 100%;">
+                                <li><a <?php if ($this->activeSubNavLink == 'marketingpage'): ?> class='active'<?php endif; ?> href="<?php echo $this->createUrl('/site/marketingpage', array()); ?>"><?php echo Yii::t('youtoo', 'Luxury Trip'); ?></a></li>
                             </ul>
                         </div>
                     </div>
