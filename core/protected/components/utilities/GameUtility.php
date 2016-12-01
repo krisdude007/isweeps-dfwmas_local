@@ -649,7 +649,7 @@ class GameUtility {
                 GROUP BY GR.game_unique_id
                 ")->queryAll();
                 foreach ($result as $r) {
-                   if ($r->total_responses > 1) {
+                   if ($r['total_responses'] > 1) {
                        $total = $total + 5;
                 } else {
                     $total = $total + 1;
