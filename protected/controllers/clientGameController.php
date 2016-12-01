@@ -296,7 +296,19 @@ class clientGameController extends GameController {
         }
     }
     
-    
+    public function actionAjaxOneFreeCredit() {
+        if (empty(Yii::app()->session)) {
+            echo json_encode(array('error' => Yii::t('youtoo', 'User not logged in.')));
+            exit;
+        }
+        $type = 'game_choice';
+        $user_id = Yii::app()->user->getId();
+        $result = PaymentUtility::oneFreeCredit('game_choice', 1, 1);
+        
+        if ($result) {
+            echo json_encode(array('added' => Yii::t('youtoo', 'one free credit added')));
+        }
+    }
     
     public function actionAjaxWinLooseOrDraw() {
         if (empty(Yii::app()->session)) {
@@ -414,7 +426,7 @@ class clientGameController extends GameController {
             Yii::app()->session['noOfAs'] = 0;
             Yii::app()->session['noOfRemaining'] = $noOfQs - Yii::app()->session['noOfAs'];
             
-            $uniqueId = (uniqid('', true));;
+            $uniqueId = (uniqid('', true));
             Yii::app()->session['gameUniqueId'] = $uniqueId;
             
             $this->redirect($this->createUrl("/winlooseordraw"));
