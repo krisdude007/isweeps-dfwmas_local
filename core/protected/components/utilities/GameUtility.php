@@ -643,13 +643,19 @@ class GameUtility {
 //        foreach($games as $game) {
 //            $totalResponses = $totalResponses + eGameChoiceResponse::model()->countByAttributes(array('game_choice_id' => $game->id, 'user_id' => $user_id));
 //        }
-        
+        $total = 0;
         $result = Yii::app()->db->createCommand("SELECT COUNT(GR.game_unique_id) AS total_responses
-                FROM game_choice AS G
-                RIGHT JOIN game_choice_response AS GR ON GR.game_choice_id = G.id AND GR.user_id = {$user_id}
+                FROM game_choice AS G, game_choice_response AS GR where GR.game_choice_id = G.id AND GR.user_id = {$user_id}
                 GROUP BY GR.game_unique_id
                 ")->queryAll();
-        return count($result) * 5;
+                foreach ($result as $r) {
+                   if ($r->total_responses > 1) {
+                       $total = $total + 5;
+                } else {
+                    $total = $total + 1;
+                }  
+                }
+               return $total;
     }
     
      public static function getTotalUserResponses($user_id) {
@@ -679,7 +685,7 @@ class GameUtility {
         foreach($transactions as $transaction) {
             $transactionBalance = $transactionBalance + $transaction->price;
         }
-
+        //var_dump($transactionBalance);exit;
         return $transactionBalance;
     }
 

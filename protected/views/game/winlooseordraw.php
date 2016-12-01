@@ -42,12 +42,12 @@ foreach ($game->gameChoiceAnswers as $answer) {
 
         <div class='row' style='margin-top: -30px;'>
             <div class="col-sm-12" style="padding-right: 0px; padding-left: 0px; left: -23px;top: -50px;">
-                <div class="form" style="position: relative; top: 22px; min-width: 923px; min-height: 712px; background-color:#002E42; clear: both;">
+                <div class="form" style="position: relative; top: 22px; min-width: 923px; min-height: 740px; background-color:#002E42; clear: both;">
                     <!--                <div class='gameEntry' style='width: 100%; background-color: #eeeeee; min-height: 299px; min-width: 823px;'>-->
                     <div class="game" class="fab-left fab-voting-left" style='clear: both;'>
                         <div class="col-xs-11 col-sm-11 col-lg-11 col-sm-offset-1" style="padding-left: 0px; padding-right: 0px; clear: both; margin-left: 5.3%;">
+                            <div id='resultCount' class='count' style="margin-top: 15px;">You have : <?php echo Yii::app()->session['noOfRemaining']; ?> answers left.</div>
                             <div class="table-responsive" style="height: 630px; overflow: auto; position: relative;  width: 98%; margin-top: 20px;">
-                                <div id='resultCount' class='count'>You have : <?php echo Yii::app()->session['noOfRemaining']; ?> answers left.</div>
                                 <?php //var_dump(Yii::app()->session['choiceList']);  ?>
                                 <table class="table">
                                     <thead style="background-color: #292929; border-color: #292929;">
@@ -141,8 +141,13 @@ foreach ($game->gameChoiceAnswers as $answer) {
 
     $('form').click(function (event) {
         //event.stopPropagation();
+        if (event.target.tagName !== 'LABEL') {
+            event.stopPropagation();
+            return false;
+        }
+        thisform = this;
         var row = $(this).closest("tr");
-        //console.log(this);
+        
         $.ajax({
             type: 'post',
             url: '/game/ajaxWinLooseOrDraw',
@@ -162,6 +167,11 @@ foreach ($game->gameChoiceAnswers as $answer) {
                             divData.innerHTML = "You have : " + countChoice + " answers left.";
                         }
                     }
+                    
+                    $(thisform).prop('onclick', null).off('click');
+                    $(thisform).find('label').each(function () {
+                        $(this).prop('onclick', null).off('click');
+                    });
 //                    $(this).find('input[type="submit"]').prop( "disabled",true);
 //                    $(me).find('input[type="reset"]').prop( "disabled",true);
                     row.css('background-color', '#142E02');

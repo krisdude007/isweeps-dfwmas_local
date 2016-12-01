@@ -261,7 +261,7 @@ class PaymentUtility {
 
     public static function stripePaymentPrepay($amount = 5, $token) {
 
-        $payCreditArray = Array("5" => "5", "10" => "13", "25" => "32", "50" => "65");
+        $payCreditArray = Array("5" => "5", "10" => "10", "25" => "15", "50" => "50");
 
         $stripe = StripeUtility::config();
 
@@ -304,7 +304,7 @@ class PaymentUtility {
 
     public static function paypalPaymentPrepay($amount = 5, $token) {
 
-        $payCreditArray = Array("5" => "5", "10" => "13", "25" => "32", "50" => "65");
+        $payCreditArray = Array("5" => "5", "10" => "10", "25" => "25", "50" => "50");
 
         $transaction = new eTransaction;
         $transaction->user_id = Yii::app()->user->getId();

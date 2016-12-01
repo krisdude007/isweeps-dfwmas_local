@@ -36,7 +36,7 @@ class clientUser extends eUser {
             array('age_accepted, eligibility_accepted', 'numerical', 'integerOnly' => true),
             array('username', 'email', 'message' => Yii::t('youtoo', 'Username is not a valid email address')),
             //array('username', 'numerical', 'integerOnly' => true, 'message'=>Yii::t('youtoo','Phone number must be a number')),
-            array('age_accepted', 'required', 'requiredValue' => 1, 'on' => 'register', 'message'=>Yii::t('youtoo','You must verify you are at least 18 years of age')),
+            array('age_accepted', 'required', 'requiredValue' => 1, 'on' => 'register', 'message'=>Yii::t('youtoo','You must verify you are at least 21 years of age')),
             array('eligibility_accepted', 'required', 'requiredValue' => 1, 'on' => 'register', 'message'=>Yii::t('youtoo','You must confirm that you are not playing from one of the above mentioned states')),
             array('password, first_name, last_name, source, paypal_preapproval_key', 'length', 'max' => 255),
             array('gender', 'length', 'max' => 1),

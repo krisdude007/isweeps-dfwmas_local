@@ -76,13 +76,13 @@ Yii::app()->clientScript->registerScriptFile('http://cdn.jquerytools.org/1.2.7/a
             <div class='col-sm-12'>
                 <?php echo $form->checkbox($user, 'age_accepted', '', array('checked' => '', 'value' => 1)); ?>
                 <span class='over_18'>
-                    <?php echo Yii::t('youtoo','I confirm that I am atleast 21 years of age.'); ?>
+                    <?php echo Yii::t('youtoo','I confirm that I am at least 21 years of age.'); ?>
                 </span>
                 <?php echo $form->error($user, 'age_accepted'); ?>
             </div>
             <div class="row">
                 <div id="states" class="col-sm-7 col-sm-offset-4" style="margin-top: 20px; text-align: left; padding-left: 0px;">
-                    <span>Este juego no está disponible en:
+                    <span>This game is not available in: 
                     California, New Mexico, <br/>Louisiana, Massachusetts, Georgia, Montana</span>
                 </div>
             </div>

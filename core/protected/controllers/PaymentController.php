@@ -79,7 +79,7 @@ class PaymentController extends Controller {
         $balance = eCreditBalance::getTotalUserBalance($user->id);
 
         $payCashArray   = Array(1 => 5, 2 => 10, 3 => 25, 4 => 50); //0 index with default key as 5
-        $payCreditArray = Array(1 => 5, 2 => 13, 3 => 32, 4 => 65); //0 index with default key as 5
+        $payCreditArray = Array(1 => 5, 2 => 10, 3 => 25, 4 => 50); //0 index with default key as 5
 
         $key = '';
 //        if(!Yii::app()->user->isGuest){

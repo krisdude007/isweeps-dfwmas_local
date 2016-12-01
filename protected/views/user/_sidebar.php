@@ -4,15 +4,16 @@
             <li class="sidebar-brand" style="text-align: center; height: 40px; text-indent: 0px;"><a href="<?php echo $this->createUrl('/user/profile', array()); ?>" style="font-size: 17px; font-weight: 500;"><?php echo empty($this->user->first_name) ? '' : $this->user->first_name; ?> <?php echo empty($this->user->last_name) ? '' : $this->user->last_name; ?></a></li>
             <?php //$geoLocation = GeoUtility::GeoLocation(); ?>
             <?php //if ($geoLocation['isValid']): ?>
-                <div style="text-align: center; color: #ffffff; font-size: 12px;"><?php echo Yii::t('youtoo', 'Cash Balance'); ?> : <?php echo '<span style="color: #35aae5;">$' . GameUtility::getCashBalance(Yii::app()->user->getId()) . '</span>'; ?></div>
-                <!--<div style="text-align: center; color: #ffffff; font-size: 12px;"><?php echo Yii::t('youtoo', 'Credits'); ?> : <?php // echo '<span style="color: #35aae5;">' . ClientUtility::getTotalUserBalanceCredits() . '</span>'; ?></div>-->
+                <div style="text-align: center; color: #ffffff; font-size: 12px;"><?php echo Yii::t('youtoo', 'Bonus Bucks'); ?> : <?php echo '<span style="color: #35aae5;">$' . GameUtility::getCashBalance(Yii::app()->user->getId()) . '</span>'; ?></div>
+                <div style="text-align: center; color: #ffffff; font-size: 12px;"><?php echo Yii::t('youtoo', 'Game Credits'); ?> : <?php // echo '<span style="color: #35aae5;">' . ClientUtility::getTotalUserBalanceCredits() . '</span>'; ?></div>
                 <a class="btn btn-default btn-sm startButton" style="text-indent: 0; line-height: normal; margin-top: 10px; font-size: 12px;" href="<?php echo $this->createUrl('/payment', array()); ?>"><?php echo Yii::t('youtoo', 'Add Funds'); ?></a><hr class='hr'/>
             <?php //endif; ?>
         <?php else: ?>
                 <?php if (!Yii::app()->user->isGuest): ?>
-                    <li class="sidebar-brand" style="text-indent: 30px; height: 55px;"><a href="<?php echo $this->createUrl('/user/profile', array()); ?>"" style="font-size: 21px; font-weight: 500;"><?php echo Yii::t('youtoo', 'Join Now'); ?></a></li><li class="btn btn-default btn-sm startButton" style="text-indent: 0; line-height: normal;"><?php echo Yii::t('youtoo', 'Get Started'); ?></li><hr class='hr'/>
+                    <li class="sidebar-brand" style="text-indent: 30px; height: 55px;"><a href="<?php echo $this->createUrl('/user/profile', array()); ?>" style="font-size: 21px; font-weight: 500;"><?php echo Yii::t('youtoo', 'Join Now'); ?></a></li><li class="btn btn-default btn-sm startButton" style="text-indent: 0; line-height: normal;"><?php echo Yii::t('youtoo', 'Get Started'); ?></li><hr class='hr'/>
                 <?php else: ?>
-                    <li class="sidebar-brand" style="text-indent: 30px; height: 55px;"><a href="<?php echo $this->createUrl('/register', array()); ?>"" style="font-size: 21px; font-weight: 500;"><?php echo Yii::t('youtoo', 'Join Now'); ?></a></li><a class="btn btn-default btn-sm startButton" href='/login' style="text-indent: 0; line-height: normal;"><?php echo Yii::t('youtoo', 'Get Started'); ?></a><hr class='hr'/>
+                    <!--<li class="sidebar-brand" style="text-indent: 30px; height: 55px;"><a href="<?php // echo $this->createUrl('/register', array()); ?>" style="font-size: 21px; font-weight: 500;"><?php // echo Yii::t('youtoo', 'Join Now'); ?></a></li>-->
+                    <a class="btn btn-default btn-sm startButton" href='/login' style="text-indent: 0; line-height: normal;"><?php echo Yii::t('youtoo', 'Login Now'); ?></a><hr class='hr'/>
                 <?php endif; ?>
         <?php endif; ?>
         <li><a href="<?php echo $this->createUrl('/site/index', array()); ?>"><?php echo Yii::t('youtoo', 'Main'); ?></a></li>
@@ -31,7 +32,7 @@
                         <?php endif; ?>
                         <div class="panel-body">
                             <ul class="nav navbar-nav">
-                                <li><a <?php if ($this->activeSubNavLink == 'marketingpage'): ?>style='font-size: 10px;padding: 10px 2px;'<?php else: ?>style='color: #ffffff; font-size: 10px;padding: 10px 2px;'<?php endif; ?> <?php if ($this->activeSubNavLink == 'marketingpage'): ?>class='active'<?php endif; ?> href="<?php echo $this->createUrl('/site/marketingpage', array()); ?>"><?php echo Yii::t('youtoo', 'Liga MX - $1,000'); ?></a></li>
+                                <li><a <?php if ($this->activeSubNavLink == 'marketingpage'): ?>style='font-size: 10px;padding: 10px 2px;'<?php else: ?>style='color: #ffffff; font-size: 10px;padding: 10px 2px;'<?php endif; ?> <?php if ($this->activeSubNavLink == 'marketingpage'): ?>class='active'<?php endif; ?> href="<?php echo $this->createUrl('/site/marketingpage', array()); ?>"><?php echo Yii::t('youtoo', 'Luxury Trip'); ?></a></li>
                                 <!--<li><a <?php // if ($this->activeSubNavLink == 'marketingpage2'): ?>style='font-size: 10px;padding: 10px 2px;'<?php // else: ?>style='color: #ffffff; font-size: 10px;padding: 10px 2px;'<?php // endif; ?> <?php // if ($this->activeSubNavLink == 'marketingpage2'): ?>class='active'<?php // endif; ?> href="<?php // echo $this->createUrl('/site/marketingpage2', array()); ?>"><?php // echo Yii::t('youtoo', 'Liga MX -  Balón Autografíado'); ?></a></li>-->
                             </ul>
                         </div>
