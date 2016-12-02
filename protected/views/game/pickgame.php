@@ -1,26 +1,31 @@
+<?php
+$entryArr = array(
+    1 => 'And up to one<br/> bonus entry',
+    2 => 'And up to 1000<br/> bonus entries',
+    3 => 'And up to 10,000<br/> bonus entries',
+    4 => 'And up to 50,000<br/> bonus entries',
+    5 => 'And up to 100,000<br/> bonus entries'
+);
+?>
 <div id="pageContainer" class="container" style="min-height: 655px;">
     <div class="subContainer">
-        <?php $this->renderPartial('/site/_sideBar', array('user' => $user)); ?>
+    <?php $this->renderPartial('/site/_sideBar', array('user' => $user)); ?>
         <div class="row">
             <a href="<?php echo Yii::app()->createUrl('/marketingpage'); ?>">
                 <div class="col-sm-12 btn btn-default" style="background-color: grey !important; color: #ffffff !important; border-color: grey !important;">
-                 HOW TO PLAY AND REVIEW THIS WEEKS QUESTIONS!
-            </div>
+                    HOW TO PLAY AND REVIEW THIS WEEKS QUESTIONS!
+                </div>
             </a>
         </div>
         <hr/>
         <br/>
         <div class="row">
             <div class='col-sm-12'>
-                <?php for ($i = 1; $i <= 5; $i++) { ?>
+            <?php for ($i = 1; $i <= 5; $i++) { ?>
                     <div class="paymentOptionsTop">
                         <div style="background-color: #f2f2f2;"><h3 class="changeText-<?php echo $gameArray[$i]; ?> " style="margin-top: 0px; min-height: 47px; font-size: 22px; padding-top: 5px; margin-bottom: 0px; font-weight: 300; cursor: default;"><?php echo $gameArray[$i]; ?> <?php echo ($gameArray[$i] > 1) ? 'questions' : 'question' ?></h3></div>
                         <div style='margin-top: 5px; cursor: default;'><?php echo $gameCreditArray[$i]; ?><br/><?php echo Yii::t('youtoo', 'game credits'); ?></div><hr style="margin-top: 5px; margin-bottom: 5px;"/>
-                        <?php if ($gameArray[$i] > 1): ?>
-                            <div style="font-size: 10px; margin-bottom: 10px; cursor: default;"><?php echo Yii::t('youtoo', 'Entry to the<br/>weekly freeroll'); ?></div>
-                        <?php else: ?>
-                            <div style="font-size: 10px; margin-bottom: 10px; cursor: default;"><?php echo Yii::t('youtoo', 'No entry to the<br/>weekly freeroll'); ?></div>                      
-                        <?php endif; ?>
+                        <div style="font-size: 10px; margin-bottom: 10px; cursor: default;"><?php echo Yii::t('youtoo', $entryArr[$i]); ?></div>                      
                         <div style="margin-top: 25px; margin-bottom: 10px;"><a id="entry<?php echo $i; ?>" href="/pickgame?noOfQs=<?php echo $gameArray[$i]; ?>" class="btn btn-default btn-md" style="min-width: 114px; min-height: 37px; background-color: #35A2CC !important; border-color: #35A2CC;"><?php echo Yii::t('youtoo', 'Select'); ?></a></div>
                     </div>
                 <?php }
@@ -30,7 +35,7 @@
         <div class="row">
             <div class="col-sm-12" style="background-color: #f6f6f6; margin-top: 10px; padding-left: 0px; padding-right: 0px;">
                 <p class="lead" style="display: none;font-size: 13px; vertical-align: middle; padding-top: 15px; font-weight: 500;">
-                    <?php echo Yii::t('youtoo', '') ?><img style="margin-left: 10px;" src='/webassets/images/laliga/icon_x.png'/>
+        <?php echo Yii::t('youtoo', '') ?><img style="margin-left: 10px;" src='/webassets/images/laliga/icon_x.png'/>
                 </p>
             </div>
         </div>
@@ -73,56 +78,61 @@
         </div>
     </div>
 </div>
-<script>   
-        $('.changeText-1').hover( 
+<script>
+    $('.changeText-1').hover(
             function () {
                 var $this = $('.statistics');
-                $this.data('initialText', $this.text());$this.text("I'm replaced! - 1");
+                $this.data('initialText', $this.text());
+                $this.text("I'm replaced! - 1");
             },
             function () {
                 var $this = $('.statistics');
                 $this.text($this.data('initialText'));
             }
-        );
-        $('.changeText-5').hover( 
+    );
+    $('.changeText-5').hover(
             function () {
                 var $this = $('.statistics');
-                $this.data('initialText', $this.text());$this.text("I'm replaced! - 5");
+                $this.data('initialText', $this.text());
+                $this.text("I'm replaced! - 5");
             },
             function () {
                 var $this = $('.statistics');
                 $this.text($this.data('initialText'));
             }
-        );
-        $('.changeText-10').hover( 
+    );
+    $('.changeText-10').hover(
             function () {
                 var $this = $('.statistics');
-                $this.data('initialText', $this.text());$this.text("I'm replaced! - 10");
+                $this.data('initialText', $this.text());
+                $this.text("I'm replaced! - 10");
             },
             function () {
                 var $this = $('.statistics');
                 $this.text($this.data('initialText'));
             }
-        );
-        $('.changeText-15').hover( 
+    );
+    $('.changeText-15').hover(
             function () {
                 var $this = $('.statistics');
-                $this.data('initialText', $this.text());$this.text("I'm replaced! - 15");
+                $this.data('initialText', $this.text());
+                $this.text("I'm replaced! - 15");
             },
             function () {
                 var $this = $('.statistics');
                 $this.text($this.data('initialText'));
             }
-        );
-        $('.changeText-20').hover( 
+    );
+    $('.changeText-20').hover(
             function () {
                 var $this = $('.statistics');
-                $this.data('initialText', $this.text());$this.text("I'm replaced! - 20");
+                $this.data('initialText', $this.text());
+                $this.text("I'm replaced! - 20");
             },
             function () {
                 var $this = $('.statistics');
                 $this.text($this.data('initialText'));
             }
-        );
+    );
 </script>
 
