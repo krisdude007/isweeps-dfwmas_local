@@ -24,7 +24,7 @@ $entryArr = array(
             <?php for ($i = 1; $i <= 5; $i++) { ?>
                     <div class="paymentOptionsTop">
                         <div style="background-color: #f2f2f2;"><h3 class="changeText-<?php echo $gameArray[$i]; ?> " style="margin-top: 0px; min-height: 47px; font-size: 22px; padding-top: 5px; margin-bottom: 0px; font-weight: 300; cursor: default;"><?php echo $gameArray[$i]; ?> <?php echo ($gameArray[$i] > 1) ? 'questions' : 'question' ?></h3></div>
-                        <div style='margin-top: 5px; cursor: default;'><?php echo $gameCreditArray[$i]; ?><br/><?php echo Yii::t('youtoo', 'game credits'); ?></div><hr style="margin-top: 5px; margin-bottom: 5px;"/>
+                        <div style='margin-top: 5px; cursor: default;'><?php echo $gameCreditArray[$i]; ?><br/><?php echo ($gameCreditArray[$i] == 1) ? Yii::t('youtoo', 'game credit') : Yii::t('youtoo', 'game credits'); ?></div><hr style="margin-top: 5px; margin-bottom: 5px;"/>
                         <div style="font-size: 10px; margin-bottom: 10px; cursor: default;"><?php echo Yii::t('youtoo', $entryArr[$i]); ?></div>                      
                         <div style="margin-top: 25px; margin-bottom: 10px;"><a id="entry<?php echo $i; ?>" href="/pickgame?noOfQs=<?php echo $gameArray[$i]; ?>" class="btn btn-default btn-md" style="min-width: 114px; min-height: 37px; background-color: #35A2CC !important; border-color: #35A2CC;"><?php echo Yii::t('youtoo', 'Select'); ?></a></div>
                     </div>
