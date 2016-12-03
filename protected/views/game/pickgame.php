@@ -1,10 +1,17 @@
 <?php
 $entryArr = array(
-    1 => 'And up to one<br/> bonus entry',
-    2 => 'And up to 1000<br/> bonus entries',
-    3 => 'And up to 10,000<br/> bonus entries',
-    4 => 'And up to 50,000<br/> bonus entries',
-    5 => 'And up to 100,000<br/> bonus entries'
+    1 => 'Up to one<br/> bonus entry',
+    2 => 'Up to 1000<br/> bonus entries',
+    3 => 'Up to 10,000<br/> bonus entries',
+    4 => 'Up to 50,000<br/> bonus entries',
+    5 => 'Up to 100,000<br/> bonus entries'
+   
+$scoreArr = array(
+    1 => 'Up to one<br/> bonus entry',
+    2 => 'Up to 1000<br/> bonus entries',
+    3 => 'Up to 10,000<br/> bonus entries',
+    4 => 'Up to 50,000<br/> bonus entries',
+    5 => 'Up to 100,000<br/> bonus entries'
 );
 ?>
 <div id="pageContainer" class="container" style="min-height: 655px;">
