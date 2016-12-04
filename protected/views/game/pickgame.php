@@ -49,7 +49,7 @@ $scoreArr = array(
         <div class="row">
             <div class="row">
                 <div class="col-sm-10 col-sm-offset-1">
-                    <h4 id="total" style="font-weight: 300; cursor: default;">Total: $5 for each game choice of questions.</h4>
+                    <h4 id="total" style="font-weight: 300; cursor: default;">Total: $5 for each game choice of questions, except for <b>1 question which is $1</b></h4>
                     <div style="max-width:100%;margin: 0 auto;">
 
                     </div>
@@ -61,7 +61,7 @@ $scoreArr = array(
                 <div class='col-sm-5 col-sm-offset-1'>
                     <div class="paymentOptionsTop" style='border: 4px solid #308000;max-width:310px; min-height: 186px; margin-left: 15px;'>
                         <div style="background-color: #f2f2f2;"><h3 style="margin-top: 0px; min-height: 47px; font-size: 22px; padding-top: 5px; margin-bottom: 0px; font-weight: 300; cursor: default;">Click below for a Free Game Credit.</h3></div>
-                        <div style='margin-top: 5px; cursor: default;'><br/><br/><?php echo Yii::t('youtoo', 'game credits'); ?></div><hr style="margin-top: 5px; margin-bottom: 5px;"/>
+                        <div style='margin-top: 5px; cursor: default;'>Watch Promotion Video and you get<br/><b>1</b><br/><?php echo Yii::t('youtoo', 'game credit'); ?></div><hr style="margin-top: 5px; margin-bottom: 5px;"/>
                         <div style="font-size: 10px; margin-bottom: 10px; cursor: default;"><?php echo Yii::t('youtoo', 'Click Here for entry to the<br/>weekly freeroll'); ?></div>                      
                         <div style="margin-top: 25px; margin-bottom: 10px;"><a id="entry<?php echo $i; ?>" href="/freecredit" class="btn btn-default btn-lg" style="background-color: #F9D83D !important; border-color: #F9D83D;"><?php echo Yii::t('youtoo', 'Free Game Credit'); ?></a></div>
                     </div>
@@ -73,7 +73,6 @@ $scoreArr = array(
                 </div>
             </div>
             <hr/>
-            <br/>
             <div class="row">
                 <div class="col-sm-10 col-sm-offset-1">
                     <span><a href="<?php echo Yii::app()->createUrl('/marketingpage'); ?>"> How to play?</a><a href="<?php echo Yii::app()->createUrl('/site/contact'); ?>"><h5 style="color: #ea8417;"><img style="vertical-align: baseline;" src="/webassets/images/laliga/icon_envelope.png"/>&nbsp; support@isweepsusa.com</h5></a></span>

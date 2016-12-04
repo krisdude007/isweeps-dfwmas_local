@@ -12,12 +12,17 @@
  * @property integer $transaction_id
  * @property integer $is_winner
  * @property string $game_unique_id
+ * @property double $game_price
  * @property string $source
  * @property string $ip_address
  * @property string $ip_derivedcity
- * @property string $ip_derivedstate
  * @property string $created_on
  * @property string $updated_on
+ *
+ * The followings are the available model relations:
+ * @property GameChoiceAnswer $gameChoiceAnswer
+ * @property GameChoice $gameChoice
+ * @property User $user
  */
 class GameChoiceResponse extends CActiveRecord
 {
@@ -37,14 +42,15 @@ class GameChoiceResponse extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('game_choice_id, game_choice_answer_id, user_id, source, created_on, updated_on', 'required'),
+			array('game_choice_id, game_choice_answer_id, user_id, game_price, source, created_on, updated_on', 'required'),
 			array('game_choice_id, game_choice_answer_id, sms_id, user_id, transaction_id, is_winner', 'numerical', 'integerOnly'=>true),
+			array('game_price', 'numerical'),
 			array('game_unique_id', 'length', 'max'=>50),
 			array('source', 'length', 'max'=>256),
-			array('ip_address, ip_derivedcity, ip_derivedstate', 'length', 'max'=>255),
+			array('ip_address, ip_derivedcity', 'length', 'max'=>255),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, game_choice_id, game_choice_answer_id, sms_id, user_id, transaction_id, is_winner, game_unique_id, source, ip_address, ip_derivedcity, ip_derivedstate, created_on, updated_on', 'safe', 'on'=>'search'),
+			array('id, game_choice_id, game_choice_answer_id, sms_id, user_id, transaction_id, is_winner, game_unique_id, game_price, source, ip_address, ip_derivedcity, created_on, updated_on', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -56,6 +62,9 @@ class GameChoiceResponse extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'gameChoiceAnswer' => array(self::BELONGS_TO, 'GameChoiceAnswer', 'game_choice_answer_id'),
+			'gameChoice' => array(self::BELONGS_TO, 'GameChoice', 'game_choice_id'),
+			'user' => array(self::BELONGS_TO, 'User', 'user_id'),
 		);
 	}
 
@@ -73,10 +82,10 @@ class GameChoiceResponse extends CActiveRecord
 			'transaction_id' => 'Transaction',
 			'is_winner' => 'Is Winner',
 			'game_unique_id' => 'Game Unique',
+			'game_price' => 'Game Price',
 			'source' => 'Source',
 			'ip_address' => 'Ip Address',
 			'ip_derivedcity' => 'Ip Derivedcity',
-			'ip_derivedstate' => 'Ip Derivedstate',
 			'created_on' => 'Created On',
 			'updated_on' => 'Updated On',
 		);
@@ -108,10 +117,10 @@ class GameChoiceResponse extends CActiveRecord
 		$criteria->compare('transaction_id',$this->transaction_id);
 		$criteria->compare('is_winner',$this->is_winner);
 		$criteria->compare('game_unique_id',$this->game_unique_id,true);
+		$criteria->compare('game_price',$this->game_price);
 		$criteria->compare('source',$this->source,true);
-		$criteria->compare('ip_address',$this->ip_address?getenv('REMOTE_ADDR'):null);
+		$criteria->compare('ip_address',$this->ip_address,true);
 		$criteria->compare('ip_derivedcity',$this->ip_derivedcity,true);
-		$criteria->compare('ip_derivedstate',$this->ip_derivedstate,true);
 		$criteria->compare('created_on',$this->created_on,true);
 		$criteria->compare('updated_on',$this->updated_on,true);
 
