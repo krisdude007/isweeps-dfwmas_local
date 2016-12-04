@@ -3,10 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/Users/krishnanaladi/NetBeansProjects/isweepsusa/protected/views/game/winlooseordraw.php</file>
             <file>file:/Users/krishnanaladi/NetBeansProjects/isweepsusa/core/protected/components/utilities/PaymentUtility.php</file>
             <file>file:/Users/krishnanaladi/NetBeansProjects/isweepsusa/protected/views/site/marketingpage.php</file>
             <file>file:/Users/krishnanaladi/NetBeansProjects/isweepsusa/protected/views/game/pickgame.php</file>
+            <file>file:/Users/krishnanaladi/NetBeansProjects/isweepsusa/protected/controllers/clientGameController.php</file>
+            <file>file:/Users/krishnanaladi/NetBeansProjects/isweepsusa/protected/views/site/freecredit.php</file>
             <file>file:/Users/krishnanaladi/NetBeansProjects/isweepsusa/protected/views/site/_sideBar.php</file>
+            <file>file:/Users/krishnanaladi/NetBeansProjects/isweepsusa/protected/views/user/_sidebar.php</file>
         </group>
     </open-files>
 </project-private>
