@@ -80,7 +80,7 @@ $config_array = array(
                 'cannotplay' =>  '/site/cannotplay',
                 'site/index' => '/site/payandplay',
                 'contact' => '/site/contact',
-                'newpage' => '/site/newpage',
+                'freecredit' => '/site/freecredit',
                 'multiplechoice/<id:\d+>' => '/game/multiple4',
                 'thankyoumobile' => '/game/thankyoumobile',
                 'thankyou' => '/game/thankyou',
@@ -286,6 +286,12 @@ $config_array = array(
             'title' => 'LALIGA EMAIL',
             'mailto' => 'youtootechsupport@youtootech.com',
             'showEmailAssistanceLink' => true,
+        ),
+        'Stripe' => array(
+           'secret_key'      => 'sk_test_sIp96bnKtxz6Rfq8ED9Hd7T0',
+           'publishable_key' => 'pk_test_jabbdHFhU7zzRHe2k3H36oCw',
+          //'secret_key'      => 'sk_live_vBST257nN2oDh2CZJmLALdUM',
+          //'publishable_key' => 'pk_live_oxxbhTzevQdiUUK09F6530AV'
         ),
         'clientIframeUrl' => '',
         'enableSweepstakes' => false,
@@ -509,7 +515,7 @@ $config_array = array(
             'invalidFiletype' => Yii::t('youtoo','Invalid file type.'),
         ),
         'custom_params' => array(
-        'client_support_email' => 'youtootechsupport@youtootech.com', //CLIENT_SUPPORT_EMAIL
+        'client_support_email' => 'danny.ohman@youtootech.com, bhrobinson@me.com', //CLIENT_SUPPORT_EMAIL
         'toggle_preview_ticker' => false,
         'video_post_file_ext_mxf' => true,
         'invalid_file_size' => Yii::t('youtoo','Invalid File Size'),

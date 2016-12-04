@@ -21,7 +21,7 @@ $cs->registerScriptFile(Yii::app()->request->baseurl . '/core/webassets/js/jquer
             </div>
         <?php else: ?>
             <?php if (isset($_GET['f']) && $_GET['f'] == 'g'): ?>
-                <div class='col-sm-12' style='padding-left: 12px; padding-right: 10px; clear: both; position: relative; top: -28px;'>
+                <div class='col-sm-12' style='padding-left: 12px; padding-right: 10px; clear: both; position: relative;'>
                     <img src="/webassets/images/laliga/image_congrats<?php echo (Yii::app()->language == 'en') ? '_eng' : ''; ?>.png" style=" max-width: 100%; margin-bottom: 10px;"/>
                 </div>
             <?php elseif (isset($_GET['f']) && $_GET['f'] == 'p'): ?>
@@ -39,8 +39,8 @@ $cs->registerScriptFile(Yii::app()->request->baseurl . '/core/webassets/js/jquer
                 </a>
                 <a href="/marketingpage"><span style="position: absolute; top: 260px;right: 125px; color: #ffffff;"><?php echo Yii::t('youtoo','You want to know more?'); ?>&nbsp;&nbsp;&nbsp;<img src="/webassets/images/laliga/Button_Yellow-Arrow.png"/></span></a>
                 <div style="position: relative; top: 15px;">
-                    <span><a href="<?php //echo $url; ?>"><img src="/webassets/images/laliga/Image_Banner_Juega-Ahora-Por-1<?php echo (Yii::app()->language == 'en') ? '_eng' : ''; ?>.png" style="margin-left: -12px;max-width: 405px; width:100%;"/></a></span>
-                    <span><a href="<?php //echo $currentWinLooseOrDrawGame['url']; ?>"><img src="/webassets/images/laliga/Image_Banner_Viernes-Futbolero<?php echo (Yii::app()->language == 'en') ? '_eng' : ''; ?>.png" style="max-width: 405px; width:100%; margin-left: 10px;"/></a></span>
+                    <span><a href="/payment"><img src="/webassets/images/laliga/Image_Banner_Juega-Ahora-Por-1<?php echo (Yii::app()->language == 'en') ? '_eng' : ''; ?>.png" style="margin-left: -12px;max-width: 405px; width:100%;"/></a></span>
+                    <span><a href="/winners"><img src="/webassets/images/laliga/Image_Banner_Viernes-Futbolero<?php echo (Yii::app()->language == 'en') ? '_eng' : ''; ?>.png" style="max-width: 405px; width:100%; margin-left: 10px;"/></a></span>
                 </div>
             <?php endif; ?>
         <?php endif; ?>

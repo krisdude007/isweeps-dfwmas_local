@@ -161,7 +161,7 @@ $stripe = StripeUtility::config();
                 <?php for ($i = 1; $i <= 4; $i++) { ?>
                     <div class="paymentOptionsTop">
                         <div style="background-color: #f2f2f2;"><h3 style="margin-top: 0px; min-height: 43px; padding-top: 8px; margin-bottom: 0px; font-weight: 300;">$<?php echo $payCashArray[$i]; ?></h3></div>
-                        <div style='margin-top: 5px;'><?php echo $payCreditArray[$i]; ?><br/><?php echo Yii::t('youtoo', 'credit bonus'); ?></div><hr style="margin-top: 5px; margin-bottom: 5px;"/>
+                        <div style='margin-top: 5px;'><?php echo $payCreditArray[$i]; ?><br/><?php echo Yii::t('youtoo', 'game credits'); ?></div><hr style="margin-top: 5px; margin-bottom: 5px;"/>
     <!--                        <div style="font-size: 10px; margin-bottom: 10px;"><?php echo Yii::t('youtoo', 'Entry to the<br/>weekly freeroll'); ?></div>-->
                         <div style="margin-top: 25px;"><a id="entry<?php echo $i; ?>" href="/payment?ci=<?php echo $i; ?>" class="btn btn-default btn-md" style="min-width: 114px; min-height: 37px;"><?php echo Yii::t('youtoo', 'Select'); ?></a></div>
                     </div>
@@ -256,9 +256,9 @@ $stripe = StripeUtility::config();
                                 </form>
                             </div>
                         </div>
-                        <div>
-                            <a id="paypal-express" style="font-size: 14pt;text-decoration: underline;" href="<?php echo Yii::app()->createURL("/expressCheckOut/$payCashArray[$cashIndex]"); ?>"><img src="https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif" alt="PayPal Credit" /></a>
-                        </div>
+<!--                        <div>
+                            <a id="paypal-express" style="font-size: 14pt;text-decoration: underline;" href="<?php //echo Yii::app()->createURL("/expressCheckOut/$payCashArray[$cashIndex]"); ?>"><img src="https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif" alt="PayPal Credit" /></a>
+                        </div>-->
                         <!--                        <form id="paypal-prepay-form" action="/processpaypalprepay" method="post">
                         <?php //echo CHtml::link(Yii::t('youtoo', 'Pay Using Paypal'), array('#'), array('data-toggle' => 'modal', 'data-target' => '#modalPaypalDirect', 'class' => 'btn btn-default btn-sm'));  ?>
                                                 </form>-->
@@ -268,7 +268,7 @@ $stripe = StripeUtility::config();
             <br/>
             <div class="row">
                 <div class="col-sm-10 col-sm-offset-2">
-                    <span><a href="<?php echo Yii::app()->createUrl('/site/contact'); ?>"><h5 style="color: #ea8417;"><img style="vertical-align: baseline;" src="/webassets/images/laliga/icon_envelope.png"/>&nbsp; support@youtootech.com</h5></a></span>
+                    <span><a href="<?php echo Yii::app()->createUrl('/site/contact'); ?>"><h5 style="color: #ea8417;"><img style="vertical-align: baseline;" src="/webassets/images/laliga/icon_envelope.png"/>&nbsp; support@isweepsusa.com</h5></a></span>
                 </div>
                 <div class="col-sm-10 col-sm-offset-2">
                     <span><h8><img style="vertical-align: baseline;" src="/webassets/images/laliga/icon_lock.png"/>&nbsp; <?php echo Yii::t('youtoo', 'Secure payments'); ?></h8></span>

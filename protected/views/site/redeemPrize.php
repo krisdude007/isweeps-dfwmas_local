@@ -19,7 +19,7 @@ $stripe = StripeUtility::config(); ?>
                             <h3 style="margin-top: 0px; margin-bottom: 0px;"><?php echo $prize->name; ?></h3>
                             <div class="description"><?php echo $prize->description; ?></div>
                             <h4 style="margin-top: 0px; margin-bottom: 0px;"><?php echo Yii::t('youtoo','Price'); ?></h4>
-                            <div class="description" style="margin: 0px;"><?php echo ($prize->credits_required == 1) ? (Yii::t('youtoo', '{value} Credit', array('{value}' => $prize->credits_required))) : (Yii::t('youtoo', '{value} Credits', array('{value}' => $prize->credits_required))) ?></div>
+                            <div class="description" style="margin: 0px;"><?php echo ($prize->credits_required == 1) ? (Yii::t('youtoo', '{value} Bonus Buck', array('{value}' => $prize->credits_required))) : (Yii::t('youtoo', '{value} Bonus Bucks', array('{value}' => $prize->credits_required))) ?></div>
                             <div style="margin-bottom: 5px;">or</div>
                             <div class="description">
                                 <?php echo Yii::t('youtoo', '${value} with Credit Card/Paypal',array('{value}' => $prize->market_value)); ?>
@@ -43,7 +43,7 @@ $stripe = StripeUtility::config(); ?>
                                 <?php $balance = ClientUtility::getTotalUserBalanceCredits(); if ($balance < $prize->credits_required): ?>
                                     <?php echo CHtml::link(Yii::t('youtoo', 'Buy with credits'), array('#'), array('data-toggle' => 'modal', 'data-target' => '#modalRedeem', 'role' => 'button', 'class' => 'btn btn-default btn-lg', 'style' => 'margin: 20px 15px; min-width: 141px; font-weight: 300;')); ?>
                                 <?php else: ?>
-                                    <input class="btn btn-default btn-md" style ='margin: 15px 15px; min-width: 141px; font-weight: 300;' role="button" type="submit" value="<?php echo Yii::t('youtoo', 'Buy with credits') ?>">
+                                    <input class="btn btn-default btn-md" style ='margin: 15px 15px; min-width: 141px; font-weight: 300;' role="button" type="submit" value="<?php echo Yii::t('youtoo', 'Buy with Bonus Bucks') ?>">
                                 <?php endif; ?>
                                 <?php $this->endWidget(); ?>
                             <div class="col-sm-4" style="line-height: 0.129;">
@@ -59,9 +59,9 @@ $stripe = StripeUtility::config(); ?>
                                     </form>
                                      <p>&nbsp;</p>
                                 </span>
-                                <span>
-                                    <a id="paypal-express" style="font-size: 14pt;text-decoration: underline;" href="<?php echo Yii::app()->createURL("/expressCheckOut/".$prize->tableName()."/$prize->market_value/$prize->id"); ?>"><img src="https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif" alt="Buy now with PayPal" /></a>
-                                </span>
+<!--                                <span>
+                                    <a id="paypal-express" style="font-size: 14pt;text-decoration: underline;" href="<?php //echo Yii::app()->createURL("/expressCheckOut/".$prize->tableName()."/$prize->market_value/$prize->id"); ?>"><img src="https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif" alt="Buy now with PayPal" /></a>
+                                </span>-->
 <!--                                <form id="paypal-payproduct-form" action="/processpaypalproduct/<?php //echo $prize->id; ?>" method="post">
                                         <?php //echo CHtml::link(Yii::t('youtoo', 'Pay Using Paypal'), array('#'), array('data-toggle' => 'modal', 'data-target' => '#modalPaypalDirect', 'class' => 'btn btn-default btn-sm')); ?>
                                 </form>-->

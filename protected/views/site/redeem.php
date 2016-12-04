@@ -3,8 +3,8 @@
         <?php $this->renderPartial('_sideBar', array()); ?>
         <div class="row" style="margin-right: 0px; margin-left: 0px;">
             <div class="col-sm-12 col-xs-12">
-                <h3><?php echo Yii::t('youtoo', 'Spend the points you have earned for great prizes.') ?></h3>
-                <div class="borderBottom"><?php echo Yii::t('youtoo','As a reminder, one point is given to you for every one dollar spent. Have fun shopping.');?></div>
+                <h3><?php echo Yii::t('youtoo', 'Spend the bonus bucks you have earned for great prizes.') ?></h3>
+                <div class="borderBottom"><?php echo Yii::t('youtoo','As a reminder, 1 bonus buck is given to you for every $1 spent. Have fun shopping.');?></div>
             </div>
         </div>
         <div class="row" style="margin-right: 0px; margin-left: 0px; overflow: scroll; max-height: 600px;">
@@ -43,7 +43,7 @@
                         ));
                         if ($prize->quantity > 0) {
                             echo sprintf(
-                                    $prizeFormat, '/' . basename(Yii::app()->params['paths']['image']) . "/{$prize->image}", $prize->name, ($prize->credits_required == 1) ? (Yii::t('youtoo', '{value} Credit', array('{value}' => $prize->credits_required))) : (Yii::t('youtoo', '{value} Credits', array('{value}' => $prize->credits_required))),$form->hiddenField($prize, 'id', array('value' => $prize->id)), Yii::t('youtoo','Buy')
+                                    $prizeFormat, '/' . basename(Yii::app()->params['paths']['image']) . "/{$prize->image}", $prize->name, ($prize->credits_required == 1) ? (Yii::t('youtoo', '{value} Bonus Buck', array('{value}' => $prize->credits_required))) : (Yii::t('youtoo', '{value} Bonus Bucks', array('{value}' => $prize->credits_required))),$form->hiddenField($prize, 'id', array('value' => $prize->id)), Yii::t('youtoo','Buy')
                             );
                             $this->endWidget();
                         }

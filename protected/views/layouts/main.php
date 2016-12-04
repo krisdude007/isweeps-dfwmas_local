@@ -110,11 +110,7 @@ Yii::app()->facebook->initJs($output);
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-left">
-   <!--  
-              <li class="logo">
-              <a target="_blank" href="http://www.baldinissports.com/"><img src="/webassets/images/laliga/logo_Azteca.png" style="height: 40px;
-               position: relative; top: -6px; z-index: 1040; margin-left: 5px;"/></a></li>
-               -->
+                <!--<li class="logo"><a target="_blank" href="http://www.baldinissports.com/"><img src="/webassets/images/laliga/logo_Azteca.png" style="height: 40px; position: relative; top: -6px; z-index: 1040; margin-left: 5px;"/></a></li>-->
                 <li style="display: none;"><a target="_blank" href="http://www.baldinissports.com/"><?php echo Yii::t('youtoo', 'SHOWS') ?></a></li>
                 <li style="display: none;" class="active"><a target="_blank" href="http://www.baldinissports.com/"><?php echo Yii::t('youtoo', 'MÁS') ?></a></li>
                 <li style="display: none;"><a target="_blank" href="http://www.baldinissports.com/"><?php echo Yii::t('youtoo', 'VIDEOS') ?></a></li>
@@ -129,37 +125,39 @@ Yii::app()->facebook->initJs($output);
         <?php elseif ($this->action->id == 'marketingpage' || $this->action->id == 'marketingpage2'): ?>
             <div id="wrapper" style="background-color: #0b1112;">
             <?php else: ?>
-                <?php echo (in_array(Yii::app()->controller->id, array('site')) || in_array(Yii::app()->controller->action->id, array('faq', 'confirmation', 'redeem', 'winners', 'playnow', 'winlooseordraw', 'payment', 'multiple4', 'thankyou', 'paidthankyou','pickgame','newpage'))) ? '<div id="wrapper">' : ''; ?>
+                <?php echo (in_array(Yii::app()->controller->id, array('site')) || in_array(Yii::app()->controller->action->id, array('faq', 'confirmation', 'redeem', 'winners', 'playnow', 'winlooseordraw', 'payment', 'multiple4', 'thankyou', 'paidthankyou','pickgame','freecredit'))) ? '<div id="wrapper">' : ''; ?>
             <?php endif; ?>
-            <?php echo ((in_array(Yii::app()->controller->action->id, array('redeem', 'winners', 'winlooseordraw', 'multiple4', 'thankyou', 'paidthankyou','pickgame','newpage')))) ? '<div id="page-content-wrapper" style="padding: 20px; background-color: #ffffff;">' : '<div id="page-content-wrapper">'; ?>
+            <?php echo ((in_array(Yii::app()->controller->action->id, array('redeem', 'winners', 'winlooseordraw', 'multiple4', 'thankyou', 'paidthankyou','pickgame','freecredit')))) ? '<div id="page-content-wrapper" style="padding: 20px; background-color: #ffffff;">' : '<div id="page-content-wrapper">'; ?>
             <div class="container-fluid">
                 <?php echo $content; ?>
             </div>
         </div>
-        <?php echo (in_array(Yii::app()->controller->id, array('site')) || in_array(Yii::app()->controller->action->id, array('playnow', 'winlooseordraw', 'index2', 'multiple4', 'thankyou', 'paidthankyou','pickgame','newpage'))) ? '</div>' : ''; ?>
+        <?php echo (in_array(Yii::app()->controller->id, array('site')) || in_array(Yii::app()->controller->action->id, array('playnow', 'winlooseordraw', 'index2', 'multiple4', 'thankyou', 'paidthankyou','pickgame','freecredit'))) ? '</div>' : ''; ?>
         <div id="pageFooterDrop">
-            <div  class="row col-sm-10 col-sm-offset-2" style='padding-left: 50px;'>
+            <div  class="row col-sm-12" style='padding-left: 50px;'>
+                <div class="col-sm-2">
+                    <a target="_blank" href="http://www.baldinissports.com/"><img src="/webassets/images/laliga/logo_Azteca.png" style="height: 40px; margin-top: 30px;"/></a></li>
+                </div>
                 <div class="col-sm-3" id="aboutDrop">
                     <div class="dropHead"><?php echo Yii::t('youtoo', 'ABOUT'); ?></div>
-                <!--    <div><a target="_blank" href="#"><?php echo Yii::t('youtoo', 'Client'); ?></a></div>-->
-                    <div><a target="_blank" href="#"><?php echo Yii::t('youtoo', 'Sweepstakes'); ?></a></div>
-                    <div><a data-toggle="modal" data-target="#modalLaIsla" href="#"><?php echo Yii::t('youtoo', 'Game Rules');     ?></a></div>
+                    <div><a target="_blank" href="http://www.baldinissports.net"><?php echo Yii::t('youtoo', 'Baldinis'); ?></a></div>
+                    <div><a target="_blank" href="/marketingpage"><?php echo Yii::t('youtoo', 'Sweepstakes'); ?></a></div>
+                    <!--<div><a data-toggle="modal" data-target="#modalLaIsla" href="#"><?php // echo Yii::t('youtoo', 'Game Rules');     ?></a></div>-->
                     <div><a href="#"><?php echo Yii::t('youtoo', 'Press and Media'); ?></a></div>
                 </div>
                 <div class="col-sm-3" id="helpDrop">
                     <div class="dropHead"><?php echo Yii::t('youtoo', 'HELP'); ?></div>
                     <div><a href="/contact"><?php echo Yii::t('youtoo', 'Support'); ?></a></div>
-                    <div><a href="#"><?php echo Yii::t('youtoo', 'How it works'); ?></a></div>
+                    <!--<div><a href="#"><?php // echo Yii::t('youtoo', 'How it works'); ?></a></div>-->
                     <div><a href="#"><?php echo Yii::t('youtoo', 'Rules & Scoring'); ?></a></div>
                     <div><a href="/faq"><?php echo Yii::t('youtoo', 'FAQ'); ?></a></div>
                 </div>
                 <div class="col-sm-3" id="legalDrop">
                     <div class="dropHead"><?php echo Yii::t('youtoo', 'LEGAL'); ?></div>
-                    <div><a href="/user/rules" target="_blank"><?php echo Yii::t('youtoo', 'Rules of the competition'); ?></a></div>
-                    <div><a href="#"><?php echo Yii::t('youtoo', 'Sweepstakes Regs'); ?></a></div>
+                    <div><a href="/marketingpage" target="_blank"><?php echo Yii::t('youtoo', 'Rules of the competition'); ?></a></div>
+                    <!--<div><a href="#"><?php // echo Yii::t('youtoo', 'Sweepstakes Regs'); ?></a></div>-->
                     <div><a data-toggle="modal" data-target="#modalTerms" href="#"><?php echo Yii::t('youtoo', 'Terms'); ?></a></div>
                     <div><a data-toggle="modal" data-target="#modalPrivacy" href="#"><?php echo Yii::t('youtoo', 'Privacy Policy'); ?></a></div>
-<!--                    <div><a href="#" data-toggle='modal' data-target='#modalFreePlay'><?php //echo Yii::t('youtoo', "Free method of play") ?></a></div>-->
                 </div>
             </div>
         </div>

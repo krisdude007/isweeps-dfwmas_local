@@ -215,6 +215,32 @@ class PaymentUtility {
 
         return $transaction->id;
     }
+    
+    public static function oneFreeCredit($type = "game_choice", $price = 1, $id = 1) {
+        
+        $transaction = new eTransaction;
+        $transaction->user_id = Yii::app()->user->getId();
+        $transaction->processor = 'free_credit';
+        $transaction->response = 'free_credit';
+        $transaction->item = 'prepay';
+        $transaction->item_id = 1;
+        $transaction->description = 'prepay';
+        $transaction->price = $price;
+        
+        if (!$transaction->save()) {
+            var_dump($transaction->getErrors());
+            exit();
+        }
+
+        $creditTransaction = new eCreditTransaction;
+        $creditTransaction->game_type = "sweepstakes_freecredit";
+        $creditTransaction->type = "earned";
+        $creditTransaction->credits = 0;
+        $creditTransaction->trans_id = $transaction->id;
+        $creditTransaction->save();
+        
+        return $transaction->id;
+    }
 
     public static function paypalDirectPayGame ($type = "game_choice", $id = 1, $token) {
         $id = (int)$id;
@@ -261,7 +287,7 @@ class PaymentUtility {
 
     public static function stripePaymentPrepay($amount = 5, $token) {
 
-        $payCreditArray = Array("5" => "5", "10" => "13", "25" => "32", "50" => "65");
+        $payCreditArray = Array("5" => "5", "10" => "10", "25" => "15", "50" => "50");
 
         $stripe = StripeUtility::config();
 
@@ -304,7 +330,7 @@ class PaymentUtility {
 
     public static function paypalPaymentPrepay($amount = 5, $token) {
 
-        $payCreditArray = Array("5" => "5", "10" => "13", "25" => "32", "50" => "65");
+        $payCreditArray = Array("5" => "5", "10" => "10", "25" => "25", "50" => "50");
 
         $transaction = new eTransaction;
         $transaction->user_id = Yii::app()->user->getId();

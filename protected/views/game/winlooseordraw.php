@@ -42,12 +42,12 @@ foreach ($game->gameChoiceAnswers as $answer) {
 
         <div class='row' style='margin-top: -30px;'>
             <div class="col-sm-12" style="padding-right: 0px; padding-left: 0px; left: -23px;top: -50px;">
-                <div class="form" style="position: relative; top: 22px; min-width: 923px; min-height: 712px; background-color:#002E42; clear: both;">
+                <div class="form" style="position: relative; top: 22px; min-width: 923px; min-height: 740px; background-color:#002E42; clear: both;">
                     <!--                <div class='gameEntry' style='width: 100%; background-color: #eeeeee; min-height: 299px; min-width: 823px;'>-->
                     <div class="game" class="fab-left fab-voting-left" style='clear: both;'>
                         <div class="col-xs-11 col-sm-11 col-lg-11 col-sm-offset-1" style="padding-left: 0px; padding-right: 0px; clear: both; margin-left: 5.3%;">
+                            <div id='resultCount' class='count' style="margin-top: 15px;">You have : <?php echo Yii::app()->session['noOfRemaining']; ?> answers left.</div>
                             <div class="table-responsive" style="height: 630px; overflow: auto; position: relative;  width: 98%; margin-top: 20px;">
-                                <div id='resultCount' class='count'>You have : <?php echo Yii::app()->session['noOfRemaining']; ?> answers left.</div>
                                 <?php //var_dump(Yii::app()->session['choiceList']);  ?>
                                 <table class="table">
                                     <thead style="background-color: #292929; border-color: #292929;">
@@ -71,7 +71,7 @@ foreach ($game->gameChoiceAnswers as $answer) {
     $form = $this->beginWidget('CActiveForm', array(
         'enableAjaxValidation' => true,
         'enableClientValidation' => true,
-        'htmlOptions' => array('onclick' => 'return false;',),
+        'htmlOptions' => array(),
     ));
 
     $answerArray = Array();
@@ -84,30 +84,46 @@ foreach ($game->gameChoiceAnswers as $answer) {
     } else {
         $source = 'web';
     }
-    foreach ($game->gameChoiceAnswers as $answer) {
-        if ($i < sizeof($game->gameChoiceAnswers) - 1) {
-            $answerArray[$answer->id] = $answer->answer;
-            $right = $answerArray[$answer->id];
-        }
-        $i++;
-    }
+//    foreach ($game->gameChoiceAnswers as $answer) {
+//        if ($i < sizeof($game->gameChoiceAnswers) - 1) {
+//            $answerArray[$answer->id] = $answer->answer;
+//            $right = $answerArray[$answer->id];
+//        }
+//        $i++;
+//    }
     if (sizeof($game->gameChoiceAnswers) > 4) {
+        $i = 1;
         echo '<div class="col-sm-11 ">';
-        echo $form->radioButtonList($response, 'game_choice_answer_id', $answerArray, array('labelOptions' => array('style' => "display:inline; background-color: transparent;", 'class' => 'form-control'), 'template' => '{label} {input}', 'separator' => '&nbsp&nbsp;&nbsp;',));
-        echo '</div>';
-        echo $form->error($response, 'game_choice_answer_id');
+        foreach ($game->gameChoiceAnswers as $ans) {
+            if ($i < sizeof($game->gameChoiceAnswers) - 1) {
+            echo '<button id="game_choice_answer_id_'.$ans->id.'" class="btn btn-primary" style="background-color: transparent; " onclick="submitChoice(this,'.$ans->id.');">'.$ans->answer.'</button>';
+            } 
+            $i++;
+        }
+        //echo $form->radioButtonList($response, 'game_choice_answer_id', $answerArray, array('labelOptions' => array('style' => "display:inline; background-color: transparent;", 'class' => 'form-control'), 'template' => '{label} {input}', 'separator' => '&nbsp&nbsp;&nbsp;',));
+        //echo $form->error($response, 'game_choice_answer_id');
         echo $form->hiddenField($response, 'game_choice_id', array('value' => $game->id));
+        echo $form->hiddenField($response, 'game_choice_answer_id', array('value' => $ans->id));
+        echo '</div>';
         $op++;
     } else {
-        echo $form->radioButtonList($response, 'game_choice_answer_id', $answerArray, array('labelOptions' => array('style' => "display:inline; background-color: transparent;", 'class' => 'form-control'), 'template' => '{label} {input}', 'separator' => '&nbsp&nbsp;&nbsp;'));
-        echo $form->error($response, 'game_choice_answer_id');
+        $i = 1;
+        echo '<div class="col-sm-11 ">';
+        foreach ($game->gameChoiceAnswers as $ans) {
+            if ($i < sizeof($game->gameChoiceAnswers) - 1) {
+            echo '<button id="game_choice_answer_id_'.$ans->id.'" class="btn btn-primary" style="background-color: transparent; margin-right: 10px;" onclick="submitChoice(this,'.$ans->id.');">'.$ans->answer.'</button>';
+            }
+            $i++;
+        }
+        //echo $form->radioButtonList($response, 'game_choice_answer_id', $answerArray, array('labelOptions' => array('style' => "display:inline; background-color: transparent;", 'class' => 'form-control'), 'template' => '{label} {input}', 'separator' => '&nbsp&nbsp;&nbsp;'));
+        //echo $form->error($response, 'game_choice_answer_id');
         echo $form->hiddenField($response, 'game_choice_id', array('value' => $game->id));
+        echo $form->hiddenField($response, 'game_choice_answer_id', array('value' => ''));
+        echo '</div>';
         $op++;
     }
     echo $form->hiddenField($response, 'source', array('value' => $source));
     echo '<br/>';
-//    echo "<input type='submit' value='Lock-in' class='btn btn-success' onclick='countChoiceClicked();'> &nbsp; &nbsp;";
-//    echo "<input type='reset' value='Choose another question' class='btn btn-warning'>";
     $this->endWidget();
     ?></td>
                                                     <?php
@@ -128,21 +144,33 @@ foreach ($game->gameChoiceAnswers as $answer) {
     </div>
 </div>
 <script>
+    function submitChoice(me, answerId) {
+        var row = $(me).closest("tr");
+        $(me).attr('style', $(me).attr('style') + 'background-color: yellow');
+        row.css('background-color', '#142E02');
+        $(me).siblings('#eGameChoiceResponse_game_choice_answer_id').each(function () {
+            $(this).val(answerId);
+            //console.log(this);
+        });
+    }
 
     var submittedAnswers = JSON.parse('<?php echo json_encode($_SESSION['choiceList']); ?>');
     for (i = 0; i < submittedAnswers.length; i++) {
         value = submittedAnswers[i].game_choice_answer_id;
-        lbl = $('input[value="' + value + '"]').prev();
-        console.log(lbl);
-        $(lbl).attr('style', $(lbl).attr('style') + 'background-color: yellow');
-        var row = $(lbl).closest("tr");
+        
+        answerButton = $('#game_choice_answer_id_'+value);console.log(answerButton);
+        answerButton.attr('style', answerButton.attr('style') + 'background-color: yellow');
+        var row = answerButton.closest("tr");
         row.css('background-color', '#142E02');
+        $(row).find('button').each(function () {
+                        $(this).prop('disabled',true);
+                    });
     }
 
-    $('form').click(function (event) {
-        //event.stopPropagation();
+    $('form').submit(function (event) {
+        thisform = this;
         var row = $(this).closest("tr");
-        //console.log(this);
+        
         $.ajax({
             type: 'post',
             url: '/game/ajaxWinLooseOrDraw',
@@ -162,9 +190,10 @@ foreach ($game->gameChoiceAnswers as $answer) {
                             divData.innerHTML = "You have : " + countChoice + " answers left.";
                         }
                     }
-//                    $(this).find('input[type="submit"]').prop( "disabled",true);
-//                    $(me).find('input[type="reset"]').prop( "disabled",true);
-                    row.css('background-color', '#142E02');
+                    
+                    $(thisform).find('button').each(function () {
+                        $(this).prop('disabled',true);
+                    });
                 }
                 if (data.error) {
                     alert(data.error);
@@ -172,11 +201,6 @@ foreach ($game->gameChoiceAnswers as $answer) {
             }
         });
         return false;
-    });
-
-    $('label').click(function (event) {
-        $(this).next().prop("checked", true);
-        $(this).attr('style', $(this).attr('style') + 'background-color: yellow');
     });
 
 </script>
