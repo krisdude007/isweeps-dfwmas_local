@@ -71,7 +71,7 @@ foreach ($game->gameChoiceAnswers as $answer) {
     $form = $this->beginWidget('CActiveForm', array(
         'enableAjaxValidation' => true,
         'enableClientValidation' => true,
-        'htmlOptions' => array('onclick' => 'return false;',),
+        'htmlOptions' => array(),
     ));
 
     $answerArray = Array();
@@ -84,30 +84,46 @@ foreach ($game->gameChoiceAnswers as $answer) {
     } else {
         $source = 'web';
     }
-    foreach ($game->gameChoiceAnswers as $answer) {
-        if ($i < sizeof($game->gameChoiceAnswers) - 1) {
-            $answerArray[$answer->id] = $answer->answer;
-            $right = $answerArray[$answer->id];
-        }
-        $i++;
-    }
+//    foreach ($game->gameChoiceAnswers as $answer) {
+//        if ($i < sizeof($game->gameChoiceAnswers) - 1) {
+//            $answerArray[$answer->id] = $answer->answer;
+//            $right = $answerArray[$answer->id];
+//        }
+//        $i++;
+//    }
     if (sizeof($game->gameChoiceAnswers) > 4) {
+        $i = 1;
         echo '<div class="col-sm-11 ">';
-        echo $form->radioButtonList($response, 'game_choice_answer_id', $answerArray, array('labelOptions' => array('style' => "display:inline; background-color: transparent;", 'class' => 'form-control'), 'template' => '{label} {input}', 'separator' => '&nbsp&nbsp;&nbsp;',));
-        echo '</div>';
-        echo $form->error($response, 'game_choice_answer_id');
+        foreach ($game->gameChoiceAnswers as $ans) {
+            if ($i < sizeof($game->gameChoiceAnswers) - 1) {
+            echo '<button id="game_choice_answer_id_'.$ans->id.'" class="btn btn-primary" style="background-color: transparent; " onclick="submitChoice(this,'.$ans->id.');">'.$ans->answer.'</button>';
+            } 
+            $i++;
+        }
+        //echo $form->radioButtonList($response, 'game_choice_answer_id', $answerArray, array('labelOptions' => array('style' => "display:inline; background-color: transparent;", 'class' => 'form-control'), 'template' => '{label} {input}', 'separator' => '&nbsp&nbsp;&nbsp;',));
+        //echo $form->error($response, 'game_choice_answer_id');
         echo $form->hiddenField($response, 'game_choice_id', array('value' => $game->id));
+        echo $form->hiddenField($response, 'game_choice_answer_id', array('value' => $ans->id));
+        echo '</div>';
         $op++;
     } else {
-        echo $form->radioButtonList($response, 'game_choice_answer_id', $answerArray, array('labelOptions' => array('style' => "display:inline; background-color: transparent;", 'class' => 'form-control'), 'template' => '{label} {input}', 'separator' => '&nbsp&nbsp;&nbsp;'));
-        echo $form->error($response, 'game_choice_answer_id');
+        $i = 1;
+        echo '<div class="col-sm-11 ">';
+        foreach ($game->gameChoiceAnswers as $ans) {
+            if ($i < sizeof($game->gameChoiceAnswers) - 1) {
+            echo '<button id="game_choice_answer_id_'.$ans->id.'" class="btn btn-primary" style="background-color: transparent; margin-right: 10px;" onclick="submitChoice(this,'.$ans->id.');">'.$ans->answer.'</button>';
+            }
+            $i++;
+        }
+        //echo $form->radioButtonList($response, 'game_choice_answer_id', $answerArray, array('labelOptions' => array('style' => "display:inline; background-color: transparent;", 'class' => 'form-control'), 'template' => '{label} {input}', 'separator' => '&nbsp&nbsp;&nbsp;'));
+        //echo $form->error($response, 'game_choice_answer_id');
         echo $form->hiddenField($response, 'game_choice_id', array('value' => $game->id));
+        echo $form->hiddenField($response, 'game_choice_answer_id', array('value' => ''));
+        echo '</div>';
         $op++;
     }
     echo $form->hiddenField($response, 'source', array('value' => $source));
     echo '<br/>';
-//    echo "<input type='submit' value='Lock-in' class='btn btn-success' onclick='countChoiceClicked();'> &nbsp; &nbsp;";
-//    echo "<input type='reset' value='Choose another question' class='btn btn-warning'>";
     $this->endWidget();
     ?></td>
                                                     <?php
@@ -128,23 +144,30 @@ foreach ($game->gameChoiceAnswers as $answer) {
     </div>
 </div>
 <script>
+    function submitChoice(me, answerId) {
+        var row = $(me).closest("tr");
+        $(me).attr('style', $(me).attr('style') + 'background-color: yellow');
+        row.css('background-color', '#142E02');
+        $(me).siblings('#eGameChoiceResponse_game_choice_answer_id').each(function () {
+            $(this).val(answerId);
+            //console.log(this);
+        });
+    }
 
     var submittedAnswers = JSON.parse('<?php echo json_encode($_SESSION['choiceList']); ?>');
     for (i = 0; i < submittedAnswers.length; i++) {
         value = submittedAnswers[i].game_choice_answer_id;
-        lbl = $('input[value="' + value + '"]').prev();
-        console.log(lbl);
-        $(lbl).attr('style', $(lbl).attr('style') + 'background-color: yellow');
-        var row = $(lbl).closest("tr");
+        
+        answerButton = $('#game_choice_answer_id_'+value);console.log(answerButton);
+        answerButton.attr('style', answerButton.attr('style') + 'background-color: yellow');
+        var row = answerButton.closest("tr");
         row.css('background-color', '#142E02');
+        $(row).find('button').each(function () {
+                        $(this).prop('disabled',true);
+                    });
     }
 
-    $('form').click(function (event) {
-        //event.stopPropagation();
-        if (event.target.tagName !== 'LABEL') {
-            event.stopPropagation();
-            return false;
-        }
+    $('form').submit(function (event) {
         thisform = this;
         var row = $(this).closest("tr");
         
@@ -168,13 +191,9 @@ foreach ($game->gameChoiceAnswers as $answer) {
                         }
                     }
                     
-                    $(thisform).prop('onclick', null).off('click');
-                    $(thisform).find('label').each(function () {
-                        $(this).prop('onclick', null).off('click');
+                    $(thisform).find('button').each(function () {
+                        $(this).prop('disabled',true);
                     });
-//                    $(this).find('input[type="submit"]').prop( "disabled",true);
-//                    $(me).find('input[type="reset"]').prop( "disabled",true);
-                    row.css('background-color', '#142E02');
                 }
                 if (data.error) {
                     alert(data.error);
@@ -182,11 +201,6 @@ foreach ($game->gameChoiceAnswers as $answer) {
             }
         });
         return false;
-    });
-
-    $('label').click(function (event) {
-        $(this).next().prop("checked", true);
-        $(this).attr('style', $(this).attr('style') + 'background-color: yellow');
     });
 
 </script>

@@ -4,8 +4,8 @@
             <li class="sidebar-brand" style="text-align: center; height: 40px; text-indent: 0px;"><a href="<?php echo $this->createUrl('/user/profile', array()); ?>" style="font-size: 17px; font-weight: 500;"><?php echo empty($this->user->first_name) ? '' : $this->user->first_name; ?> <?php echo empty($this->user->last_name) ? '' : $this->user->last_name; ?></a></li>
             <?php //$geoLocation = GeoUtility::GeoLocation(); ?>
             <?php //if ($geoLocation['isValid']): ?>
-                <div style="text-align: center; color: #ffffff; font-size: 12px;"><?php echo Yii::t('youtoo', 'Bonus Bucks'); ?> : <?php echo '<span style="color: #35aae5;">$' . GameUtility::getCashBalance(Yii::app()->user->getId()) . '</span>'; ?></div>
-                <div style="text-align: center; color: #ffffff; font-size: 12px;"><?php echo Yii::t('youtoo', 'Game Credits'); ?> : <?php // echo '<span style="color: #35aae5;">' . ClientUtility::getTotalUserBalanceCredits() . '</span>'; ?></div>
+                <div style="text-align: center; color: #ffffff; font-size: 12px;"><?php echo Yii::t('youtoo', 'Game Credits'); ?> : <?php echo '<span style="color: #35aae5;">$' . GameUtility::getCashBalance(Yii::app()->user->getId()) . '</span>'; ?></div>
+                <div style="text-align: center; color: #ffffff; font-size: 12px;"><?php echo Yii::t('youtoo', 'Bonus Bucks'); ?> : <?php echo '<span style="color: #35aae5;">' . ClientUtility::getTotalUserBalanceCredits() . '</span>'; ?></div>
                 <a class="btn btn-default btn-sm startButton" style="text-indent: 0; line-height: normal; margin-top: 10px; font-size: 12px;" href="<?php echo $this->createUrl('/payment', array()); ?>"><?php echo Yii::t('youtoo', 'Add Funds'); ?></a><hr class='hr'/>
             <?php //endif; ?>
         <?php else: ?>
