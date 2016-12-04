@@ -5,6 +5,7 @@ $entryArr = array(
     3 => 'Up to 10,000<br/> bonus entries',
     4 => 'Up to 50,000<br/> bonus entries',
     5 => 'Up to 100,000<br/> bonus entries'
+);
    
 $scoreArr = array(
     1 => 'Up to one<br/> bonus entry',
