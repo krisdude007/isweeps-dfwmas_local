@@ -46,13 +46,13 @@ switch($env) {
     break;
   case "aws-production":
   default:
-    $config->db_name = "ytt_laliga";
+    $config->db_name = "ytt_dfwmas";
     $config->db_user = "yii";
     $config->db_pass = "n)/xC$724P)9m#43;,N32t),q.83JR";
     $config->db_host = "strategicgamingus.coz6nx9zzwhf.us-east-1.rds.amazonaws.com";
     $config->db_port = 3306;
     $config->db_prefix = "ytt_";
-    $config->memcached_host = "youtoo.xmuhnx.0001.use1.cache.amazonaws.com";
+    $config->memcached_host = "isweeps.sewiba.0001.use1.cache.amazonaws.com";
     $config->memcached_port = 11211;
     break;
 }

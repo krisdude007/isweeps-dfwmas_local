@@ -12004,3 +12004,75 @@ Stack trace:
 #23 {main}
 REQUEST_URI=/
 ---
+2017/04/09 12:31:00 [error] [php] MemcachePool::get(): php_network_getaddresses: getaddrinfo failed: Name or service not known (/var/www/yii/framework/caching/CMemCache.php:149)
+Stack trace:
+#0 /var/www/yii/framework/web/CUrlManager.php(219): CMemCache->get()
+#1 /var/www/yii/framework/web/CUrlManager.php(206): CUrlManager->processRules()
+#2 /var/www/yii/framework/base/CModule.php(387): CUrlManager->init()
+#3 /var/www/yii/framework/base/CApplication.php(522): YttCore->getComponent()
+#4 /var/www/yii/framework/web/CWebApplication.php(140): YttCore->getUrlManager()
+#5 /var/www/yii/framework/base/CApplication.php(180): YttCore->processRequest()
+#6 /dfwmas.isweepsusa.com/index.php(19): YttCore->run()
+REQUEST_URI=/
+2017/04/09 12:31:00 [error] [php] MemcachePool::get(): php_network_getaddresses: getaddrinfo failed: Name or service not known (/var/www/yii/framework/caching/CMemCache.php:149)
+Stack trace:
+#0 /var/www/yii/framework/web/CUrlManager.php(219): CMemCache->get()
+#1 /var/www/yii/framework/web/CUrlManager.php(206): CUrlManager->processRules()
+#2 /var/www/yii/framework/base/CModule.php(387): CUrlManager->init()
+#3 /var/www/yii/framework/base/CApplication.php(522): YttCore->getComponent()
+#4 /var/www/yii/framework/web/CWebApplication.php(140): YttCore->getUrlManager()
+#5 /var/www/yii/framework/base/CApplication.php(180): YttCore->processRequest()
+#6 /dfwmas.isweepsusa.com/index.php(19): YttCore->run()
+REQUEST_URI=/
+2017/04/09 12:31:01 [error] [php] MemcachePool::get(): php_network_getaddresses: getaddrinfo failed: Name or service not known (/var/www/yii/framework/caching/CMemCache.php:149)
+Stack trace:
+#0 /var/www/yii/framework/web/CUrlManager.php(219): CMemCache->get()
+#1 /var/www/yii/framework/web/CUrlManager.php(206): CUrlManager->processRules()
+#2 /var/www/yii/framework/base/CModule.php(387): CUrlManager->init()
+#3 /var/www/yii/framework/base/CApplication.php(522): YttCore->getComponent()
+#4 /var/www/yii/framework/web/CWebApplication.php(140): YttCore->getUrlManager()
+#5 /var/www/yii/framework/base/CApplication.php(180): YttCore->processRequest()
+#6 /dfwmas.isweepsusa.com/index.php(19): YttCore->run()
+REQUEST_URI=/favicon.ico
+2017/04/09 12:31:01 [error] [php] MemcachePool::get(): php_network_getaddresses: getaddrinfo failed: Name or service not known (/var/www/yii/framework/caching/CMemCache.php:149)
+Stack trace:
+#0 /var/www/yii/framework/web/CUrlManager.php(219): CMemCache->get()
+#1 /var/www/yii/framework/web/CUrlManager.php(206): CUrlManager->processRules()
+#2 /var/www/yii/framework/base/CModule.php(387): CUrlManager->init()
+#3 /var/www/yii/framework/base/CApplication.php(522): YttCore->getComponent()
+#4 /var/www/yii/framework/web/CWebApplication.php(140): YttCore->getUrlManager()
+#5 /var/www/yii/framework/base/CApplication.php(180): YttCore->processRequest()
+#6 /dfwmas.isweepsusa.com/index.php(19): YttCore->run()
+REQUEST_URI=/favicon.ico
+2017/04/09 12:35:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "apple-touch-icon-precomposed.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('apple-touch-ico...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/apple-touch-icon-precomposed.png
+---
+2017/04/09 12:35:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "apple-touch-icon-precomposed.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('apple-touch-ico...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/apple-touch-icon-precomposed.png
+---
+2017/04/09 12:35:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "apple-touch-icon.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('apple-touch-ico...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/apple-touch-icon.png
+---
+2017/04/09 12:35:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "apple-touch-icon.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('apple-touch-ico...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/apple-touch-icon.png
+---
