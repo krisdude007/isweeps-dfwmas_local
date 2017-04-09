@@ -1,6 +1,6 @@
 <?php
 
-//echo 'test123';exit;
+echo 'test123';exit;
 error_reporting(E_ERROR);
 // change the following paths if necessary
 $yii='framework/yii.php';
