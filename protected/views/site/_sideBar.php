@@ -43,13 +43,13 @@
                     <li class="sidebar-brand" style="text-align: center; height: 40px; text-indent: 0px;"><a href="<?php echo $this->createUrl('/user/profile', array()); ?>" style="font-size: 17px; font-weight: 500;"><?php echo $user->first_name . ' ' . $user->last_name; ?></a></li>
                     <?php //$geoLocation = GeoUtility::GeoLocation(); ?>
                     <?php //if ($geoLocation['isValid']): ?>
-                        <!--<div style="text-align: center; color: #ffffff; font-size: 12px;"><?php // echo Yii::t('youtoo', 'Game Credits'); ?> : <?php // echo '<span style="color: #35aae5;">$' . $balance . '</span>'; ?></div>-->
+                        <div style="text-align: center; color: #ffffff; font-size: 12px;"><?php echo Yii::t('youtoo', 'Game Credits'); ?> : <?php echo '<span style="color: #35aae5;">$' . $balance . '</span>'; ?></div>
                         <!--<div style="text-align: center; color: #ffffff; font-size: 12px;"><?php // echo Yii::t('youtoo', 'Bonus Bucks'); ?> : <?php // echo '<span style="color: #35aae5;">' . $credits . '</span>'; ?></div>-->
                     <?php //endif; ?>
                 <?php else: ?>
                     <li class="sidebar-brand" style="text-align: center; height: 40px; text-indent: 0px;"><a href="<?php echo $this->createUrl('/user/profile', array()); ?>" style="font-size: 17px; font-weight: 500;"><?php echo empty($this->user->first_name) ? '' : $this->user->first_name; ?> <?php echo empty($this->user->last_name) ? '' : $this->user->last_name; ?></a></li>
                     <?php //$geoLocation = GeoUtility::GeoLocation(); if ($geoLocation['isValid']): ?>
-                    <!--<div style="text-align: center; color: #ffffff; font-size: 12px;"><?php // echo Yii::t('youtoo', 'Game Credits'); ?> : <?php // echo '<span style="color: #35aae5;">$' . $balance . '</span>'; ?></div>-->
+                    <div style="text-align: center; color: #ffffff; font-size: 12px;"><?php echo Yii::t('youtoo', 'Game Credits'); ?> : <?php echo '<span style="color: #35aae5;">$' . $balance . '</span>'; ?></div>
                     <!--<div style="text-align: center; color: #ffffff; font-size: 12px;"><?php // echo Yii::t('youtoo', 'Bonus Bucks'); ?> : <?php // echo '<span style="color: #35aae5;">' . $credits . '</span>'; ?></div>-->
                     <?php //endif; ?>
                 <?php endif; ?>

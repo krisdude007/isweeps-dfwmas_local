@@ -1,6 +1,13 @@
 <?php
 $cs = Yii::app()->getClientScript();
 $stripe = StripeUtility::config();
+
+$gameEntry = array (
+    5 => '$5 for 1 game',
+    10 => '$10 for 2 games',
+    25 => '$25 for 5 games',
+    50 => '$50 for 10 games',
+    );
 ?>
 
 <!-- The required Stripe lib -->
@@ -161,7 +168,7 @@ $stripe = StripeUtility::config();
                 <?php for ($i = 1; $i <= 4; $i++) { ?>
                     <div class="paymentOptionsTop" style="min-height: 222px;">
                         <div style="background-color: #f2f2f2;"><h3 style="margin-top: 0px; min-height: 43px; padding-top: 8px; margin-bottom: 0px; font-weight: 300;">$<?php echo $payCashArray[$i]; ?></h3></div>
-                        <div style='margin-top: 5px;'><?php //echo $payCreditArray[$i]; ?>It's <br/><?php echo Yii::t('youtoo', '$5 for 6 game entries'); ?></div><hr style="margin-top: 5px; margin-bottom: 5px;"/>
+                        <div style='margin-top: 5px;'><?php //echo $payCreditArray[$i]; ?>It's <br/><?php echo Yii::t('youtoo', $gameEntry[$payCreditArray[$i]]); ?></div><hr style="margin-top: 5px; margin-bottom: 5px;"/>
                             <div style="font-size: 10px; margin-bottom: 10px;"><?php echo Yii::t('youtoo', 'Plus bonus entries<br/>for correct answers'); ?></div>
                         <div style="margin-top: 25px;"><a id="entry<?php echo $i; ?>" href="/payment?ci=<?php echo $i; ?>" class="btn btn-default btn-md" style="min-width: 114px; min-height: 37px;"><?php echo Yii::t('youtoo', 'Select'); ?></a></div>
                     </div>
