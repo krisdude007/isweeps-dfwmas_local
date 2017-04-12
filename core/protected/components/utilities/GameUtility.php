@@ -31,6 +31,47 @@ class GameUtility {
 
         return $totals;
     }
+    
+    
+    public static function getBonusCredit($noOfQs, $noOfCorrectAnswers) {
+
+        $bonusArr = array(
+            '1' => array('1' => 0),
+            '5' => array('5' => 1000),
+            '10' => array('6' => 1000, '7' => 2500, '8' => 5000, '9' => 7500, '10' => 10000),
+            '15' => array('11' => 5000, '12' => 12500, '13' => 25000, '14' => 37500, '15' => 50000),
+            '20' => array('16' => 10000, '17' => 25000, '18' => 50000, '19' => 75000, '20' => 100000),
+        );
+        return empty($bonusArr[$noOfQs][$noOfCorrectAnswers]) ? 0 : $bonusArr[$noOfQs][$noOfCorrectAnswers];
+    }
+
+    public static function getGameHistory($userId) {
+        $result = Yii::app()->db->createCommand("
+                SELECT 
+                   game_unique_id as gameId,
+                   max(created_on) as Date,
+                   no_of_questions AS NoOfQuestions,
+                   SUM(bonus_credit) as BonusCredits,
+                   COUNT(id) as NoOfAnswers from game_choice_response
+                where user_id = {$userId}
+                GROUP BY game_unique_id, no_of_questions
+                ORDER BY created_on desc
+                ")->queryAll();
+        
+        return $result;
+    }
+    
+    public static function getNoOfCorrectAnswersByGameId($gameId) {
+        $result = Yii::app()->db->createCommand("
+                SELECT 
+                   COUNT(id) as NoOfCorrectAnswers 
+                   from game_choice_response
+                where game_unique_id = '{$gameId}'
+                and is_correct = 1
+                ")->queryAll();
+       
+        return $result[0]['NoOfCorrectAnswers'];
+    }
 
     public static function pickWinnerRand($old_is_active, $new_is_active, $game_id) {
 
@@ -331,6 +372,12 @@ class GameUtility {
         if (isset($game)) {
         return $game->description;
         }
+    }
+    
+    public static function checkIfAnswerIsCorrect($gameAnswerId) {
+        $result = eGameChoiceAnswer::model()->findByPK($gameAnswerId);
+        
+        return $result->is_correct;
     }
 
     public static function actionGameSMS($phone = NULL) { //TO-DO

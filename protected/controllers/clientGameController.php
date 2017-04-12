@@ -6,6 +6,37 @@ class clientGameController extends GameController {
     public $activeSubNavLink = '';
     public $userBalance = null;
 
+        public function filters() {
+        return array(
+            'accessControl', // perform access control for CRUD operations
+        );
+    }
+
+    public function goToLogin() {
+        $this->redirect($this->createUrl('/user/login'));
+    }
+
+    public function accessRules() {
+        return array(
+            array('allow',
+                'actions' => array('pickgame','winlooseordraw','entrymobile', 'thankyoumobile'),
+                'users' => array('@'),
+            ),
+            array('allow',
+                'actions' => array(),
+                'users' => array('*'),
+            ),
+            array('allow',
+                'actions' => array('login'),
+                'users' => array('?'),
+            ),
+            array('deny', // deny all users
+                'users' => array('*'),
+            //'deniedCallback' => array($this, 'goToLogin'),
+            ),
+        );
+    }
+    
     public function actionMultiple2($id = NULL) {
         //if ($this->isMobile()) {
         //    Yii::app()->theme = 'mobile';
@@ -302,11 +333,19 @@ class clientGameController extends GameController {
             exit;
         }
         $type = 'game_choice';
-        $user_id = Yii::app()->user->getId();
-        $result = PaymentUtility::oneFreeCredit('game_choice', 1, 1);
+        $userId = Yii::app()->user->getId();
+        $video = $_POST['videoId'];
+        $freeCredit = $_POST['freeCredit'];
+        $date = date('Y-m-d', time());
+        $totalFreeCredits = PaymentUtility::countFreeCredits($userId, $date);
 
-        if ($result) {
-            echo json_encode(array('added' => Yii::t('youtoo', 'one free credit added')));
+        if ($totalFreeCredits <= Yii::app()->params['GamePlay']['maxFreeCredits']) {
+            $result = PaymentUtility::oneFreeCredit('game_choice', $freeCredit, 1, $video);
+            if ($result) {
+                echo json_encode(array('added' => Yii::t('youtoo', 'one free credit added')));
+            }
+        } else {
+            echo json_encode(array('limit_reached' => Yii::t('youtoo', 'You have reached your free credit limit. No more credits can be added for today.')));
         }
     }
 
@@ -349,7 +388,6 @@ class clientGameController extends GameController {
 //        } else {
 //            $mainGame = null;
 //        }
-
 //        if ($game->price == 0) {
 //            
 //        } else {
@@ -373,7 +411,9 @@ class clientGameController extends GameController {
             $response->user_id = $user_id;
             $response->game_unique_id = Yii::app()->session['gameUniqueId'];
             $response->game_price = Yii::app()->session['gamePrice'];
-            //var_dump($response);exit;
+            $response->no_of_questions = Yii::app()->session['noOfQs'];
+            $response->is_correct = GameUtility::checkIfAnswerIsCorrect($_POST['eGameChoiceResponse']['game_choice_answer_id']);
+            
             if (empty($response->game_choice_answer_id)) {
                 echo json_encode(array('error' => Yii::t('youtoo', 'Please choose an answer.')));
                 exit;
@@ -409,13 +449,14 @@ class clientGameController extends GameController {
     }
 
     public function actionPickGame($gi = 1, $gid = NULL) {
-
+        $this->activeNavLink = 'pickgame';
         $user_id = Yii::app()->user->getId();
-
-//        if (empty($user_id)) {
-//            $this->redirect($this->createUrl("/login/{$id}"));
-//        }
-
+        $date = date('Y-m-d', time());
+        
+        if (empty($user_id)) {
+            $this->redirect($this->createUrl("/login"));
+        }
+        //$this->redirect($this->createUrl("/?games=ended")); //redirect when games are stopped
         $user = clientUser::model()->findByPK($user_id);
 
         //if (isset($_GET['noOfQs']) && $_GET['noOfQs'] > 0) {
@@ -446,7 +487,9 @@ class clientGameController extends GameController {
 
             $this->redirect($this->createUrl("/winlooseordraw"));
         //}
-
+            
+        $totalFreeCredits = PaymentUtility::countFreeCredits($user_id, $date);
+        
         $gameArray = Array(1 => 1, 2 => 5, 3 => 10, 4 => 15, 5 => 20); //0 index with default key as 5
         $gameCreditArray = Array(1 => 1, 2 => 5, 3 => 10, 4 => 15, 5 => 20);
 
@@ -456,6 +499,7 @@ class clientGameController extends GameController {
             'gameCreditArray' => $gameCreditArray,
             'gameIndex' => $gi,
             'user' => $user,
+            'totalFreeCredits' => $totalFreeCredits,
         ));
     }
 
@@ -467,7 +511,7 @@ class clientGameController extends GameController {
         if (empty($user_id)) {
             $this->redirect($this->createUrl("/login/{$id}"));
         }
-
+        //$this->redirect($this->createUrl("/?games=ended")); //redirect when games are stopped
         $user = clientUser::model()->findByPK($user_id);
 
         if (eGameChoice::getNumberOfActiveGames() > 0) {
@@ -729,6 +773,16 @@ class clientGameController extends GameController {
         $this->render('thankyoumobile', array());
     }
 
+public function actionEntryMobile() {
+
+        if (Yii::app()->user->isGuest) {
+            Yii::app()->user->setReturnUrl(Yii::app()->request->getUrl());
+            $this->redirect($this->createUrl("/login"));
+        }
+
+        $this->render('entrymobile', array());
+    }
+    
 }
 
 ?>

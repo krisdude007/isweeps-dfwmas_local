@@ -28,7 +28,7 @@ class clientUserController extends UserController {
                 'users' => array('@'),
             ),
             array('allow',
-                'actions' => array('login', 'loginpay', 'register', 'registerpay', 'getpassword', 'termsofuse', 'privacypolicy', 'ajaxPayPalDirect', 'registernew', 'loginnew','baldiniscontact', 'rules'),
+                'actions' => array('login', 'loginpay', 'activity', 'register', 'registerpay', 'getpassword', 'termsofuse', 'privacypolicy', 'ajaxPayPalDirect', 'registernew', 'loginnew','baldiniscontact', 'rules'),
                 'users' => array('*'),
             ),
             array('deny', // deny all users
@@ -660,6 +660,32 @@ class clientUserController extends UserController {
                 $this->redirect(Yii::app()->createUrl('/user/login'));
             }
         }
+    }
+    
+        public function actionActivity() {
+        $this->activeSubNavLink = 'activity';
+        
+        $userId = Yii::app()->user->getId();
+        if(!empty($_GET['userid'])){
+            $userId = $_GET['userid'];
+        }
+        
+        $gameHistory = GameUtility::getGameHistory($userId);//var_dump($gameHistory);exit;
+        
+        for ($i = 0; $i < count($gameHistory); $i++) {
+            
+            $total = GameUtility::getNoOfCorrectAnswersByGameId ($gameHistory[$i]['gameId']);//var_dump($total);exit;
+            $gameHistory[$i]['NoOfCorrectAnswers'] = $total;
+            if (is_null($gameHistory[$i]['BonusCredits'])) {
+                $gameHistory[$i]['NoOfCorrectAnswers'] = 'Pending';
+                //var_dump($gameHistory[$i]['NoOfQuestions']);
+                $gameHistory[$i]['BonusCredits'] = 'upto '.GameUtility::getBonusCredit($gameHistory[$i]['NoOfQuestions'], $gameHistory[$i]['NoOfQuestions']);
+            }
+        }//exit;
+        //$activityResults = GameUtility::getActivity(Yii::app()->user->getId());
+        
+        $this->render('activity', array('gameHistory' => $gameHistory)
+        );
     }
 
         public function actionConnections() {

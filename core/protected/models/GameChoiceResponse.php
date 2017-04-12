@@ -11,8 +11,11 @@
  * @property integer $user_id
  * @property integer $transaction_id
  * @property integer $is_winner
+ * @property integer $is_correct
  * @property string $game_unique_id
  * @property double $game_price
+ * @property string $no_of_questions
+ * @property string $bonus_credit
  * @property string $source
  * @property string $ip_address
  * @property string $ip_derivedcity
@@ -43,14 +46,14 @@ class GameChoiceResponse extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('game_choice_id, game_choice_answer_id, user_id, game_price, source, created_on, updated_on', 'required'),
-			array('game_choice_id, game_choice_answer_id, sms_id, user_id, transaction_id, is_winner', 'numerical', 'integerOnly'=>true),
+			array('game_choice_id, game_choice_answer_id, sms_id, user_id, transaction_id, is_winner, is_correct', 'numerical', 'integerOnly'=>true),
 			array('game_price', 'numerical'),
 			array('game_unique_id', 'length', 'max'=>50),
+			array('no_of_questions, bonus_credit, ip_address, ip_derivedcity', 'length', 'max'=>255),
 			array('source', 'length', 'max'=>256),
-			array('ip_address, ip_derivedcity', 'length', 'max'=>255),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, game_choice_id, game_choice_answer_id, sms_id, user_id, transaction_id, is_winner, game_unique_id, game_price, source, ip_address, ip_derivedcity, created_on, updated_on', 'safe', 'on'=>'search'),
+			array('id, game_choice_id, game_choice_answer_id, sms_id, user_id, transaction_id, is_winner, is_correct, game_unique_id, game_price, no_of_questions, bonus_credit, source, ip_address, ip_derivedcity, created_on, updated_on', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -81,8 +84,11 @@ class GameChoiceResponse extends CActiveRecord
 			'user_id' => 'User',
 			'transaction_id' => 'Transaction',
 			'is_winner' => 'Is Winner',
+			'is_correct' => 'Is Correct',
 			'game_unique_id' => 'Game Unique',
 			'game_price' => 'Game Price',
+			'no_of_questions' => 'No Of Questions',
+			'bonus_credit' => 'Bonus Credit',
 			'source' => 'Source',
 			'ip_address' => 'Ip Address',
 			'ip_derivedcity' => 'Ip Derivedcity',
@@ -116,8 +122,11 @@ class GameChoiceResponse extends CActiveRecord
 		$criteria->compare('user_id',$this->user_id);
 		$criteria->compare('transaction_id',$this->transaction_id);
 		$criteria->compare('is_winner',$this->is_winner);
+		$criteria->compare('is_correct',$this->is_correct);
 		$criteria->compare('game_unique_id',$this->game_unique_id,true);
 		$criteria->compare('game_price',$this->game_price);
+		$criteria->compare('no_of_questions',$this->no_of_questions,true);
+		$criteria->compare('bonus_credit',$this->bonus_credit,true);
 		$criteria->compare('source',$this->source,true);
 		$criteria->compare('ip_address',$this->ip_address,true);
 		$criteria->compare('ip_derivedcity',$this->ip_derivedcity,true);

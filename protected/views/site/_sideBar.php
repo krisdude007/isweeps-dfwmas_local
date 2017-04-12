@@ -96,6 +96,7 @@
                             <ul class="nav navbar-nav">
                                 <li><a style='color: #ffffff;' <?php if ($this->activeSubNavLink == 'basicinfo'): ?>class='active'<?php endif; ?> href="<?php echo $this->createUrl('/user/profile', array()); ?>"><?php echo Yii::t('youtoo', 'Basic Info'); ?></a></li>
                                 <li><a style='color: #ffffff;' <?php if ($this->activeSubNavLink == 'password'): ?>class='active'<?php endif; ?> href="<?php echo $this->createUrl('/user/password', array()); ?>"><?php echo Yii::t('youtoo', 'Password'); ?></a></li>
+                                <li><a style='color: #ffffff;' <?php if ($this->activeSubNavLink == 'activity'): ?>class='active'<?php endif; ?> href="<?php echo $this->createUrl('/activity', array()); ?>"><?php echo Yii::t('youtoo', 'History'); ?></a></li>
                                 <li><a style='color: #ffffff;' <?php if ($this->activeSubNavLink == 'credits'): ?>class='active'<?php endif; ?> href="<?php echo $this->createUrl('/user/credits', array()); ?>"><?php echo Yii::t('youtoo', 'Credits'); ?></a></li>
                                 <?php //$geoLocation = GeoUtility::GeoLocation();
                                 //if ($geoLocation['isValid']):

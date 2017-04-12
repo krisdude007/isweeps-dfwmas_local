@@ -58,7 +58,6 @@ foreach ($game->gameChoiceAnswers as $answer) {
                                     </thead>
                                     <tbody>
                                         <?php
-                                        $allDisplayedGames = GameUtility::getAllDisplayedGames($games);
                                         $q = 1;
                                         ?>
                                         <?php
@@ -84,24 +83,16 @@ foreach ($game->gameChoiceAnswers as $answer) {
     } else {
         $source = 'web';
     }
-//    foreach ($game->gameChoiceAnswers as $answer) {
-//        if ($i < sizeof($game->gameChoiceAnswers) - 1) {
-//            $answerArray[$answer->id] = $answer->answer;
-//            $right = $answerArray[$answer->id];
-//        }
-//        $i++;
-//    }
+
     if (sizeof($game->gameChoiceAnswers) > 4) {
         $i = 1;
         echo '<div class="col-sm-11 ">';
         foreach ($game->gameChoiceAnswers as $ans) {
             if ($i < sizeof($game->gameChoiceAnswers) - 1) {
-            echo '<button id="game_choice_answer_id_'.$ans->id.'" class="btn btn-primary" style="background-color: transparent; " onclick="submitChoice(this,'.$ans->id.');">'.$ans->answer.'</button>';
+            echo '<button id="game_choice_answer_id_'.$ans->id.'" class="btn btn-primary" style="background-color: transparent; margin-right: 10px;" onclick="submitChoice(this,'.$ans->id.');">'.$ans->answer.'</button>';
             } 
             $i++;
         }
-        //echo $form->radioButtonList($response, 'game_choice_answer_id', $answerArray, array('labelOptions' => array('style' => "display:inline; background-color: transparent;", 'class' => 'form-control'), 'template' => '{label} {input}', 'separator' => '&nbsp&nbsp;&nbsp;',));
-        //echo $form->error($response, 'game_choice_answer_id');
         echo $form->hiddenField($response, 'game_choice_id', array('value' => $game->id));
         echo $form->hiddenField($response, 'game_choice_answer_id', array('value' => $ans->id));
         echo '</div>';
@@ -115,8 +106,6 @@ foreach ($game->gameChoiceAnswers as $answer) {
             }
             $i++;
         }
-        //echo $form->radioButtonList($response, 'game_choice_answer_id', $answerArray, array('labelOptions' => array('style' => "display:inline; background-color: transparent;", 'class' => 'form-control'), 'template' => '{label} {input}', 'separator' => '&nbsp&nbsp;&nbsp;'));
-        //echo $form->error($response, 'game_choice_answer_id');
         echo $form->hiddenField($response, 'game_choice_id', array('value' => $game->id));
         echo $form->hiddenField($response, 'game_choice_answer_id', array('value' => ''));
         echo '</div>';
@@ -158,7 +147,7 @@ foreach ($game->gameChoiceAnswers as $answer) {
     for (i = 0; i < submittedAnswers.length; i++) {
         value = submittedAnswers[i].game_choice_answer_id;
         
-        answerButton = $('#game_choice_answer_id_'+value);console.log(answerButton);
+        answerButton = $('#game_choice_answer_id_'+value);//console.log(answerButton);
         answerButton.attr('style', answerButton.attr('style') + 'background-color: yellow');
         var row = answerButton.closest("tr");
         row.css('background-color', '#142E02');
@@ -169,7 +158,7 @@ foreach ($game->gameChoiceAnswers as $answer) {
 
     $('form').submit(function (event) {
         thisform = this;
-        var row = $(this).closest("tr");
+        //var row = $(this).closest("tr");
         
         $.ajax({
             type: 'post',

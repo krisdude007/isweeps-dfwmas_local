@@ -97,6 +97,7 @@ $config_array = array(
                 'baldiniscontact' => '/user/baldiniscontact',
                 'customerror' => '/site/customerror',
                 'redeem' => '/site/redeem',
+                'activity' => '/user/activity',
                 'redeemtw/<i:\d+>' => '/site/redeem',
                 'payPrepapproval/<id:\d+>' => '/payment/payPrepapproval',
                 'payment' => '/payment/index2',
