@@ -6,7 +6,7 @@
 </p>
 <p align="center">
     <strong>
-        Baldini’s Sweepstakes &amp; Contests
+        <?php echo Yii::app()->params['global']['replaceValue']; ?> Sweepstakes &amp; Contests
         <br/>
         Terms and Conditions / Official Rules
     </strong>
@@ -30,13 +30,13 @@
     <strong></strong>
 </p>
 <p>
-    Sponsor, Administrator, Operator, and Prize Provider: <a>Baldini’s in Reno, NV </a><a id="_anchor_1" href="#_msocom_1" name="_msoanchor_1">[RR1]</a>
+    Sponsor, Administrator, Operator, and Prize Provider: <a><?php echo Yii::app()->params['global']['replaceValue']; ?> in Reno, NV </a><a id="_anchor_1" href="#_msocom_1" name="_msoanchor_1">[RR1]</a>
 </p>
 <p>
     Software Provider: Youtoo Technologies, LLC
 </p>
 <p>
-    1. Acceptance of Terms and Conditions/Official Rules: By entering this Sweepstakes (the "Promotion" or the “Sweepstakes”), connected to Baldini’s in Reno,
+    1. Acceptance of Terms and Conditions/Official Rules: By entering this Sweepstakes (the "Promotion" or the “Sweepstakes”), connected to <?php echo Yii::app()->params['global']['replaceValue']; ?> in Reno,
     NV (the “Operator,” “Sweepstakes Provider,” or “Sweepstakes Operator”) and operated on the website accessible at the domain "www.baldinis.net" (the
     "Website") with the Software Provider Youtoo Technologies, LLC (the “Provider”), you (the “Participant” or “Winner” or “Player” or “User”) hereby accept
     and agree to the official rules (the "Official Rules") of this Promotion, and the decision of the Operator in connection with the Promotion and Sweepstakes
@@ -89,7 +89,7 @@
 </p>
 <p>
     (b) Free Entry Method: If Participant does not wish to enter online, he/she may enter the Sweepstakes by printing their name, address, city, state and zip
-    code, day &amp; evening telephone number and e-mail address on a standard size postcard and mail to: Baldini’s Sweepstakes c/o Youtoo Technologies, LLC.
+    code, day &amp; evening telephone number and e-mail address on a standard size postcard and mail to: <?php echo Yii::app()->params['global']['replaceValue']; ?> Sweepstakes c/o Youtoo Technologies, LLC.
     6565 North MacArthur Blvd., Suite 400, Irving, Texas 75039. Sweepstakes Providers (as defined below) will use e-mail addresses and telephone numbers
     provided via the Mail-In entry method for prize notification purposes only; however, eligibility to participate in the Sweepstakes is not dependent upon
     participant’s provision of this information. Mail-in entries must be postmarked and received by the Saturday before the end of each individual Sweepstakes
@@ -112,7 +112,7 @@
 <p>
     Consideration: The account holder, as defined below, will receive consideration for all successful monetary transactions with Operator. Said consideration
     will be received by “Credits” which can be exchanged for virtual and tangible items in the “Store” within the Operator’s Website. All tangible items must
-    be redeemed in person at the Baldini’s Casino location 865 South Rock Blvd., Sparks NV 89431. Consideration credits are calculated on a one to one ratio,
+    be redeemed in person at the <?php echo Yii::app()->params['global']['replaceValue']; ?> Casino location 865 South Rock Blvd., Sparks NV 89431. Consideration credits are calculated on a one to one ratio,
     or any additional bonus or additions set by Sweepstakes Operator, and all points have no monetary exchange value. The current store exchange is as follows:
     1 (one) credit redeems for a burger basket and drink for $1 (saving of $1.49 to retail); 5 (five) credits redeem a free burger basket and drink plus $5
     free play (value of $7.48); 10 (ten) credits redeem for a free breakfast entrée at Empire Diner and $10 free play (value of 14.95 +); 20 (twenty) credits
@@ -173,15 +173,15 @@ right to close Participant’s account at any time for any reason.<a name="9"></
     are as follows:
 </p>
 <p>
-    1st Sweepstakes: One (1) check in the amount of $3,500 USD (three thousand and five hundred US dollars) provided by Baldini’s, with an approximate retail
+    1st Sweepstakes: One (1) check in the amount of $3,500 USD (three thousand and five hundred US dollars) provided by <?php echo Yii::app()->params['global']['replaceValue']; ?>, with an approximate retail
     value ("ARV") of $3,500 USD (three thousand and five hundred US dollars).
 </p>
 <p>
-    2nd Sweepstakes: One (1) check in the amount of $3,500 USD (three thousand and five hundred US dollars) provided by Baldini’s, with an "ARV" of $3,500 USD
+    2nd Sweepstakes: One (1) check in the amount of $3,500 USD (three thousand and five hundred US dollars) provided by <?php echo Yii::app()->params['global']['replaceValue']; ?>, with an "ARV" of $3,500 USD
     (three thousand and five hundred US dollars).
 </p>
 <p>
-    3rd Sweepstakes: One (1) check in the amount of $3,500 USD (three thousand and five hundred US dollars) provided by Baldini’s, with an ARV $3,500 USD
+    3rd Sweepstakes: One (1) check in the amount of $3,500 USD (three thousand and five hundred US dollars) provided by <?php echo Yii::app()->params['global']['replaceValue']; ?>, with an ARV $3,500 USD
     (three thousand and five hundred US dollars).
 </p>
 <p>
@@ -350,9 +350,9 @@ right to close Participant’s account at any time for any reason.<a name="9"></
     Texas, in the City of Dallas.
 </p>
 <p>
-    23. Winner List/Official Rules: For the name of the Prize winners send a self-addressed stamped envelope for receipt by May 31, 2015 to "Baldini’s
+    23. Winner List/Official Rules: For the name of the Prize winners send a self-addressed stamped envelope for receipt by May 31, 2015 to "<?php echo Yii::app()->params['global']['replaceValue']; ?>
     Sweepstake Winner's list" Giveaway, c/o Youtoo Technologies, LLC., 6565 North MacArthur Blvd, Suite 400, Irving, Texas 75039. For a copy of the Official
-    Rules send a self-addressed stamped envelope to the above address marked “Official Rules: Baldini’s Sweepstakes Giveaway” for receipt by May 31, 2015;
+    Rules send a self-addressed stamped envelope to the above address marked “Official Rules: <?php echo Yii::app()->params['global']['replaceValue']; ?> Sweepstakes Giveaway” for receipt by May 31, 2015;
     residents from VT may omit postage on the self-addressed envelope. The full name of the Prize winners may be posted and the Official Rules will be posted
     on the Website Service.
 </p>

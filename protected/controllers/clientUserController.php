@@ -230,7 +230,7 @@ class clientUserController extends UserController {
                     }
                 }
                 
-                $this->redirect($this->createUrl('/pickgame'));
+                $this->redirect($this->createUrl('/payment?ci=1'));
                 AuditUtility::save($this, $_REQUEST);
 
             } else {
@@ -498,7 +498,7 @@ class clientUserController extends UserController {
                     $creditTransaction->save();
                 }
 
-                $result = MailUtility::send('welcome', $userEmail->email, array('link' =>Yii::app()->createAbsoluteUrl("/", array()),'storelink' => Yii::app()->createAbsoluteUrl("/redeem", array())), false);
+                $result = MailUtility::send('welcome', $userEmail->email, array('link' =>Yii::app()->createAbsoluteUrl("/", array()),'storelink' => Yii::app()->createAbsoluteUrl("/payment?ci=1", array())), false);
                 if($result) {
                     AuditUtility::save($this, $_REQUEST);
 

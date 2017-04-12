@@ -16,7 +16,7 @@ Yii::app()->clientScript->registerScriptFile('http://cdn.jquerytools.org/1.2.7/a
                         <table class="table">
                             <tr style='background-color: #ffffff;'>
                                 <th style="text-align: left; padding: 15px;"><?php echo Yii::t('youtoo', 'Date') ?></th>
-                                <th style="text-align: left; padding: 15px;"><?php echo Yii::t('youtoo', 'Credits/Purchases') ?></th>
+                                <th style="text-align: left; padding: 15px;"><?php echo Yii::t('youtoo', 'Entries/Bonuses') ?></th>
                                 <th class='newItem' style="text-align: left; padding: 15px; background-color: #ffffff;"><?php echo Yii::t('youtoo', 'Description') ?></th>
                             </tr>
                             <?php foreach ($credits as $credit): ?>
@@ -37,7 +37,7 @@ Yii::app()->clientScript->registerScriptFile('http://cdn.jquerytools.org/1.2.7/a
                                     </td>
                                     <td class='newItem' style="text-align: left;  padding: 15px;"><?php
                                         if ($credit->type == 'earned') {
-                                            echo Yii::t('youtoo','Game Credits');
+                                            echo Yii::t('youtoo','Game Entries');
                                         } else {
                                             echo empty($credit->prize->name) ? '<span style="color: red;">'. Yii::t('youtoo','Game Debits') .'</span>' : '<span style="color: red;">' . $credit->prize->name . '</span>';
                                         }

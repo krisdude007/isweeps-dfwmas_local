@@ -418,8 +418,8 @@ class clientGameController extends GameController {
 
         $user = clientUser::model()->findByPK($user_id);
 
-        if (isset($_GET['noOfQs']) && $_GET['noOfQs'] > 0) {
-            $noOfQs = $_GET['noOfQs'];
+        //if (isset($_GET['noOfQs']) && $_GET['noOfQs'] > 0) {
+            $noOfQs = 6;
             $currBalance = GameUtility::getCashBalance($user_id); 
             if ((int) $noOfQs == 1) {
                 if (!($currBalance >= 1)) {
@@ -438,14 +438,14 @@ class clientGameController extends GameController {
 
             $uniqueId = (uniqid('', true));
             Yii::app()->session['gameUniqueId'] = $uniqueId;
-            if ($noOfQs == 1) {
-                Yii::app()->session['gamePrice'] = 1;
-            } else {
+            //if ($noOfQs == 1) {
+            //    Yii::app()->session['gamePrice'] = 1;
+            //} else {
                 Yii::app()->session['gamePrice'] = 5;
-            }
+            //}
 
             $this->redirect($this->createUrl("/winlooseordraw"));
-        }
+        //}
 
         $gameArray = Array(1 => 1, 2 => 5, 3 => 10, 4 => 15, 5 => 20); //0 index with default key as 5
         $gameCreditArray = Array(1 => 1, 2 => 5, 3 => 10, 4 => 15, 5 => 20);

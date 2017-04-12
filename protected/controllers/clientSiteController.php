@@ -393,6 +393,9 @@ class clientSiteController extends SiteController {
     }
 
     public function actionRedeem() {
+        
+        $this->redirect($this->createUrl('/site/index'));
+        
         $this->activeNavLink = 'redeem';
 
         if (isset($_POST['ePrize'])) {
@@ -459,7 +462,7 @@ class clientSiteController extends SiteController {
                 $prize->save();
             }
             Yii::app()->session['creditId'] = $transaction->id;
-            $result = MailUtility::send('confirm', $userEmail->email, array('link' => Yii::app()->createAbsoluteUrl("redeem/", array()),'prize' => $prize->name, 'credits' => $creditRequired ,'firstname' => isset($user->first_name) ? $user->first_name : 'John', 'lastname' => isset($user->last_name) ? $user->last_name : 'Doe','address' => $userLocation->address1, 'city' => $userLocation->city,'state' => $userLocation->state, 'zipcode' => $userLocation->postal_code, 'image' => Yii::app()->createAbsoluteUrl("/" . basename(Yii::app()->params["paths"]["image"])) . "/{$prize->image}"), false);
+            $result = MailUtility::send('confirm', $userEmail->email, array('link' => Yii::app()->createAbsoluteUrl("/", array()),'prize' => $prize->name, 'credits' => $creditRequired ,'firstname' => isset($user->first_name) ? $user->first_name : 'John', 'lastname' => isset($user->last_name) ? $user->last_name : 'Doe','address' => $userLocation->address1, 'city' => $userLocation->city,'state' => $userLocation->state, 'zipcode' => $userLocation->postal_code, 'image' => Yii::app()->createAbsoluteUrl("/" . basename(Yii::app()->params["paths"]["image"])) . "/{$prize->image}"), false);
             if ($result) {
                 $this->redirect($this->createUrl('/site/confirmation'));
             } else {

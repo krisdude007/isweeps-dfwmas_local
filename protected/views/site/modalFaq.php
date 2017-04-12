@@ -4,11 +4,11 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" style='color:#000000' id="myModalLabel"><?php echo Yii::t('youtoo', 'BALDINI’S SWEEPSTAKES FAQ') ?></h4>
+                <h4 class="modal-title" style='color:#000000' id="myModalLabel"><?php echo Yii::t('youtoo', Yii::app()->params['global']['replaceValue'].' SWEEPSTAKES FAQ') ?></h4>
             </div>
             <div class="modal-body" style='color:#000000'>
                <p>
-    BALDINI’S SWEEPSTAKES FAQ
+    DFWMAS’S SWEEPSTAKES FAQ
 </p>
 <p>
     <strong>Do I need to pay to enter the sweepstakes?</strong>
@@ -46,7 +46,7 @@
     <strong> like? Can I play more than once?</strong>
 </p>
 <p>
-    Each week will have a different multiple-choice question based upon Baldini’s, which is the first game. The questions are skill based. Players will have to
+    Each week will have a different multiple-choice question based upon <?php echo Yii::app()->params['global']['replaceValue']; ?>, which is the first game. The questions are skill based. Players will have to
     select one answer from the two multiple-choice answers offered. The next game, Game 2, also costs $1 (one US dollar) to play, but will consist of three (3)
     questions. These questions are trivia based and will have four (4) possible answers each. You will have 15 seconds to answer each question. Each correct
     response creates one additional Sweepstakes entry for the participant. The next game, Game 3 through Game 10, each costs $1 (one US dollar) to play, but
@@ -90,7 +90,7 @@
     <strong>How are winners announced?</strong>
 </p>
 <p>
-    The winner will be announced weekly with the historical list also available online. All public or media mentions will be at Baldini’s sole discretion.
+    The winner will be announced weekly with the historical list also available online. All public or media mentions will be at <?php echo Yii::app()->params['global']['replaceValue']; ?> sole discretion.
 </p>
 <p>
     <strong></strong>
@@ -99,15 +99,15 @@
     <strong>How do I obtain my prize if I am a winner?</strong>
 </p>
 <p>
-    All prizes are distributed at Baldini’s. Confirmed winners will need to come to the Baldini’s Casino, sign appropriate paperwork and receive their prize in
-    person. A Baldini’s Casino representative will contact winners.<strong></strong>
+    All prizes are distributed at <?php echo Yii::app()->params['global']['replaceValue']; ?>. Confirmed winners will need to come to the <?php echo Yii::app()->params['global']['replaceValue']; ?> Casino, sign appropriate paperwork and receive their prize in
+    person. A <?php echo Yii::app()->params['global']['replaceValue']; ?> Casino representative will contact winners.<strong></strong>
 </p>
 <p>
     <strong>What is The Store?</strong>
 </p>
 <p>
     Players will receive one (1) credit for each successful $1 (one US dollar) transaction. Credits can only be spent in The Store for items and services at
-    Baldini’s Casino location. Credits have no physical monetary exchange rate and do not accrue any interest.
+    <?php echo Yii::app()->params['global']['replaceValue']; ?> Casino location. Credits have no physical monetary exchange rate and do not accrue any interest.
 </p>
 <p>
     <strong>Do I need to pay to register?</strong>

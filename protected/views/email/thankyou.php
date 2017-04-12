@@ -21,17 +21,17 @@
                     <br/>
                     <p style="font-family: museosans,museo, sans-serif;">
                         <?php echo Yii::t('youtoo', 'Good luck!'); ?><br>
-                        <?php echo Yii::t('youtoo','The Azteca Team'); ?><br>
-                        <a href='http://us.azteca.com'>us.azteca.com</a>
+                        <?php echo Yii::t('youtoo','The iSweepsUSA Team'); ?><br>
+                        <a href='http://DFWMAS.org'>DFWMAS</a>
                     </p>
                 </div>
             </div>
             <div style='padding:15px;font-family: museosans,museo, sans-serif;'>
                 <p style="font-family: museosans,museo, sans-serif; font-size: 10px;">
-                    <?php echo Yii::t('youtoo','To UNSUBSCRIBE from future email notifications, '); ?><a href='http://{hostname}/you/profile' style='color: #ea8417'><?php echo Yii::t('youtoo','click here'); ?></a><br>
+                    <?php echo Yii::t('youtoo','To UNSUBSCRIBE from future email notifications, '); ?><?php echo Yii::t('youtoo','please email request to '); ?><a href='mailto:support@isweepsusa.com' style='color: #ea8417'>support@isweepsusa.com</a><br>
                 </p>
                 <p style='margin-top:15px;font-family: museosans,museo, sans-serif; font-size: 10px;'>
-                    &#169; <?php echo date('Y'); ?> Azteca <a style="font-family: museosans,museo, sans-serif; color: #ea8417;" href='http://static.azteca.com/TermsOfService.html' target='_blank'><?php echo Yii::t('youtoo','Terms of Use'); ?></a> & <a style="font-family: museosans,museo, sans-serif; color: #ea8417;" href='http://static.azteca.com/OnlinePrivacyPolicy.html' target='_blank' ><?php echo Yii::t('youtoo','Privacy Policy'); ?></a>.
+                    &#169; <?php echo date('Y'); ?> iSweepsUSA <a style="font-family: museosans,museo, sans-serif; color: #ea8417;" href='http://{hostname}/marketingpage' target='_blank'><?php echo Yii::t('youtoo','Terms of Use'); ?></a> & <a style="font-family: museosans,museo, sans-serif; color: #ea8417;" href='http://{hostname}/marketingpage' target='_blank' ><?php echo Yii::t('youtoo','Privacy Policy'); ?></a>.
                     Youtoo Technologies, LLC <a style="font-family: museosans,museo, sans-serif; color: #ea8417;" href='http://youtootech.com/patents' target='_blank'>youtootech.com/patents</a>
                 </p>
             </div>

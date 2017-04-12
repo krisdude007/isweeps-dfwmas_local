@@ -110,11 +110,11 @@ Yii::app()->facebook->initJs($output);
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-left">
-                <!--<li class="logo"><a target="_blank" href="http://www.baldinissports.com/"><img src="/webassets/images/laliga/logo_Azteca.png" style="height: 40px; position: relative; top: -6px; z-index: 1040; margin-left: 5px;"/></a></li>-->
-                <li style="display: none;"><a target="_blank" href="http://www.baldinissports.com/"><?php echo Yii::t('youtoo', 'SHOWS') ?></a></li>
-                <li style="display: none;" class="active"><a target="_blank" href="http://www.baldinissports.com/"><?php echo Yii::t('youtoo', 'MÁS') ?></a></li>
-                <li style="display: none;"><a target="_blank" href="http://www.baldinissports.com/"><?php echo Yii::t('youtoo', 'VIDEOS') ?></a></li>
-                <li style="display: none;"><a target="_blank" href="http://us.azteca.com/programacion/index"><?php echo Yii::t('youtoo', 'HORARIOS') ?></a></li>
+                <li class="logo"><a target="_blank" href="http://DFWMAS.org"><img src="/webassets/images/laliga/logo_DFWMAS.png" style="height: 40px; position: relative; top: -6px; z-index: 1040; margin-left: 15px;"/></a></li>
+                <li style="display: none;"><a target="_blank" href="http://DFWMAS.org"><?php echo Yii::t('youtoo', 'SHOWS') ?></a></li>
+                <li style="display: none;" class="active"><a target="_blank" href="http://DFWMAS.org"><?php echo Yii::t('youtoo', 'MÁS') ?></a></li>
+                <li style="display: none;"><a target="_blank" href="http://DFWMAS.org"><?php echo Yii::t('youtoo', 'VIDEOS') ?></a></li>
+                <li style="display: none;"><a target="_blank" href="http://DFWMAS.org"><?php echo Yii::t('youtoo', 'HORARIOS') ?></a></li>
          
             </ul>
         </div>
@@ -136,37 +136,37 @@ Yii::app()->facebook->initJs($output);
         <div id="pageFooterDrop">
             <div  class="row col-sm-12" style='padding-left: 50px;'>
                 <div class="col-sm-2">
-                    <a target="_blank" href="http://www.baldinissports.com/"><img src="/webassets/images/laliga/logo_Azteca.png" style="height: 40px; margin-top: 30px;"/></a></li>
+                    <a target="_blank" href="http://DFWMAS.org"><img src="/webassets/images/laliga/logo_Azteca.png" style="height: 40px; margin-top: 30px;"/></a></li>
                 </div>
                 <div class="col-sm-3" id="aboutDrop">
                     <div class="dropHead"><?php echo Yii::t('youtoo', 'ABOUT'); ?></div>
-                    <div><a target="_blank" href="http://www.baldinissports.net"><?php echo Yii::t('youtoo', 'Baldinis'); ?></a></div>
+                    <div><a target="_blank" href="http://DFWMAS.org"><?php echo Yii::t('youtoo', 'DFWMAS'); ?></a></div>
                     <div><a target="_blank" href="/marketingpage"><?php echo Yii::t('youtoo', 'Sweepstakes'); ?></a></div>
-                    <!--<div><a data-toggle="modal" data-target="#modalLaIsla" href="#"><?php // echo Yii::t('youtoo', 'Game Rules');     ?></a></div>-->
-                    <div><a href="#"><?php echo Yii::t('youtoo', 'Press and Media'); ?></a></div>
+                    <!--<div><a data-toggle="modal" data-target="#modalLaIsla" href="http://DFWMAS.org"><?php // echo Yii::t('youtoo', 'Game Rules');     ?></a></div>-->
+                    <div><a href="http://DFWMAS.org/club-news"><?php echo Yii::t('youtoo', 'Press and Media'); ?></a></div>
                 </div>
                 <div class="col-sm-3" id="helpDrop">
                     <div class="dropHead"><?php echo Yii::t('youtoo', 'HELP'); ?></div>
                     <div><a href="/contact"><?php echo Yii::t('youtoo', 'Support'); ?></a></div>
-                    <!--<div><a href="#"><?php // echo Yii::t('youtoo', 'How it works'); ?></a></div>-->
-                    <div><a href="#"><?php echo Yii::t('youtoo', 'Rules & Scoring'); ?></a></div>
+                    <!--<div><a href="http://DFWMAS.org"><?php // echo Yii::t('youtoo', 'How it works'); ?></a></div>-->
+                    <div><a href="http://DFWMAS.org"><?php echo Yii::t('youtoo', 'Rules & Regulations'); ?></a></div>
                     <div><a href="/faq"><?php echo Yii::t('youtoo', 'FAQ'); ?></a></div>
                 </div>
                 <div class="col-sm-3" id="legalDrop">
                     <div class="dropHead"><?php echo Yii::t('youtoo', 'LEGAL'); ?></div>
                     <div><a href="/marketingpage" target="_blank"><?php echo Yii::t('youtoo', 'Rules of the competition'); ?></a></div>
-                    <!--<div><a href="#"><?php // echo Yii::t('youtoo', 'Sweepstakes Regs'); ?></a></div>-->
-                    <div><a data-toggle="modal" data-target="#modalTerms" href="#"><?php echo Yii::t('youtoo', 'Terms'); ?></a></div>
-                    <div><a data-toggle="modal" data-target="#modalPrivacy" href="#"><?php echo Yii::t('youtoo', 'Privacy Policy'); ?></a></div>
+                    <!--<div><a href="http://DFWMAS.org"><?php // echo Yii::t('youtoo', 'Sweepstakes Regs'); ?></a></div>-->
+                    <div><a data-toggle="modal" data-target="#modalTerms" href="http://DFWMAS.org"><?php echo Yii::t('youtoo', 'Terms'); ?></a></div>
+                    <div><a data-toggle="modal" data-target="#modalPrivacy" href="http://DFWMAS.org"><?php echo Yii::t('youtoo', 'Privacy Policy'); ?></a></div>
                 </div>
             </div>
         </div>
         <div id="sponsorLogo">
             <!--<img src="/webassets/images/laliga/footer_paypal.png" style="margin-right: 17px;"/> -->
-            <img src="/webassets/images/laliga/footer_visa.png" style="margin-right: 17px;"/>
-            <img src="/webassets/images/laliga/footer_mastercard.png" style="margin-right: 17px;"/>
+            <a href="/payment?ci=1"><img src="/webassets/images/laliga/footer_visa.png" style="margin-right: 17px;"/></a>
+            <a href="/payment?ci=1"><img src="/webassets/images/laliga/footer_mastercard.png" style="margin-right: 17px;"/></a>
     <!--        <img src="/webassets/images/laliga/footer_discover.png" style="margin-right: 25px;"/>-->
-            <img src="/webassets/images/laliga/footer_twitter.png" style="margin-right: 5px;"/>
+            <a href="https://twitter.com/dfwmas"><img src="/webassets/images/laliga/footer_twitter.png" style="margin-right: 5px;"/></a>
 <!--            <img src="/webassets/images/laliga/footer_instagram.png" style="margin-right: 5px;"/>-->
     <!--        <img src="/webassets/images/laliga/footer_facebook.png" style="margin-right: 5px;"/>-->
         </div>
