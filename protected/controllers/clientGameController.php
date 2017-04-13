@@ -6,36 +6,36 @@ class clientGameController extends GameController {
     public $activeSubNavLink = '';
     public $userBalance = null;
 
-    public function filters() {
-        return array(
-            'accessControl', // perform access control for CRUD operations
-        );
-    }
+//    public function filters() {
+//        return array(
+//            'accessControl', // perform access control for CRUD operations
+//        );
+//    }
 
-    public function goToLogin() {
-        $this->redirect($this->createUrl('/user/login'));
-    }
-
-    public function accessRules() {
-        return array(
-            array('allow',
-                'actions' => array('pickgame', 'winlooseordraw', 'entrymobile', 'thankyoumobile', 'gametrivia'),
-                'users' => array('@'),
-            ),
-            array('allow',
-                'actions' => array('ajaxgametriviaquestionsapi'),
-                'users' => array('*'),
-            ),
-            array('allow',
-                'actions' => array('login'),
-                'users' => array('?'),
-            ),
-            array('deny', // deny all users
-                'users' => array('*'),
-            //'deniedCallback' => array($this, 'goToLogin'),
-            ),
-        );
-    }
+//    public function goToLogin() {
+//        $this->redirect($this->createUrl('/user/login'));
+//    }
+//
+//    public function accessRules() {
+//        return array(
+//            array('allow',
+//                'actions' => array('pickgame', 'entrymobile', 'thankyoumobile', 'gametrivia'),
+//                'users' => array('@'),
+//            ),
+//            array('allow',
+//                'actions' => array('ajaxgametriviaquestionsapi','winlooseordraw'),
+//                'users' => array('*'),
+//            ),
+//            array('allow',
+//                'actions' => array('login'),
+//                'users' => array('?'),
+//            ),
+//            array('deny', // deny all users
+//                'users' => array('*'),
+//            //'deniedCallback' => array($this, 'goToLogin'),
+//            ),
+//        );
+//    }
 
     public function actionAjaxGameTriviaQuestionsApi($id = null) {
         $ch = curl_init();
