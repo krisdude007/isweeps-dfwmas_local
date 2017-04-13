@@ -67,6 +67,7 @@ $config_array = array(
                 'payandplay' => '/site/payandplay',
                 'newpayandplay' => '/site/newpayandplay',
                 'geocoordinates' => '/site/geocoordinates',
+                'gametrivia' => '/game/gametrivia',
                 'geocoordinatesshare' => '/site/geocoordinatesshare',
                 'geocoordinates/<id:\d+>' => '/site/geocoordinates',
                 'geocoordinatesshare/<id:\d+>' => '/site/geocoordinatesshare',
@@ -314,6 +315,10 @@ $config_array = array(
          */
         'client' => $subdomain,
         'maxActiveQuestions' => 3,
+        'triviaQuestions' => array(
+            'maxQuestionsAllowed' => 6,
+            
+        ),
         'perPage' => 50,
         'currencySymbol' => '$',
         'vine' => array(

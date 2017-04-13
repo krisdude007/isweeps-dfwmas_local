@@ -6,7 +6,7 @@ class clientGameController extends GameController {
     public $activeSubNavLink = '';
     public $userBalance = null;
 
-        public function filters() {
+    public function filters() {
         return array(
             'accessControl', // perform access control for CRUD operations
         );
@@ -19,11 +19,11 @@ class clientGameController extends GameController {
     public function accessRules() {
         return array(
             array('allow',
-                'actions' => array('pickgame','winlooseordraw','entrymobile', 'thankyoumobile'),
+                'actions' => array('pickgame', 'winlooseordraw', 'entrymobile', 'thankyoumobile', 'gametrivia'),
                 'users' => array('@'),
             ),
             array('allow',
-                'actions' => array(),
+                'actions' => array('ajaxgametriviaquestionsapi'),
                 'users' => array('*'),
             ),
             array('allow',
@@ -36,7 +36,86 @@ class clientGameController extends GameController {
             ),
         );
     }
-    
+
+    public function actionAjaxGameTriviaQuestionsApi($id = null) {
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, "https://opentdb.com/api.php?amount=".Yii::app()->params['triviaQuestions']['maxQuestionsAllowed']."&difficulty=medium");
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+        $response = curl_exec($ch);
+        curl_close($ch);
+
+        $decodedTrivia = json_decode($response);
+        //var_dump($decodedTrivia->results);exit;
+        foreach ($decodedTrivia->results as $dt) {
+            $game = new eGameChoice;
+
+            $game->user_id = Yii::app()->user->getId();
+            $game->type = 'multiple';
+            $game->description = 'iSweepsUSA Game Questions';
+            $game->price = 1;
+            $game->prize = 1000;
+            $game->question = $dt->question;
+            $game->is_active = 1;
+            $game->open_date = date('Y-m-d H:i:s', strtotime(date("Y-m-d H:i:s")));
+            $game->close_date = date('Y-m-d H:i:s', strtotime('+7 days', strtotime(date("Y-m-d H:i:s"))));
+            
+            if ($game->save()) {
+                array_push($dt->incorrect_answers, $dt->correct_answer);
+                shuffle($dt->incorrect_answers);
+                
+                $arr = array(0 => 'A', 1 => 'B', 2 => 'C', 3 => 'D');
+                $arr2 = array(0 => 'A', 1 => 'B');
+                if ($dt->type == 'multiple') {
+                    for ($i = 0; $i < 4; $i++) {
+                        //foreach ($dt->incorrect_answers as $ia) {
+                        $gameAnswer = new eGameChoiceAnswer;
+                        $gameAnswer->label = $arr[$i];
+                        $gameAnswer->answer = $dt->incorrect_answers[$i];
+                        $gameAnswer->point_value = 10;
+                        $gameAnswer->user_id = Yii::app()->user->getId();
+                        $gameAnswer->is_correct = ($dt->incorrect_answers[$i] == $dt->correct_answer) ? 1 : 0;
+                        $gameAnswer->game_choice_id = $game->id;
+                        $gameAnswer->save();
+                    }
+                } else {
+                    for ($i = 0; $i < 4; $i++) {
+                    $gameAnswer = new eGameChoiceAnswer;
+                    $gameAnswer->label = $arr2[$i];
+                    $gameAnswer->answer = $dt->incorrect_answers[$i];
+                    $gameAnswer->point_value = 10;
+                    $gameAnswer->user_id = Yii::app()->user->getId();
+                    $gameAnswer->is_correct = ($dt->incorrect_answers[$i] == $dt->correct_answer) ? 1 : 0;
+                    $gameAnswer->game_choice_id = $game->id;
+                    $gameAnswer->save();
+                    }
+                }
+                
+                $unintelligibleAnswer = new eGameChoiceAnswer;
+                $unintelligibleAnswer->label = 'E';
+                $unintelligibleAnswer->answer = 'Auto';
+                $unintelligibleAnswer->point_value = 10;
+                $unintelligibleAnswer->user_id = Yii::app()->user->getId();
+                $unintelligibleAnswer->game_choice_id = $game->id;
+                $unintelligibleAnswer->save();
+
+                $unintelligibleAnswer = new eGameChoiceAnswer;
+                $unintelligibleAnswer->label = '#';
+                $unintelligibleAnswer->answer = 'Unintelligible';
+                $unintelligibleAnswer->point_value = 10;
+                $unintelligibleAnswer->user_id = Yii::app()->user->getId();
+                $unintelligibleAnswer->game_choice_id = $game->id;
+                $unintelligibleAnswer->save();
+            }
+        }
+        
+        echo json_encode(array('completed' => Yii::t('youtoo', 'Questions are entered successfully!')));
+    }
+
+    public function actionGameTrivia($id = null) {
+        $this->render('gametrivia', array());
+    }
+
     public function actionMultiple2($id = NULL) {
         //if ($this->isMobile()) {
         //    Yii::app()->theme = 'mobile';
@@ -413,7 +492,7 @@ class clientGameController extends GameController {
             $response->game_price = Yii::app()->session['gamePrice'];
             $response->no_of_questions = Yii::app()->session['noOfQs'];
             $response->is_correct = GameUtility::checkIfAnswerIsCorrect($_POST['eGameChoiceResponse']['game_choice_answer_id']);
-            
+
             if (empty($response->game_choice_answer_id)) {
                 echo json_encode(array('error' => Yii::t('youtoo', 'Please choose an answer.')));
                 exit;
@@ -452,7 +531,7 @@ class clientGameController extends GameController {
         $this->activeNavLink = 'pickgame';
         $user_id = Yii::app()->user->getId();
         $date = date('Y-m-d', time());
-        
+
         if (empty($user_id)) {
             $this->redirect($this->createUrl("/login"));
         }
@@ -460,36 +539,36 @@ class clientGameController extends GameController {
         $user = clientUser::model()->findByPK($user_id);
 
         //if (isset($_GET['noOfQs']) && $_GET['noOfQs'] > 0) {
-            $noOfQs = 6;
-            $currBalance = GameUtility::getCashBalance($user_id); 
-            if ((int) $noOfQs == 1) {
-                if (!($currBalance >= 1)) {
-                    $this->redirect($this->createUrl("/payment?ci=1"));
-                }
-            } else {
-                if ((!($currBalance >= 5))) {
-                    $this->redirect($this->createUrl("/payment?ci=1"));
-                }
+        $noOfQs = 6;
+        $currBalance = GameUtility::getCashBalance($user_id);
+        if ((int) $noOfQs == 1) {
+            if (!($currBalance >= 1)) {
+                $this->redirect($this->createUrl("/payment?ci=1"));
             }
+        } else {
+            if ((!($currBalance >= 5))) {
+                $this->redirect($this->createUrl("/payment?ci=1"));
+            }
+        }
 
-            $_SESSION['choiceList'] = array();
-            Yii::app()->session['noOfQs'] = $noOfQs;
-            Yii::app()->session['noOfAs'] = 0;
-            Yii::app()->session['noOfRemaining'] = $noOfQs - Yii::app()->session['noOfAs'];
+        $_SESSION['choiceList'] = array();
+        Yii::app()->session['noOfQs'] = $noOfQs;
+        Yii::app()->session['noOfAs'] = 0;
+        Yii::app()->session['noOfRemaining'] = $noOfQs - Yii::app()->session['noOfAs'];
 
-            $uniqueId = (uniqid('', true));
-            Yii::app()->session['gameUniqueId'] = $uniqueId;
-            //if ($noOfQs == 1) {
-            //    Yii::app()->session['gamePrice'] = 1;
-            //} else {
-                Yii::app()->session['gamePrice'] = 5;
-            //}
-
-            $this->redirect($this->createUrl("/winlooseordraw"));
+        $uniqueId = (uniqid('', true));
+        Yii::app()->session['gameUniqueId'] = $uniqueId;
+        //if ($noOfQs == 1) {
+        //    Yii::app()->session['gamePrice'] = 1;
+        //} else {
+        Yii::app()->session['gamePrice'] = 5;
         //}
-            
+
+        $this->redirect($this->createUrl("/winlooseordraw"));
+        //}
+
         $totalFreeCredits = PaymentUtility::countFreeCredits($user_id, $date);
-        
+
         $gameArray = Array(1 => 1, 2 => 5, 3 => 10, 4 => 15, 5 => 20); //0 index with default key as 5
         $gameCreditArray = Array(1 => 1, 2 => 5, 3 => 10, 4 => 15, 5 => 20);
 
@@ -773,7 +852,7 @@ class clientGameController extends GameController {
         $this->render('thankyoumobile', array());
     }
 
-public function actionEntryMobile() {
+    public function actionEntryMobile() {
 
         if (Yii::app()->user->isGuest) {
             Yii::app()->user->setReturnUrl(Yii::app()->request->getUrl());
@@ -782,7 +861,7 @@ public function actionEntryMobile() {
 
         $this->render('entrymobile', array());
     }
-    
+
 }
 
 ?>

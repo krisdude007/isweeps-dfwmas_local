@@ -34,6 +34,16 @@ $cs->registerScriptFile(Yii::app()->request->baseurl . '/core/webassets/js/jquer
                     <?php echo Yii::t('youtoo', 'If you have any questions, please click'); ?> <a href="<?php echo $this->createUrl('/site/faq', array()); ?>" style="color: #ea8417;"><?php echo Yii::t('youtoo', 'FAQ'); ?></a> <?php echo Yii::t('youtoo', 'and'); ?> <a href="#" data-toggle='modal' data-target ='#modalRules' style="color: #ea8417;"><?php echo Yii::t('youtoo', 'Rules'); ?></a> <?php echo Yii::t('youtoo', 'to learn how to play.'); ?>
                     <br/><br/> <?php echo Yii::t('youtoo', 'Good luck and have fun.'); ?>
                 </div>
+            <?php elseif (isset($_GET['f']) && $_GET['f'] == 'p'): ?>
+                <div style="background-color: #f7f9fa; min-height: 235px; width: 97.4%; margin: 20px auto; padding-top: 1px;margin-left: 12px; margin-right: 10px;">
+                    <h1 style="font-weight: 300; margin-bottom: 15px;"><?php echo Yii::t('youtoo', 'SUCCESS!!'); ?></h1>
+                    <h4 style="margin-bottom: 10px; line-height: 2;"><?php
+                        echo Yii::t('youtoo', "Questions have been entered successfully");
+                        ?>
+                    </h4>
+                    <?php echo Yii::t('youtoo', 'If you have any questions, please click'); ?> <a href="<?php echo $this->createUrl('/site/faq', array()); ?>" style="color: #ea8417;"><?php echo Yii::t('youtoo', 'FAQ'); ?></a> <?php echo Yii::t('youtoo', 'and'); ?> <a href="#" data-toggle='modal' data-target ='#modalRules' style="color: #ea8417;"><?php echo Yii::t('youtoo', 'Rules'); ?></a> <?php echo Yii::t('youtoo', 'to learn how to play.'); ?>
+                    <br/><br/> <?php echo Yii::t('youtoo', 'Good luck and have fun.'); ?>
+                </div>
             <?php else: ?>
                 <a href="<?php echo $url; ?>"><img src="/webassets/images/laliga/Image_Hero_Azteca-Concursos<?php echo (Yii::app()->language == 'en') ? '_eng' : ''; ?>.png" style="position: relative; max-width: 102.6%; left: -7px;"/>
                 </a>

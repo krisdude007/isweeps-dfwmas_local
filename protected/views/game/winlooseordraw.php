@@ -37,7 +37,7 @@ foreach ($game->gameChoiceAnswers as $answer) {
 </style>
 
 <div id="pageContainer" class="container" style='padding-right: 0px; padding-left: 0px;'>
-    <div class='subContainer' style='max-height: 672px;'>
+    <div class='subContainer' style='max-height: 697px;'>
         <?php $this->renderPartial('/site/_sideBar', array()); ?>
 
         <div class='row' style='margin-top: -30px;'>
@@ -89,7 +89,7 @@ foreach ($game->gameChoiceAnswers as $answer) {
         echo '<div class="col-sm-11 ">';
         foreach ($game->gameChoiceAnswers as $ans) {
             if ($i < sizeof($game->gameChoiceAnswers) - 1) {
-            echo '<button id="game_choice_answer_id_'.$ans->id.'" class="btn btn-primary" style="background-color: transparent; margin-right: 10px;" onclick="submitChoice(this,'.$ans->id.');">'.$ans->answer.'</button>';
+            echo '<button id="game_choice_answer_id_'.$ans->id.'" class="btn btn-primary" style="background-color: transparent; margin-right: 10px; margin-bottom: 5px;" onclick="submitChoice(this,'.$ans->id.');">'.$ans->answer.'</button>';
             } 
             $i++;
         }
@@ -102,7 +102,7 @@ foreach ($game->gameChoiceAnswers as $answer) {
         echo '<div class="col-sm-11 ">';
         foreach ($game->gameChoiceAnswers as $ans) {
             if ($i < sizeof($game->gameChoiceAnswers) - 1) {
-            echo '<button id="game_choice_answer_id_'.$ans->id.'" class="btn btn-primary" style="background-color: transparent; margin-right: 10px;" onclick="submitChoice(this,'.$ans->id.');">'.$ans->answer.'</button>';
+            echo '<button id="game_choice_answer_id_'.$ans->id.'" class="btn btn-primary" style="background-color: transparent; margin-right: 10px; margin-bottom: 5px;" onclick="submitChoice(this,'.$ans->id.');">'.$ans->answer.'</button>';
             }
             $i++;
         }
