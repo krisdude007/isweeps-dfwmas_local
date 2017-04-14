@@ -47,6 +47,14 @@ class clientGameController extends GameController {
 
         $decodedTrivia = json_decode($response);
         //var_dump($decodedTrivia->results);exit;
+        
+        $activeGames = eGameChoice::model()->multiple()->isActive()->orderByCloseAsc()->findAll();var_dump($activeGames);exit;
+//        $activeGames->is_active = 0;
+//
+//            if($activeGames->validate()) {
+//                $activeGames->update(array('is_active'));
+//            }
+         
         foreach ($decodedTrivia->results as $dt) {
             $game = new eGameChoice;
 

@@ -57,7 +57,11 @@ $cs->registerScriptFile(Yii::app()->request->baseurl . '/core/webassets/js/jquer
         <script>
         </script>
         <div id="getting-started"></div>
-        <?php if (isset($_GET['f']) && $_GET['f'] == 'g'): ?>
+        <?php if (isset($_GET['f']) && $_GET['f'] == 't'): ?>
+            <h2 style='color: #ea8417;'><?php echo Yii::t('youtoo', 'Want to play or return?'); ?></h2>
+            <a class="btn btn-default btn-lg startButton2" style="text-indent: 0; line-height: normal;margin-right: 10px;" href="<?php echo $this->createUrl('/pickgame', array()); ?>"><?php echo Yii::t('youtoo', 'Play Now'); ?></a>
+            <a class="btn btn-default btn-lg startButton2" style="text-indent: 0; line-height: normal;" href="<?php Yii::app()->user->setReturnUrl(Yii::app()->request->getUrl()); ?>"><?php echo Yii::t('youtoo', 'Return'); ?></a>
+        <?php elseif (isset($_GET['f']) && $_GET['f'] == 'g'): ?>
             <h2 style='color: #ea8417;'><?php echo Yii::t('youtoo', 'Want to play again?'); ?></h2>
             <a class="btn btn-default btn-lg startButton2" style="text-indent: 0; line-height: normal;" href="<?php echo $this->createUrl('/pickgame', array()); ?>"><?php echo Yii::t('youtoo', 'Play Now'); ?></a>
         <?php elseif (Yii::app()->user->isGuest): ?>
