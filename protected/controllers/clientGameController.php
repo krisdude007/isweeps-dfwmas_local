@@ -87,7 +87,7 @@ class clientGameController extends GameController {
                         $gameAnswer->save();
                     }
                 } else {
-                    for ($i = 0; $i < 4; $i++) {
+                    for ($i = 0; $i < 2; $i++) {
                     $gameAnswer = new eGameChoiceAnswer;
                     $gameAnswer->label = $arr2[$i];
                     $gameAnswer->answer = $dt->incorrect_answers[$i];
