@@ -105,7 +105,11 @@ Yii::app()->facebook->initJs($output);
         </div>
         <?php echo (Yii::app()->controller->action->id == 'marketingpage' || Yii::app()->controller->action->id == 'marketingpage2') ? '<div id="pageNavigation" class="navbar navbar-inverse" role="navigation" >' : '<div id="pageNavigation" class="navbar navbar-inverse" role="navigation">'; ?>
         <div class="navbar-header">
+<<<<<<< Updated upstream
         
+=======
+        <img src="/webassets/images/logo.png" style="height: 40px; position: relative; top: -6px; z-index: 1040; margin-left: 15px;"/>
+>>>>>>> Stashed changes
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
@@ -115,6 +119,7 @@ Yii::app()->facebook->initJs($output);
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-left">
+<<<<<<< Updated upstream
                 
                 
                 
@@ -124,6 +129,13 @@ Yii::app()->facebook->initJs($output);
                 <li><a href="/marketingpage"><?php echo Yii::t('youtoo', 'How to Play') ?></a></li>
                <li  class="right-btn"><a href="/login"><?php echo Yii::t('youtoo', 'Login Now') ?></a></li>
 
+=======
+                <li class="logo"><a target="_blank" href="http://DFWMAS.org"></a></li>
+                <li style=""><a target="_blank" href="http://DFWMAS.org"><?php echo Yii::t('youtoo', 'SHOWS') ?></a></li>
+                <li style="" class="active"><a target="_blank" href="http://DFWMAS.org"><?php echo Yii::t('youtoo', 'MÁS') ?></a></li>
+                <li style=""><a target="_blank" href="http://DFWMAS.org"><?php echo Yii::t('youtoo', 'VIDEOS') ?></a></li>
+                <li style=""><a target="_blank" href="http://DFWMAS.org"><?php echo Yii::t('youtoo', 'HORARIOS') ?></a></li>
+>>>>>>> Stashed changes
          
             </ul>
         </div>
@@ -173,10 +185,17 @@ Yii::app()->facebook->initJs($output);
         </div>
         <div id="sponsorLogo">
             <!--<img src="/webassets/images/laliga/footer_paypal.png" style="margin-right: 17px;"/> -->
+<<<<<<< Updated upstream
             <a href="/payment?ci=1"><img src="/webassets/images/footer_visa.png" style="margin-right: 17px;"/></a>
             <a href="/payment?ci=1"><img src="/webassets/images/footer_mastercard.png" style="margin-right: 17px;"/></a>
     <!--        <img src="/webassets/images/laliga/footer_discover.png" style="margin-right: 25px;"/>-->
             <a href="https://twitter.com/dfwmas"><img src="/webassets/images/footer_twitter.png" style="margin-right: 5px;"/></a>
+=======
+            <a href="/payment?ci=1"><img src="/webassets/images/laliga/footer_visa.png" style="margin-right: 17px;"/></a>
+            <a href="/payment?ci=1"><img src="/webassets/images/laliga/footer_mastercard.png" style="margin-right: 17px;"/></a>
+    <!--        <img src="/webassets/images/laliga/footer_discover.png" style="margin-right: 25px;"/>-->
+            <a href="https://twitter.com/dfwmas"><img src="/webassets/images/laliga/footer_twitter.png" style="margin-right: 5px;"/></a>
+>>>>>>> Stashed changes
 <!--            <img src="/webassets/images/laliga/footer_instagram.png" style="margin-right: 5px;"/>-->
     <!--        <img src="/webassets/images/laliga/footer_facebook.png" style="margin-right: 5px;"/>-->
         </div>

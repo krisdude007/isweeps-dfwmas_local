@@ -12076,6 +12076,7 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/apple-touch-icon.png
 ---
+<<<<<<< Updated upstream
 2017/04/14 17:18:58 [error] [php] Undefined variable: games (/dino.isweepsusa.com/themes/mobile/views/site/index.php:7)
 Stack trace:
 #0 /var/www/yii/framework/web/CController.php(869): clientSiteController->renderFile()
@@ -12253,6 +12254,343 @@ Stack trace:
 #0 /var/www/yii/framework/web/CController.php(869): clientSiteController->renderFile()
 #1 /var/www/yii/framework/web/CController.php(782): clientSiteController->renderPartial()
 #2 /dino.isweepsusa.com/protected/controllers/clientSiteController.php(100): clientSiteController->render()
+=======
+2017/04/09 15:30:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2017/04/09 15:30:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2017/04/09 16:25:06 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ytt_dfwmas.email_template' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `email_template`.
+2017/04/09 16:25:06 [error] [exception.CDbException] exception 'CDbException' with message 'The table "email_template" for active record class "eEmailTemplate" cannot be found in the database.' in /var/www/yii/framework/db/ar/CActiveRecord.php:2362
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(eEmailTemplate))
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(658): CActiveRecord->getMetaData()
+#2 /var/www/yii/framework/db/ar/CActiveRecord.php(1518): CActiveRecord->getTableSchema()
+#3 /dfwmas.isweepsusa.com/core/protected/components/utilities/MailUtility.php(22): CActiveRecord->findByAttributes(Array)
+#4 /dfwmas.isweepsusa.com/core/protected/components/utilities/MailUtility.php(11): MailUtility::deliver('thankyou', 'krisdude007@gma...', Array, false, true)
+#5 /dfwmas.isweepsusa.com/core/protected/controllers/PaymentController.php(237): MailUtility::send('thankyou', 'krisdude007@gma...', Array, false)
+#6 /var/www/yii/framework/web/actions/CInlineAction.php(49): PaymentController->actionProcessStripePrepay()
+#7 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('processstripepr...')
+#11 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('payment/process...')
+#12 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#13 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#14 {main}
+REQUEST_URI=/processstripeprepay
+HTTP_REFERER=http://dfwmas.isweepsusa.com/payment?ci=1
+---
+2017/04/09 16:25:06 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ytt_dfwmas.email_template' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `email_template`.
+2017/04/09 16:25:06 [error] [exception.CDbException] exception 'CDbException' with message 'The table "email_template" for active record class "eEmailTemplate" cannot be found in the database.' in /var/www/yii/framework/db/ar/CActiveRecord.php:2362
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(eEmailTemplate))
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(658): CActiveRecord->getMetaData()
+#2 /var/www/yii/framework/db/ar/CActiveRecord.php(1518): CActiveRecord->getTableSchema()
+#3 /dfwmas.isweepsusa.com/core/protected/components/utilities/MailUtility.php(22): CActiveRecord->findByAttributes(Array)
+#4 /dfwmas.isweepsusa.com/core/protected/components/utilities/MailUtility.php(11): MailUtility::deliver('thankyou', 'krisdude007@gma...', Array, false, true)
+#5 /dfwmas.isweepsusa.com/core/protected/controllers/PaymentController.php(237): MailUtility::send('thankyou', 'krisdude007@gma...', Array, false)
+#6 /var/www/yii/framework/web/actions/CInlineAction.php(49): PaymentController->actionProcessStripePrepay()
+#7 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('processstripepr...')
+#11 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('payment/process...')
+#12 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#13 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#14 {main}
+REQUEST_URI=/processstripeprepay
+HTTP_REFERER=http://dfwmas.isweepsusa.com/payment?ci=1
+---
+2017/04/09 16:35:13 [error] [php] Undefined index: amount (/dfwmas.isweepsusa.com/core/protected/controllers/PaymentController.php:236)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(286): PaymentController->runAction()
+#1 /var/www/yii/framework/web/CController.php(265): PaymentController->runActionWithFilters()
+#2 /var/www/yii/framework/web/CWebApplication.php(282): PaymentController->run()
+#3 /var/www/yii/framework/web/CWebApplication.php(141): YttCore->runController()
+#4 /var/www/yii/framework/base/CApplication.php(180): YttCore->processRequest()
+#5 /dfwmas.isweepsusa.com/index.php(19): YttCore->run()
+REQUEST_URI=/processstripeprepay
+2017/04/09 16:35:13 [error] [php] Undefined index: amount (/dfwmas.isweepsusa.com/core/protected/controllers/PaymentController.php:236)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(286): PaymentController->runAction()
+#1 /var/www/yii/framework/web/CController.php(265): PaymentController->runActionWithFilters()
+#2 /var/www/yii/framework/web/CWebApplication.php(282): PaymentController->run()
+#3 /var/www/yii/framework/web/CWebApplication.php(141): YttCore->runController()
+#4 /var/www/yii/framework/base/CApplication.php(180): YttCore->processRequest()
+#5 /dfwmas.isweepsusa.com/index.php(19): YttCore->run()
+REQUEST_URI=/processstripeprepay
+2017/04/09 16:56:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://dfwmas.isweepsusa.com/winlooseordraw
+---
+2017/04/09 16:56:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://dfwmas.isweepsusa.com/winlooseordraw
+---
+2017/04/09 17:18:47 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY GR.game_unique_id, GR.game_price' at line 3. The SQL statement executed was: SELECT COUNT(GR.game_unique_id) AS total_responses, GR.game_price as game_price
+                FROM game_choice AS G, game_choice_response AS GR where GR.game_choice_id = G.id AND GR.user_id = 
+                GROUP BY GR.game_unique_id, GR.game_price
+                .
+2017/04/09 17:18:47 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY GR.game_unique_id, GR.game_price' at line 3' in /var/www/yii/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /var/www/yii/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /dfwmas.isweepsusa.com/core/protected/components/utilities/GameUtility.php(650): CDbCommand->queryAll()
+#2 /dfwmas.isweepsusa.com/core/protected/components/utilities/GameUtility.php(616): GameUtility::getTotalUserGames(NULL)
+#3 /dfwmas.isweepsusa.com/protected/controllers/clientGameController.php(423): GameUtility::getCashBalance(NULL)
+#4 [internal function]: clientGameController->actionPickGame(1, NULL)
+#5 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(clientGameController), Array)
+#6 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(clientGameController), Object(ReflectionMethod), Array)
+#7 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('pickgame')
+#11 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('game/pickgame')
+#12 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#13 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#14 {main}
+REQUEST_URI=/pickgame
+---
+2017/04/09 17:18:47 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY GR.game_unique_id, GR.game_price' at line 3. The SQL statement executed was: SELECT COUNT(GR.game_unique_id) AS total_responses, GR.game_price as game_price
+                FROM game_choice AS G, game_choice_response AS GR where GR.game_choice_id = G.id AND GR.user_id = 
+                GROUP BY GR.game_unique_id, GR.game_price
+                .
+2017/04/09 17:18:47 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY GR.game_unique_id, GR.game_price' at line 3' in /var/www/yii/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /var/www/yii/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /dfwmas.isweepsusa.com/core/protected/components/utilities/GameUtility.php(650): CDbCommand->queryAll()
+#2 /dfwmas.isweepsusa.com/core/protected/components/utilities/GameUtility.php(616): GameUtility::getTotalUserGames(NULL)
+#3 /dfwmas.isweepsusa.com/protected/controllers/clientGameController.php(423): GameUtility::getCashBalance(NULL)
+#4 [internal function]: clientGameController->actionPickGame(1, NULL)
+#5 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(clientGameController), Array)
+#6 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(clientGameController), Object(ReflectionMethod), Array)
+#7 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('pickgame')
+#11 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('game/pickgame')
+#12 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#13 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#14 {main}
+REQUEST_URI=/pickgame
+---
+2017/04/09 17:19:16 [error] [php] Trying to get property of non-object (/dfwmas.isweepsusa.com/core/protected/controllers/PaymentController.php:234)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(286): PaymentController->runAction()
+#1 /var/www/yii/framework/web/CController.php(265): PaymentController->runActionWithFilters()
+#2 /var/www/yii/framework/web/CWebApplication.php(282): PaymentController->run()
+#3 /var/www/yii/framework/web/CWebApplication.php(141): YttCore->runController()
+#4 /var/www/yii/framework/base/CApplication.php(180): YttCore->processRequest()
+#5 /dfwmas.isweepsusa.com/index.php(19): YttCore->run()
+REQUEST_URI=/processstripeprepay
+2017/04/09 17:19:16 [error] [php] Trying to get property of non-object (/dfwmas.isweepsusa.com/core/protected/controllers/PaymentController.php:234)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(286): PaymentController->runAction()
+#1 /var/www/yii/framework/web/CController.php(265): PaymentController->runActionWithFilters()
+#2 /var/www/yii/framework/web/CWebApplication.php(282): PaymentController->run()
+#3 /var/www/yii/framework/web/CWebApplication.php(141): YttCore->runController()
+#4 /var/www/yii/framework/base/CApplication.php(180): YttCore->processRequest()
+#5 /dfwmas.isweepsusa.com/index.php(19): YttCore->run()
+REQUEST_URI=/processstripeprepay
+2017/04/09 17:22:37 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY GR.game_unique_id, GR.game_price' at line 3. The SQL statement executed was: SELECT COUNT(GR.game_unique_id) AS total_responses, GR.game_price as game_price
+                FROM game_choice AS G, game_choice_response AS GR where GR.game_choice_id = G.id AND GR.user_id = 
+                GROUP BY GR.game_unique_id, GR.game_price
+                .
+2017/04/09 17:22:37 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY GR.game_unique_id, GR.game_price' at line 3' in /var/www/yii/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /var/www/yii/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /dfwmas.isweepsusa.com/core/protected/components/utilities/GameUtility.php(650): CDbCommand->queryAll()
+#2 /dfwmas.isweepsusa.com/core/protected/components/utilities/GameUtility.php(616): GameUtility::getTotalUserGames(NULL)
+#3 /dfwmas.isweepsusa.com/protected/controllers/clientGameController.php(423): GameUtility::getCashBalance(NULL)
+#4 [internal function]: clientGameController->actionPickGame(1, NULL)
+#5 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(clientGameController), Array)
+#6 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(clientGameController), Object(ReflectionMethod), Array)
+#7 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('pickgame')
+#11 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('game/pickgame')
+#12 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#13 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#14 {main}
+REQUEST_URI=/pickgame
+---
+2017/04/09 17:22:37 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY GR.game_unique_id, GR.game_price' at line 3. The SQL statement executed was: SELECT COUNT(GR.game_unique_id) AS total_responses, GR.game_price as game_price
+                FROM game_choice AS G, game_choice_response AS GR where GR.game_choice_id = G.id AND GR.user_id = 
+                GROUP BY GR.game_unique_id, GR.game_price
+                .
+2017/04/09 17:22:37 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY GR.game_unique_id, GR.game_price' at line 3' in /var/www/yii/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /var/www/yii/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /dfwmas.isweepsusa.com/core/protected/components/utilities/GameUtility.php(650): CDbCommand->queryAll()
+#2 /dfwmas.isweepsusa.com/core/protected/components/utilities/GameUtility.php(616): GameUtility::getTotalUserGames(NULL)
+#3 /dfwmas.isweepsusa.com/protected/controllers/clientGameController.php(423): GameUtility::getCashBalance(NULL)
+#4 [internal function]: clientGameController->actionPickGame(1, NULL)
+#5 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(clientGameController), Array)
+#6 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(clientGameController), Object(ReflectionMethod), Array)
+#7 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('pickgame')
+#11 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('game/pickgame')
+#12 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#13 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#14 {main}
+REQUEST_URI=/pickgame
+---
+2017/04/09 17:27:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_5851baa73c43b2.90843459.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_5851baa73c43b2.90843459.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/09 17:27:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_5851baa73c43b2.90843459.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_5851baa73c43b2.90843459.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/09 17:27:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_58562966c04c38.59922188.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_58562966c04c38.59922188.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/09 17:27:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_58562966c04c38.59922188.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_58562966c04c38.59922188.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/09 17:27:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_585629569905e9.42030278.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_585629569905e9.42030278.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/09 17:27:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_585629569905e9.42030278.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_585629569905e9.42030278.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/09 17:27:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_5856297e2f37b5.13361312.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_5856297e2f37b5.13361312.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/09 17:27:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_5856297e2f37b5.13361312.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_5856297e2f37b5.13361312.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/09 17:27:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_5851bb15da5101.92962810.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_5851bb15da5101.92962810.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/09 17:27:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_5851bb15da5101.92962810.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_5851bb15da5101.92962810.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/09 17:27:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_58562935581c41.68531074.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_58562935581c41.68531074.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/09 17:27:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_58562935581c41.68531074.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_58562935581c41.68531074.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/09 17:27:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_58562946b462d8.15021597.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_58562946b462d8.15021597.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/09 17:27:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_58562946b462d8.15021597.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_58562946b462d8.15021597.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/09 17:53:10 [error] [php] Undefined variable: games (/dfwmas.isweepsusa.com/themes/mobile/views/site/index.php:7)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(869): clientSiteController->renderFile()
+#1 /var/www/yii/framework/web/CController.php(782): clientSiteController->renderPartial()
+#2 /dfwmas.isweepsusa.com/protected/controllers/clientSiteController.php(100): clientSiteController->render()
+>>>>>>> Stashed changes
 #3 unknown(0): clientSiteController->actionIndex()
 #4 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
 #5 /var/www/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
@@ -12267,6 +12605,7 @@ Stack trace:
 #14 /var/www/yii/framework/web/CWebApplication.php(282): clientSiteController->run()
 #15 /var/www/yii/framework/web/CWebApplication.php(141): YttCore->runController()
 #16 /var/www/yii/framework/base/CApplication.php(180): YttCore->processRequest()
+<<<<<<< Updated upstream
 #17 /dino.isweepsusa.com/index.php(19): YttCore->run()
 REQUEST_URI=/
 2017/04/14 19:10:01 [error] [php] Undefined variable: games (/dino.isweepsusa.com/themes/mobile/views/site/index.php:7)
@@ -12274,6 +12613,15 @@ Stack trace:
 #0 /var/www/yii/framework/web/CController.php(869): clientSiteController->renderFile()
 #1 /var/www/yii/framework/web/CController.php(782): clientSiteController->renderPartial()
 #2 /dino.isweepsusa.com/protected/controllers/clientSiteController.php(100): clientSiteController->render()
+=======
+#17 /dfwmas.isweepsusa.com/index.php(19): YttCore->run()
+REQUEST_URI=/
+2017/04/09 17:53:10 [error] [php] Undefined variable: games (/dfwmas.isweepsusa.com/themes/mobile/views/site/index.php:7)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(869): clientSiteController->renderFile()
+#1 /var/www/yii/framework/web/CController.php(782): clientSiteController->renderPartial()
+#2 /dfwmas.isweepsusa.com/protected/controllers/clientSiteController.php(100): clientSiteController->render()
+>>>>>>> Stashed changes
 #3 unknown(0): clientSiteController->actionIndex()
 #4 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
 #5 /var/www/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
@@ -12288,6 +12636,7 @@ Stack trace:
 #14 /var/www/yii/framework/web/CWebApplication.php(282): clientSiteController->run()
 #15 /var/www/yii/framework/web/CWebApplication.php(141): YttCore->runController()
 #16 /var/www/yii/framework/base/CApplication.php(180): YttCore->processRequest()
+<<<<<<< Updated upstream
 #17 /dino.isweepsusa.com/index.php(19): YttCore->run()
 REQUEST_URI=/
 2017/04/14 19:10:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "apple-touch-icon-precomposed.png".' in /var/www/yii/framework/web/CWebApplication.php:286
@@ -13435,6 +13784,1071 @@ Stack trace:
 #0 /var/www/yii/framework/web/CController.php(869): clientSiteController->renderFile()
 #1 /var/www/yii/framework/web/CController.php(782): clientSiteController->renderPartial()
 #2 /dino.isweepsusa.com/protected/controllers/clientSiteController.php(100): clientSiteController->render()
+=======
+#17 /dfwmas.isweepsusa.com/index.php(19): YttCore->run()
+REQUEST_URI=/
+2017/04/09 20:14:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_5851baa73c43b2.90843459.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_5851baa73c43b2.90843459.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/09 20:14:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_5851baa73c43b2.90843459.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_5851baa73c43b2.90843459.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/09 20:14:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_5851bb15da5101.92962810.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_5851bb15da5101.92962810.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/09 20:14:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_5851bb15da5101.92962810.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_5851bb15da5101.92962810.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/09 20:14:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_5856297e2f37b5.13361312.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_5856297e2f37b5.13361312.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/09 20:14:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_5856297e2f37b5.13361312.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_5856297e2f37b5.13361312.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/09 20:14:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_58562966c04c38.59922188.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_58562966c04c38.59922188.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/09 20:14:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_58562966c04c38.59922188.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_58562966c04c38.59922188.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/09 20:14:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_58562946b462d8.15021597.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_58562946b462d8.15021597.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/09 20:14:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_58562946b462d8.15021597.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_58562946b462d8.15021597.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/09 20:14:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_585629569905e9.42030278.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_585629569905e9.42030278.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/09 20:14:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_585629569905e9.42030278.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_585629569905e9.42030278.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/09 20:14:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_58562935581c41.68531074.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_58562935581c41.68531074.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/09 20:14:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_58562935581c41.68531074.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_58562935581c41.68531074.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/10 17:12:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_5851baa73c43b2.90843459.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_5851baa73c43b2.90843459.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/10 17:12:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_5851baa73c43b2.90843459.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_5851baa73c43b2.90843459.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/10 17:12:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_5856297e2f37b5.13361312.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_5856297e2f37b5.13361312.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/10 17:12:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_5856297e2f37b5.13361312.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_5856297e2f37b5.13361312.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/10 17:12:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_58562966c04c38.59922188.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_58562966c04c38.59922188.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/10 17:12:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_58562966c04c38.59922188.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_58562966c04c38.59922188.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/10 17:12:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_58562946b462d8.15021597.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_58562946b462d8.15021597.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/10 17:12:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_58562946b462d8.15021597.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_58562946b462d8.15021597.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/10 17:12:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_585629569905e9.42030278.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_585629569905e9.42030278.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/10 17:12:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_585629569905e9.42030278.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_585629569905e9.42030278.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/10 17:12:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_5851bb15da5101.92962810.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_5851bb15da5101.92962810.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/10 17:12:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_5851bb15da5101.92962810.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_5851bb15da5101.92962810.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/10 17:12:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_58562935581c41.68531074.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_58562935581c41.68531074.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/10 17:12:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_58562935581c41.68531074.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_58562935581c41.68531074.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 10:28:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_5851baa73c43b2.90843459.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_5851baa73c43b2.90843459.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 10:28:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_5851baa73c43b2.90843459.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_5851baa73c43b2.90843459.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 10:28:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_5851bb15da5101.92962810.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_5851bb15da5101.92962810.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 10:28:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_5851bb15da5101.92962810.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_5851bb15da5101.92962810.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 10:28:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_58562966c04c38.59922188.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_58562966c04c38.59922188.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 10:28:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_58562966c04c38.59922188.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_58562966c04c38.59922188.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 10:28:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_5856297e2f37b5.13361312.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_5856297e2f37b5.13361312.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 10:28:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_5856297e2f37b5.13361312.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_5856297e2f37b5.13361312.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 10:28:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_58562946b462d8.15021597.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_58562946b462d8.15021597.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 10:28:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_58562946b462d8.15021597.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_58562946b462d8.15021597.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 10:28:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_585629569905e9.42030278.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_585629569905e9.42030278.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 10:28:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_585629569905e9.42030278.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_585629569905e9.42030278.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 10:28:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_58562935581c41.68531074.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_58562935581c41.68531074.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 10:28:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_58562935581c41.68531074.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_58562935581c41.68531074.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 10:36:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_5851baa73c43b2.90843459.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_5851baa73c43b2.90843459.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 10:36:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_5851baa73c43b2.90843459.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_5851baa73c43b2.90843459.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 10:36:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_5851bb15da5101.92962810.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_5851bb15da5101.92962810.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 10:36:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_5851bb15da5101.92962810.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_5851bb15da5101.92962810.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 10:36:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_585629569905e9.42030278.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_585629569905e9.42030278.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 10:36:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_585629569905e9.42030278.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_585629569905e9.42030278.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 10:36:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_5856297e2f37b5.13361312.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_5856297e2f37b5.13361312.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 10:36:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_5856297e2f37b5.13361312.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_5856297e2f37b5.13361312.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 10:36:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_58562935581c41.68531074.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_58562935581c41.68531074.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 10:36:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_58562935581c41.68531074.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_58562935581c41.68531074.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 10:36:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_58562966c04c38.59922188.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_58562966c04c38.59922188.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 10:36:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_58562966c04c38.59922188.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_58562966c04c38.59922188.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 10:36:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_58562946b462d8.15021597.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_58562946b462d8.15021597.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 10:36:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_58562946b462d8.15021597.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_58562946b462d8.15021597.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 13:05:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "you/profile".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('you/profile')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/you/profile
+---
+2017/04/11 13:05:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "you/profile".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('you/profile')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/you/profile
+---
+2017/04/11 13:05:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "you/profile".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('you/profile')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/you/profile
+---
+2017/04/11 13:05:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "you/profile".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('you/profile')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/you/profile
+---
+2017/04/11 13:06:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "you/profile".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('you/profile')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/you/profile
+---
+2017/04/11 13:06:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "you/profile".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('you/profile')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/you/profile
+---
+2017/04/11 22:08:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_5851baa73c43b2.90843459.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_5851baa73c43b2.90843459.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 22:08:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_5851baa73c43b2.90843459.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_5851baa73c43b2.90843459.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 22:08:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_58562946b462d8.15021597.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_58562946b462d8.15021597.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 22:08:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_58562946b462d8.15021597.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_58562946b462d8.15021597.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 22:08:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_5851bb15da5101.92962810.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_5851bb15da5101.92962810.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 22:08:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_5851bb15da5101.92962810.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_5851bb15da5101.92962810.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 22:08:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_5856297e2f37b5.13361312.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_5856297e2f37b5.13361312.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 22:08:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_5856297e2f37b5.13361312.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_5856297e2f37b5.13361312.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 22:08:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_58562966c04c38.59922188.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_58562966c04c38.59922188.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 22:08:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_58562966c04c38.59922188.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_58562966c04c38.59922188.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 22:08:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_58562935581c41.68531074.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_58562935581c41.68531074.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 22:08:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_58562935581c41.68531074.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_58562935581c41.68531074.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 22:08:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_585629569905e9.42030278.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_585629569905e9.42030278.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 22:08:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_585629569905e9.42030278.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_585629569905e9.42030278.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 22:25:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_5851baa73c43b2.90843459.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_5851baa73c43b2.90843459.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 22:25:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_5851baa73c43b2.90843459.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_5851baa73c43b2.90843459.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 22:25:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_5851bb15da5101.92962810.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_5851bb15da5101.92962810.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 22:25:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_5851bb15da5101.92962810.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_5851bb15da5101.92962810.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 22:25:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_5856297e2f37b5.13361312.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_5856297e2f37b5.13361312.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 22:25:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_5856297e2f37b5.13361312.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_5856297e2f37b5.13361312.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 22:25:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_58562946b462d8.15021597.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_58562946b462d8.15021597.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 22:25:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_58562946b462d8.15021597.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_58562946b462d8.15021597.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 22:25:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_585629569905e9.42030278.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_585629569905e9.42030278.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 22:25:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_585629569905e9.42030278.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_585629569905e9.42030278.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 22:25:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_58562935581c41.68531074.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_58562935581c41.68531074.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 22:25:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_58562935581c41.68531074.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_58562935581c41.68531074.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 22:25:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_58562966c04c38.59922188.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_58562966c04c38.59922188.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 22:25:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_58562966c04c38.59922188.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_58562966c04c38.59922188.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 22:25:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_5851baa73c43b2.90843459.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_5851baa73c43b2.90843459.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 22:25:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_5851baa73c43b2.90843459.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_5851baa73c43b2.90843459.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 22:27:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_5851baa73c43b2.90843459.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_5851baa73c43b2.90843459.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 22:27:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_5851baa73c43b2.90843459.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_5851baa73c43b2.90843459.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 22:27:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_5851bb15da5101.92962810.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_5851bb15da5101.92962810.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 22:27:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_5851bb15da5101.92962810.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_5851bb15da5101.92962810.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 22:27:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_5856297e2f37b5.13361312.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_5856297e2f37b5.13361312.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 22:27:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_5856297e2f37b5.13361312.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_5856297e2f37b5.13361312.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 22:27:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_58562966c04c38.59922188.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_58562966c04c38.59922188.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 22:27:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_58562966c04c38.59922188.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_58562966c04c38.59922188.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 22:27:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_58562935581c41.68531074.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_58562935581c41.68531074.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 22:27:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_58562935581c41.68531074.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_58562935581c41.68531074.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 22:27:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_58562946b462d8.15021597.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_58562946b462d8.15021597.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 22:27:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_58562946b462d8.15021597.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_58562946b462d8.15021597.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 22:27:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_585629569905e9.42030278.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_585629569905e9.42030278.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 22:27:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_585629569905e9.42030278.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_585629569905e9.42030278.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 22:27:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_5851baa73c43b2.90843459.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_5851baa73c43b2.90843459.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 22:27:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userimages/prize_5851baa73c43b2.90843459.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('userimages/priz...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/userimages/prize_5851baa73c43b2.90843459.jpg
+HTTP_REFERER=http://dfwmas.isweepsusa.com/redeem
+---
+2017/04/11 22:45:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "webassets/images/laliga/image_web_azteca-concursos_background.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('webassets/image...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/webassets/images/laliga/image_web_azteca-concursos_background.png
+HTTP_REFERER=http://dfwmas.isweepsusa.com/marketingpage
+---
+2017/04/11 22:45:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "webassets/images/laliga/image_web_azteca-concursos_background.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('webassets/image...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/webassets/images/laliga/image_web_azteca-concursos_background.png
+HTTP_REFERER=http://dfwmas.isweepsusa.com/marketingpage
+---
+2017/04/11 22:45:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "webassets/images/laliga/image_web_azteca-concursos_background.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('webassets/image...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/webassets/images/laliga/image_web_azteca-concursos_background.png
+HTTP_REFERER=http://dfwmas.isweepsusa.com/marketingpage
+---
+2017/04/11 22:45:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "webassets/images/laliga/image_web_azteca-concursos_background.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('webassets/image...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/webassets/images/laliga/image_web_azteca-concursos_background.png
+HTTP_REFERER=http://dfwmas.isweepsusa.com/marketingpage
+---
+2017/04/11 22:45:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "webassets/images/laliga/image_web_azteca-concursos_background.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('webassets/image...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/webassets/images/laliga/image_web_azteca-concursos_background.png
+HTTP_REFERER=http://dfwmas.isweepsusa.com/marketingpage
+---
+2017/04/11 22:45:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "webassets/images/laliga/image_web_azteca-concursos_background.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('webassets/image...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/webassets/images/laliga/image_web_azteca-concursos_background.png
+HTTP_REFERER=http://dfwmas.isweepsusa.com/marketingpage
+---
+2017/04/11 22:45:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "webassets/images/laliga/image_web_azteca-concursos_background.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('webassets/image...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/webassets/images/laliga/image_web_azteca-concursos_background.png
+HTTP_REFERER=http://dfwmas.isweepsusa.com/marketingpage
+---
+2017/04/11 22:45:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "webassets/images/laliga/image_web_azteca-concursos_background.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('webassets/image...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/webassets/images/laliga/image_web_azteca-concursos_background.png
+HTTP_REFERER=http://dfwmas.isweepsusa.com/marketingpage
+---
+2017/04/11 22:46:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "webassets/images/laliga/image_web_azteca-concursos_background.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('webassets/image...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/webassets/images/laliga/image_web_azteca-concursos_background.png
+HTTP_REFERER=http://dfwmas.isweepsusa.com/marketingpage
+---
+2017/04/11 22:46:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "webassets/images/laliga/image_web_azteca-concursos_background.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('webassets/image...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dfwmas.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/webassets/images/laliga/image_web_azteca-concursos_background.png
+HTTP_REFERER=http://dfwmas.isweepsusa.com/marketingpage
+---
+2017/04/12 00:42:31 [error] [php] Undefined variable: games (/dfwmas.isweepsusa.com/themes/mobile/views/site/index.php:7)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(869): clientSiteController->renderFile()
+#1 /var/www/yii/framework/web/CController.php(782): clientSiteController->renderPartial()
+#2 /dfwmas.isweepsusa.com/protected/controllers/clientSiteController.php(100): clientSiteController->render()
+>>>>>>> Stashed changes
 #3 unknown(0): clientSiteController->actionIndex()
 #4 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
 #5 /var/www/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
@@ -13449,6 +14863,7 @@ Stack trace:
 #14 /var/www/yii/framework/web/CWebApplication.php(282): clientSiteController->run()
 #15 /var/www/yii/framework/web/CWebApplication.php(141): YttCore->runController()
 #16 /var/www/yii/framework/base/CApplication.php(180): YttCore->processRequest()
+<<<<<<< Updated upstream
 #17 /dino.isweepsusa.com/index.php(19): YttCore->run()
 REQUEST_URI=/
 2017/04/14 19:26:32 [error] [php] Undefined variable: games (/dino.isweepsusa.com/themes/mobile/views/site/index.php:7)
@@ -13456,6 +14871,15 @@ Stack trace:
 #0 /var/www/yii/framework/web/CController.php(869): clientSiteController->renderFile()
 #1 /var/www/yii/framework/web/CController.php(782): clientSiteController->renderPartial()
 #2 /dino.isweepsusa.com/protected/controllers/clientSiteController.php(100): clientSiteController->render()
+=======
+#17 /dfwmas.isweepsusa.com/index.php(19): YttCore->run()
+REQUEST_URI=/
+2017/04/12 00:42:31 [error] [php] Undefined variable: games (/dfwmas.isweepsusa.com/themes/mobile/views/site/index.php:7)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(869): clientSiteController->renderFile()
+#1 /var/www/yii/framework/web/CController.php(782): clientSiteController->renderPartial()
+#2 /dfwmas.isweepsusa.com/protected/controllers/clientSiteController.php(100): clientSiteController->render()
+>>>>>>> Stashed changes
 #3 unknown(0): clientSiteController->actionIndex()
 #4 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
 #5 /var/www/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
@@ -13470,5 +14894,9 @@ Stack trace:
 #14 /var/www/yii/framework/web/CWebApplication.php(282): clientSiteController->run()
 #15 /var/www/yii/framework/web/CWebApplication.php(141): YttCore->runController()
 #16 /var/www/yii/framework/base/CApplication.php(180): YttCore->processRequest()
+<<<<<<< Updated upstream
 #17 /dino.isweepsusa.com/index.php(19): YttCore->run()
+=======
+#17 /dfwmas.isweepsusa.com/index.php(19): YttCore->run()
+>>>>>>> Stashed changes
 REQUEST_URI=/
