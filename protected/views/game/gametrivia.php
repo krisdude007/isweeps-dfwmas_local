@@ -7,7 +7,7 @@
             dataType: 'json',
             success: function (data) {
                 if (data.completed) {
-                    window.location = "/index.php?f=t";
+                    window.location = "/winlooseordraw";
                 }
             }
         });
