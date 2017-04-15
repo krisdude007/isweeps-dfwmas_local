@@ -101,6 +101,7 @@ Yii::app()->facebook->initJs($output);
         </div>
         <?php echo (Yii::app()->controller->action->id == 'marketingpage' || Yii::app()->controller->action->id == 'marketingpage2') ? '<div id="pageNavigation" class="navbar navbar-inverse" role="navigation" >' : '<div id="pageNavigation" class="navbar navbar-inverse" role="navigation">'; ?>
         <div class="navbar-header">
+        <img src="/webassets/images/logo.png" style="height: 40px; position: relative; top: -6px; z-index: 1040; margin-left: 15px;"/>
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
@@ -110,11 +111,11 @@ Yii::app()->facebook->initJs($output);
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-left">
-                <li class="logo"><a target="_blank" href="http://DFWMAS.org"><img src="/webassets/images/laliga/logo_DFWMAS.png" style="height: 40px; position: relative; top: -6px; z-index: 1040; margin-left: 15px;"/></a></li>
-                <li style="display: none;"><a target="_blank" href="http://DFWMAS.org"><?php echo Yii::t('youtoo', 'SHOWS') ?></a></li>
-                <li style="display: none;" class="active"><a target="_blank" href="http://DFWMAS.org"><?php echo Yii::t('youtoo', 'MÁS') ?></a></li>
-                <li style="display: none;"><a target="_blank" href="http://DFWMAS.org"><?php echo Yii::t('youtoo', 'VIDEOS') ?></a></li>
-                <li style="display: none;"><a target="_blank" href="http://DFWMAS.org"><?php echo Yii::t('youtoo', 'HORARIOS') ?></a></li>
+                <li class="logo"><a target="_blank" href="http://DFWMAS.org"></a></li>
+                <li style=""><a target="_blank" href="http://DFWMAS.org"><?php echo Yii::t('youtoo', 'SHOWS') ?></a></li>
+                <li style="" class="active"><a target="_blank" href="http://DFWMAS.org"><?php echo Yii::t('youtoo', 'MÁS') ?></a></li>
+                <li style=""><a target="_blank" href="http://DFWMAS.org"><?php echo Yii::t('youtoo', 'VIDEOS') ?></a></li>
+                <li style=""><a target="_blank" href="http://DFWMAS.org"><?php echo Yii::t('youtoo', 'HORARIOS') ?></a></li>
          
             </ul>
         </div>
@@ -136,7 +137,8 @@ Yii::app()->facebook->initJs($output);
         <div id="pageFooterDrop">
             <div  class="row col-sm-12" style='padding-left: 50px;'>
                 <div class="col-sm-2">
-                    <a target="_blank" href="http://DFWMAS.org"><img src="/webassets/images/laliga/logo_Azteca.png" style="height: 40px; margin-top: 30px;"/></a></li>
+                    <a target="_blank" href="http://DFWMAS.org">
+                        <img src="/webassets/images/laliga/logo_Azteca.png" style="height: 40px; margin-top: 30px;"/></a></li>
                 </div>
                 <div class="col-sm-3" id="aboutDrop">
                     <div class="dropHead"><?php echo Yii::t('youtoo', 'ABOUT'); ?></div>
