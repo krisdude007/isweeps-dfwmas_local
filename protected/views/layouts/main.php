@@ -19,6 +19,7 @@ Yii::app()->facebook->initJs($output);
         <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
         <link rel="stylesheet" type="text/css" href="/webassets/css/client.css" />
         <link  rel="stylesheet" type="text/css" href="/webassets/css/simple-sidebar.css"/>
+        <link  rel="stylesheet" type="text/css" href="/webassets/css/skin01.css"/>
         <!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -93,6 +94,9 @@ Yii::app()->facebook->initJs($output);
         </div>
         <div id="pageHeader">
             <div class="row">
+               <div class="header-logo">
+               		<img src="/webassets/images/logo.png" style="margin-left: 15px;"/>
+               </div>
                 <div class="col-xs-12" style="overflow:hidden;">
                     <span class="pull-left pageHeaderContent" style="margin: 10px 20px 0px 20px;">
                     </span>
@@ -101,7 +105,7 @@ Yii::app()->facebook->initJs($output);
         </div>
         <?php echo (Yii::app()->controller->action->id == 'marketingpage' || Yii::app()->controller->action->id == 'marketingpage2') ? '<div id="pageNavigation" class="navbar navbar-inverse" role="navigation" >' : '<div id="pageNavigation" class="navbar navbar-inverse" role="navigation">'; ?>
         <div class="navbar-header">
-        <img src="/webassets/images/logo.png" style="height: 40px; position: relative; top: -6px; z-index: 1040; margin-left: 15px;"/>
+        
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
@@ -111,11 +115,15 @@ Yii::app()->facebook->initJs($output);
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-left">
-                <li class="logo"><a target="_blank" href="http://DFWMAS.org"></a></li>
-                <li style=""><a target="_blank" href="http://DFWMAS.org"><?php echo Yii::t('youtoo', 'SHOWS') ?></a></li>
-                <li style="" class="active"><a target="_blank" href="http://DFWMAS.org"><?php echo Yii::t('youtoo', 'MÁS') ?></a></li>
-                <li style=""><a target="_blank" href="http://DFWMAS.org"><?php echo Yii::t('youtoo', 'VIDEOS') ?></a></li>
-                <li style=""><a target="_blank" href="http://DFWMAS.org"><?php echo Yii::t('youtoo', 'HORARIOS') ?></a></li>
+                
+                
+                
+                <li><a href="/"><?php echo Yii::t('youtoo', 'Home') ?></a></li>
+                <li class="active"><a href="/winners"><?php echo Yii::t('youtoo', 'Winners') ?></a></li>
+                <li><a href="/faq"><?php echo Yii::t('youtoo', 'FAQ') ?></a></li>
+                <li><a href="/marketingpage"><?php echo Yii::t('youtoo', 'How to Play') ?></a></li>
+               <li  class="right-btn"><a href="/login"><?php echo Yii::t('youtoo', 'Login Now') ?></a></li>
+
          
             </ul>
         </div>
@@ -165,14 +173,14 @@ Yii::app()->facebook->initJs($output);
         </div>
         <div id="sponsorLogo">
             <!--<img src="/webassets/images/laliga/footer_paypal.png" style="margin-right: 17px;"/> -->
-            <a href="/payment?ci=1"><img src="/webassets/images/laliga/footer_visa.png" style="margin-right: 17px;"/></a>
-            <a href="/payment?ci=1"><img src="/webassets/images/laliga/footer_mastercard.png" style="margin-right: 17px;"/></a>
+            <a href="/payment?ci=1"><img src="/webassets/images/footer_visa.png" style="margin-right: 17px;"/></a>
+            <a href="/payment?ci=1"><img src="/webassets/images/footer_mastercard.png" style="margin-right: 17px;"/></a>
     <!--        <img src="/webassets/images/laliga/footer_discover.png" style="margin-right: 25px;"/>-->
-            <a href="https://twitter.com/dfwmas"><img src="/webassets/images/laliga/footer_twitter.png" style="margin-right: 5px;"/></a>
+            <a href="https://twitter.com/dfwmas"><img src="/webassets/images/footer_twitter.png" style="margin-right: 5px;"/></a>
 <!--            <img src="/webassets/images/laliga/footer_instagram.png" style="margin-right: 5px;"/>-->
     <!--        <img src="/webassets/images/laliga/footer_facebook.png" style="margin-right: 5px;"/>-->
         </div>
-        <div id="pageHeader"></div>
+      
         <?php echo in_array(Yii::app()->controller->action->id, array('marketingpage', 'marketingpage2')) ? '<div id="pageFooter" style="color: #707070; width: 648px; padding: 2px 12px; height: 30px; display: none;">' : '<div id="pageFooter" style="color: #707070;">'; ?>
     <!--    <?php //echo CHtml::link(Yii::t('youtoo', 'Terms of Use'), array('#'), array('data-toggle' => 'modal', 'data-target' => '#modalTerms'));       ?> &amp;-->
     <!--    <?php //echo CHtml::link(Yii::t('youtoo', 'Privacy Policy'), array('#'), array('data-toggle' => 'modal', 'data-target' => '#modalPrivacy'));       ?> &nbsp;|&nbsp;-->

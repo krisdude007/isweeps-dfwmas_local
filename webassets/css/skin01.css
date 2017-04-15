@@ -1,0 +1,275 @@
+/*
+DG April 14 2017
+*/
+
+/*hide side bar- items moved to main nav bar*/
+#sidebar-wrapper{
+	display: none;
+}
+body{
+	background-image: url("http://www.dfwmas.org/wp-content/uploads/2016/12/Blog.jpg");
+	background-size: cover;
+	background-repeat: no-repeat !important;
+	background-attachment: fixed;
+}
+#pageContainer{
+	padding: 20px;
+	padding-top: 60px;
+	background-color: transparent !important;
+	padding-right:0 !important;
+	
+}
+#pageNavigation {
+	border: none;
+	height: auto;
+	background-color: #011a50;
+	width: 100%;
+}
+.main {
+    max-width: none;
+	width: 100%;
+    margin: 0 auto;
+}
+#page-content-wrapper{
+	background-color: transparent !important;
+}
+/*set up nav bar width*/ 
+div.collapse.navbar-collapse{
+	width: 90% !important;
+    margin: 0 auto;
+	max-width: 1200px;
+}
+/* set login position/to stand out */
+.navbar-nav li.right-btn{
+	float: none;
+	float: right !important;
+}
+.right-btn{
+	background-color: rgba(255, 255, 255, 0.18);
+}
+#pageNavigation {
+	-webkit-box-shadow:  0px 0px 8px 4px rgba(0, 0, 0, 0.22);
+	-moz-box-shadow:  0px 0px 8px 4px rgba(0, 0, 0, 0.22);
+	box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.22);
+	z-index: 9999;
+}
+.navbar-inverse .navbar-toggle, .navbar-inverse .navbar-toggle {
+    background-color: #0b3286;
+}
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+    background-color: #1947ac;
+}
+#pageHeader {
+    height: 100px;
+    background-color: #fff;
+    width: 100%;
+    margin: 0 auto;
+	border-top: 6px solid #df6b28;
+}
+
+#pageHeader~#pageHeader {  
+	background-color:  #df6b28 !important;
+}
+.header-logo{
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+	
+}
+.header-logo img{
+	width: 170px  !important;
+	height: auto !important;
+	margin-left: 0 !important;
+}
+#pageFooterDrop .row{
+	width: 90% !important;
+    margin: 0 auto !important;
+}
+#pageFooterDrop {
+	background-color: rgba(4, 35, 101, 0.65);
+margin-top: 30px;
+}
+#pageFooterDrop a:link,#pageFooterDrop a:visited{
+	color: white;
+	text-decoration: none;
+	font-weight: 400;
+}
+#sponsorLogo{
+	background-color: #011a50;
+	border-top: 6px solid #df6b28;
+}
+#sponsorLogo img{
+opacity: 0.5;
+}
+#wrapper {
+        padding-left: 0px !important;
+        width: 90%;
+	max-width: 1200px !important;
+	padding-bottom: 100px;
+        margin: 0 auto;
+        background-color: rgba(4, 35, 101, 0.39) !important;
+}
+#pageFooter{
+	background-color: #272727;
+}
+.dropHead{
+	color: white;
+	margin-bottom: 12px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.36);
+}
+#sidebar-wrapper{
+	width: 100% !important;	
+	z-index: 1000;
+position: absolute;
+left: 0px !important;	
+top: 0px !important;	
+width: 100%  !important;	
+height: 55px !important;	
+margin-left: 0 !important;
+overflow-y: visible !important;	
+background: #011a50 !important;	
+	
+}
+.sidebar-nav{
+	display: table;
+	width: 100% !important;
+	top: 0 !important;
+}
+
+.sidebar-nav .hr{
+	display: none;
+}
+.sidebar-nav li{
+	display: table-cell;
+	line-height: 55px !important;
+	text-indent:0px !important;
+	text-align: center;
+	
+}
+.sidebar-nav li a:hover{
+	background-color: #1f3a74 !important;
+		font-size: 15px;
+font-weight: 500;
+	
+}
+.sidebar-nav li a{
+	font-size: 15px;
+font-weight: 500;
+	background-color: transparent;
+	-o-transition:color .7s ease-out, background 0.2s ease-in;
+  -ms-transition:color .7s ease-out, background 0.2s ease-in;
+  -moz-transition:color .7s ease-out, background 0.2s ease-in;
+  -webkit-transition:color .7s ease-out, background 0.2s ease-in;
+  /* ...and now override with proper CSS property */
+  transition:color .7s ease-out, background 0.2s ease-in;
+}
+.sidebar-nav .btn{
+	background-color: #011a50 !important;
+	border: 1px solid rgba(255, 255, 255, 0.25);
+	-o-transition:color .7s ease-out, background 0.2s ease-in;
+  -ms-transition:color .7s ease-out, background 0.2s ease-in;
+  -moz-transition:color .7s ease-out, background 0.2s ease-in;
+  -webkit-transition:color .7s ease-out, background 0.2s ease-in;
+  /* ...and now override with proper CSS property */
+  transition:color .7s ease-out, background 0.2s ease-in;
+}
+.sidebar-nav .btn:hover{
+	background: #143274 !important;
+}
+.btn-default{
+	color: white !important;
+	background-color: #011a50 !important;
+	border: 1px solid transparent;
+	background-color: #011a50 !important;
+	border: 1px solid rgba(255, 255, 255, 0.25);
+	-o-transition:color .7s ease-out, background 0.2s ease-in;
+	-ms-transition:color .7s ease-out, background 0.2s ease-in;
+	-moz-transition:color .7s ease-out, background 0.2s ease-in;
+	-webkit-transition:color .7s ease-out, background 0.2s ease-in;
+	/* ...and now override with proper CSS property */
+	transition:color .7s ease-out, background 0.2s ease-in;
+	
+	
+}
+.btn-default:hover{
+	color: white !important;
+	background-color: #1c408d !important;
+	border: 1px solid transparent;
+	
+}
+.caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    vertical-align: middle;
+    border-top: 7px solid #fff;
+    border-right: 4px solid transparent;
+    border-bottom: 0 dotted;
+    border-left: 4px solid transparent;
+	float: none;
+	margin: 0px 10px 0;
+	
+}
+li#dropdown{
+	position: relative;
+}
+#dropdown-lvl1{
+height: auto;
+position: absolute;
+width: 100%;
+}
+.navbar-nav{
+	width: 100%;
+}
+.subContainer h3{
+	font-weight: 500 !important;
+margin-bottom: 40px !important;
+color: white !important;
+font-size: 33px !important;
+}
+.faq h3{
+margin-bottom: 0px !important;
+color:#011a50 !important;
+font-size: 15px !important;
+padding: 15px !important
+}
+.faq i{
+	color: #e07b27;
+}
+.faq.panel-body{
+	font-size: 15px;
+	font-weight: 400;
+}
+
+form#user-profile-form{
+padding: 20px;
+background: rgba(255, 255, 255, 0.69);
+	margin: 30px;
+}
+.panel-primary > .panel-heading {
+    color: #FFF;
+    background-color: rgba(188, 227, 255, 0.31);
+    border-color: rgba(188, 227, 255, 0.31);
+}
+.wrapper .container{
+	padding-right: 0 !important;
+}
+form .user-profile-form{
+margin: 0 20px;
+}
+
+.table-responsive{
+	 background-color: rgba(255, 255, 255, 0.49) !important;
+	padding: 30px;
+	font-weight: 500;
+	
+}
+.table-responsive th{
+	 background-color: rgba(176, 193, 226, 0.29) 
+}
+table.table.table-bordered tbody{
+	min-height: 700px !important;
+}
+a.login-btn{
+	border-style: none; 
+}

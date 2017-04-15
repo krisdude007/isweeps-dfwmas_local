@@ -4,7 +4,7 @@ define('SITE_NAME','INITECH');
 define('CLIENT_EMAIL_NAME','INITECH EMAIL');
 define('CLIENT_TZ', 'America/New_York');
 
-define('MOBILE_WEB_THEME', true);//paste themes/mobile/views/*, allow videoipload/id, past webassets/mobile/*
+define('MOBILE_WEB_THEME', false);//paste themes/mobile/views/*, allow videoipload/id, past webassets/mobile/*
 
 define('PAYPAL_ACTIVE',false);
 define('PAYPAL_USERNAME','kyrie42-facilitator_api1.gmail.com');
