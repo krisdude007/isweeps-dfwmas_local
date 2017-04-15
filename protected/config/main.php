@@ -297,7 +297,7 @@ $config_array = array(
         ),
         'clientIframeUrl' => '',
         'enableSweepstakes' => false,
-        'useMobileTheme' => true,
+        'useMobileTheme' => false,
         'enableYtFunctionality' => true,
         'enableUserFunctionality' => true,
         'enableUserPermissions' => false,
