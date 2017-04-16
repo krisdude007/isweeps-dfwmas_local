@@ -164,8 +164,11 @@ $gameEntry = array (
     <div class="subContainer" style="padding: 0px;">
         <?php $this->renderPartial('/site/_sideBar', array('user' => $user)); ?>
         <?php //$geoLocation = GeoUtility::GeoLocation();if($geoLocation['isValid']): ?>
-        <div class="row">
-            <div class="col-sm-9 col-sm-offset-3">
+       
+           
+           <div class="row">
+           <div class="col-sm-2"></div>
+            <div class="col-sm-8">
                 <?php for ($i = 1; $i <= 4; $i++) { ?>
                     <div class="paymentOptionsTop" style="min-height: 222px;">
                         <div class="ribbon"><h3 style="margin-top: 0px; min-height: 43px; padding-top: 8px; margin-bottom: 0px; font-weight: 300;">$<?php echo $payCashArray[$i]; ?></h3></div>
@@ -182,9 +185,17 @@ $gameEntry = array (
                                     <div style="margin-top: 25px;"><a id="entryCustom" href="#" class="btn btn-default btn-md" style="min-width: 114px; min-height: 37px;"><?php echo Yii::t('youtoo', 'Select'); ?></a></div>
                                 </div>-->
             </div>
+            
+            <div class="col-sm-2"></div> 
         </div>
+        
+        
+        
+        
+        
+        
         <div class="row">
-            <div class="col-sm-10 col-sm-offset-2" style="background-color: #f6f6f6; margin-top: 10px; padding-left: 0px; padding-right: 0px;">
+            <div class="col-sm-10 col-sm-offset-2" style=" margin-top: 10px; padding-left: 0px; padding-right: 0px;">
                 <p class="lead" style="display: none;font-size: 13px; vertical-align: middle; padding-top: 15px; font-weight: 500;">
                     <?php echo Yii::t('youtoo', '') ?><img style="margin-left: 10px;" src='/webassets/images/laliga/icon_x.png'/>
                 </p>

@@ -74,7 +74,7 @@ Yii::app()->clientScript->registerScriptFile('http://cdn.jquerytools.org/1.2.7/a
                 <?php echo $form->error($user, 'terms_accepted'); ?>
             </div>
         </div>
-        <div class="row">
+        <div class="row" style="margin-right: 0px; margin-left: 0px ">
             <div class='col-sm-12'>
                 <?php echo $form->checkbox($user, 'age_accepted', '', array('checked' => '', 'value' => 1)); ?>
                 <span class='over_18'>

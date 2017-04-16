@@ -7019,3 +7019,273 @@ Stack trace:
 #14 /var/www/yii/framework/base/CApplication.php(180): YttCore->processRequest()
 #15 /dino.isweepsusa.com/index.php(19): YttCore->run()
 REQUEST_URI=/contact
+2017/04/15 19:37:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "webassets/images/logo-footer.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('webassets/image...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/webassets/images/logo-footer.png
+HTTP_REFERER=http://dino.isweepsusa.com/register
+---
+2017/04/15 19:37:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "webassets/images/logo-footer.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('webassets/image...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/webassets/images/logo-footer.png
+HTTP_REFERER=http://dino.isweepsusa.com/register
+---
+2017/04/15 21:09:11 [error] [exception.CException] exception 'CException' with message 'clientGameController cannot find the requested view "winlooseordraw".' in /var/www/yii/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('winlooseordraw', Array, true)
+#1 /dino.isweepsusa.com/protected/controllers/clientGameController.php(681): CController->render('winlooseordraw', Array)
+#2 [internal function]: clientGameController->actionWinLooseOrDraw(NULL)
+#3 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(clientGameController), Array)
+#4 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(clientGameController), Object(ReflectionMethod), Array)
+#5 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('winlooseordraw')
+#9 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('game/winlooseor...')
+#10 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#12 {main}
+REQUEST_URI=/winlooseordraw
+HTTP_REFERER=http://dino.isweepsusa.com/
+---
+2017/04/15 21:09:11 [error] [exception.CException] exception 'CException' with message 'clientGameController cannot find the requested view "winlooseordraw".' in /var/www/yii/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('winlooseordraw', Array, true)
+#1 /dino.isweepsusa.com/protected/controllers/clientGameController.php(681): CController->render('winlooseordraw', Array)
+#2 [internal function]: clientGameController->actionWinLooseOrDraw(NULL)
+#3 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(clientGameController), Array)
+#4 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(clientGameController), Object(ReflectionMethod), Array)
+#5 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('winlooseordraw')
+#9 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('game/winlooseor...')
+#10 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#12 {main}
+REQUEST_URI=/winlooseordraw
+HTTP_REFERER=http://dino.isweepsusa.com/
+---
+2017/04/15 21:09:14 [error] [exception.CException] exception 'CException' with message 'clientGameController cannot find the requested view "winlooseordraw".' in /var/www/yii/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('winlooseordraw', Array, true)
+#1 /dino.isweepsusa.com/protected/controllers/clientGameController.php(681): CController->render('winlooseordraw', Array)
+#2 [internal function]: clientGameController->actionWinLooseOrDraw(NULL)
+#3 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(clientGameController), Array)
+#4 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(clientGameController), Object(ReflectionMethod), Array)
+#5 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('winlooseordraw')
+#9 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('game/winlooseor...')
+#10 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#12 {main}
+REQUEST_URI=/winlooseordraw
+HTTP_REFERER=http://dino.isweepsusa.com/
+---
+2017/04/15 21:09:14 [error] [exception.CException] exception 'CException' with message 'clientGameController cannot find the requested view "winlooseordraw".' in /var/www/yii/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('winlooseordraw', Array, true)
+#1 /dino.isweepsusa.com/protected/controllers/clientGameController.php(681): CController->render('winlooseordraw', Array)
+#2 [internal function]: clientGameController->actionWinLooseOrDraw(NULL)
+#3 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(clientGameController), Array)
+#4 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(clientGameController), Object(ReflectionMethod), Array)
+#5 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('winlooseordraw')
+#9 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('game/winlooseor...')
+#10 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#12 {main}
+REQUEST_URI=/winlooseordraw
+HTTP_REFERER=http://dino.isweepsusa.com/
+---
+2017/04/15 21:09:15 [error] [exception.CException] exception 'CException' with message 'clientGameController cannot find the requested view "winlooseordraw".' in /var/www/yii/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('winlooseordraw', Array, true)
+#1 /dino.isweepsusa.com/protected/controllers/clientGameController.php(681): CController->render('winlooseordraw', Array)
+#2 [internal function]: clientGameController->actionWinLooseOrDraw(NULL)
+#3 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(clientGameController), Array)
+#4 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(clientGameController), Object(ReflectionMethod), Array)
+#5 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('winlooseordraw')
+#9 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('game/winlooseor...')
+#10 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#12 {main}
+REQUEST_URI=/winlooseordraw
+HTTP_REFERER=http://dino.isweepsusa.com/
+---
+2017/04/15 21:09:15 [error] [exception.CException] exception 'CException' with message 'clientGameController cannot find the requested view "winlooseordraw".' in /var/www/yii/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('winlooseordraw', Array, true)
+#1 /dino.isweepsusa.com/protected/controllers/clientGameController.php(681): CController->render('winlooseordraw', Array)
+#2 [internal function]: clientGameController->actionWinLooseOrDraw(NULL)
+#3 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(clientGameController), Array)
+#4 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(clientGameController), Object(ReflectionMethod), Array)
+#5 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('winlooseordraw')
+#9 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('game/winlooseor...')
+#10 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#12 {main}
+REQUEST_URI=/winlooseordraw
+HTTP_REFERER=http://dino.isweepsusa.com/
+---
+2017/04/15 21:09:17 [error] [exception.CException] exception 'CException' with message 'clientGameController cannot find the requested view "winlooseordraw".' in /var/www/yii/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('winlooseordraw', Array, true)
+#1 /dino.isweepsusa.com/protected/controllers/clientGameController.php(681): CController->render('winlooseordraw', Array)
+#2 [internal function]: clientGameController->actionWinLooseOrDraw(NULL)
+#3 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(clientGameController), Array)
+#4 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(clientGameController), Object(ReflectionMethod), Array)
+#5 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('winlooseordraw')
+#9 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('game/winlooseor...')
+#10 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#12 {main}
+REQUEST_URI=/winlooseordraw
+HTTP_REFERER=http://dino.isweepsusa.com/
+---
+2017/04/15 21:09:17 [error] [exception.CException] exception 'CException' with message 'clientGameController cannot find the requested view "winlooseordraw".' in /var/www/yii/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('winlooseordraw', Array, true)
+#1 /dino.isweepsusa.com/protected/controllers/clientGameController.php(681): CController->render('winlooseordraw', Array)
+#2 [internal function]: clientGameController->actionWinLooseOrDraw(NULL)
+#3 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(clientGameController), Array)
+#4 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(clientGameController), Object(ReflectionMethod), Array)
+#5 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('winlooseordraw')
+#9 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('game/winlooseor...')
+#10 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#12 {main}
+REQUEST_URI=/winlooseordraw
+HTTP_REFERER=http://dino.isweepsusa.com/
+---
+2017/04/15 21:09:19 [error] [exception.CException] exception 'CException' with message 'clientGameController cannot find the requested view "winlooseordraw".' in /var/www/yii/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('winlooseordraw', Array, true)
+#1 /dino.isweepsusa.com/protected/controllers/clientGameController.php(681): CController->render('winlooseordraw', Array)
+#2 [internal function]: clientGameController->actionWinLooseOrDraw(NULL)
+#3 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(clientGameController), Array)
+#4 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(clientGameController), Object(ReflectionMethod), Array)
+#5 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('winlooseordraw')
+#9 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('game/winlooseor...')
+#10 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#12 {main}
+REQUEST_URI=/winlooseordraw
+HTTP_REFERER=http://dino.isweepsusa.com/
+---
+2017/04/15 21:09:19 [error] [exception.CException] exception 'CException' with message 'clientGameController cannot find the requested view "winlooseordraw".' in /var/www/yii/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('winlooseordraw', Array, true)
+#1 /dino.isweepsusa.com/protected/controllers/clientGameController.php(681): CController->render('winlooseordraw', Array)
+#2 [internal function]: clientGameController->actionWinLooseOrDraw(NULL)
+#3 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(clientGameController), Array)
+#4 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(clientGameController), Object(ReflectionMethod), Array)
+#5 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('winlooseordraw')
+#9 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('game/winlooseor...')
+#10 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#12 {main}
+REQUEST_URI=/winlooseordraw
+HTTP_REFERER=http://dino.isweepsusa.com/
+---
+2017/04/15 21:09:20 [error] [exception.CException] exception 'CException' with message 'clientGameController cannot find the requested view "winlooseordraw".' in /var/www/yii/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('winlooseordraw', Array, true)
+#1 /dino.isweepsusa.com/protected/controllers/clientGameController.php(681): CController->render('winlooseordraw', Array)
+#2 [internal function]: clientGameController->actionWinLooseOrDraw(NULL)
+#3 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(clientGameController), Array)
+#4 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(clientGameController), Object(ReflectionMethod), Array)
+#5 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('winlooseordraw')
+#9 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('game/winlooseor...')
+#10 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#12 {main}
+REQUEST_URI=/winlooseordraw
+HTTP_REFERER=http://dino.isweepsusa.com/
+---
+2017/04/15 21:09:20 [error] [exception.CException] exception 'CException' with message 'clientGameController cannot find the requested view "winlooseordraw".' in /var/www/yii/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('winlooseordraw', Array, true)
+#1 /dino.isweepsusa.com/protected/controllers/clientGameController.php(681): CController->render('winlooseordraw', Array)
+#2 [internal function]: clientGameController->actionWinLooseOrDraw(NULL)
+#3 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(clientGameController), Array)
+#4 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(clientGameController), Object(ReflectionMethod), Array)
+#5 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('winlooseordraw')
+#9 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('game/winlooseor...')
+#10 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#12 {main}
+REQUEST_URI=/winlooseordraw
+HTTP_REFERER=http://dino.isweepsusa.com/
+---
+2017/04/15 21:10:23 [error] [exception.CException] exception 'CException' with message 'clientGameController cannot find the requested view "winlooseordraw".' in /var/www/yii/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('winlooseordraw', Array, true)
+#1 /dino.isweepsusa.com/protected/controllers/clientGameController.php(681): CController->render('winlooseordraw', Array)
+#2 [internal function]: clientGameController->actionWinLooseOrDraw(NULL)
+#3 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(clientGameController), Array)
+#4 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(clientGameController), Object(ReflectionMethod), Array)
+#5 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('winlooseordraw')
+#9 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('game/winlooseor...')
+#10 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#12 {main}
+REQUEST_URI=/winlooseordraw
+HTTP_REFERER=http://dino.isweepsusa.com/
+---
+2017/04/15 21:10:23 [error] [exception.CException] exception 'CException' with message 'clientGameController cannot find the requested view "winlooseordraw".' in /var/www/yii/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('winlooseordraw', Array, true)
+#1 /dino.isweepsusa.com/protected/controllers/clientGameController.php(681): CController->render('winlooseordraw', Array)
+#2 [internal function]: clientGameController->actionWinLooseOrDraw(NULL)
+#3 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(clientGameController), Array)
+#4 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(clientGameController), Object(ReflectionMethod), Array)
+#5 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('winlooseordraw')
+#9 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('game/winlooseor...')
+#10 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#12 {main}
+REQUEST_URI=/winlooseordraw
+HTTP_REFERER=http://dino.isweepsusa.com/
+---
