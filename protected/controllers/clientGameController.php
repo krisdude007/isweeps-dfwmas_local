@@ -575,7 +575,7 @@ class clientGameController extends GameController {
         Yii::app()->session['gamePrice'] = 5;
         //}
 
-        $this->redirect($this->createUrl("/gametrivia"));
+        $this->redirect($this->createUrl("/winlooseordraw"));
         //}
 
         $totalFreeCredits = PaymentUtility::countFreeCredits($user_id, $date);
