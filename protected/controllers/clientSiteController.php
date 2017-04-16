@@ -88,10 +88,17 @@ class clientSiteController extends SiteController {
 //                    $this->redirect($this->createUrl('/actel/payment'));
 //                }
 //            }
-
+              
+              $allCorrect = eGameChoiceResponse::model()->isCorrect()->findAllByAttributes(array('game_unique_id' => Yii::app()->session['gameUniqueId']));//var_dump($countCorrect);exit;
+              if (!empty($allCorrect)) {
+                  $countCorrect = sizeof($allCorrect);
+              } else {
+                  $countCorrect = 0;
+              }
             //if (isset($game)) {
                 //$formPlayNow = new FormPlayNow();
                 $this->render('index', array(
+                    'countCorrect' => $countCorrect,
                     //'games' => $games,
                     //'game' => $game,
                     //'response' => $response,

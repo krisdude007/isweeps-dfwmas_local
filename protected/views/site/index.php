@@ -21,6 +21,7 @@ $cs->registerScriptFile(Yii::app()->request->baseurl . '/core/webassets/js/jquer
             </div>
         <?php else: ?>
             <?php if (isset($_GET['f']) && $_GET['f'] == 'g'): ?>
+            <h1 style="color: #ffffff;">You have got <i style="color: #ea8417;">"<?php echo isset($countCorrect) ? $countCorrect : '-'; ?>"</i> correct answers. </h1>
                 <div class='col-sm-12' style='padding-left: 12px; padding-right: 10px; clear: both; position: relative;'>
                     <img src="/webassets/images/laliga/image_congrats<?php echo (Yii::app()->language == 'en') ? '_eng' : ''; ?>.png" style=" max-width: 100%; margin-bottom: 10px;"/>
                 </div>
