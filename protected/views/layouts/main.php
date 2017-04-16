@@ -128,6 +128,7 @@ margin-left: 0px;">
                 <li  class="right-btn <?php if ($this->activeNavLink == 'login'): ?>active<?php endif; ?>"><a href="/login"><?php echo Yii::t('youtoo', 'Login Now') ?></a></li>
                 <?php else: ?>
                 <li  class="right-btn <?php if ($this->activeNavLink == 'login'): ?>active<?php endif; ?>"><a href="/logout"><?php echo Yii::t('youtoo', 'Logout') ?></a></li>
+                <i style="color: #00dd00; padding: 10px;float: right !important;">You have <b style="color: #ffffff;">$<?php echo GameUtility::getCashBalance(Yii::app()->user->getId()); ?></b> balance left.</i>
                 <?php endif; ?>
             </ul>
         </div>
