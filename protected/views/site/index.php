@@ -12,12 +12,12 @@ $cs->registerScriptFile(Yii::app()->request->baseurl . '/core/webassets/js/jquer
         ?>
 
         <?php if (Yii::app()->user->isGuest): ?>
-            <a href="<?php echo $url; ?>"><img src="/webassets/images/laliga/Image_Hero_Azteca-Concursos<?php echo (Yii::app()->language == 'en') ? '_eng' : ''; ?>.png" style="position: relative; max-width: 102.6%; left: -7px;"/>
+            <a href="<?php echo $url; ?>"><img src="/webassets/images/banners/main<?php echo (Yii::app()->language == 'en') ? '_eng' : ''; ?>.jpg" style="position: relative; width:90%; border: 10px solid white;"/>
             </a>
             <a href="/marketingpage"><span style="position: absolute; top: 170px;right: 185px; color: #ffffff;"><?php echo Yii::t('youtoo','You want to know more?'); ?>&nbsp;&nbsp;&nbsp;<img src="/webassets/images/laliga/Button_Yellow-Arrow.png"/></span></a>
             <div style="position: relative; top: 15px;">
-                <span><a href=<?php echo $url; ?>><img src="/webassets/images/laliga/Image_Banner_Juega-Ahora-Por-1<?php echo (Yii::app()->language == 'en') ? '_eng' : ''; ?>.png" style="margin-left: -12px;max-width: 405px; width:100%;"/></a></span>
-                <span><a href="<?php //echo $currentWinLooseOrDrawGame['url']; ?>"><img src="/webassets/images/laliga/Image_Banner_Viernes-Futbolero<?php echo (Yii::app()->language == 'en') ? '_eng' : ''; ?>.png" style="max-width: 405px; width:100%; margin-left: 10px;"/></a></span>
+                <span><a href=<?php echo $url; ?>><img src="/webassets/images/banners/01<?php echo (Yii::app()->language == 'en') ? '_eng' : ''; ?>.png" style="max-width: 405px; width:100%;margin-bottom:10px;"/></a></span>
+                <span><a href="<?php //echo $currentWinLooseOrDrawGame['url']; ?>"><img src="/webassets/images/banners/02<?php echo (Yii::app()->language == 'en') ? '_eng' : ''; ?>.jpg" style="max-width: 405px; width:100%;margin-bottom:10px; "/></a></span>
             </div>
         <?php else: ?>
             <?php if (isset($_GET['f']) && $_GET['f'] == 'g'): ?>
@@ -45,12 +45,12 @@ $cs->registerScriptFile(Yii::app()->request->baseurl . '/core/webassets/js/jquer
                     <br/><br/> <?php echo Yii::t('youtoo', 'Good luck and have fun.'); ?>
                 </div>
             <?php else: ?>
-                <a href="<?php echo $url; ?>"><img src="/webassets/images/laliga/Image_Hero_Azteca-Concursos<?php echo (Yii::app()->language == 'en') ? '_eng' : ''; ?>.png" style="position: relative; max-width: 102.6%; left: -7px;"/>
+                <a href="<?php echo $url; ?>"><img src="/webassets/images/banners/main<?php echo (Yii::app()->language == 'en') ? '_eng' : ''; ?>.jpg" style="position: relative; width: 90%;border: 10px solid white;"/>
                 </a>
                 <a href="/marketingpage"><span style="position: absolute; top: 170px;right: 185px; color: #ffffff;"><?php echo Yii::t('youtoo','You want to know more?'); ?>&nbsp;&nbsp;&nbsp;<img src="/webassets/images/laliga/Button_Yellow-Arrow.png"/></span></a>
                 <div style="position: relative; top: 15px;">
-                    <span><a href="http://DFWMAS.org"><img src="/webassets/images/laliga/Image_Banner_Juega-Ahora-Por-1<?php echo (Yii::app()->language == 'en') ? '_eng' : ''; ?>.png" style="margin-left: -12px;max-width: 405px; width:100%;"/></a></span>
-                    <span><a href="http://DFWMAS.org"><img src="/webassets/images/laliga/Image_Banner_Viernes-Futbolero<?php echo (Yii::app()->language == 'en') ? '_eng' : ''; ?>.png" style="max-width: 405px; width:100%; margin-left: 10px;"/></a></span>
+                    <span><a href="http://DFWMAS.org"><img src="/webassets/images/banners/01<?php echo (Yii::app()->language == 'en') ? '_eng' : ''; ?>.png" style="max-width: 405px; width:100%;margin-bottom:10px;"/></a></span>
+                    <span><a href="http://DFWMAS.org"><img src="/webassets/images/banners/02<?php echo (Yii::app()->language == 'en') ? '_eng' : ''; ?>.jpg" style="max-width: 405px; width:100%;margin-bottom:10px;"/></a></span>
                 </div>
             <?php endif; ?>
         <?php endif; ?>

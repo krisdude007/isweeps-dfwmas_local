@@ -3,11 +3,13 @@
 Yii::app()->clientScript->registerCssFile(Yii::app()->request->baseUrl . '/core/webassets/css/jquery-ui-1.10.0.css');
 Yii::app()->clientScript->registerScriptFile('http://cdn.jquerytools.org/1.2.7/all/jquery.tools.min.js', CClientScript::POS_END);
 ?>
-
+<div id="wrapper">
 <div id="pageContainer" class="container">
     <div class="subContainer" style="max-width: 800px;">
         <?php $this->renderPartial('_sidebar', array()); ?>
-        <div style='margin-left: 100px;'>
+        <h1 style="font-weight: 300; font-size: 30px;color:white;"><?php echo Yii::t('youtoo', 'Create an Account'); ?></h1>
+        <div style='background-color:rgba(255, 255, 255, 0.52);padding:12px;'>
+		<div style='background-color:white;'>
         <?php
         $form = $this->beginWidget('CActiveForm', array('id' => 'user-registernew-form',
             'enableAjaxValidation' => true,
@@ -18,7 +20,7 @@ Yii::app()->clientScript->registerScriptFile('http://cdn.jquerytools.org/1.2.7/a
             'htmlOptions' => array(
             ),));
         ?>
-        <h1 style="font-weight: 300; font-size: 30px;"><?php echo Yii::t('youtoo', 'Create an Account'); ?></h1>
+        
         <br/>
         <br/>
         <div class="row">
@@ -80,14 +82,18 @@ Yii::app()->clientScript->registerScriptFile('http://cdn.jquerytools.org/1.2.7/a
                 </span>
                 <?php echo $form->error($user, 'age_accepted'); ?>
             </div>
+            
+            
             <div class="row">
-                <div id="states" class="col-sm-7 col-sm-offset-4" style="margin-top: 20px; text-align: left; padding-left: 0px;">
+                <div id="states" class="col-sm-7 col-sm-offset-4" style="margin-top: 20px; padding-left: 0px;">
                     <span>This game is not available in: 
                     California, New Mexico, <br/>Louisiana, Massachusetts, Georgia, Montana</span>
                 </div>
             </div>
+            
+            
             <div class="row">
-            <div class='col-sm-10 col-sm-offset-3' style="margin-top: 20px; text-align: left; padding-left: 0px;">
+            <div class='col-sm-10 col-sm-offset-3' style="margin-top: 20px; padding-left: 0px;">
                 <?php echo $form->checkbox($user, 'eligibility_accepted', '', array('checked' => '', 'value' => 1)); ?>
                 <span class='eligiblity_accepted'>
                     <?php echo Yii::t('youtoo','I hereby confirm that I am not playing in one of the above mentioned states.'); ?>
@@ -116,7 +122,10 @@ Yii::app()->clientScript->registerScriptFile('http://cdn.jquerytools.org/1.2.7/a
         <br/>
         <?php $this->endWidget(); ?>
     </div>
+     </div>
+    
     </div>
+</div>
 </div>
 <?php $this->renderPartial('/site/modalTerms', array()); ?>
 <?php $this->renderPartial('/site/modalPrivacy', array()); ?>

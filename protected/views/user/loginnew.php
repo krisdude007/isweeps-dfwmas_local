@@ -3,11 +3,12 @@
 Yii::app()->clientScript->registerCssFile(Yii::app()->request->baseUrl . '/core/webassets/css/jquery-ui-1.10.0.css');
 Yii::app()->clientScript->registerScriptFile('http://cdn.jquerytools.org/1.2.7/all/jquery.tools.min.js', CClientScript::POS_END);
 ?>
-
+<div id="wrapper">
 <div id="pageContainer" class="container">
     <div class="subContainer" style="max-width: 550px;">
         <?php $this->renderPartial('_sidebar', array()); ?>
-        <div class"login-container">
+        <div class="login-container-border">
+          <div class="login-container">
         <?php
         $form = $this->beginWidget('CActiveForm', array('id' => 'user-loginnew-form',
             'enableAjaxValidation' => true,
@@ -20,7 +21,7 @@ Yii::app()->clientScript->registerScriptFile('http://cdn.jquerytools.org/1.2.7/a
             )
            );
         ?>
-        <h1 style="font-weight: 300; font-size: 30px;"><?php echo Yii::t('youtoo', 'Log In and Play!'); ?></h1>
+        <h1 style="font-weight: 500; font-size: 30px;"><?php echo Yii::t('youtoo', 'Log In and Play!'); ?></h1>
         <br/>
         <br/>
         <div class="row">
@@ -61,5 +62,7 @@ Yii::app()->clientScript->registerScriptFile('http://cdn.jquerytools.org/1.2.7/a
         <br/>
         <?php $this->endWidget(); ?>
         </div>
+		</div>
     </div>
+</div>
 </div>

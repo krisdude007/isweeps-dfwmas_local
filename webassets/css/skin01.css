@@ -17,6 +17,8 @@ body{
 	padding-top: 60px;
 	background-color: transparent !important;
 	padding-right:0 !important;
+	height: auto !important;
+	min-height: 100px !important;
 	
 }
 #pageNavigation {
@@ -24,6 +26,7 @@ body{
 	height: auto;
 	background-color: #011a50;
 	width: 100%;
+	z-index: 100 !important;
 }
 .main {
     max-width: none;
@@ -87,7 +90,8 @@ div.collapse.navbar-collapse{
 }
 #pageFooterDrop {
 	background-color: rgba(4, 35, 101, 0.65);
-margin-top: 30px;
+	margin-top: 30px;
+	height: auto !important;
 }
 #pageFooterDrop a:link,#pageFooterDrop a:visited{
 	color: white;
@@ -99,15 +103,15 @@ margin-top: 30px;
 	border-top: 6px solid #df6b28;
 }
 #sponsorLogo img{
-opacity: 0.5;
+	opacity: 0.5;
 }
 #wrapper {
-        padding-left: 0px !important;
-        width: 90%;
+	padding-left: 0px !important;
+	width: 90%;
 	max-width: 1200px !important;
 	padding-bottom: 100px;
-        margin: 0 auto;
-        background-color: rgba(4, 35, 101, 0.39) !important;
+	margin: 0 auto;
+	background-color: rgba(4, 35, 101, 0.39) !important;
 }
 #pageFooter{
 	background-color: #272727;
@@ -120,14 +124,14 @@ opacity: 0.5;
 #sidebar-wrapper{
 	width: 100% !important;	
 	z-index: 1000;
-position: absolute;
-left: 0px !important;	
-top: 0px !important;	
-width: 100%  !important;	
-height: 55px !important;	
-margin-left: 0 !important;
-overflow-y: visible !important;	
-background: #011a50 !important;	
+	position: absolute;
+	left: 0px !important;	
+	top: 0px !important;	
+	width: 100%  !important;	
+	height: 55px !important;	
+	margin-left: 0 !important;
+	overflow-y: visible !important;	
+	background: #011a50 !important;	
 	
 }
 .sidebar-nav{
@@ -148,30 +152,30 @@ background: #011a50 !important;
 }
 .sidebar-nav li a:hover{
 	background-color: #1f3a74 !important;
-		font-size: 15px;
-font-weight: 500;
+	font-size: 15px;
+	font-weight: 500;
 	
 }
 .sidebar-nav li a{
 	font-size: 15px;
-font-weight: 500;
+	font-weight: 500;
 	background-color: transparent;
 	-o-transition:color .7s ease-out, background 0.2s ease-in;
-  -ms-transition:color .7s ease-out, background 0.2s ease-in;
-  -moz-transition:color .7s ease-out, background 0.2s ease-in;
-  -webkit-transition:color .7s ease-out, background 0.2s ease-in;
-  /* ...and now override with proper CSS property */
-  transition:color .7s ease-out, background 0.2s ease-in;
+	-ms-transition:color .7s ease-out, background 0.2s ease-in;
+	-moz-transition:color .7s ease-out, background 0.2s ease-in;
+	-webkit-transition:color .7s ease-out, background 0.2s ease-in;
+	/* ...and now override with proper CSS property */
+	transition:color .7s ease-out, background 0.2s ease-in;
 }
 .sidebar-nav .btn{
 	background-color: #011a50 !important;
 	border: 1px solid rgba(255, 255, 255, 0.25);
 	-o-transition:color .7s ease-out, background 0.2s ease-in;
-  -ms-transition:color .7s ease-out, background 0.2s ease-in;
-  -moz-transition:color .7s ease-out, background 0.2s ease-in;
-  -webkit-transition:color .7s ease-out, background 0.2s ease-in;
-  /* ...and now override with proper CSS property */
-  transition:color .7s ease-out, background 0.2s ease-in;
+	-ms-transition:color .7s ease-out, background 0.2s ease-in;
+	-moz-transition:color .7s ease-out, background 0.2s ease-in;
+	-webkit-transition:color .7s ease-out, background 0.2s ease-in;
+	/* ...and now override with proper CSS property */
+	transition:color .7s ease-out, background 0.2s ease-in;
 }
 .sidebar-nav .btn:hover{
 	background: #143274 !important;
@@ -214,24 +218,24 @@ li#dropdown{
 	position: relative;
 }
 #dropdown-lvl1{
-height: auto;
-position: absolute;
-width: 100%;
+	height: auto;
+	position: absolute;
+	width: 100%;
 }
 .navbar-nav{
 	width: 100%;
 }
 .subContainer h3{
 	font-weight: 500 !important;
-margin-bottom: 40px !important;
-color: white !important;
-font-size: 33px !important;
+	margin-bottom: 40px !important;
+	color: white !important;
+	font-size: 33px !important;
 }
 .faq h3{
-margin-bottom: 0px !important;
-color:#011a50 !important;
-font-size: 15px !important;
-padding: 15px !important
+	margin-bottom: 0px !important;
+	color:#011a50 !important;
+	font-size: 15px !important;
+	padding: 15px !important
 }
 .faq i{
 	color: #e07b27;
@@ -242,8 +246,8 @@ padding: 15px !important
 }
 
 form#user-profile-form{
-padding: 20px;
-background: rgba(255, 255, 255, 0.69);
+	padding: 20px;
+	background: rgba(255, 255, 255, 0.69);
 	margin: 30px;
 }
 .panel-primary > .panel-heading {
@@ -255,15 +259,23 @@ background: rgba(255, 255, 255, 0.69);
 	padding-right: 0 !important;
 }
 form .user-profile-form{
-margin: 0 20px;
+	margin: 0 20px;
 }
 
 .table-responsive{
-	 background-color: rgba(255, 255, 255, 0.49) !important;
+	background-color: rgba(255, 255, 255, 0.49) !important;
 	padding: 30px;
 	font-weight: 500;
-	
 }
+.table-responsive.winners th{
+	background-color: #0b3286;
+	color: white;
+}
+.table-responsive.winners td{
+	white-space: normal !important;
+
+}
+
 .table-responsive th{
 	 background-color: rgba(176, 193, 226, 0.29) 
 }
@@ -272,4 +284,162 @@ table.table.table-bordered tbody{
 }
 a.login-btn{
 	border-style: none; 
+}
+
+/*FAQ PAGE*/
+.faq.panel-title i::before{
+	width: 40px;
+	height: 40px;
+}
+.faq.panel-title i{
+	font-size: 18px;
+	cursor: pointer;
+}
+/*PAYMENT OPTIONS PAGE*/
+
+.ribbon{
+  position: absolute;
+  top: 0;
+  right: 1.3em;
+  z-index: 1;
+  color: #eee;
+  font-size: 2em;
+  
+  width: 2.6em;
+  line-height: 0.5em;
+  -webkit-transition: line-height 0.5s;
+  transition: line-height 0.5s;
+}
+.ribbon:after {
+  content: "";
+  font-size: 0.5em;
+  position: absolute;
+  height: 1.2em;
+  border: 2.6em solid #f48636;
+  z-index: -1;
+  top: -1em;
+  border-top-width: 4.6em;
+  border-bottom-color: transparent;
+  right: 0;
+  -webkit-transition: height 0.5s;
+  transition: height 0.5s;
+}
+.ribbon:before {
+  content: "";
+  font-size: 0.5em;
+  position: absolute;
+  border-style: solid;
+  border-color: transparent transparent #B71C1C transparent;
+  top: -1em;
+  right: 5em;
+  border-width: 0 0 1em 0.7em;
+  z-index: -1;
+}
+
+
+.paymentOptionsTop{
+	background-color:white;
+    max-width:150px;
+    min-height: 186px;
+    width: 100%;
+    height: 100%;
+    border: 4px solid #9a9a9a;
+    float: left;
+    margin-right: 14px;
+	padding: 80px 15px 15px 15px;
+	position: relative;
+	margin-bottom: 10px;
+}
+.paymentOptionsTop .btn-default.selected {
+    background-color: #055cc1 !important;
+    border-color: #055cc1;
+	color: white !important;
+}
+.paymentOptionsTop .btn-default.selected:hover {
+    background-color: #055cc1 !important;
+    border-color: #055cc1;
+	color: white !important;
+}
+/*WIN LOOSE GAME PAGE*/
+div.form{
+	overflow: auto;
+}
+div.subContainer{
+	max-height: none !important;
+}
+.game .table-responsive{
+	padding: 0 !important;
+	height: auto !important;
+	width: 100%;
+}
+
+.game .table-responsive > .table > thead > tr > th, .game .table-responsive > .table > tbody > tr > th,
+.game .table-responsive > .table > tfoot > tr > th, .game .table-responsive > .table > thead > tr > td,
+.game .table-responsive > .table > tbody > tr > td, .game .table-responsive > .table > tfoot > tr > td {
+	white-space: normal !important;
+}
+/* MARKETING PAGE*/
+.boxes{
+	margin: 5px;
+	background-color: #2a3335;
+	color: white;
+	min-height: 380px;
+	height: auto;
+	width: 100%;
+	padding: 15px;
+	
+}
+.play-now-btn{
+	margin-top: 30px;
+}
+/*LOGIN PAGE*/ 
+.login-container{
+	background-color: white !important;
+	padding: 30px !important;
+	
+}
+.login-container-border{
+	padding: 12px;
+	background-color: rgba(255, 255, 255, 0.38) !important;
+}
+.modal{
+	z-index: 9999 !important;
+}
+/*CONTACT PAGE*/
+.contact-message-box textarea{
+	width: 100%;
+}
+/*MEDIA QUERIES*/
+@media screen and (max-width:600px){
+	  
+	#pageFooterDrop a{
+		font-size: 18px;
+	}
+	.table-responsive.winners{
+		padding: 5px;
+	}
+	#pageContainer{
+		padding: 5px;
+	}
+	#page-content-wrapper{
+		padding: 0 !important;
+	}
+}
+@media screen and (max-width:400px){
+	  
+	#pageFooterDrop a{
+		font-size: 21px;
+	}
+	.table-responsive.winners{
+		padding: 0px;
+	}
+	#pageContainer{
+		padding: 5px;
+	}
+	#page-content-wrapper{
+		padding: 0 !important;
+	}
+	#wrapper{
+		padding: 0 !important;
+	}
 }

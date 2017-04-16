@@ -4,6 +4,7 @@ Yii::app()->clientScript->registerCssFile(Yii::app()->request->baseUrl . '/core/
 Yii::app()->clientScript->registerScriptFile('http://cdn.jquerytools.org/1.2.7/all/jquery.tools.min.js', CClientScript::POS_END);
 ?>
 <?php if (!Yii::app()->user->isGuest): ?>
+   <div id="wrapper">
     <div id="pageContainer" class="container">
         <div class="subContainer">
             <div class="row">
@@ -14,7 +15,9 @@ Yii::app()->clientScript->registerScriptFile('http://cdn.jquerytools.org/1.2.7/a
             </div>
         </div>
     </div>
+</div>
 <?php else : ?>
+   <div id="wrapper">
     <div id="pageContainer" class="container">
         <div class="subContainer">
             <div class="row">
@@ -106,4 +109,5 @@ Yii::app()->clientScript->registerScriptFile('http://cdn.jquerytools.org/1.2.7/a
             </div>
         </div>
     </div>
+    </div> <!--end wrapper-->
 <?php endif; ?>

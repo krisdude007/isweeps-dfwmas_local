@@ -159,16 +159,17 @@ $gameEntry = array (
         });
     }
 </script>
-<div id="pageContainer" class="container" style="min-height: 655px;">
-    <div class="subContainer">
+  <div id="wrapper" style="background-color: #303030;">
+<div id="pageContainer" class="container" style="padding-left: 0px;">
+    <div class="subContainer" style="padding: 0px;">
         <?php $this->renderPartial('/site/_sideBar', array('user' => $user)); ?>
         <?php //$geoLocation = GeoUtility::GeoLocation();if($geoLocation['isValid']): ?>
         <div class="row">
-            <div class='col-sm-9 col-sm-offset-3'>
+            <div class="col-sm-9 col-sm-offset-3">
                 <?php for ($i = 1; $i <= 4; $i++) { ?>
                     <div class="paymentOptionsTop" style="min-height: 222px;">
-                        <div style="background-color: #f2f2f2;"><h3 style="margin-top: 0px; min-height: 43px; padding-top: 8px; margin-bottom: 0px; font-weight: 300;">$<?php echo $payCashArray[$i]; ?></h3></div>
-                        <div style='margin-top: 5px;'><?php //echo $payCreditArray[$i]; ?>It's <br/><?php echo Yii::t('youtoo', $gameEntry[$payCreditArray[$i]]); ?></div><hr style="margin-top: 5px; margin-bottom: 5px;"/>
+                        <div class="ribbon"><h3 style="margin-top: 0px; min-height: 43px; padding-top: 8px; margin-bottom: 0px; font-weight: 300;">$<?php echo $payCashArray[$i]; ?></h3></div>
+                        <div style='margin-top: 5px;'><?php //echo $payCreditArray[$i]; ?><?php echo Yii::t('youtoo', $gameEntry[$payCreditArray[$i]]); ?></div><hr style="margin-top: 5px; margin-bottom: 5px;"/>
                             <div style="font-size: 10px; margin-bottom: 10px;"><?php echo Yii::t('youtoo', 'Plus bonus entries<br/>for correct answers'); ?></div>
                         <div style="margin-top: 25px;"><a id="entry<?php echo $i; ?>" href="/payment?ci=<?php echo $i; ?>" class="btn btn-default btn-md" style="min-width: 114px; min-height: 37px;"><?php echo Yii::t('youtoo', 'Select'); ?></a></div>
                     </div>
@@ -283,5 +284,6 @@ $gameEntry = array (
             </div>
         </div>
     </div>
+     </div> </div>
     <?php
     //$this->renderPartial('paypaldirect', array()); ?>

@@ -18,7 +18,8 @@ Yii::app()->facebook->initJs($output);
         <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
         <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
         <link rel="stylesheet" type="text/css" href="/webassets/css/client.css" />
-        <link  rel="stylesheet" type="text/css" href="/webassets/css/simple-sidebar.css"/>
+        <!--no longer using side bar DG April 14 2017-->
+       <!-- <link  rel="stylesheet" type="text/css" href="/webassets/css/simple-sidebar.css"/>-->
         <link  rel="stylesheet" type="text/css" href="/webassets/css/skin01.css"/>
         <!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -93,7 +94,8 @@ Yii::app()->facebook->initJs($output);
             </div>
         </div>
         <div id="pageHeader">
-            <div class="row">
+            <div class="row" style="margin-right: 0px;
+margin-left: 0px;">
                <div class="header-logo">
                		<img src="/webassets/images/logo.png" style="margin-left: 15px;"/>
                </div>
@@ -118,11 +120,11 @@ Yii::app()->facebook->initJs($output);
                 
                 
                 
-                <li><a href="/"><?php echo Yii::t('youtoo', 'Home') ?></a></li>
-                <li class="active"><a href="/winners"><?php echo Yii::t('youtoo', 'Winners') ?></a></li>
-                <li><a href="/faq"><?php echo Yii::t('youtoo', 'FAQ') ?></a></li>
-                <li><a href="/marketingpage"><?php echo Yii::t('youtoo', 'How to Play') ?></a></li>
-               <li  class="right-btn"><a href="/login"><?php echo Yii::t('youtoo', 'Login Now') ?></a></li>
+                <li class="<?php if ($this->activeNavLink == 'index'): ?>active<?php endif; ?>"><a href="/"><?php echo Yii::t('youtoo', 'Home') ?></a></li>
+                <li class="<?php if ($this->activeNavLink == 'winners'): ?>active<?php endif; ?>"><a href="/winners"><?php echo Yii::t('youtoo', 'Winners') ?></a></li>
+                <li class="<?php if ($this->activeNavLink == 'faq'): ?>active<?php endif; ?>"><a href="/faq"><?php echo Yii::t('youtoo', 'FAQ') ?></a></li>
+                <li class="<?php if ($this->activeNavLink == 'marketingpage'): ?>active<?php endif; ?>"><a href="/marketingpage"><?php echo Yii::t('youtoo', 'How to Play') ?></a></li>
+               <li  class="right-btn <?php if ($this->activeNavLink == 'login'): ?>active<?php endif; ?>"><a href="/login"><?php echo Yii::t('youtoo', 'Login Now') ?></a></li>
 
          
             </ul>

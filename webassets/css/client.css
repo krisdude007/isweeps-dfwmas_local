@@ -66,15 +66,20 @@
 
 @media(max-width:600px){
 #pageFooterDrop {
+/* DG
     visibility: hidden;
     display: none;
+*/
     }
 }
 
 @media screen and (max-width:400px){
   #pageFooterDrop {
+	  
+/*
     visibility: hidden;
     display: none;
+*/
   }
 }
 
