@@ -40,7 +40,8 @@ foreach ($game->gameChoiceAnswers as $answer) {
     <div class='subContainer'>
         <?php $this->renderPartial('/site/_sideBar', array()); ?>
 
-        <div class='row' style='margin-top: -30px;'>
+        <div class='row' style='margin-right: 0px;
+margin-left: 0px;'>
             <div class="col-sm-12" style="padding-right: 0px; padding-left: 0px;top: -50px;">
                 <div class="form" style="position: relative; top: 22px; min-height: 740px; background-color:#002E42; clear: both;">
                     <!--                <div class='gameEntry' style='width: 100%; background-color: #eeeeee; min-height: 299px; min-width: 823px;'>-->
