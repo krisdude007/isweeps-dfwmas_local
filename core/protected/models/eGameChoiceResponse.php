@@ -92,6 +92,9 @@ class eGameChoiceResponse extends GameChoiceResponse {
             'isPaid' => array(
                 'condition' => "sms_id IS NOT NULL OR transaction_id IS NOT NULL",
             ),
+            'isCorrect' => array(
+                'condition' => "is_correct = '1'",
+            ),
         );
     }
 
