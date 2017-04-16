@@ -7289,3 +7289,131 @@ Stack trace:
 REQUEST_URI=/winlooseordraw
 HTTP_REFERER=http://dino.isweepsusa.com/
 ---
+2017/04/15 23:44:08 [error] [php] Undefined index: choiceList (/dino.isweepsusa.com/protected/views/game/winlooseordraw.php:147)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(869): clientGameController->renderFile()
+#1 /var/www/yii/framework/web/CController.php(782): clientGameController->renderPartial()
+#2 /dino.isweepsusa.com/protected/controllers/clientGameController.php(681): clientGameController->render()
+#3 unknown(0): clientGameController->actionWinLooseOrDraw()
+#4 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#5 /var/www/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /var/www/yii/framework/web/CController.php(286): clientGameController->runAction()
+#8 /var/www/yii/framework/web/CController.php(265): clientGameController->runActionWithFilters()
+#9 /var/www/yii/framework/web/CWebApplication.php(282): clientGameController->run()
+#10 /var/www/yii/framework/web/CWebApplication.php(141): YttCore->runController()
+#11 /var/www/yii/framework/base/CApplication.php(180): YttCore->processRequest()
+#12 /dino.isweepsusa.com/index.php(19): YttCore->run()
+REQUEST_URI=/winlooseordraw
+2017/04/15 23:44:08 [error] [php] Undefined index: choiceList (/dino.isweepsusa.com/protected/views/game/winlooseordraw.php:147)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(869): clientGameController->renderFile()
+#1 /var/www/yii/framework/web/CController.php(782): clientGameController->renderPartial()
+#2 /dino.isweepsusa.com/protected/controllers/clientGameController.php(681): clientGameController->render()
+#3 unknown(0): clientGameController->actionWinLooseOrDraw()
+#4 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#5 /var/www/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /var/www/yii/framework/web/CController.php(286): clientGameController->runAction()
+#8 /var/www/yii/framework/web/CController.php(265): clientGameController->runActionWithFilters()
+#9 /var/www/yii/framework/web/CWebApplication.php(282): clientGameController->run()
+#10 /var/www/yii/framework/web/CWebApplication.php(141): YttCore->runController()
+#11 /var/www/yii/framework/base/CApplication.php(180): YttCore->processRequest()
+#12 /dino.isweepsusa.com/index.php(19): YttCore->run()
+REQUEST_URI=/winlooseordraw
+2017/04/16 08:51:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "games".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('games')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/games
+---
+2017/04/16 08:51:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "games".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('games')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/games
+---
+2017/04/16 18:04:12 [error] [php] Undefined index: choiceList (/dino.isweepsusa.com/protected/views/game/winlooseordraw.php:147)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(869): clientGameController->renderFile()
+#1 /var/www/yii/framework/web/CController.php(782): clientGameController->renderPartial()
+#2 /dino.isweepsusa.com/protected/controllers/clientGameController.php(681): clientGameController->render()
+#3 unknown(0): clientGameController->actionWinLooseOrDraw()
+#4 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#5 /var/www/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /var/www/yii/framework/web/CController.php(286): clientGameController->runAction()
+#8 /var/www/yii/framework/web/CController.php(265): clientGameController->runActionWithFilters()
+#9 /var/www/yii/framework/web/CWebApplication.php(282): clientGameController->run()
+#10 /var/www/yii/framework/web/CWebApplication.php(141): YttCore->runController()
+#11 /var/www/yii/framework/base/CApplication.php(180): YttCore->processRequest()
+#12 /dino.isweepsusa.com/index.php(19): YttCore->run()
+REQUEST_URI=/winlooseordraw
+2017/04/16 18:04:12 [error] [php] Undefined index: choiceList (/dino.isweepsusa.com/protected/views/game/winlooseordraw.php:147)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(869): clientGameController->renderFile()
+#1 /var/www/yii/framework/web/CController.php(782): clientGameController->renderPartial()
+#2 /dino.isweepsusa.com/protected/controllers/clientGameController.php(681): clientGameController->render()
+#3 unknown(0): clientGameController->actionWinLooseOrDraw()
+#4 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#5 /var/www/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /var/www/yii/framework/web/CController.php(286): clientGameController->runAction()
+#8 /var/www/yii/framework/web/CController.php(265): clientGameController->runActionWithFilters()
+#9 /var/www/yii/framework/web/CWebApplication.php(282): clientGameController->run()
+#10 /var/www/yii/framework/web/CWebApplication.php(141): YttCore->runController()
+#11 /var/www/yii/framework/base/CApplication.php(180): YttCore->processRequest()
+#12 /dino.isweepsusa.com/index.php(19): YttCore->run()
+REQUEST_URI=/winlooseordraw
+2017/04/16 18:04:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "winloosedraw".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('winloosedraw')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/winloosedraw
+---
+2017/04/16 18:04:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "winloosedraw".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('winloosedraw')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/winloosedraw
+---
+2017/04/16 18:06:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "winloosedraw".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('winloosedraw')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/winloosedraw
+---
+2017/04/16 18:06:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "winloosedraw".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('winloosedraw')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/winloosedraw
+---
+2017/04/16 18:08:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "winloosedraw".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('winloosedraw')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/winloosedraw
+---
+2017/04/16 18:08:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "winloosedraw".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('winloosedraw')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/winloosedraw
+---

@@ -8,7 +8,7 @@ Yii::app()->clientScript->registerScriptFile('http://cdn.jquerytools.org/1.2.7/a
     <div class="subContainer" style="max-width: 800px;">
         <?php $this->renderPartial('_sidebar', array()); ?>
         <h1 style="font-weight: 300; font-size: 30px;color:white;"><?php echo Yii::t('youtoo', 'Create an Account'); ?></h1>
-        <div style='background-color:rgba(255, 255, 255, 0.52);padding:12px;'>
+        <div class="form-box">
 		<div style='background-color:white;'>
         <?php
         $form = $this->beginWidget('CActiveForm', array('id' => 'user-registernew-form',
@@ -85,7 +85,7 @@ Yii::app()->clientScript->registerScriptFile('http://cdn.jquerytools.org/1.2.7/a
             
             
             <div class="row">
-                <div id="states" class="col-sm-7 col-sm-offset-4" style="margin-top: 20px; padding-left: 0px;">
+                <div id="states" class="" style="margin-top: 20px; padding-left: 0px;">
                     <span>This game is not available in: 
                     California, New Mexico, <br/>Louisiana, Massachusetts, Georgia, Montana</span>
                 </div>
@@ -93,7 +93,7 @@ Yii::app()->clientScript->registerScriptFile('http://cdn.jquerytools.org/1.2.7/a
             
             
             <div class="row">
-            <div class='col-sm-10 col-sm-offset-3' style="margin-top: 20px; padding-left: 0px;">
+            <div class='' style="margin-top: 20px; padding-left: 0px;">
                 <?php echo $form->checkbox($user, 'eligibility_accepted', '', array('checked' => '', 'value' => 1)); ?>
                 <span class='eligiblity_accepted'>
                     <?php echo Yii::t('youtoo','I hereby confirm that I am not playing in one of the above mentioned states.'); ?>

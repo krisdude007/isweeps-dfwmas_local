@@ -7,7 +7,8 @@ Yii::app()->clientScript->registerScriptFile('http://cdn.jquerytools.org/1.2.7/a
 <div id="pageContainer" class="container">
     <div class="subContainer" style="max-width: 550px;">
         <?php $this->renderPartial('_sidebar', array()); ?>
-        <div style='margin-left: 200px;'>
+        
+        <div class="form-box" style=''>
         <?php
                 $form = $this->beginWidget('CActiveForm', array(
                     'id' => 'user-retrieve-form',

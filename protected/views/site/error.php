@@ -2,7 +2,7 @@
     <div class="subContainer">
         <div class="row">
             <div class="col-xs-8 col-xs-offset-2">
-                <h1>
+                <h1 class="error">
                     <?php
                         if($code == "503"){
                             echo CHtml::encode(Yii::t('youtoo','Sorry, temporary closed for maintenance.'));
@@ -22,7 +22,7 @@
                         }
                     ?>
                 </h1>
-                <p class="lead">
+                <p class="lead error">
                     <?php
                         echo CHtml::encode(Yii::t('youtoo',$message." on line ".$line));
                     ?>

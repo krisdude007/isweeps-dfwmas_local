@@ -145,7 +145,7 @@ margin-left: 0px;">
         </div>
         <?php echo (in_array(Yii::app()->controller->id, array('site')) || in_array(Yii::app()->controller->action->id, array('playnow', 'winlooseordraw', 'index2', 'multiple4', 'thankyou', 'paidthankyou','pickgame','freecredit'))) ? '</div>' : ''; ?>
         <div id="pageFooterDrop">
-            <div  class="row col-sm-12" style='padding-left: 0px;'>
+            <div  class="row col-sm-12" style='padding-left: 0px;max-width: 1200px;'>
                 <div class="col-sm-3">
                     <a target="_blank" href="http://DFWMAS.org">
                         <img src="/webassets/images/logo_footer.png" style="height:auto; margin-top: 30px; width:100%;max-width:160px;"/></a></li>

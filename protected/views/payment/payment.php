@@ -166,14 +166,15 @@ $gameEntry = array (
         <?php //$geoLocation = GeoUtility::GeoLocation();if($geoLocation['isValid']): ?>
        
            
-           <div class="row">
-           <div class="col-sm-2"></div>
-            <div class="col-sm-8">
+           <div class="row" style="margin-right:0; margin-left:0;">
+<!--           <div class="col-sm-2"></div>-->
+            <div class="prices-grid" style="">
                 <?php for ($i = 1; $i <= 4; $i++) { ?>
                     <div class="paymentOptionsTop" style="min-height: 222px;">
                         <div class="ribbon"><h3 style="margin-top: 0px; min-height: 43px; padding-top: 8px; margin-bottom: 0px; font-weight: 300;">$<?php echo $payCashArray[$i]; ?></h3></div>
-                        <div style='margin-top: 5px;'><?php //echo $payCreditArray[$i]; ?><?php echo Yii::t('youtoo', $gameEntry[$payCreditArray[$i]]); ?></div><hr style="margin-top: 5px; margin-bottom: 5px;"/>
-                            <div style="font-size: 10px; margin-bottom: 10px;"><?php echo Yii::t('youtoo', 'Plus bonus entries<br/>for correct answers'); ?></div>
+                        
+                        <div class="gameentry-header" style='margin-top: 5px;'><?php //echo $payCreditArray[$i]; ?><?php echo Yii::t('youtoo', $gameEntry[$payCreditArray[$i]]); ?></div><hr style="margin-top: 5px; margin-bottom: 5px;"/>
+                            <div class="gameentry-text" style="font-size: 11px; margin-bottom: 10px;"><?php echo Yii::t('youtoo', 'Plus bonus entries<br/>for correct answers'); ?></div>
                         <div style="margin-top: 25px;"><a id="entry<?php echo $i; ?>" href="/payment?ci=<?php echo $i; ?>" class="btn btn-default btn-md" style="min-width: 114px; min-height: 37px;"><?php echo Yii::t('youtoo', 'Select'); ?></a></div>
                     </div>
                     <?php }
@@ -186,7 +187,7 @@ $gameEntry = array (
                                 </div>-->
             </div>
             
-            <div class="col-sm-2"></div> 
+<!--            <div class="col-sm-2"></div> -->
         </div>
         
         
@@ -195,7 +196,7 @@ $gameEntry = array (
         
         
         <div class="row">
-            <div class="col-sm-10 col-sm-offset-2" style=" margin-top: 10px; padding-left: 0px; padding-right: 0px;">
+            <div class="col-sm-10" style=" margin-top: 10px; padding-left: 0px; padding-right: 0px;">
                 <p class="lead" style="display: none;font-size: 13px; vertical-align: middle; padding-top: 15px; font-weight: 500;">
                     <?php echo Yii::t('youtoo', '') ?><img style="margin-left: 10px;" src='/webassets/images/laliga/icon_x.png'/>
                 </p>
@@ -257,12 +258,12 @@ $gameEntry = array (
                         </div>
                     </div>-->
             <div class="row">
-                <div class="col-sm-10 col-sm-offset-2">
-                    <h4 id="total" style="font-weight: 300;">Total: $<?php echo $payCashArray[$cashIndex]; ?></h4>
+                <div class="col-sm-12">
+                    <h4 id="total" style="font-weight: 500;color: white;background: rgba(0, 0, 0, 0.5);display: inline;padding: 10px">Total: $<?php echo $payCashArray[$cashIndex]; ?></h4>
                     <div style="max-width:100%;margin: 0 auto;">
                         <div>
                             <div style="margin: 20px 0px 20px 0px;">
-                                <form action="/processstripeprepay" method="post">
+                                <form action="/processstripeprepay" method="post" style="background-color:transparent;">
                                     <script id="stripe-button" src="https://checkout.stripe.com/v2/checkout.js" class="stripe-button"
                                             data-key="<?php echo $stripe['publishable_key']; ?>"
                                             data-amount="<?php echo $payCashArray[$cashIndex] * 100; ?>"
@@ -285,12 +286,12 @@ $gameEntry = array (
                 </div>
             </div>
             <br/>
-            <div class="row">
-                <div class="col-sm-10 col-sm-offset-2">
+            <div class="row paymentpage-lower-info" style="width:40%;height:100px; padding:10px;margin:0 auto; float:none;background-color:rgba(0, 0, 0, 0.65);">
+                <div class="col-sm-12">
                     <span><a href="<?php echo Yii::app()->createUrl('/site/contact'); ?>"><h5 style="color: #ea8417;"><img style="vertical-align: baseline;" src="/webassets/images/laliga/icon_envelope.png"/>&nbsp; support@isweepsusa.com</h5></a></span>
                 </div>
-                <div class="col-sm-10 col-sm-offset-2">
-                    <span><h8><img style="vertical-align: baseline;" src="/webassets/images/laliga/icon_lock.png"/>&nbsp; <?php echo Yii::t('youtoo', 'Secure payments'); ?></h8></span>
+                <div class="col-sm-12">
+                    <span><h5 style="color:white;"><img style="vertical-align: baseline;" src="/webassets/images/laliga/icon_lock.png"/>&nbsp; <?php echo Yii::t('youtoo', 'Secure payments'); ?></h5></span>
                 </div>
             </div>
         </div>
