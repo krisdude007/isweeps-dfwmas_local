@@ -20,6 +20,8 @@ Yii::app()->facebook->initJs($output);
         <link rel="stylesheet" type="text/css" href="/webassets/css/client.css" />
         <!--no longer using side bar DG April 14 2017-->
        <!-- <link  rel="stylesheet" type="text/css" href="/webassets/css/simple-sidebar.css"/>-->
+       <!--ADDED ANIMATE CSS April 16 2017 -->
+         <link  rel="stylesheet" type="text/css" href="/webassets/css/animate.css"/>
         <link  rel="stylesheet" type="text/css" href="/webassets/css/skin01.css"/>
         <!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -94,9 +96,16 @@ Yii::app()->facebook->initJs($output);
             </div>
         </div>
         <div id="pageHeader">
-            <div class="row" style="margin-right: 0px;
-margin-left: 0px;">
+            <div class="row" style="margin-right: 0px;margin-left: 0px;">
                <div class="header-logo">
+              		   <?php if (Yii::app()->user->isGuest): ?>
+                		<div class="right-log-btn <?php if ($this->activeNavLink == 'login'): ?>active<?php endif; ?>"><a href="/login"><?php echo Yii::t('youtoo', 'Login Now') ?></a></div>
+						<?php else: ?>
+						
+						<div  class="right-log-btn <?php if ($this->activeNavLink == 'login'): ?>active<?php endif; ?>"> <i style="color: green;">You have <strong style="color: green;">$<?php echo GameUtility::getCashBalance(Yii::app()->user->getId()); ?></strong> balance left.</i><a href="/logout"><?php echo Yii::t('youtoo', 'Logout') ?></a></div>
+
+						<?php endif; ?>
+               		
                		<img src="/webassets/images/logo.png" style="margin-left: 15px;"/>
                </div>
                 <div class="col-xs-12" style="overflow:hidden;">
@@ -124,12 +133,7 @@ margin-left: 0px;">
                 <li class="<?php if ($this->activeNavLink == 'winners'): ?>active<?php endif; ?>"><a href="/winners"><?php echo Yii::t('youtoo', 'Winners') ?></a></li>
                 <li class="<?php if ($this->activeNavLink == 'faq'): ?>active<?php endif; ?>"><a href="/faq"><?php echo Yii::t('youtoo', 'FAQ') ?></a></li>
                 <li class="<?php if ($this->activeNavLink == 'marketingpage'): ?>active<?php endif; ?>"><a href="/marketingpage"><?php echo Yii::t('youtoo', 'How to Play') ?></a></li>
-                <?php if (Yii::app()->user->isGuest): ?>
-                <li  class="right-btn <?php if ($this->activeNavLink == 'login'): ?>active<?php endif; ?>"><a href="/login"><?php echo Yii::t('youtoo', 'Login Now') ?></a></li>
-                <?php else: ?>
-                <li  class="right-btn <?php if ($this->activeNavLink == 'login'): ?>active<?php endif; ?>"><a href="/logout"><?php echo Yii::t('youtoo', 'Logout') ?></a></li>
-                <i style="color: #00dd00; padding: 10px;float: right !important;">You have <b style="color: #ffffff;">$<?php echo GameUtility::getCashBalance(Yii::app()->user->getId()); ?></b> balance left.</i>
-                <?php endif; ?>
+              
             </ul>
         </div>
     </div>

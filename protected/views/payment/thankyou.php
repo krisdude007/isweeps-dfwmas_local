@@ -5,7 +5,7 @@ $stripe = StripeUtility::config();
 <div id="pageContainer" class="container">
     <div class="subContainer">
         <div class="row">
-            <div style="background-color: #f7f9fa; min-height: 278px; width: 100%; max-width: 662px; margin: 30px auto; padding-top: 30px;">
+            <div style="background-color: #fff; min-height: 278px; width: 100%; max-width: 662px; margin: 30px auto; padding-top: 30px;">
                 <h1 style="font-weight: 300; margin-bottom: 30px;"><?php echo Yii::t('youtoo', 'SUCCESS!!'); ?></h1>
                 <h4 style="margin-bottom: 40px; line-height: 2;"><?php
                     echo Yii::t('youtoo', "Your payment was processed successfully, and your funds have been<br/> deposited in your account.");

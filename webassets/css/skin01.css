@@ -6,13 +6,34 @@ DG April 14 2017
 margin-right: 0;
 margin-left: 0;
 }
-form{
-	background-color: white;
-	padding: 15px;
+
+.navbar-nav a{
+	
+	-o-transition:color .7s ease-out, background 0.2s ease-in;
+	-ms-transition:color .7s ease-out, background 0.2s ease-in;
+	-moz-transition:color .7s ease-out, background 0.2s ease-in;
+	-webkit-transition:color .7s ease-out, background 0.2s ease-in;
+	/* ...and now override with proper CSS property */
+	transition:color .7s ease-out, background 0.2s ease-in;
+}
+.navbar-nav a:hover{
+	background-color: #1f418b !important;
+	color: white !important;
+}
+.right-log-btn a:hover{
+	background-color: #1f418b !important;
+		color: white !important;
+	
 }
 .error{
 	color: white  !important;
 }
+.Checkout.is-desktop .Button {
+    
+    background-color:#1f418b !important;
+    background-image: none !important;
+    }
+
 .form-box{
 	padding:12px;background-color:rgba(255, 255, 255, 0.53);
 }
@@ -21,10 +42,19 @@ form{
 	display: none;
 }
 body{
-	background-image: url("http://www.dfwmas.org/wp-content/uploads/2016/12/Blog.jpg");
+	background-image: url("/webassets/images/main-bg-01.jpg");
 	background-size: cover;
 	background-repeat: no-repeat !important;
 	background-attachment: fixed;
+}
+
+#wrapper {
+	padding-left: 0px !important;
+	width: 90%;
+	max-width: 1200px !important;
+	padding-bottom: 100px;
+	margin: 0 auto;
+	background-color: rgba(4, 35, 101, 0.39) !important;
 }
 #pageContainer{
 	padding: 20px;
@@ -50,20 +80,17 @@ body{
 #page-content-wrapper{
 	background-color: transparent !important;
 }
-/*set up nav bar width*/ 
+/*NAVIGATION*/ 
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form{
+	border-color: transparent;
+}
 div.collapse.navbar-collapse{
 	width: 90% !important;
     margin: 0 auto;
 	max-width: 1200px;
 }
-/* set login position/to stand out */
-.navbar-nav li.right-btn{
-	float: none;
-	float: right !important;
-}
-.right-btn{
-	background-color: rgba(255, 255, 255, 0.18);
-}
+
+
 #pageNavigation {
 	-webkit-box-shadow:  0px 0px 8px 4px rgba(0, 0, 0, 0.22);
 	-moz-box-shadow:  0px 0px 8px 4px rgba(0, 0, 0, 0.22);
@@ -75,6 +102,24 @@ div.collapse.navbar-collapse{
 }
 .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
     background-color: #1947ac;
+}
+/*MASTHEAD*/
+
+.right-log-btn{
+	float: none;
+	float: right !important;
+	padding: 10px;
+
+}
+.right-log-btn a{
+	margin-left: 20px;
+	background-color: #011a50;
+	color: white;
+	padding: 5px;
+	border-radius: 4px;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 11px !important;
 }
 #pageHeader {
     height: 100px;
@@ -98,6 +143,7 @@ div.collapse.navbar-collapse{
 	height: auto !important;
 	margin-left: 0 !important;
 }
+/*FOOTER*/
 #pageFooterDrop .row{
 	width: 90% !important;
     margin: 0 auto !important;
@@ -108,6 +154,13 @@ div.collapse.navbar-collapse{
 	height: auto !important;
 }
 #pageFooterDrop a:link,#pageFooterDrop a:visited{
+	color: #e6e6e6;
+	text-decoration: none;
+	font-weight: 400;
+	
+	
+}
+#pageFooterDrop a:hover,#pageFooterDrop a:active{
 	color: white;
 	text-decoration: none;
 	font-weight: 400;
@@ -119,14 +172,7 @@ div.collapse.navbar-collapse{
 #sponsorLogo img{
 	opacity: 0.5;
 }
-#wrapper {
-	padding-left: 0px !important;
-	width: 90%;
-	max-width: 1200px !important;
-	padding-bottom: 100px;
-	margin: 0 auto;
-	background-color: rgba(4, 35, 101, 0.39) !important;
-}
+
 #pageFooter{
 	background-color: #272727;
 }
@@ -148,52 +194,7 @@ div.collapse.navbar-collapse{
 	background: #011a50 !important;	
 	
 }
-.sidebar-nav{
-	display: table;
-	width: 100% !important;
-	top: 0 !important;
-}
 
-.sidebar-nav .hr{
-	display: none;
-}
-.sidebar-nav li{
-	display: table-cell;
-	line-height: 55px !important;
-	text-indent:0px !important;
-	text-align: center;
-	
-}
-.sidebar-nav li a:hover{
-	background-color: #1f3a74 !important;
-	font-size: 15px;
-	font-weight: 500;
-	
-}
-.sidebar-nav li a{
-	font-size: 15px;
-	font-weight: 500;
-	background-color: transparent;
-	-o-transition:color .7s ease-out, background 0.2s ease-in;
-	-ms-transition:color .7s ease-out, background 0.2s ease-in;
-	-moz-transition:color .7s ease-out, background 0.2s ease-in;
-	-webkit-transition:color .7s ease-out, background 0.2s ease-in;
-	/* ...and now override with proper CSS property */
-	transition:color .7s ease-out, background 0.2s ease-in;
-}
-.sidebar-nav .btn{
-	background-color: #011a50 !important;
-	border: 1px solid rgba(255, 255, 255, 0.25);
-	-o-transition:color .7s ease-out, background 0.2s ease-in;
-	-ms-transition:color .7s ease-out, background 0.2s ease-in;
-	-moz-transition:color .7s ease-out, background 0.2s ease-in;
-	-webkit-transition:color .7s ease-out, background 0.2s ease-in;
-	/* ...and now override with proper CSS property */
-	transition:color .7s ease-out, background 0.2s ease-in;
-}
-.sidebar-nav .btn:hover{
-	background: #143274 !important;
-}
 .btn-default{
 	color: white !important;
 	background-color: #011a50 !important;
@@ -238,6 +239,7 @@ li#dropdown{
 }
 .navbar-nav{
 	width: 100%;
+
 }
 .subContainer h3{
 	font-weight: 500 !important;
@@ -268,6 +270,9 @@ form#user-profile-form{
     color: #FFF;
     background-color: rgba(188, 227, 255, 0.31);
     border-color: rgba(188, 227, 255, 0.31);
+}
+.btn-primary{
+	white-space: normal !important;
 }
 .wrapper .container{
 	padding-right: 0 !important;
@@ -394,6 +399,7 @@ div.subContainer{
 .game .table-responsive > .table > tbody > tr > td, .game .table-responsive > .table > tfoot > tr > td {
 	white-space: normal !important;
 }
+
 /* MARKETING PAGE*/
 .boxes{
 	margin: 5px;
@@ -428,6 +434,7 @@ div.subContainer{
 }
 
 /*MEDIA QUERIES*/
+
 @media screen and (max-width:850px){
 	.prices-grid{
 		width:100%;margin:0 auto;
@@ -479,6 +486,16 @@ div.subContainer{
 	.paymentpage-lower-info{
 		width: 80% !important;
 	}
+	.right-log-btn i, .right-log-btn a{
+		display: block;
+		text-align: center
+	}
+	.right-log-btn i{
+		text-align: right
+	}
+	.right-log-btn{
+		padding: 8px 2px;
+	}
 
 }
 @media screen and (max-width:400px){
@@ -506,4 +523,15 @@ div.subContainer{
 	.ribbon{
 		right: 0.9em;
 	}
+	.right-log-btn i, .right-log-btn a{
+		display: block;
+		text-align: center
+	}
+	.right-log-btn i{
+		text-align: right
+	}
+	.right-log-btn{
+		padding: 8px 2px;
+	}
 }
+

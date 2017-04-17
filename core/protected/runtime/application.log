@@ -7417,3 +7417,125 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/winloosedraw
 ---
+2017/04/16 21:33:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "apple-touch-icon-precomposed.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('apple-touch-ico...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/apple-touch-icon-precomposed.png
+---
+2017/04/16 21:33:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "apple-touch-icon-precomposed.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('apple-touch-ico...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/apple-touch-icon-precomposed.png
+---
+2017/04/16 21:33:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "apple-touch-icon.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('apple-touch-ico...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/apple-touch-icon.png
+---
+2017/04/16 21:33:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "apple-touch-icon.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('apple-touch-ico...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/apple-touch-icon.png
+---
+2017/04/17 00:56:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "webassets/ifmages/main-bg-01.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('webassets/ifmag...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/webassets/ifmages/main-bg-01.jpg
+HTTP_REFERER=http://dino.isweepsusa.com/login
+---
+2017/04/17 00:56:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "webassets/ifmages/main-bg-01.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('webassets/ifmag...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/webassets/ifmages/main-bg-01.jpg
+HTTP_REFERER=http://dino.isweepsusa.com/login
+---
+2017/04/17 00:57:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "webassets/ifmages/main-bg-01.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('webassets/ifmag...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/webassets/ifmages/main-bg-01.jpg
+HTTP_REFERER=http://dino.isweepsusa.com/login
+---
+2017/04/17 00:57:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "webassets/ifmages/main-bg-01.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('webassets/ifmag...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/webassets/ifmages/main-bg-01.jpg
+HTTP_REFERER=http://dino.isweepsusa.com/login
+---
+2017/04/17 00:57:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "webassets/ifmages/main-bg-01.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('webassets/ifmag...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/webassets/ifmages/main-bg-01.jpg
+HTTP_REFERER=http://dino.isweepsusa.com/login
+---
+2017/04/17 00:57:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "webassets/ifmages/main-bg-01.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('webassets/ifmag...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/webassets/ifmages/main-bg-01.jpg
+HTTP_REFERER=http://dino.isweepsusa.com/login
+---
+2017/04/17 00:57:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "webassets/ifmages/main-bg-01.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('webassets/ifmag...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/webassets/ifmages/main-bg-01.jpg
+HTTP_REFERER=http://dino.isweepsusa.com/login
+---
+2017/04/17 00:57:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "webassets/ifmages/main-bg-01.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('webassets/ifmag...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/webassets/ifmages/main-bg-01.jpg
+HTTP_REFERER=http://dino.isweepsusa.com/login
+---
+2017/04/17 00:57:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "webassets/ifmages/main-bg-01.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('webassets/ifmag...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/webassets/ifmages/main-bg-01.jpg
+HTTP_REFERER=http://dino.isweepsusa.com/login
+---
+2017/04/17 00:57:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "webassets/ifmages/main-bg-01.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('webassets/ifmag...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/webassets/ifmages/main-bg-01.jpg
+HTTP_REFERER=http://dino.isweepsusa.com/login
+---
