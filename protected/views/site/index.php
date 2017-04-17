@@ -50,7 +50,7 @@ $cs->registerScriptFile(Yii::app()->request->baseurl . '/core/webassets/js/jquer
                 </a>
                 <a href="/marketingpage"><span style="position: absolute; top: 170px;right: 185px; color: #ffffff;"><?php echo Yii::t('youtoo','You want to know more?'); ?>&nbsp;&nbsp;&nbsp;<img src="/webassets/images/laliga/Button_Yellow-Arrow.png"/></span></a>
                 <div style="position: relative; top: 15px;">
-                    <span><a href="http://DFWMAS.org"><img src="/webassets/images/banners/01<?php echo (Yii::app()->language == 'en') ? '_eng' : ''; ?>.png" style="max-width: 405px; width:100%;margin-bottom:10px;"/></a></span>
+                    <span><a href="/payment?ci=1"><img src="/webassets/images/banners/01<?php echo (Yii::app()->language == 'en') ? '_eng' : ''; ?>.png" style="max-width: 405px; width:100%;margin-bottom:10px;"/></a></span>
                     <span><a href="http://DFWMAS.org"><img src="/webassets/images/banners/02<?php echo (Yii::app()->language == 'en') ? '_eng' : ''; ?>.jpg" style="max-width: 405px; width:100%;margin-bottom:10px;"/></a></span>
                 </div>
             <?php endif; ?>
