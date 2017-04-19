@@ -132,7 +132,7 @@ class clientSiteController extends SiteController {
                     $totalFreeCredits = PaymentUtility::countFreeCreditsPerUser($user->id, $date);
 
                     if ($totalFreeCredits < Yii::app()->params['GamePlay']['maxFreeCredits']) {
-                        $result = PaymentUtility::oneFreeCreditNEW('game_choice', Yii::app()->params['GamePlay']['freeCreditPrice'], $user->id, $freeCreditCode);
+                        $result = PaymentUtility::oneFreeCreditNEW('game_choice', Yii::app()->params['GamePlay']['freeCreditPrice'], $userId, $freeCreditCode);
                         if ($result) {
                             $isCodeValid->is_code_used = 1;
                             if ($isCodeValid->validate()) {
