@@ -7,6 +7,7 @@
  * @property integer $id
  * @property integer $user_id
  * @property string $freecredit_key
+ * @property string $freecredit_price
  * @property string $user_email
  * @property integer $is_code_used
  * @property string $created_on

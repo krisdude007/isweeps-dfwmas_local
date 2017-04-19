@@ -310,6 +310,28 @@ class GameUtility {
             }
         }
     }
+    
+    public static function freeCreditCodeGenerate($type = "game_choice", $userId, $freeCreditCode) {
+        
+        $uniqeId = mt_rand(100000, 999999);
+        
+        $user = eUser::model()->findByPK($userId);
+        
+        $freeCredit = new eFreeCredit();
+        $freeCredit->freecredit_key = isset($freeCreditCode) ? $freeCreditCode : 'freecredit_key';
+        $freeCredit->freecredit_price = 5;
+        $freeCredit->user_id = isset($userId) ? $userId : Yii::app()->user->getId;
+        $freeCredit->is_code_used = 0;
+        $freeCredit->user_email = isset($user->username) ? $user->username : 'anonymous';
+        $freeCredit->created_on = new CDbExpression('NOW()');
+        
+        if (!$freeCredit->save()) {
+            var_dump($freeCredit->getErrors());
+            exit();
+        }        
+
+        return $freeCredit->id;
+    }
 
     public static function pickWinnerRandPeriod($type, $name, $from, $to, $isNew = true, $winnerID = NULL) {
         //YYYY-MM-DD HH:MM:SS

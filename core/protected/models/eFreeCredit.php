@@ -1,17 +1,5 @@
 <?php
 
-/**
- * This is the model class for table "free_credit".
- *
- * The followings are the available columns in table 'free_credit':
- * @property integer $id
- * @property integer $user_id
- * @property string $freecredit_key
- * @property string $user_email
- * @property integer $is_code_used
- * @property string $created_on
- * @property string $updated_on
- */
 class eFreeCredit extends FreeCredit
 {
 	
@@ -26,11 +14,12 @@ class eFreeCredit extends FreeCredit
 			array('user_id, created_on, updated_on', 'required'),
 			array('user_id, is_code_used', 'numerical', 'integerOnly'=>true),
 			array('freecredit_key, user_email', 'length', 'max'=>256),
+                        array('freecredit_price', 'numerical'),
                         array('created_on, updated_on', 'default', 'value' => date("Y-m-d H:i:s"), 'setOnEmpty' => false, 'on' => 'insert'),
                         array('updated_on', 'default', 'value' => date("Y-m-d H:i:s"), 'setOnEmpty' => false, 'on' => 'update'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, user_id, freecredit_key, user_email, is_code_used, created_on, updated_on', 'safe', 'on'=>'search'),
+			array('id, user_id, freecredit_key, freecredit_price, user_email, is_code_used, created_on, updated_on', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -96,6 +85,7 @@ class eFreeCredit extends FreeCredit
 		$criteria->compare('id',$this->id);
 		$criteria->compare('user_id',$this->user_id);
 		$criteria->compare('freecredit_key',$this->freecredit_key,true);
+                $criteria->compare('freecredit_price', $this->freecredit_price,true);
 		$criteria->compare('user_email',$this->user_email,true);
 		$criteria->compare('is_code_used',$this->is_code_used);
 		$criteria->compare('created_on',$this->created_on,true);
