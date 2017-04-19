@@ -218,10 +218,10 @@ class PaymentUtility {
     
     
     
-    public static function oneFreeCreditNEW($type = "game_choice", $price = NULL, $id = 1, $freeCreditCode) {
+    public static function oneFreeCreditNEW($type = "game_choice", $price = NULL, $userId = NULL, $freeCreditCode) {
         
         $transaction = new eTransaction;
-        $transaction->user_id = Yii::app()->user->getId();
+        $transaction->user_id = $userId;
         $transaction->processor = empty($freeCreditCode) ? "promo_code" : 'fc_'.$freeCreditCode;
         $transaction->response = 'free_credit';
         $transaction->item = 'prepay';
@@ -274,7 +274,7 @@ class PaymentUtility {
     public static function countFreeCreditsPerUser($userId, $date = NULL) {
         
         if ($userId) {
-            $freeCredits = eFreeCredit::model()->recent()->findAllByAttributes(array('user_id' => $userId));
+            $freeCredits = eTransaction::model()->recent()->findAllByAttributes(array('user_id' => $userId, 'response' => 'free_credit'));//var_dump($freeCredits);exit;
             $count = 0;
             foreach ($freeCredits as $fc) {
                 if (strpos($fc->created_on, $date) !== false) {
