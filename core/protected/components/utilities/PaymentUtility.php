@@ -218,6 +218,32 @@ class PaymentUtility {
     
     
     
+    public static function oneFreeCreditNEW($type = "game_choice", $price = NULL, $id = 1, $freeCreditCode) {
+        
+        $transaction = new eTransaction;
+        $transaction->user_id = Yii::app()->user->getId();
+        $transaction->processor = empty($freeCreditCode) ? "promo_code" : 'fc_'.$freeCreditCode;
+        $transaction->response = 'free_credit';
+        $transaction->item = 'prepay';
+        $transaction->item_id = 1;
+        $transaction->description = 'prepay';
+        $transaction->price = $price;
+        
+        if (!$transaction->save()) {
+            var_dump($transaction->getErrors());
+            exit();
+        }
+
+        $creditTransaction = new eCreditTransaction;
+        $creditTransaction->game_type = "sweepstakes_freecredit";
+        $creditTransaction->type = "earned";
+        $creditTransaction->credits = 0;
+        $creditTransaction->trans_id = $transaction->id;
+        $creditTransaction->save();
+
+        return $transaction->id;
+    }
+    
     public static function oneFreeCredit($type = "game_choice", $price = 1, $id = 1) {
         
         $transaction = new eTransaction;
@@ -240,11 +266,26 @@ class PaymentUtility {
         $creditTransaction->credits = 0;
         $creditTransaction->trans_id = $transaction->id;
         $creditTransaction->save();
-        
+         
         return $transaction->id;
     }
+
     
-    public static function countFreeCredits($userId, $date = NULL) {
+    public static function countFreeCreditsPerUser($userId, $date = NULL) {
+        
+        if ($userId) {
+            $freeCredits = eFreeCredit::model()->recent()->findAllByAttributes(array('user_id' => $userId));
+            $count = 0;
+            foreach ($freeCredits as $fc) {
+                if (strpos($fc->created_on, $date) !== false) {
+                    $count = $count + 1;
+                }
+            }
+        } 
+        return $count;
+    }
+    
+        public static function countFreeCredits($userId, $date = NULL) {
         
         if ($userId) {
             $freeCredits = eTransaction::model()->recent()->freeCredit()->findAllByAttributes(array('user_id' => $userId));

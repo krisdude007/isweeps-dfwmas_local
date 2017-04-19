@@ -17,9 +17,14 @@
             <div class='form group col-sm-12'>
                 <?php echo CHtml::textField('freecreditcode', '', array('placeholder' => Yii::t('youtoo', 'Enter Free Credit Code here'), 'class' => 'form-control')); ?>
             </div>
+            <br/>
+            <div class='form group col-sm-12'>
+                <?php echo CHtml::textField('emailUsed', '', array('placeholder' => Yii::t('youtoo', 'Enter the email associated with the account'), 'class' => 'form-control')); ?>
+            </div>
         </div>
         <?php $this->endWidget(); ?>
         <br/>
+        <hr/>
         <div class='row'>
             <div class="form group col-sm-12">
                 <?php echo CHtml::submitButton(Yii::t('youtoo', 'Submit'), array('class' => 'btn btn-default', 'role' => 'button', 'style' => 'width: 40%', 'onclick' => 'oneFreeCredit();')); ?>
@@ -31,10 +36,11 @@
 
     function oneFreeCredit() {
         var freeCreditCode = $('#freecreditcode').val();
+        var emailUsed =  $('#emailUsed').val();//console.log(emailUsed)
         
-        if (freeCreditCode === '' || isNaN(freeCreditCode)) {
-            alert('The number you entered either contains letters or is blank, please try again');
-        } else if (freeCreditCode.toString().length !== 6) {
+        if (freeCreditCode === '' || isNaN(freeCreditCode) || freeCreditCode.toString().length !== 6) {
+            alert('The number you entered either contains letters or is blank or invalid, please try again');
+        } else if (emailUsed == '') {
             alert('Invalid code length');
         } else {
             $.ajax({
@@ -42,12 +48,29 @@
                 url: '/site/ajaxFreeCredit',
                 data: ({
                         'freecreditcode': freeCreditCode,
+                        'emailused': emailUsed,
                     }),
                 dataType: 'json',
                 success: function (data) {
                     if (data.added) {
-                        window.location = "/pickgame";
+                        window.location = "/";
                         alert('One Free Game Credit added to your account');
+                    }
+                    if (data.limit_reached) {
+                        window.location = "/";
+                        alert(data.limit_reached);
+                    }
+                    if (data.code_expired) {
+                        //window.location = "/";
+                        alert(data.code_expired);
+                    }
+                    if (data.invalid_code) {
+                        //window.location = "/";
+                        alert(data.invalid_code);
+                    }
+                    if (data.invalid_email) {
+                        //window.location = "/";
+                        alert(data.invalid_email);
                     }
                 }
             });

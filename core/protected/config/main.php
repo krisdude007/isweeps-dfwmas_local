@@ -33,14 +33,14 @@ return array(
     'modules' => array(
     // uncomment the following to enable the Gii tool
 
-      'gii' => array(
-      'class' => 'system.gii.GiiModule',
-      'password' => 'g111tup',
-      // If removed, Gii defaults to localhost only. Edit carefully to taste.
-      'ipFilters' => array('*'),
-      'newFileMode'=>0666,
-      'newDirMode'=>0777,
-      ),
+//      'gii' => array(
+//      'class' => 'system.gii.GiiModule',
+//      'password' => 'g111tup',
+//      // If removed, Gii defaults to localhost only. Edit carefully to taste.
+//      'ipFilters' => array('*'),
+//      'newFileMode'=>0666,
+//      'newDirMode'=>0777,
+//      ),
     ),
     // application components
     'components' => array(

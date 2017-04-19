@@ -137,6 +137,9 @@ class Transaction extends CActiveRecord
                 'prepay' => array(
                     'condition' => "description = 'prepay'",
                 ),
+                'freeCredit' => array(
+                    'condition' => "response = 'free_credit'",
+                ),
             );
         }
 
