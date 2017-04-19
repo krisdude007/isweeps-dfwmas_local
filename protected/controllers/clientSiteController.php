@@ -18,11 +18,11 @@ class clientSiteController extends SiteController {
     public function accessRules() {
         return array(
             array('allow',
-                'actions' => array('redeemPrize', 'payviapaypal', 'printReceipt', 'barcode', 'indexlinks'),
+                'actions' => array('redeemPrize', 'payviapaypal', 'printReceipt', 'barcode', 'indexlinks', 'freecredit'),
                 'users' => array('@'),
             ),
             array('allow',
-                'actions' => array('index', 'home', 'winners', 'redeem', 'error', 'customerror', 'testserverload', 'confirmation', 'howtoplay', 'geocoordinates', 'geocoordinatesshare', 'ajaxGeoCoordinates', 'ajaxGeoCoordinatesNotPreshare', 'cannotplay', 'gameredirect', 'aboutlinks', 'about', 'legallinks', 'marketinglinks','legal', 'helplinks', 'help', 'faq', 'privacy', 'marketingpage', 'marketingpage2', 'payandplay', 'newpayandplay', 'freeplay', 'rules', 'testgame', 'terms','contact', 'freecredit', 'ajaxFreeCredit'),
+                'actions' => array('index', 'home', 'winners', 'redeem', 'error', 'customerror', 'testserverload', 'confirmation', 'howtoplay', 'geocoordinates', 'geocoordinatesshare', 'ajaxGeoCoordinates', 'ajaxGeoCoordinatesNotPreshare', 'cannotplay', 'gameredirect', 'aboutlinks', 'about', 'legallinks', 'marketinglinks', 'legal', 'helplinks', 'help', 'faq', 'privacy', 'marketingpage', 'marketingpage2', 'payandplay', 'newpayandplay', 'freeplay', 'rules', 'testgame', 'terms', 'contact', 'ajaxFreeCredit'),
                 'users' => array('*'),
             ),
             array('allow',
@@ -49,22 +49,18 @@ class clientSiteController extends SiteController {
 //                $this->redirect($this->createUrl('/site/home'));
 //            }
 //        }
-
         //unset(Yii::app()->session['mainGameId']);
-
         //if (eGameChoice::getNumberOfActiveGames() > 0) {
-
 //            $games = eGameChoice::getAllActiveGames();
 //            var_dump($games);exit;
 //            $response = new eGameChoiceResponse;
-              $user_id = Yii::app()->user->getId();
-              $user = clientUser::model()->findByPk($user_id);
+        $user_id = Yii::app()->user->getId();
+        $user = clientUser::model()->findByPk($user_id);
 
 //            if (isset($_POST['ajax']) && $_POST['ajax'] === 'game-choice-form') {
 //                echo CActiveForm::validate($response);
 //                Yii::app()->end();
 //            }
-
 //            if (isset($_POST['eGameChoiceResponse'])) {
 //                $response->attributes = $_POST['eGameChoiceResponse'];
 //                Yii::app()->session['gamechoiceanswerId'] = $response->game_choice_answer_id;
@@ -88,25 +84,25 @@ class clientSiteController extends SiteController {
 //                    $this->redirect($this->createUrl('/actel/payment'));
 //                }
 //            }
-              
-              $allCorrect = eGameChoiceResponse::model()->isCorrect()->findAllByAttributes(array('game_unique_id' => Yii::app()->session['gameUniqueId']));//var_dump($countCorrect);exit;
-              if (!empty($allCorrect)) {
-                  $countCorrect = sizeof($allCorrect);
-              } else {
-                  $countCorrect = 0;
-              }
-            //if (isset($game)) {
-                //$formPlayNow = new FormPlayNow();
-                $this->render('index', array(
-                    'countCorrect' => $countCorrect,
-                    //'games' => $games,
-                    //'game' => $game,
-                    //'response' => $response,
-                    'user' => $user,
-                    //'formPlayNow' => $formPlayNow,
-                ));
 
-                /* end game play */
+        $allCorrect = eGameChoiceResponse::model()->isCorrect()->findAllByAttributes(array('game_unique_id' => Yii::app()->session['gameUniqueId'])); //var_dump($countCorrect);exit;
+        if (!empty($allCorrect)) {
+            $countCorrect = sizeof($allCorrect);
+        } else {
+            $countCorrect = 0;
+        }
+        //if (isset($game)) {
+        //$formPlayNow = new FormPlayNow();
+        $this->render('index', array(
+            'countCorrect' => $countCorrect,
+            //'games' => $games,
+            //'game' => $game,
+            //'response' => $response,
+            'user' => $user,
+                //'formPlayNow' => $formPlayNow,
+        ));
+
+        /* end game play */
 //            } else {
 //                Yii::app()->user->setFlash('error', "Errors found!");
 //            }
@@ -114,26 +110,47 @@ class clientSiteController extends SiteController {
 //            $this->render('index2', array());
 //        }
     }
-    
-    public function actionAjaxFreeCredit() {var_dump($_POST['freecreditcode']);exit;
+
+    public function actionAjaxFreeCredit() {//var_dump($_POST);exit;
         if (empty(Yii::app()->session)) {
             echo json_encode(array('error' => Yii::t('youtoo', 'User not logged in.')));
             exit;
         }
-        
-        $userId = Yii::app()->user->getId();
-        
-        $freeCredit = $_POST['freecreditcode'];
-        $date = date('Y-m-d', time());
-        $totalFreeCredits = PaymentUtility::countFreeCredits($userId, $date);
 
-        if ($totalFreeCredits <= Yii::app()->params['GamePlay']['maxFreeCredits']) {
-            $result = PaymentUtility::oneFreeCredit('game_choice', $freeCredit, 1, $video);
-            if ($result) {
-                echo json_encode(array('added' => Yii::t('youtoo', 'one free credit added')));
+        $userId = Yii::app()->user->getId();
+
+        $freeCreditCode = isset($_POST['freecreditcode']) ? $_POST['freecreditcode'] : 999999;
+        $usedEmail = isset($_POST['emailused']) ? $_POST['emailused'] : 'anonymous';
+        $date = date('Y-m-d', time());
+
+        $isCodeValid = eFreeCredit::model()->findByAttributes(array('freecredit_key' => $freeCreditCode)); //var_dump($isCodeValid);exit;
+        $user = clientUser::model()->findByAttributes(array('username' => $usedEmail));
+        
+        if (!is_null($isCodeValid)) {
+            if ($usedEmail == $isCodeValid->user_email) {
+                if ($isCodeValid->is_code_used == 0) {
+                    $totalFreeCredits = PaymentUtility::countFreeCreditsPerUser($user->id, $date);
+
+                    if ($totalFreeCredits < Yii::app()->params['GamePlay']['maxFreeCredits']) {
+                        $result = PaymentUtility::oneFreeCreditNEW('game_choice', Yii::app()->params['GamePlay']['freeCreditPrice'], $user->id, $freeCreditCode);
+                        if ($result) {
+                            $isCodeValid->is_code_used = 1;
+                            if ($isCodeValid->validate()) {
+                                $isCodeValid->update(array('is_code_used'));
+                            }
+                            echo json_encode(array('added' => Yii::t('youtoo', 'One free credit added')));
+                        }
+                    } else {
+                        echo json_encode(array('limit_reached' => Yii::t('youtoo', 'You have reached your free credit limit. No more credits can be added for today.')));
+                    }
+                } else {
+                    echo json_encode(array('code_expired' => Yii::t('youtoo', 'This code has been used already')));
+                }
+            } else {
+                echo json_encode(array('invalid_email' => Yii::t('youtoo', 'This email is not associated with the code you entered.')));
             }
         } else {
-            echo json_encode(array('limit_reached' => Yii::t('youtoo', 'You have reached your free credit limit. No more credits can be added for today.')));
+            echo json_encode(array('invalid_code' => Yii::t('youtoo', 'This code entered is invalid. Please contact the administrator.')));
         }
     }
 
@@ -141,19 +158,16 @@ class clientSiteController extends SiteController {
 
         //echo '1';
         //exit;
-
         //echo '<div id="flashcontent" style="height: 480px; width: 640px; overflow: hidden; margin: 0px 0px 0px 132px; background: rgb(0, 0, 0);"><object width="640" height="480" id="gameloader" name="gameloader" data="http://media.mindjolt.com/media/the-word-pyramid.swf?hcxqhd" type="application/x-shockwave-flash" style="margin-top: 0px;"><param name="allowfullscreen" value="true"><param name="allowscriptaccess" value="always"><param name="quality" value="high"><param name="name" value="gameloader"><param name="bgcolor" value="#000000"><param name="allowScriptAccess" value="always"><param name="loop" value="false"><param name="wmode" value="window"><param name="flashvars" value="mjPath=http%3A%2F%2Fmedia.mindjolt.com%2Fmedia%2Fmj_api_as3.swf%3Fv%3D1&amp;allow_scale=0&amp;mj_sig_hpm_game_id=82203&amp;mj_sig_game_id=7802&amp;mj_sig_game_key=2JQGBMPPQCKENNHE&amp;mj_sig_game_url=the-word-pyramid&amp;mj_sig_width=640&amp;mj_sig_height=480&amp;mj_sig_network=web&amp;mj_sig_network_name=mindjolt.com&amp;mj_sig_ts=1438877147877&amp;mj_sig_rand=-1021590713291627864&amp;mj_sig_play_again=true&amp;mj_sig_analytics_host=analytics.mindjolt.com&amp;mj_sig_analytics_enabled=1&amp;game_key=2JQGBMPPQCKENNHE&amp;game_url=the-word-pyramid&amp;mj_sig_recomendations=1&amp;recommendations_url=http%3A%2F%2Fwww.mindjolt.com%2Fservlet%2FRecommendation%2F%3Fid%3D82203&amp;mj_sig_play_again_ad_id=mj&amp;mj_sig_html_ads=1&amp;mj_sig_force_redraw=1&amp;mj_sig=e7dc1746d87fb8b95d363badd396e60c"></object></div>';
 
         $this->render('testgame', array());
-
-
     }
 
     public function actionGeoCoordinates($id = NULL) {
 
         $geoLocation = GeoUtility::GeoLocation();
 
-        if($geoLocation['isOtherGeoLocationShare']) {
+        if ($geoLocation['isOtherGeoLocationShare']) {
             $this->redirect($this->createUrl("/geocoordinatesshare/{$id}"));
         }
 
@@ -210,7 +224,7 @@ class clientSiteController extends SiteController {
 
         $geoLocation = GeoUtility::GeoLocation();
 
-        if($geoLocation['isExists']) {
+        if ($geoLocation['isExists']) {
             //update old record
             $geoLocationInfo = eGeoLocationInfo::model()->findByPk($geoLocation['geo_id']);
         } else {
@@ -221,10 +235,8 @@ class clientSiteController extends SiteController {
         $positionLat = isset($_POST['lat']) ? $_POST['lat'] : 0;
         $positionLng = isset($_POST['lng']) ? $_POST['lng'] : 0;
 
-        if(!($positionLat == 0) && !($positionLng == 0))
-        {
-            if(isset(Yii::app()->params['GamePlay']['setGeoLocation']) && Yii::app()->params['GamePlay']['setGeoLocation'] == true)
-            {
+        if (!($positionLat == 0) && !($positionLng == 0)) {
+            if (isset(Yii::app()->params['GamePlay']['setGeoLocation']) && Yii::app()->params['GamePlay']['setGeoLocation'] == true) {
                 $ch = curl_init();
                 curl_setopt($ch, CURLOPT_URL, "https://maps.googleapis.com/maps/api/geocode/json?latlng=" . $positionLat . "," . $positionLng . "&key=AIzaSyBqBZAwrI-zhDidCVDtriw1BHrQC9cuTZ4");
                 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -238,17 +250,13 @@ class clientSiteController extends SiteController {
                 $state = $decodedResultForLatLng->results[0]->address_components[5]->long_name;
                 $country = $decodedResultForLatLng->results[0]->address_components[6]->long_name;
 
-                if(in_array($country, Yii::app()->params['GamePlay']['Country']))
-                {
-                    if(in_array($city, Yii::app()->params['GamePlay']['AllowedCity']) || in_array($state, Yii::app()->params['GamePlay']['AllowedState']))
-                    {
+                if (in_array($country, Yii::app()->params['GamePlay']['Country'])) {
+                    if (in_array($city, Yii::app()->params['GamePlay']['AllowedCity']) || in_array($state, Yii::app()->params['GamePlay']['AllowedState'])) {
                         $geoLocationInfo->is_validlocation = 1;
                         Yii::app()->session['IsValidGeoCode'] = 1;
 
                         echo json_encode(array('success' => Yii::t('youtoo', 'Bienvenido, este juego está disponible en su estado')));
-                    }
-                    else
-                    {
+                    } else {
                         $geoLocationInfo->is_validlocation = 0;
 
                         echo json_encode(array('error' => Yii::t('youtoo', 'Este juego no está disponible en:California, New Mexico, Louisiana, Massachusetts, Georgia, Montana')));
@@ -266,9 +274,7 @@ class clientSiteController extends SiteController {
                     $geoLocationInfo->save();
                 }
             }
-        }
-        else
-        {
+        } else {
             $geoLocationInfo->user_id = $user_id;
             $geoLocationInfo->latitude = 'Not Shared';
             $geoLocationInfo->longitude = 'Not Shared';
@@ -305,8 +311,8 @@ class clientSiteController extends SiteController {
         $winners = GameUtility::getWinners();
         $this->render('winners', array('winners' => $winners));
     }
-    
-     public function actionFreeCredit() {
+
+    public function actionFreeCredit() {
 
         $this->render('freecredit', array());
     }
@@ -422,9 +428,9 @@ class clientSiteController extends SiteController {
     }
 
     public function actionRedeem() {
-        
+
         $this->redirect($this->createUrl('/site/index'));
-        
+
         $this->activeNavLink = 'redeem';
 
         if (isset($_POST['ePrize'])) {
@@ -447,10 +453,10 @@ class clientSiteController extends SiteController {
 
         if (isset($_POST['ePrize'])) {
 
-             if ($balance < $prize->credits_required) {
-                    Yii::app()->user->setFlash('error', Yii::t('youtoo', Yii::app()->params['flashMessage']['lowCreditBalance']));
-                    $this->redirect($this->createUrl('/redeem'));
-                }
+            if ($balance < $prize->credits_required) {
+                Yii::app()->user->setFlash('error', Yii::t('youtoo', Yii::app()->params['flashMessage']['lowCreditBalance']));
+                $this->redirect($this->createUrl('/redeem'));
+            }
             $user = clientUser::model()->findByAttributes(array('id' => Yii::app()->user->getId()));
             $userLocation = clientUserLocation::model()->findByAttributes(array('user_id' => Yii::app()->user->getId(), 'type' => 'primary'));
             $userLocation = (is_null($userLocation)) ? new clientUserLocation : $userLocation;
@@ -491,7 +497,7 @@ class clientSiteController extends SiteController {
                 $prize->save();
             }
             Yii::app()->session['creditId'] = $transaction->id;
-            $result = MailUtility::send('confirm', $userEmail->email, array('link' => Yii::app()->createAbsoluteUrl("/", array()),'prize' => $prize->name, 'credits' => $creditRequired ,'firstname' => isset($user->first_name) ? $user->first_name : 'John', 'lastname' => isset($user->last_name) ? $user->last_name : 'Doe','address' => $userLocation->address1, 'city' => $userLocation->city,'state' => $userLocation->state, 'zipcode' => $userLocation->postal_code, 'image' => Yii::app()->createAbsoluteUrl("/" . basename(Yii::app()->params["paths"]["image"])) . "/{$prize->image}"), false);
+            $result = MailUtility::send('confirm', $userEmail->email, array('link' => Yii::app()->createAbsoluteUrl("/", array()), 'prize' => $prize->name, 'credits' => $creditRequired, 'firstname' => isset($user->first_name) ? $user->first_name : 'John', 'lastname' => isset($user->last_name) ? $user->last_name : 'Doe', 'address' => $userLocation->address1, 'city' => $userLocation->city, 'state' => $userLocation->state, 'zipcode' => $userLocation->postal_code, 'image' => Yii::app()->createAbsoluteUrl("/" . basename(Yii::app()->params["paths"]["image"])) . "/{$prize->image}"), false);
             if ($result) {
                 $this->redirect($this->createUrl('/site/confirmation'));
             } else {

@@ -470,6 +470,8 @@ $config_array = array(
               'Rhode Island','South Carolina','South Dakota','Tennessee',
               'Texas','Utah','Vermont','Virginia','Washington','West Virginia',
               'Wisconsin','Wyoming'),
+            'maxFreeCredits' => 5,
+            'freeCreditPrice' => 5,
         ),
         'user' => array(
             'extendedPermissions' => array("new" => "Producer Web", "newtv" => "Producer TV"),),
