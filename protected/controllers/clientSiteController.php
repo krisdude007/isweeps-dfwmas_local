@@ -22,7 +22,7 @@ class clientSiteController extends SiteController {
                 'users' => array('@'),
             ),
             array('allow',
-                'actions' => array('index', 'home', 'winners', 'redeem', 'error', 'customerror', 'testserverload', 'confirmation', 'howtoplay', 'geocoordinates', 'geocoordinatesshare', 'ajaxGeoCoordinates', 'ajaxGeoCoordinatesNotPreshare', 'cannotplay', 'gameredirect', 'aboutlinks', 'about', 'legallinks', 'marketinglinks','legal', 'helplinks', 'help', 'faq', 'privacy', 'marketingpage', 'marketingpage2', 'payandplay', 'newpayandplay', 'freeplay', 'rules', 'testgame', 'terms','contact', 'freecredit'),
+                'actions' => array('index', 'home', 'winners', 'redeem', 'error', 'customerror', 'testserverload', 'confirmation', 'howtoplay', 'geocoordinates', 'geocoordinatesshare', 'ajaxGeoCoordinates', 'ajaxGeoCoordinatesNotPreshare', 'cannotplay', 'gameredirect', 'aboutlinks', 'about', 'legallinks', 'marketinglinks','legal', 'helplinks', 'help', 'faq', 'privacy', 'marketingpage', 'marketingpage2', 'payandplay', 'newpayandplay', 'freeplay', 'rules', 'testgame', 'terms','contact', 'freecredit', 'ajaxFreeCredit'),
                 'users' => array('*'),
             ),
             array('allow',
@@ -113,6 +113,28 @@ class clientSiteController extends SiteController {
 //        } else {
 //            $this->render('index2', array());
 //        }
+    }
+    
+    public function actionAjaxFreeCredit() {var_dump($_POST['freecreditcode']);exit;
+        if (empty(Yii::app()->session)) {
+            echo json_encode(array('error' => Yii::t('youtoo', 'User not logged in.')));
+            exit;
+        }
+        
+        $userId = Yii::app()->user->getId();
+        
+        $freeCredit = $_POST['freecreditcode'];
+        $date = date('Y-m-d', time());
+        $totalFreeCredits = PaymentUtility::countFreeCredits($userId, $date);
+
+        if ($totalFreeCredits <= Yii::app()->params['GamePlay']['maxFreeCredits']) {
+            $result = PaymentUtility::oneFreeCredit('game_choice', $freeCredit, 1, $video);
+            if ($result) {
+                echo json_encode(array('added' => Yii::t('youtoo', 'one free credit added')));
+            }
+        } else {
+            echo json_encode(array('limit_reached' => Yii::t('youtoo', 'You have reached your free credit limit. No more credits can be added for today.')));
+        }
     }
 
     public function actionTestGame() {
