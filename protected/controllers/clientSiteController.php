@@ -18,11 +18,11 @@ class clientSiteController extends SiteController {
     public function accessRules() {
         return array(
             array('allow',
-                'actions' => array('redeemPrize', 'payviapaypal', 'printReceipt', 'barcode', 'indexlinks'),
+                'actions' => array('redeemPrize', 'payviapaypal', 'printReceipt', 'barcode', 'indexlinks','freecredit'),
                 'users' => array('@'),
             ),
             array('allow',
-                'actions' => array('index', 'home', 'winners', 'redeem', 'error', 'customerror', 'testserverload', 'confirmation', 'howtoplay', 'geocoordinates', 'geocoordinatesshare', 'ajaxGeoCoordinates', 'ajaxGeoCoordinatesNotPreshare', 'cannotplay', 'gameredirect', 'aboutlinks', 'about', 'legallinks', 'marketinglinks','legal', 'helplinks', 'help', 'faq', 'privacy', 'marketingpage', 'marketingpage2', 'payandplay', 'newpayandplay', 'freeplay', 'rules', 'testgame', 'terms','contact', 'freecredit', 'ajaxFreeCredit'),
+                'actions' => array('index', 'home', 'winners', 'redeem', 'error', 'customerror', 'testserverload', 'confirmation', 'howtoplay', 'geocoordinates', 'geocoordinatesshare', 'ajaxGeoCoordinates', 'ajaxGeoCoordinatesNotPreshare', 'cannotplay', 'gameredirect', 'aboutlinks', 'about', 'legallinks', 'marketinglinks','legal', 'helplinks', 'help', 'faq', 'privacy', 'marketingpage', 'marketingpage2', 'payandplay', 'newpayandplay', 'freeplay', 'rules', 'testgame', 'terms','contact', 'ajaxFreeCredit'),
                 'users' => array('*'),
             ),
             array('allow',
@@ -130,7 +130,7 @@ class clientSiteController extends SiteController {
         $user = clientUser::model()->findByPK($userId);
         if ($usedEmail == $user->username) {
             $isCodeValid = eFreeCredit::model()->findByAttributes(array('freecredit_key' => $freeCreditCode));//var_dump($isCodeValid);exit;
-            if (!empty($isCodeValid) && $isCodeValid->is_code_used == 0) {
+            if (!is_null($isCodeValid) && $isCodeValid->is_code_used == 0) {
                 $totalFreeCredits = PaymentUtility::countFreeCreditsPerUser($userId, $date);
 
                 if ($totalFreeCredits <= Yii::app()->params['GamePlay']['maxFreeCredits']) {
@@ -145,7 +145,7 @@ class clientSiteController extends SiteController {
                 } else {
                     echo json_encode(array('limit_reached' => Yii::t('youtoo', 'You have reached your free credit limit. No more credits can be added for today.')));
                 }
-            } elseif($isCodeValid->is_code_used == 1) {
+            } elseif(isset($isCodeValid->is_code_used) == 1) {
                     echo json_encode(array('code_expired' => Yii::t('youtoo', 'This code has been used already')));
             } else {
                     echo json_encode(array('invalid_code' => Yii::t('youtoo', 'This code entered is invalid. Please contact the administrator.')));

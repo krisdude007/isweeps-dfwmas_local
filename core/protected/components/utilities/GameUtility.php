@@ -328,7 +328,15 @@ class GameUtility {
         if (!$freeCredit->save()) {
             var_dump($freeCredit->getErrors());
             exit();
-        }        
+        } 
+        if($freeCredit->id != NULL) {
+            $userEmail = clientUserEmail::model()->findByAttributes(array('user_id' => $user->id, 'type' => 'primary'));
+            
+            $result = MailUtility::send('promocode', $userEmail->email, array('link' => Yii::app()->createAbsoluteUrl("/freecredit", array()),'reply-to' => 'mailto: youtootechsupport@youtootech.com','fccode' => $freeCreditCode), false);
+                if ($result) {
+                    //confirm
+                }
+        }
 
         return $freeCredit->id;
     }
