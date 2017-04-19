@@ -55,7 +55,7 @@ Yii::app()->clientScript->registerScriptFile('http://cdn.jquerytools.org/1.2.7/a
         <br/>
         <br/>
         <div class='row'>
-            <div class='col-sm-12' ><a  href="<?php echo '/register'.$game_url; ?>" style='color:#ea8417;'><?php echo Yii::t('youtoo','Don\'t have an account?'); ?></a>
+            <div class='col-sm-12' ><a  href="<?php echo '/register'; ?>" style='color:#ea8417;'><?php echo Yii::t('youtoo','Don\'t have an account?'); ?></a>
             </div>
         </div>
         <br/>

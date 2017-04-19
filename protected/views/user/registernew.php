@@ -78,7 +78,7 @@ Yii::app()->clientScript->registerScriptFile('http://cdn.jquerytools.org/1.2.7/a
             <div class='col-sm-12'>
                 <?php echo $form->checkbox($user, 'age_accepted', '', array('checked' => '', 'value' => 1)); ?>
                 <span class='over_18'>
-                    <?php echo Yii::t('youtoo','I confirm that I am at least 21 years of age.'); ?>
+                    <?php echo Yii::t('youtoo','I confirm that I am at least 18 years of age.'); ?>
                 </span>
                 <?php echo $form->error($user, 'age_accepted'); ?>
             </div>
@@ -90,8 +90,13 @@ Yii::app()->clientScript->registerScriptFile('http://cdn.jquerytools.org/1.2.7/a
                     California, New Mexico, <br/>Louisiana, Massachusetts, Georgia, Montana</span>
                 </div>
             </div>
-            
-            
+            <div class='' style="margin-top: 20px; padding-left: 0px;">
+                <?php echo $form->checkbox($user, 'dfwmas_eligible', '', array('checked' => '', 'value' => 1)); ?>
+                <span class='eligiblity_accepted'>
+                    <?php echo Yii::t('youtoo','I am a current member of DFWMAS.'); ?>
+                </span>
+                <?php echo $form->error($user, 'dfwmas_eligible'); ?>
+            </div>
             <div class="row">
             <div class='' style="margin-top: 20px; padding-left: 0px;">
                 <?php echo $form->checkbox($user, 'eligibility_accepted', '', array('checked' => '', 'value' => 1)); ?>

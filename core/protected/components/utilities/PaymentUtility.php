@@ -216,6 +216,8 @@ class PaymentUtility {
         return $transaction->id;
     }
     
+    
+    
     public static function oneFreeCredit($type = "game_choice", $price = 1, $id = 1) {
         
         $transaction = new eTransaction;
@@ -240,6 +242,20 @@ class PaymentUtility {
         $creditTransaction->save();
         
         return $transaction->id;
+    }
+    
+    public static function countFreeCredits($userId, $date = NULL) {
+        
+        if ($userId) {
+            $freeCredits = eTransaction::model()->recent()->freeCredit()->findAllByAttributes(array('user_id' => $userId));
+            $count = 0;
+            foreach ($freeCredits as $fc) {
+                if (strpos($fc->created_on, $date) !== false) {
+                    $count = $count + 1;
+                }
+            }
+        } 
+        return $count;
     }
 
     public static function paypalDirectPayGame ($type = "game_choice", $id = 1, $token) {
