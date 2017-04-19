@@ -6,7 +6,12 @@ DG April 14 2017
 margin-right: 0;
 margin-left: 0;
 }
-
+.main-banner{
+	-moz-animation-delay: 2s;
+	-webkit-animation-delay: 2s;
+	-o-animation-delay: 2s;
+	animation-delay: 2s;
+}
 .navbar-nav a{
 	
 	-o-transition:color .7s ease-out, background 0.2s ease-in;
