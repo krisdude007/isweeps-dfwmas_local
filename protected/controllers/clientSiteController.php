@@ -135,8 +135,9 @@ class clientSiteController extends SiteController {
                         $result = PaymentUtility::oneFreeCreditNEW('game_choice', Yii::app()->params['GamePlay']['freeCreditPrice'], $userId, $freeCreditCode);
                         if ($result) {
                             $isCodeValid->is_code_used = 1;
+                            $isCodeValid->code_used_by = $userId;
                             if ($isCodeValid->validate()) {
-                                $isCodeValid->update(array('is_code_used'));
+                                $isCodeValid->update(array('is_code_used', 'code_used_by'));
                             }
                             echo json_encode(array('added' => Yii::t('youtoo', 'One free credit added')));
                         }
