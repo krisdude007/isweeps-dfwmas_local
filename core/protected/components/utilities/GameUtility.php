@@ -320,9 +320,9 @@ class GameUtility {
         $freeCredit = new eFreeCredit();
         $freeCredit->freecredit_key = isset($freeCreditCode) ? $freeCreditCode : 'freecredit_key';
         $freeCredit->freecredit_price = 5;
-        $freeCredit->user_id = isset($userId) ? $userId : Yii::app()->user->getId;
+        $freeCredit->user_id = isset($userId) ? $userId : Yii::app()->user->getId();
         $freeCredit->is_code_used = 0;
-        $freeCredit->code_used_by = Yii::app()->user->getId;
+        $freeCredit->code_used_by = Yii::app()->user->getId();
         $freeCredit->user_email = isset($user->username) ? $user->username : 'anonymous';
         $freeCredit->created_on = new CDbExpression('NOW()');
         
