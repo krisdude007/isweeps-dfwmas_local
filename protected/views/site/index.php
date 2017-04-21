@@ -53,7 +53,9 @@ $cs->registerScriptFile(Yii::app()->request->baseurl . '/core/webassets/js/jquer
                 <div style="position: relative; top: 15px;">
                     <span><a href="/payment?ci=1"><img src="/webassets/images/banners/01<?php echo (Yii::app()->language == 'en') ? '_eng' : ''; ?>.png" style="max-width: 405px; width:100%;margin-bottom:10px;"/></a></span>
                     <span><a href="http://DFWMAS.org"><img src="/webassets/images/banners/02<?php echo (Yii::app()->language == 'en') ? '_eng' : ''; ?>.jpg" style="max-width: 405px; width:100%;margin-bottom:10px;"/></a></span>
-                </div>
+              
+                
+                      </div>
             <?php endif; ?>
         <?php endif; ?>
         <script>

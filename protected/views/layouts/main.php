@@ -219,7 +219,7 @@ Yii::app()->facebook->initJs($output);
     <!--    <?php //echo CHtml::link(Yii::t('youtoo', 'Rules'), array('#'), array('data-toggle' => 'modal', 'data-target' => '#modalRules'));       ?> &nbsp;|&nbsp;-->
     <!--    <?php //echo CHtml::link(Yii::t('youtoo', 'FAQ'), array('#'), array('data-toggle' => 'modal', 'data-target' => '#modalFaq'));       ?> &nbsp;|&nbsp;-->
         Copyright <?php echo date('Y'); ?> <a href="http://www.youtootech.com/patents" target="_blank"><?php echo Yii::t('youtoo', 'Youtootech.com/patents') ?></a>
-    <p style="font-size:10px;">NO PURCHASE NECESSARY. Open to legal residents of the US age 18 or older. Void where prohibited. Odds of winning depend on the number of entries received. For full official rules and to entry options, visit the Terms link on <a href="DFWMAS.iSweepsUSA.com" target="_blank"></a>DFWMAS.iSweepsUSA.com.</p>
+    <p style="font-size:10px;">NO PURCHASE NECESSARY. Open to legal residents of the US age 18 or older. Void where prohibited. Odds of winning depend on the number of entries received. For full official rules and to entry options, visit the Terms link on <a href="DFWMAS.iSweepsUSA.com" target="_blank">DFWMAS.iSweepsUSA.com</a>.</p>
                   
     </div>
 
