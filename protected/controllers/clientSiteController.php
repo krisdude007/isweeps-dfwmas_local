@@ -338,6 +338,10 @@ class clientSiteController extends SiteController {
         $this->render('baldiniscontact', array());
     }
 
+    public function actionPrizes() {
+        $this->render('prizes', array());
+    }
+
     public function actionBarcode($id = NULL) {
         require_once('core/protected/vendor/barcodegen/class/BCGFontFile.php');
         require_once('core/protected/vendor/barcodegen/class/BCGColor.php');
