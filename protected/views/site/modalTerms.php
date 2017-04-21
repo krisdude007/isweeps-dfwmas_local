@@ -87,7 +87,6 @@ Redeem Game Credits to obtain Sweepstakes Game Entries.  Each Sweepstakes Game E
 </p>
 <p>
     <strong>6. Sweepstakes Entry Periods and Prize Drawing Schedule: </strong>
-    <strong> </strong>
     Entry Period begins on or about April 17th and ends at 11:59:59 May 8, 2017.  Drawings will be conducted from all valid entries as follows:
 </p>
 <p>
@@ -97,7 +96,8 @@ Redeem Game Credits to obtain Sweepstakes Game Entries.  Each Sweepstakes Game E
     2nd Sweepstakes drawing will be conducted on or about May 8, 2017 from all valid Entries from 12:00:01 AM Monday, April 17, 2017, until  11:59:59 Sunday April 30th, 2017.
 </p>
 <p>
-    2nd Sweepstakes drawing will be conducted on or about May 8, 2017 from all valid Entries from 12:00:01 AM Monday, April 17, 2017, until  11:59:59 Sunday April 30th, 2017.
+    3rd Sweepstakes drawing will be conducted on or about May 15, 2017 from all valid Entries from 12:01:01  Monday, April 17, 2017, until 11:59:59 Sunday May 8, 2017.
+
 </p>
 <p>
 </p>
@@ -164,57 +164,57 @@ Redeem Game Credits to obtain Sweepstakes Game Entries.  Each Sweepstakes Game E
     Game Credits have no monetary exchange value and cannot be sold or transferred.  Payment methods will be processed through your credit card and/or financial provider.  Participant must ensure that he/she uses a payment method which belongs to them and is registered in their name.  Participant must abide to all terms with their provider.  Payment of all taxes owed will be Participant’s responsibility. 
 
 </p>
-<p>Self-Exclusion:</strong>
+<p>14. Self-Exclusion:</strong>
     Have fun and please play responsibly:  Operator recognizes that although for most entering sweepstakes can be a fun activity, for others it can become a problem.  Operator advises and can assist with any self-exclusion needs of anyone with a habitual problem.  Please email support@isweepsusa.com or contact the appropriate state agency or representative.
 
 </p>
 
 <p>
-    <strong>17. Promotion Errors/Integrity Issues:</strong>
+    <strong>15. Promotion Errors/Integrity Issues:</strong>
     The Sweepstakes Provider reserves the right in its sole discretion to modify these Official Rules and/or to cancel, terminate, modify, or suspend all or any part of the Sweepstakes, and to select a winner from among all eligible entries received up to the time of such cancellation, termination, modification, or suspension, as applicable. Proof of mailing or submitting entry will not be deemed receipt of such entry by the Sweepstakes Providers.  The Sweepstakes Entities assume no liability and are not responsible for, and Participant hereby forever waives any rights to any claim in connection with, errors and/or ambiguity: (a) in the Promotion; (b) in any Sweepstakes; (c) in any related advertising or promotions of this Promotion and/or any Sweepstakes; and/or (d) in these Official Rules.  In the event of any ambiguity(s) or error (s) in these Official Rules, Operator reserves the right to modify these Official Rules for clarification purposes or to correct any such ambiguity or error(s) without materially affecting the terms and conditions of the Promotion. The Sweepstakes Entities assume no liability and are not responsible for, and Participant hereby forever waives any rights to any claim in connection with, lost, late, incomplete, corrupted, stolen, misdirected, illegible or postage due entries or mail, if applicable; or for any computer, telephone, cable, network, satellite, electronic or Internet hardware or software malfunctions, unauthorized human intervention, or the incorrect or inaccurate capture of entry or other information, or the failure to capture any such information.  Participant’s sole remedy in such an event is a replacement Sweepstakes Entry.   The Sweepstakes Entities are not responsible for any incorrect or inaccurate information, whether caused by registration information submitted by end Participants or tampering, hacking, or by any of the equipment or programming associated with or utilized in this Promotion, and assume no responsibility for any error, omission, interruption, deletion, defect, delay in operation or transmission, communications line failure, theft or destruction or unauthorized access to the Promotion.  If, for any reason, the Promotion is not capable of running as planned by reason, including but not limited to, infection by computer virus, worms, bugs, tampering, unauthorized intervention, fraud, technical failures, or any other causes which Operator, in its sole opinion believes could corrupt or affect the administration, security, fairness, integrity or proper conduct of this Promotion, Operator reserves the right at its sole discretion to cancel, terminate, modify or suspend this Promotion and not award the Prize(s) or select the Prize winners from entries received prior to the action taken or in such other manner as Operator may deem fair and appropriate.
 
 </p>
 <p>
-    <strong>18. Release and Indemnity:</strong>
+    <strong>16. Release and Indemnity:</strong>
     Each Participant, including, without limitation, the Prize winners, hereby releases and agrees to hold harmless the Sweepstakes Entities, and their respective directors, officers, employees, representatives and agents from any and all liability for any injuries, loss or damage of any kind to person, including death, and property, arising in whole or in part, directly or indirectly, from  any claim in connection with, injury or damage to any Participant or to any other person's computer or property related to or resulting from participating in this Promotion, downloading materials from this Promotion, participation in any activity related to this Promotion, as well as any expenses incurred towards mobile carrier fees, Internet provider fees, credit card, bank and any financial institution fees, or other such fees. 
 
 </p>
 <p>
-    <strong>19. Intellectual Property:</strong>
+    <strong>17. Intellectual Property:</strong>
     Participant acknowledges and agrees that the following intellectual property rights which include, but are not limited to, Intellectual Property on the Website, in e-mails and in any other correspondence, shall at all times remain vested in the Operator or its licensors: any trademarks, logos and trade names; domain names, database rights and all related software, including content published or used on it.  All Website material, including design, text, graphics, music, sound, photographs, video, including their selection and arrangement, software compilations, underlying source code and software are the property of Software Provider or its applicable licensors.  If any of the Website material is downloadable or can be printed, then such material can only be downloaded to a single personal computer and hard copies may only be printed for Participant’s personal and non-commercial use.  No right, title or interest in any downloaded materials or software is transferred to Participant by downloading.  Participant may not transfer, copy, reproduce, distribute, exploit or make any other use of this website material other than to display on its computer screen or to view the content on a print out. The Website must not be linked to any other website without written permission.  Participant shall have no cause of action and hereby waives any rights or claims against the software developer of our third party licensed products for any matter, cause or thing involving its participation in the games or otherwise.  
 
 </p>
 <p>
-    <strong>20. Disclaimer of Warranties:</strong>
+    <strong>18. Disclaimer of Warranties:</strong>
     THE PROMOTION AND THE PRIZES ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE OR NON-INFRINGEMENT. IN NO EVENT WILL THE SWEEPSTAKES ENTITIES, THEIR PARENTS, AFFILIATES, SUBSIDIARIES AND RELATED COMPANIES, THEIR ADVERTISING OR PROMOTION AGENCIES, OR THEIR RESPECTIVE OFFICERS, DIRECTORS, EMPLOYEES, REPRESENTATIVES AND AGENTS, BE RESPONSIBLE OR LIABLE FOR ANY DAMAGES OR LOSSES OF ANY KIND, INCLUDING DIRECT, INDIRECT, INCIDENTAL, CONSEQUENTIAL OR PUNITIVE DAMAGES ARISING OUT OF YOUR ACCESS TO AND USE OF THE PROMOTION OR THE DOWNLOADING FROM AND/OR PRINTING MATERIAL DOWNLOADED FROM THE PROMOTION WEBSITE. SOME JURISDICTIONS MAY NOT ALLOW THE LIMITATIONS OR EXCLUSION OF LIABILITY FOR INCIDENTAL OR CONSEQUENTIAL DAMAGES OR EXCLUSION OF IMPLIED WARRANTIES SO SOME OF THE ABOVE LIMITATIONS OR EXCLUSIONS MAY NOT APPLY TO YOU. CHECK YOUR LOCAL LAWS FOR ANY RESTRICTIONS OR LIMITATIONS REGARDING THESE LIMITATIONS OR EXCLUSIONS.  This Section does not apply to residents of the State of New Jersey. 
 
 </p>
 <p>
-    <strong>21. Identity Disputes:</strong>
+    <strong>19. Identity Disputes:</strong>
    In the event of a dispute as to the identity of a winner based on an e-mail address, the winning entry will be declared made by the Authorized Account Holder of the e-mail address submitted at time of entry.  For purposes of these Official Rules, "Authorized Account Holder" is defined as the natural person who is assigned to an e-mail address by an Internet access provider, online service provider or other organization (e.g., business, educational, institution, etc.) that is responsible for assigning e-mail addresses for the domain associated with the submitted e-mail address. 
 </p>
 <p>
     <strong></strong>
 </p>
 <p>
-    <strong>22. Binding Arbitration:</strong>
+    <strong>20. Binding Arbitration:</strong>
     <strong>
         Any controversy or claim arising out of or relating to these Official Rules and/or this Promotion shall be settled by individual binding arbitration in accordance with the commercial arbitration rules of the American Arbitration Association.  Any such controversy or claim shall be arbitrated on an individual basis, and shall not be consolidated in any arbitration with any claim or controversy of any other party OR REPRESENTATIVE BASIS. 
     </strong>
     THE ARBITRATOR'S AUTHORITY TO RESOLVE AND MAKE WRITTEN AWARDS IS LIMITED TO CLAIMS BETWEEN YOU AND US ALONE.  CLAIMS MAY NOT BE JOINED OR CONSOLIDATED UNLESS AGREED TO IN WRITING BY ALL PARTIES.  NO ARBITRATION AWARD OR DECISION WILL HAVE ANY PRECLUSIVE EFFECT AS TO ISSUES OR CLAIMS IN ANY DISPUTE WITH ANYONE WHO IS NOT A NAMED PARTY TO THE ARBITRATION.  NOTWITHSTANDING ANY OTHER PROVISION IN THESE TERMS AND CONDITIONS AND WITHOUT WAIVING EITHER PARTY'S RIGHT OF APPEAL, IF ANY PORTION OF THIS “CLASS ACTION WAIVER AND OTHER RESTRICTIONS” PROVISION IS DEEMED INVALID OR UNENFORCEABLE, THEN THE ENTIRE ARBITRATION PROVISION (OTHER THAN THIS SENTENCE) SHALL NOT APPLY.  The arbitration shall be conducted in the State of Nevada, County of Washoe or in the locale of the Entrant.
 </p>
 <p>
-    <strong>23. Governing Law and Jurisdiction:</strong>
+    <strong>21. Governing Law and Jurisdiction:</strong>
     This Promotion is subject to all applicable federal, state and local laws and regulations.  Void where prohibited by law.  All issues and questions concerning the construction, validity, interpretation and enforceability of these Official Rules, or the rights and obligations of Participant and Operator in connection with this Promotion, shall be governed by, and construed in accordance with, the laws of the State of  Texas, without giving effect to the conflict of laws rules thereof, and any matters or proceedings which are not subject to arbitration as set forth in these Official Rules and/or for entering any judgment on an arbitration award, shall take place in the State of Texas, in the County of  Dallas. 
 </p>
 <p>
-    <strong>24.</strong>
+    <strong>22.</strong>
     <strong>Privacy. </strong>
     By accessing, continuing to use, or navigating through this site, Participant has accepted the use of certain browser cookies to improve the experience, which is received with Provider.  Please refer to Privacy Policy for further information on the types of cookies Provider uses. Privacy information submitted in connection with the Sweepstakes will be treated in accordance with these Official Rules and all Privacy Policies (as may be amended from time to time), currently located at the bottom of the Website, that in the event of any conflict between these Terms and such Privacy Policies, these Terms and Conditions shall prevail.
 
 </p>
 <p>
-    <strong>25.</strong>
+    <strong>23.</strong>
     <strong>Winner List/Official Rules:</strong>
    For the name of the Prize winners send a self-addressed stamped envelope for receipt by May 24, 2017 to  DFWMAS Sweepstakes Winner's List, c/o iSweepsUSA, LLC., 3101 S Russell, Missoula MT 59801 ,.  For a copy of the Official Rules send a self-addressed stamped envelope to the above address marked “Official Rules: DFWMAS Sweepstakes Giveaway” for receipt by May 8, 2017.   The name of the Prize winners may be posted and the Official Rules will be posted on the Website Service. 
 

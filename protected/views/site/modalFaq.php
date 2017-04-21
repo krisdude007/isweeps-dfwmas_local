@@ -30,7 +30,7 @@
     <strong>Is there an age restriction?</strong>
 </p>
 <p>
-    Yes. This is designed as a game for players 21 years or older to play.
+    Yes. This is designed as a game for players 18 years or older to play.
 </p>
 <p>
     <strong></strong>
@@ -80,8 +80,7 @@
     <strong>How are winners selected?</strong>
 </p>
 <p>
-    Each week will have one winner who is pulled from CORRECT entries only. The winner from the pool of correct participants is randomly selected via the
-    computerized platform. <strong></strong>
+    The winner(s) are randomly drawn from the pool of all eligible participants via the computerized platform.  <strong></strong>
 </p>
 <p>
     <strong></strong>
@@ -90,7 +89,7 @@
     <strong>How are winners announced?</strong>
 </p>
 <p>
-    The winner will be announced weekly with the historical list also available online. All public or media mentions will be at <?php echo Yii::app()->params['global']['replaceValue']; ?> sole discretion.
+    Winners will be notified via the email address used to enter the sweepstakes and will also be available on line in the winners section.  All public or media mentions will be at the sole discretion of DFWMAS
 </p>
 <p>
     <strong></strong>
@@ -103,17 +102,10 @@
     person. A <?php echo Yii::app()->params['global']['replaceValue']; ?> Casino representative will contact winners.<strong></strong>
 </p>
 <p>
-    <strong>What is The Store?</strong>
-</p>
-<p>
-    Players will receive one (1) credit for each successful $1 (one US dollar) transaction. Credits can only be spent in The Store for items and services at
-    <?php echo Yii::app()->params['global']['replaceValue']; ?> Casino location. Credits have no physical monetary exchange rate and do not accrue any interest.
-</p>
-<p>
     <strong>Do I need to pay to register?</strong>
 </p>
 <p>
-    No, you do not need to pay to register. But you do need to register online to enter the sweepstakes.
+    No, you do not need to pay to register. Please see Terms and Conditions/Official Rules for more information
 </p>
             </div>
         </div>
