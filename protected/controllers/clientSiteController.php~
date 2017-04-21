@@ -22,7 +22,7 @@ class clientSiteController extends SiteController {
                 'users' => array('@'),
             ),
             array('allow',
-                'actions' => array('index', 'home', 'winners', 'prizes', 'redeem', 'error', 'customerror', 'testserverload', 'confirmation', 'howtoplay', 'geocoordinates', 'geocoordinatesshare', 'ajaxGeoCoordinates', 'ajaxGeoCoordinatesNotPreshare', 'cannotplay', 'gameredirect', 'aboutlinks', 'about', 'legallinks', 'marketinglinks', 'legal', 'helplinks', 'help', 'faq', 'privacy', 'marketingpage', 'marketingpage2', 'payandplay', 'newpayandplay', 'freeplay', 'rules', 'testgame', 'terms', 'contact', 'ajaxFreeCredit'),
+                'actions' => array('index', 'home', 'winners', 'redeem', 'error', 'customerror', 'testserverload', 'confirmation', 'howtoplay', 'geocoordinates', 'geocoordinatesshare', 'ajaxGeoCoordinates', 'ajaxGeoCoordinatesNotPreshare', 'cannotplay', 'gameredirect', 'aboutlinks', 'about', 'legallinks', 'marketinglinks', 'legal', 'helplinks', 'help', 'faq', 'privacy', 'marketingpage', 'marketingpage2', 'payandplay', 'newpayandplay', 'freeplay', 'rules', 'testgame', 'terms', 'contact', 'ajaxFreeCredit'),
                 'users' => array('*'),
             ),
             array('allow',
