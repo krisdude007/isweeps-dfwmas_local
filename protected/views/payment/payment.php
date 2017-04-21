@@ -3,11 +3,12 @@ $cs = Yii::app()->getClientScript();
 $stripe = StripeUtility::config();
 
 $gameEntry = array (
-    5 => '$5 for 1 game',
-    10 => '$10 for 2 games',
-    25 => '$25 for 5 games',
-    50 => '$50 for 10 games',
-    );
+    5 => '$5 for 1 game',);
+
+//    10 => '$10 for 2 games',
+ //   25 => '$25 for 5 games',
+ //   50 => '$50 for 10 games',
+  //  );
 ?>
 
 <!-- The required Stripe lib -->
