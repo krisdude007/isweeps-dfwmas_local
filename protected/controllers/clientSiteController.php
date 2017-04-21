@@ -339,6 +339,7 @@ class clientSiteController extends SiteController {
     }
 
     public function actionPrizes() {
+        $this->activeNavLink = 'prizes';
         $this->render('prizes', array());
     }
 

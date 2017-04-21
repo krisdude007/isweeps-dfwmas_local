@@ -594,7 +594,7 @@ class clientGameController extends GameController {
     }
 
     public function actionWinLooseOrDraw($id = NULL) {
-
+        $this->activeNavLink = 'winlooseordraw';
         $user_id = Yii::app()->user->getId();
         $noOfQs = Yii::app()->session['noOfQs'];
 

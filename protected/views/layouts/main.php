@@ -151,7 +151,7 @@ Yii::app()->facebook->initJs($output);
                 
                 
                 <li class="<?php if ($this->activeNavLink == 'index'): ?>active<?php endif; ?>"><a href="/"><?php echo Yii::t('youtoo', 'Home') ?></a></li>
-                <li class="<?php if ($this->activeNavLink == 'pickgame'): ?>active<?php endif; ?>"><a href="/pickgame"><?php echo Yii::t('youtoo', 'Play Now') ?></a></li>           
+                <li class="<?php if ($this->activeNavLink == 'winlooseordraw'): ?>active<?php endif; ?>"><a href="/pickgame"><?php echo Yii::t('youtoo', 'Play Now') ?></a></li>           
                 <li class="<?php if ($this->activeNavLink == 'prizes'): ?>active<?php endif; ?>"><a href="/prizes"><?php echo Yii::t('youtoo', 'Prizes') ?></a></li>
                 <li class="<?php if ($this->activeNavLink == 'winners'): ?>active<?php endif; ?>"><a href="/winners"><?php echo Yii::t('youtoo', 'Winners') ?></a></li>
                 <li class="<?php if ($this->activeNavLink == 'faq'): ?>active<?php endif; ?>"><a href="/faq"><?php echo Yii::t('youtoo', 'FAQ') ?></a></li>
