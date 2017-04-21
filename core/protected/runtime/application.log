@@ -8443,3 +8443,841 @@ Stack trace:
 REQUEST_URI=/webassets/images/redbackground.png
 HTTP_REFERER=http://dino.isweepsusa.com/
 ---
+2017/04/19 07:50:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/webassets/images/ui-icons_2e83ff_256x240.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('core/webassets/...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/core/webassets/images/ui-icons_2e83ff_256x240.png
+HTTP_REFERER=http://dino.isweepsusa.com/login
+---
+2017/04/19 07:50:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/webassets/images/ui-icons_2e83ff_256x240.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('core/webassets/...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/core/webassets/images/ui-icons_2e83ff_256x240.png
+HTTP_REFERER=http://dino.isweepsusa.com/login
+---
+2017/04/19 07:50:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/webassets/css/images/ui-bg_flat_0_aaaaaa_40x100.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('core/webassets/...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/core/webassets/css/images/ui-bg_flat_0_aaaaaa_40x100.png
+HTTP_REFERER=http://dino.isweepsusa.com/login
+---
+2017/04/19 07:50:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/webassets/css/images/ui-bg_flat_0_aaaaaa_40x100.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('core/webassets/...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/core/webassets/css/images/ui-bg_flat_0_aaaaaa_40x100.png
+HTTP_REFERER=http://dino.isweepsusa.com/login
+---
+2017/04/19 07:50:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/webassets/images/ui-icons_888888_256x240.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('core/webassets/...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/core/webassets/images/ui-icons_888888_256x240.png
+HTTP_REFERER=http://dino.isweepsusa.com/login
+---
+2017/04/19 07:50:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/webassets/images/ui-icons_888888_256x240.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('core/webassets/...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/core/webassets/images/ui-icons_888888_256x240.png
+HTTP_REFERER=http://dino.isweepsusa.com/login
+---
+2017/04/19 07:50:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/webassets/images/ui-icons_f6cf3b_256x240.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('core/webassets/...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/core/webassets/images/ui-icons_f6cf3b_256x240.png
+HTTP_REFERER=http://dino.isweepsusa.com/login
+---
+2017/04/19 07:50:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/webassets/images/ui-icons_f6cf3b_256x240.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('core/webassets/...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/core/webassets/images/ui-icons_f6cf3b_256x240.png
+HTTP_REFERER=http://dino.isweepsusa.com/login
+---
+2017/04/19 10:39:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "webassets/images/previewIframe.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('webassets/image...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/webassets/images/previewIframe.png
+HTTP_REFERER=http://dino.isweepsusa.com/payment?ci=1
+---
+2017/04/19 10:39:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "webassets/images/previewIframe.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('webassets/image...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/webassets/images/previewIframe.png
+HTTP_REFERER=http://dino.isweepsusa.com/payment?ci=1
+---
+2017/04/19 10:39:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "webassets/images/redbackground.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('webassets/image...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/webassets/images/redbackground.png
+HTTP_REFERER=http://dino.isweepsusa.com/payment?ci=1
+---
+2017/04/19 10:39:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "webassets/images/redbackground.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('webassets/image...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/webassets/images/redbackground.png
+HTTP_REFERER=http://dino.isweepsusa.com/payment?ci=1
+---
+2017/04/19 15:35:46 [error] [php] Trying to get property of non-object (/dino.isweepsusa.com/core/protected/controllers/PaymentController.php:234)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(286): PaymentController->runAction()
+#1 /var/www/yii/framework/web/CController.php(265): PaymentController->runActionWithFilters()
+#2 /var/www/yii/framework/web/CWebApplication.php(282): PaymentController->run()
+#3 /var/www/yii/framework/web/CWebApplication.php(141): YttCore->runController()
+#4 /var/www/yii/framework/base/CApplication.php(180): YttCore->processRequest()
+#5 /dino.isweepsusa.com/index.php(19): YttCore->run()
+REQUEST_URI=/processstripeprepay
+2017/04/19 15:35:46 [error] [php] Trying to get property of non-object (/dino.isweepsusa.com/core/protected/controllers/PaymentController.php:234)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(286): PaymentController->runAction()
+#1 /var/www/yii/framework/web/CController.php(265): PaymentController->runActionWithFilters()
+#2 /var/www/yii/framework/web/CWebApplication.php(282): PaymentController->run()
+#3 /var/www/yii/framework/web/CWebApplication.php(141): YttCore->runController()
+#4 /var/www/yii/framework/base/CApplication.php(180): YttCore->processRequest()
+#5 /dino.isweepsusa.com/index.php(19): YttCore->run()
+REQUEST_URI=/processstripeprepay
+2017/04/19 15:37:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "webassets/images/redbackground.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('webassets/image...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/webassets/images/redbackground.png
+HTTP_REFERER=http://dino.isweepsusa.com/
+---
+2017/04/19 15:37:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "webassets/images/redbackground.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('webassets/image...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/webassets/images/redbackground.png
+HTTP_REFERER=http://dino.isweepsusa.com/
+---
+2017/04/19 15:37:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "webassets/images/previewIframe.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('webassets/image...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/webassets/images/previewIframe.png
+HTTP_REFERER=http://dino.isweepsusa.com/
+---
+2017/04/19 15:37:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "webassets/images/previewIframe.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('webassets/image...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/webassets/images/previewIframe.png
+HTTP_REFERER=http://dino.isweepsusa.com/
+---
+2017/04/19 15:37:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/webassets/images/ui-icons_f6cf3b_256x240.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('core/webassets/...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/core/webassets/images/ui-icons_f6cf3b_256x240.png
+HTTP_REFERER=http://dino.isweepsusa.com/login
+---
+2017/04/19 15:37:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/webassets/images/ui-icons_f6cf3b_256x240.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('core/webassets/...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/core/webassets/images/ui-icons_f6cf3b_256x240.png
+HTTP_REFERER=http://dino.isweepsusa.com/login
+---
+2017/04/19 15:37:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/webassets/css/images/ui-bg_flat_0_aaaaaa_40x100.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('core/webassets/...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/core/webassets/css/images/ui-bg_flat_0_aaaaaa_40x100.png
+HTTP_REFERER=http://dino.isweepsusa.com/login
+---
+2017/04/19 15:37:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/webassets/css/images/ui-bg_flat_0_aaaaaa_40x100.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('core/webassets/...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/core/webassets/css/images/ui-bg_flat_0_aaaaaa_40x100.png
+HTTP_REFERER=http://dino.isweepsusa.com/login
+---
+2017/04/19 15:37:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/webassets/images/ui-icons_888888_256x240.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('core/webassets/...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/core/webassets/images/ui-icons_888888_256x240.png
+HTTP_REFERER=http://dino.isweepsusa.com/login
+---
+2017/04/19 15:37:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/webassets/images/ui-icons_888888_256x240.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('core/webassets/...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/core/webassets/images/ui-icons_888888_256x240.png
+HTTP_REFERER=http://dino.isweepsusa.com/login
+---
+2017/04/19 15:37:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/webassets/images/ui-icons_2e83ff_256x240.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('core/webassets/...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/core/webassets/images/ui-icons_2e83ff_256x240.png
+HTTP_REFERER=http://dino.isweepsusa.com/login
+---
+2017/04/19 15:37:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/webassets/images/ui-icons_2e83ff_256x240.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('core/webassets/...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/core/webassets/images/ui-icons_2e83ff_256x240.png
+HTTP_REFERER=http://dino.isweepsusa.com/login
+---
+2017/04/19 16:02:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2017/04/19 16:02:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2017/04/19 21:33:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "webassets/images/previewIframe.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('webassets/image...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/webassets/images/previewIframe.png
+HTTP_REFERER=http://dino.isweepsusa.com/
+---
+2017/04/19 21:33:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "webassets/images/previewIframe.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('webassets/image...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/webassets/images/previewIframe.png
+HTTP_REFERER=http://dino.isweepsusa.com/
+---
+2017/04/19 21:33:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "webassets/images/redbackground.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('webassets/image...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/webassets/images/redbackground.png
+HTTP_REFERER=http://dino.isweepsusa.com/
+---
+2017/04/19 21:33:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "webassets/images/redbackground.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('webassets/image...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/webassets/images/redbackground.png
+HTTP_REFERER=http://dino.isweepsusa.com/
+---
+2017/04/19 21:51:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "apple-touch-icon-precomposed.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('apple-touch-ico...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/apple-touch-icon-precomposed.png
+---
+2017/04/19 21:51:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "apple-touch-icon-precomposed.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('apple-touch-ico...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/apple-touch-icon-precomposed.png
+---
+2017/04/19 21:51:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "apple-touch-icon.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('apple-touch-ico...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/apple-touch-icon.png
+---
+2017/04/19 21:51:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "apple-touch-icon.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('apple-touch-ico...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/apple-touch-icon.png
+---
+2017/04/19 22:42:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "webassets/images/redbackground.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('webassets/image...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/webassets/images/redbackground.png
+HTTP_REFERER=http://dino.isweepsusa.com/
+---
+2017/04/19 22:42:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "webassets/images/redbackground.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('webassets/image...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/webassets/images/redbackground.png
+HTTP_REFERER=http://dino.isweepsusa.com/
+---
+2017/04/19 22:42:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "webassets/images/previewIframe.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('webassets/image...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/webassets/images/previewIframe.png
+HTTP_REFERER=http://dino.isweepsusa.com/
+---
+2017/04/19 22:42:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "webassets/images/previewIframe.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('webassets/image...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/webassets/images/previewIframe.png
+HTTP_REFERER=http://dino.isweepsusa.com/
+---
+2017/04/20 08:50:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "webassets/images/redbackground.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('webassets/image...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/webassets/images/redbackground.png
+HTTP_REFERER=http://dino.isweepsusa.com/
+---
+2017/04/20 08:50:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "webassets/images/redbackground.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('webassets/image...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/webassets/images/redbackground.png
+HTTP_REFERER=http://dino.isweepsusa.com/
+---
+2017/04/20 08:50:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "webassets/images/previewIframe.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('webassets/image...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/webassets/images/previewIframe.png
+HTTP_REFERER=http://dino.isweepsusa.com/
+---
+2017/04/20 08:50:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "webassets/images/previewIframe.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('webassets/image...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/webassets/images/previewIframe.png
+HTTP_REFERER=http://dino.isweepsusa.com/
+---
+2017/04/20 10:33:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "webassets/images/redbackground.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('webassets/image...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/webassets/images/redbackground.png
+HTTP_REFERER=http://dino.isweepsusa.com/
+---
+2017/04/20 10:33:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "webassets/images/redbackground.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('webassets/image...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/webassets/images/redbackground.png
+HTTP_REFERER=http://dino.isweepsusa.com/
+---
+2017/04/20 10:33:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "webassets/images/previewIframe.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('webassets/image...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/webassets/images/previewIframe.png
+HTTP_REFERER=http://dino.isweepsusa.com/
+---
+2017/04/20 10:33:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "webassets/images/previewIframe.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('webassets/image...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/webassets/images/previewIframe.png
+HTTP_REFERER=http://dino.isweepsusa.com/
+---
+2017/04/20 11:07:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/webassets/css/images/ui-bg_flat_0_aaaaaa_40x100.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('core/webassets/...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/core/webassets/css/images/ui-bg_flat_0_aaaaaa_40x100.png
+HTTP_REFERER=http://dino.isweepsusa.com/login
+---
+2017/04/20 11:07:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/webassets/css/images/ui-bg_flat_0_aaaaaa_40x100.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('core/webassets/...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/core/webassets/css/images/ui-bg_flat_0_aaaaaa_40x100.png
+HTTP_REFERER=http://dino.isweepsusa.com/login
+---
+2017/04/20 11:07:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/webassets/images/ui-icons_f6cf3b_256x240.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('core/webassets/...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/core/webassets/images/ui-icons_f6cf3b_256x240.png
+HTTP_REFERER=http://dino.isweepsusa.com/login
+---
+2017/04/20 11:07:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/webassets/images/ui-icons_f6cf3b_256x240.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('core/webassets/...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/core/webassets/images/ui-icons_f6cf3b_256x240.png
+HTTP_REFERER=http://dino.isweepsusa.com/login
+---
+2017/04/20 11:07:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/webassets/images/ui-icons_888888_256x240.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('core/webassets/...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/core/webassets/images/ui-icons_888888_256x240.png
+HTTP_REFERER=http://dino.isweepsusa.com/login
+---
+2017/04/20 11:07:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/webassets/images/ui-icons_888888_256x240.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('core/webassets/...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/core/webassets/images/ui-icons_888888_256x240.png
+HTTP_REFERER=http://dino.isweepsusa.com/login
+---
+2017/04/20 11:07:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/webassets/images/ui-icons_2e83ff_256x240.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('core/webassets/...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/core/webassets/images/ui-icons_2e83ff_256x240.png
+HTTP_REFERER=http://dino.isweepsusa.com/login
+---
+2017/04/20 11:07:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/webassets/images/ui-icons_2e83ff_256x240.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('core/webassets/...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/core/webassets/images/ui-icons_2e83ff_256x240.png
+HTTP_REFERER=http://dino.isweepsusa.com/login
+---
+2017/04/20 12:28:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "webassets/images/previewIframe.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('webassets/image...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/webassets/images/previewIframe.png
+HTTP_REFERER=http://dino.isweepsusa.com/
+---
+2017/04/20 12:28:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "webassets/images/previewIframe.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('webassets/image...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/webassets/images/previewIframe.png
+HTTP_REFERER=http://dino.isweepsusa.com/
+---
+2017/04/20 12:28:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "webassets/images/redbackground.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('webassets/image...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/webassets/images/redbackground.png
+HTTP_REFERER=http://dino.isweepsusa.com/
+---
+2017/04/20 12:28:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "webassets/images/redbackground.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('webassets/image...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/webassets/images/redbackground.png
+HTTP_REFERER=http://dino.isweepsusa.com/
+---
+2017/04/20 12:49:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/webassets/images/ui-icons_f6cf3b_256x240.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('core/webassets/...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/core/webassets/images/ui-icons_f6cf3b_256x240.png
+HTTP_REFERER=http://dino.isweepsusa.com/login
+---
+2017/04/20 12:49:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/webassets/images/ui-icons_f6cf3b_256x240.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('core/webassets/...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/core/webassets/images/ui-icons_f6cf3b_256x240.png
+HTTP_REFERER=http://dino.isweepsusa.com/login
+---
+2017/04/20 12:49:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/webassets/css/images/ui-bg_flat_0_aaaaaa_40x100.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('core/webassets/...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/core/webassets/css/images/ui-bg_flat_0_aaaaaa_40x100.png
+HTTP_REFERER=http://dino.isweepsusa.com/login
+---
+2017/04/20 12:49:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/webassets/css/images/ui-bg_flat_0_aaaaaa_40x100.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('core/webassets/...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/core/webassets/css/images/ui-bg_flat_0_aaaaaa_40x100.png
+HTTP_REFERER=http://dino.isweepsusa.com/login
+---
+2017/04/20 12:49:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/webassets/images/ui-icons_888888_256x240.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('core/webassets/...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/core/webassets/images/ui-icons_888888_256x240.png
+HTTP_REFERER=http://dino.isweepsusa.com/login
+---
+2017/04/20 12:49:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/webassets/images/ui-icons_888888_256x240.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('core/webassets/...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/core/webassets/images/ui-icons_888888_256x240.png
+HTTP_REFERER=http://dino.isweepsusa.com/login
+---
+2017/04/20 12:49:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/webassets/images/ui-icons_2e83ff_256x240.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('core/webassets/...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/core/webassets/images/ui-icons_2e83ff_256x240.png
+HTTP_REFERER=http://dino.isweepsusa.com/login
+---
+2017/04/20 12:49:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/webassets/images/ui-icons_2e83ff_256x240.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('core/webassets/...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/core/webassets/images/ui-icons_2e83ff_256x240.png
+HTTP_REFERER=http://dino.isweepsusa.com/login
+---
+2017/04/20 15:54:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "webassets/images/previewIframe.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('webassets/image...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/webassets/images/previewIframe.png
+HTTP_REFERER=http://dino.isweepsusa.com/
+---
+2017/04/20 15:54:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "webassets/images/previewIframe.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('webassets/image...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/webassets/images/previewIframe.png
+HTTP_REFERER=http://dino.isweepsusa.com/
+---
+2017/04/20 15:54:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "webassets/images/redbackground.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('webassets/image...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/webassets/images/redbackground.png
+HTTP_REFERER=http://dino.isweepsusa.com/
+---
+2017/04/20 15:54:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "webassets/images/redbackground.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('webassets/image...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/webassets/images/redbackground.png
+HTTP_REFERER=http://dino.isweepsusa.com/
+---
+2017/04/20 15:55:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/webassets/images/ui-icons_2e83ff_256x240.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('core/webassets/...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/core/webassets/images/ui-icons_2e83ff_256x240.png
+HTTP_REFERER=http://dino.isweepsusa.com/login
+---
+2017/04/20 15:55:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/webassets/images/ui-icons_2e83ff_256x240.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('core/webassets/...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/core/webassets/images/ui-icons_2e83ff_256x240.png
+HTTP_REFERER=http://dino.isweepsusa.com/login
+---
+2017/04/20 15:55:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/webassets/images/ui-icons_f6cf3b_256x240.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('core/webassets/...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/core/webassets/images/ui-icons_f6cf3b_256x240.png
+HTTP_REFERER=http://dino.isweepsusa.com/login
+---
+2017/04/20 15:55:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/webassets/images/ui-icons_f6cf3b_256x240.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('core/webassets/...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/core/webassets/images/ui-icons_f6cf3b_256x240.png
+HTTP_REFERER=http://dino.isweepsusa.com/login
+---
+2017/04/20 15:55:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/webassets/css/images/ui-bg_flat_0_aaaaaa_40x100.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('core/webassets/...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/core/webassets/css/images/ui-bg_flat_0_aaaaaa_40x100.png
+HTTP_REFERER=http://dino.isweepsusa.com/login
+---
+2017/04/20 15:55:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/webassets/css/images/ui-bg_flat_0_aaaaaa_40x100.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('core/webassets/...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/core/webassets/css/images/ui-bg_flat_0_aaaaaa_40x100.png
+HTTP_REFERER=http://dino.isweepsusa.com/login
+---
+2017/04/20 15:55:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/webassets/images/ui-icons_888888_256x240.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('core/webassets/...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/core/webassets/images/ui-icons_888888_256x240.png
+HTTP_REFERER=http://dino.isweepsusa.com/login
+---
+2017/04/20 15:55:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/webassets/images/ui-icons_888888_256x240.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('core/webassets/...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/core/webassets/images/ui-icons_888888_256x240.png
+HTTP_REFERER=http://dino.isweepsusa.com/login
+---
+2017/04/20 17:21:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "webassets/images/redbackground.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('webassets/image...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/webassets/images/redbackground.png
+HTTP_REFERER=http://dino.isweepsusa.com/
+---
+2017/04/20 17:21:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "webassets/images/redbackground.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('webassets/image...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/webassets/images/redbackground.png
+HTTP_REFERER=http://dino.isweepsusa.com/
+---
+2017/04/20 17:21:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "webassets/images/previewIframe.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('webassets/image...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/webassets/images/previewIframe.png
+HTTP_REFERER=http://dino.isweepsusa.com/
+---
+2017/04/20 17:21:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "webassets/images/previewIframe.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('webassets/image...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/webassets/images/previewIframe.png
+HTTP_REFERER=http://dino.isweepsusa.com/
+---
+2017/04/20 17:23:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/webassets/images/ui-icons_f6cf3b_256x240.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('core/webassets/...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/core/webassets/images/ui-icons_f6cf3b_256x240.png
+HTTP_REFERER=http://dino.isweepsusa.com/login
+---
+2017/04/20 17:23:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/webassets/images/ui-icons_f6cf3b_256x240.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('core/webassets/...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/core/webassets/images/ui-icons_f6cf3b_256x240.png
+HTTP_REFERER=http://dino.isweepsusa.com/login
+---
+2017/04/20 17:23:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/webassets/images/ui-icons_888888_256x240.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('core/webassets/...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/core/webassets/images/ui-icons_888888_256x240.png
+HTTP_REFERER=http://dino.isweepsusa.com/login
+---
+2017/04/20 17:23:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/webassets/images/ui-icons_888888_256x240.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('core/webassets/...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/core/webassets/images/ui-icons_888888_256x240.png
+HTTP_REFERER=http://dino.isweepsusa.com/login
+---
+2017/04/20 17:23:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/webassets/css/images/ui-bg_flat_0_aaaaaa_40x100.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('core/webassets/...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/core/webassets/css/images/ui-bg_flat_0_aaaaaa_40x100.png
+HTTP_REFERER=http://dino.isweepsusa.com/login
+---
+2017/04/20 17:23:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/webassets/css/images/ui-bg_flat_0_aaaaaa_40x100.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('core/webassets/...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/core/webassets/css/images/ui-bg_flat_0_aaaaaa_40x100.png
+HTTP_REFERER=http://dino.isweepsusa.com/login
+---
+2017/04/20 17:23:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/webassets/images/ui-icons_2e83ff_256x240.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('core/webassets/...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/core/webassets/images/ui-icons_2e83ff_256x240.png
+HTTP_REFERER=http://dino.isweepsusa.com/login
+---
+2017/04/20 17:23:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/webassets/images/ui-icons_2e83ff_256x240.png".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('core/webassets/...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/core/webassets/images/ui-icons_2e83ff_256x240.png
+HTTP_REFERER=http://dino.isweepsusa.com/login
+---
+2017/04/20 21:56:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2017/04/20 21:56:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /dino.isweepsusa.com/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
