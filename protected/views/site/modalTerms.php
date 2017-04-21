@@ -16,11 +16,8 @@
     Terms and Conditions / Official Rules
 </p>
 <p>
-    NO PURCHASE NECESSARY TO ENTER OR WIN. A PURCHASE WILL NOT INCREASE OR
-    ENHANCE YOUR CHANCES OF WINNING. YOU HAVE NOT YET WON. PARTICIPANTS MUST BE
-    LEGAL RESIDENTS OF THE UNITED STATES AT LEAST 18 YEARS OLD AS OF THE DATE
-    OF ENTRY INTO THIS PROMOTION. VOID IN GUAM, THE US VIRGIN ISLANDS, AND ALL
-    OTHER U.S. TERRITORIES AND POSSESSESION AND WHERE PROHIBITED BY LAW.
+   NO PURCHASE OR DONATION NECESSARY TO ENTER OR WIN.  A PURCHASE OR DONATION WILL NOT INCREASE OR ENHANCE YOUR CHANCES OF WINNING.  YOU HAVE NOT YET WON.  PARTICIPANTS MUST BE LEGAL RESIDENTS OF THE UNITED STATES AT LEAST 18 YEARS OLD AS OF THE DATE OF ENTRY INTO THIS PROMOTION.  VOID IN GUAM, THE US VIRGIN ISLANDS, AND ALL OTHER U.S. TERRITORIES AND POSSESSESION AND  WHERE PROHIBITED BY LAW.   
+
 </p>
 <p>
     THESE RULES INLCUDE AN AGREEMENT TO HAVE ALL DISPUTES RESOLVED BY BINDING
@@ -38,19 +35,7 @@
     iSweepsUSA, LLC.
 </p>
 <p>
-    <strong>1. Acceptance of Terms and Conditions/Official Rules:</strong>
-    By entering this Sweepstakes (the "Promotion" or the “Sweepstakes”),
-    connected to DFW Marine Aquarium Society (the “Operator,” “Sweepstakes
-    Provider,” or “Sweepstakes Operator”) and operated on the website
-    accessible at the domain "www.dfwmas.isweepsUSA.com" (the "Website") with
-    the Software Provider iSweepsUSA, LLC (the “Provider”), you (the
-    “Participant” or “Winner” or “Player” or “Participant”) hereby accept and
-    agree to the official rules (the "Official Rules") of this Promotion, and
-    the decision of the Operator in connection with the Promotion and
-    Sweepstakes (as defined below), whose decision is final. Operator and
-    Provider, along with their respective, parents, affiliated and subsidiary
-    companies and advertising and promotion agencies are collectively known as
-    the “Sweepstakes Entities.”
+    <strong>By entering this Sweepstakes (the "Promotion" or the “Sweepstakes”), connected to DFW Marine Aquarium Society  (the “Operator,” “Sweepstakes Provider,” or “Sweepstakes Operator”) and operated on the website accessible at the domain "www.dfwmas.org" (the "Website") with the Software Provider iSweepsUSA, LLC (the “Provider”), you (the “Participant” or “Winner” or “Player” or “Participant”) hereby accept and agree to the official rules (the "Official Rules") of this Promotion, and the decision of the Operator in connection with the Promotion and Sweepstakes (as defined below), whose decision is final. Operator and Provider, along with their respective, parents, affiliated and subsidiary companies and advertising and promotion agencies are collectively known as the “Sweepstakes Entities.”
 </p>
 <p>
     By entering any details into, and/or purchase any products or using any
