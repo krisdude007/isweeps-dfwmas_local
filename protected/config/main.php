@@ -107,6 +107,7 @@ $config_array = array(
                 'expressCheckOut/<amount:\w+>/<id:\d+>' => '/payment/expressCheckOut',
                 'payprocess/<modelName:\w+>/<id:\d+>' => '/payment/payprocess',
                 'payprocess/<modelName:\w+>' => '/payment/payprocess',
+                'prizes' => '/site/prizes',
                 'processstripeprepay' => '/payment/processstripeprepay',
                 'processpaypalprepay' => '/payment/processpaypalprepay',
                 'processstripeproduct/<id:\d+>' => '/payment/processstripeproduct',
